@@ -34,6 +34,8 @@ else
   $tarifa4 = number_format($tarifa1,2);
   $tarifa5 = number_format($tarifa2,2);
   $tarifa6 = number_format($tarifa3,2);
+  $tarifa7 = odbc_result($sql,7);
+  $tarifa8 = number_format($tarifa7,2);
   // Se consultan planes ya registrados de la unidad
   $consu = "SELECT conse FROM cx_gas_bas WHERE unidad='$uni_usuario'"; 
   $cur = odbc_exec($conexion, $consu);
@@ -100,9 +102,6 @@ include('titulo.php');
                	<div class="col col-lg-4 col-sm-4 col-md-4 col-xs-4">
                   <label><font face="Verdana" size="2">Tarifa Fuera de Sede No Pernoctado</font></label>
                 </div>
-               	<div class="col col-lg-4 col-sm-4 col-md-4 col-xs-4">
-                  <label><font face="Verdana" size="2">Tarifa en la Sede</font></label>
-                </div>
               </div>
               <div class="row">
                 <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
@@ -113,7 +112,21 @@ include('titulo.php');
                   <input type="text" name="tarifa2" id="tarifa2" class="form-control numero" value="<?php echo $tarifa5; ?>"><input type="hidden" name="tarifa5" id="tarifa5" class="form-control" value="<?php echo $tarifa2; ?>">
                 </div>
                 <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2"></div>
-               	<div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+              </div>
+              <div class="row">
+                <div class="col col-lg-4 col-sm-4 col-md-4 col-xs-4">
+                  <label><font face="Verdana" size="2">Gasto básico mensual</font></label>
+                </div>
+                <div class="col col-lg-4 col-sm-4 col-md-4 col-xs-4">
+                  <label><font face="Verdana" size="2">Tarifa en la Sede</font></label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                  <input type="text" name="tarifa7" id="tarifa7" class="form-control numero" value="<?php echo $tarifa8; ?>"><input type="hidden" name="tarifa8" id="tarifa8" class="form-control" value="<?php echo $tarifa7; ?>">
+                </div>
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2"></div>
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
                   <input type="text" name="tarifa3" id="tarifa3" class="form-control numero" value="<?php echo $tarifa6; ?>"><input type="hidden" name="tarifa6" id="tarifa6" class="form-control" value="<?php echo $tarifa3; ?>">
                 </div>
               </div>
@@ -434,6 +447,7 @@ $(document).ready(function () {
   $("#tarifa1").prop("disabled",true);
   $("#tarifa2").prop("disabled",true);
   $("#tarifa3").prop("disabled",true);
+  $("#tarifa7").prop("disabled",true);
   $("#aceptar1").button();
   $("#aceptar1").click(busca);
   $("#aceptar1").css({ width: '200px', 'padding-top': '8px', 'padding-bottom': '8px' });
@@ -1043,6 +1057,7 @@ function nuevo()
         tarifa1: $("#tarifa4").val(),
         tarifa2: $("#tarifa5").val(),
         tarifa3: $("#tarifa6").val(),
+        tarifa4: $("#tarifa8").val(),
         centra: $("#centra").val(),
         periodo: $("#v_periodo").val(),
         elaboro: $("#elaboro").val(),
@@ -1055,14 +1070,18 @@ function nuevo()
       {
         $("#load").show();
       },
-      error: function ()
+      error: function (data)
       {
         $("#load").hide();
+        var detalle = "<center><h3>Error durante la grabación</h3></center>";
+        $("#dialogo").html(detalle);
+        $("#dialogo").dialog("open");
+        $("#dialogo").closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
       },
       success: function (data)
       {
         $("#load").hide();
-        var registros = JSON.parse(data);
+        var registros = JSON.parse(data.replace(/[\uFEFF\xA0]/g, ""));
         var valida = registros.salida;
         var valida1 = registros.salida1;
         var valida2 = registros.salida2;

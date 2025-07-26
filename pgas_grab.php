@@ -52,6 +52,7 @@ if (is_ajax())
 	$tarifa1 = $_POST['tarifa1'];
 	$tarifa2 = $_POST['tarifa2'];
 	$tarifa3 = $_POST['tarifa3'];
+	$tarifa4 = $_POST['tarifa4'];
 	$centra = $_POST['centra'];
 	$periodo = $_POST['periodo'];
 	$elaboro = $_POST['elaboro'];
@@ -151,7 +152,7 @@ if (is_ajax())
 		else
 		{
 			// Se graba encabezado de planilla
-			$graba = "INSERT INTO cx_gas_bas (conse, usuario, unidad, ciudad, ordop, n_ordop, mision, periodo, ano, total, responsable, tarifa1, tarifa2, tarifa3, interno, numero, solicitud, elaboro, adicional, cargo) VALUES ('$consecu', '$usuario', '$unidad', '$ciudad', '$mision', '$var1', '$var3', '$periodo', '$ano', '$total', '$responsable', '$tarifa1', '$tarifa2', '$tarifa3', '$interno', '$var5', '$var4', '$elaboro', '$adicional', '$cargo')";
+			$graba = "INSERT INTO cx_gas_bas (conse, usuario, unidad, ciudad, ordop, n_ordop, mision, periodo, ano, total, responsable, tarifa1, tarifa2, tarifa3, interno, numero, solicitud, elaboro, adicional, cargo, tarifa4) VALUES ('$consecu', '$usuario', '$unidad', '$ciudad', '$mision', '$var1', '$var3', '$periodo', '$ano', '$total', '$responsable', '$tarifa1', '$tarifa2', '$tarifa3', '$interno', '$var5', '$var4', '$elaboro', '$adicional', '$cargo', '$tarifa4')";
 			if (!odbc_exec($conexion, $graba))
 			{
 		    	$confirma = "0";

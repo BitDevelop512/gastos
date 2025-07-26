@@ -1,7 +1,7 @@
 <?php
 /* 639.php
-   FO-JEMPP-CEDE2-639 - Planilla de Gastos Básicos.
-   (pág 187 - "Dirtectiva Permanente No. 00095 de 2017.PDF")
+   FO-JEMPP-CEDE2-639 - Planilla de Gastos BÃ¡sicos.
+   (pÃ¡g 187 - "Directiva Permanente No. 00095 de 2017.PDF")
 
 	01/07/2023 - Se hace control del cambio de la sigla a partir de la fecha de cx_org_sub. Jorge Clavijo
 */
@@ -55,23 +55,23 @@ else
 			$this->Cell(17,5,'',0,0,'C',0);
 			$this->Cell(87,5,'MINISTERIO DE DEFENSA NACIONAL',0,0,'');
 			$this->Cell(116,5,'',0,0,'C');
-			$this->Cell(12,5,'Pág:',0,0,'');
+			$this->Cell(12,5,'PÃ¡g:',0,0,'');
 			$this->SetFont('Arial','',8);
 			$this->Cell(40,5,$this->PageNo().'/{nb}',0,1,'');
 
 			$this->SetFont('Arial','B',8);
 			$this->Cell(17,5,'',0,0,'C',0);
 			$this->Cell(87,5,'COMANDO GENERAL FUERZAS MILITARES',0,0,'');
-			$this->Cell(116,5,'PLANILLA GASTOS BÁSICOS',0,0,'C');
-			$this->Cell(12,5,'Código:',0,0,'');
+			$this->Cell(116,5,'PLANILLA GASTOS BÃSICOS',0,0,'C');
+			$this->Cell(12,5,'CÃ³digo:',0,0,'');
 			$this->SetFont('Arial','',8);
 			$this->Cell(36,5,'FO-JEMPP-CEDE2-639',0,1,'');
 
 			$this->SetFont('Arial','B',8);
 			$this->Cell(17,5,'',0,0,'C',0);
-			$this->Cell(87,5,'EJÉRCITO NACIONAL',0,0,'');
+			$this->Cell(87,5,'EJÃ‰RCITO NACIONAL',0,0,'');
 			$this->Cell(116,5,'',0,0,'C');
-			$this->Cell(12,5,'Versión:',0,0,'');
+			$this->Cell(12,5,'VersiÃ³n:',0,0,'');
 			$this->SetFont('Arial','',8);
 			$this->Cell(36,5,'0',0,1,'');
 
@@ -79,7 +79,7 @@ else
 			$this->Cell(17,5,'',0,0,'C',0);
 			$this->Cell(87,5,'DEPARTAMENTO DE INTELIGENCIA Y CONTRAINTELIGENCIA',0,0,'');
 			$this->Cell(116,5,'',0,0,'C');			
-			$this->Cell(26,5,'Fecha de emisión:',0,0,'');
+			$this->Cell(26,5,'Fecha de emisiÃ³n:',0,0,'');
 			$this->SetFont('Arial','',8);
 			$this->Cell(22,5,'2017-05-16',0,1,'');
 
@@ -233,7 +233,7 @@ else
 	$pdf->SetAuthor('Cx Computers');
 	$pdf->SetFillColor(204);
 	
-	$sustituye = array ( 'Ã¡' => 'á', 'Ãº' => 'ú', 'Ã“' => 'Ó', 'Ã³' => 'ó', 'Ã‰' => 'É', 'Ã©' => 'é', 'Ã‘' => 'Ñ', 'Ã­' => 'í' );
+	$sustituye = array ( 'Ã¡' => 'Ã¡', 'Ã©' => 'Ã©', 'Ã­' => 'Ã­', 'Ã³' => 'Ã³', 'Ãº' => 'Ãº', 'Ã±' => 'Ã±', 'Â¿' => 'Â¿', 'Â¡' => 'Â¡' );
 	$n_meses = array('ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE');
 	$linea = str_repeat("_",203);   
 	
@@ -247,6 +247,7 @@ else
 	$tarifa1 = odbc_result($cur,13);
 	$tarifa2 = odbc_result($cur,14);
 	$tarifa3 = odbc_result($cur,15);
+	$tarifa4 = odbc_result($cur,23);
 	$interno = odbc_result($cur,16);
 	$elabora = trim(odbc_result($cur,19));
 	if ($elabora == "") $elabora = $_SESSION["nom_usuario"];
@@ -262,7 +263,7 @@ else
 
 	$actual=$pdf->GetY();
 	$pdf->Cell(276,5,'DE USO EXCLUSIVO',0,1,'R');	
-	$pdf->Cell(36,5,'Unidad/Dependencia/Sección',0,0,'');	
+	$pdf->Cell(36,5,'Unidad/Dependencia/SecciÃ³n',0,0,'');	
 	$pdf->Cell(67,5,$sigla,B,1,'L');	
 	$pdf->Cell(23,5,'Lugar y Fecha',0,0,'');
 	$pdf->Cell(80,5,$ciudad.'  -  '.$fecha,B,1,'L');
@@ -270,25 +271,29 @@ else
 
 	$pdf->Cell(20,5,'ORDOP No.  ',0,0,'L');
 	$pdf->Cell(65,5,$ordop,1,0,'C');
-	$pdf->Cell(20,5,'MISIÓN No.  ',0,0,'R');
+	$pdf->Cell(20,5,'MISIÃ“N No.  ',0,0,'R');
 	$pdf->Cell(65,5,$mision,1,0,'C');
-	$pdf->Cell(35,5,'MISIÓN ADICIONAL No.  ',0,0,'R');
+	$pdf->Cell(35,5,'MISIÃ“N ADICIONAL No.  ',0,0,'R');
 	$pdf->Cell(65,5,$adicional,1,1,'C');	
 	$pdf->Cell(15,5,'',0,1,'L');
 
 	$actual=$pdf->GetY();
 	$pdf->RoundedRect(9,$actual,279,5,0,'');
-	$pdf->Cell(60,5,'TARIFA FUERA DE LA SEDE (F.S) PERNOTADO:',0,0,'L');
+	$pdf->Cell(40,5,'T FUERA SEDE PERNOCA:',0,0,'L');
 	$pdf->SetFont('Arial','B',7);	
-	$pdf->Cell(30,5,'$'.number_format($tarifa1,2),L,0,'C');
+	$pdf->Cell(25,5,'$'.number_format($tarifa1,2),L,0,'C');
 	$pdf->SetFont('Arial','',7);		
-	$pdf->Cell(73,5,'TARIFA FUERA DE LA SEDE (F.S) NO PERNOTADO:',L,0,'L');	
+	$pdf->Cell(50,5,'T FUERA DE LA SEDE NP:',L,0,'L');	
 	$pdf->SetFont('Arial','B',7);	
-	$pdf->Cell(30,5,'$'.number_format($tarifa2,2),L,0,'C');		
+	$pdf->Cell(25,5,'$'.number_format($tarifa2,2),L,0,'C');		
 	$pdf->SetFont('Arial','',7);		
-	$pdf->Cell(55,5,'TARIFA EN LA SEDE:',L,0,'L');
+	$pdf->Cell(45,5,'TARIFA EN LA SEDE:',L,0,'L');
 	$pdf->SetFont('Arial','B',7);		
-	$pdf->Cell(30,5,'$'.number_format($tarifa3,2),L,1,'C');	
+	$pdf->Cell(25,5,'$'.number_format($tarifa3,2),L,0,'C');	
+	$pdf->SetFont('Arial','',7);		
+	$pdf->Cell(30,5,'GASTO FIJO MENSUAL:',L,0,'R');
+	$pdf->SetFont('Arial','B',7);		
+	$pdf->Cell(24,5,'$'.number_format($tarifa4,2),L,1,'C');	
 	$pdf->SetFont('Arial','',7);		
 	$pdf->Cell(15,5,'',0,1,'L');
 		
@@ -297,23 +302,24 @@ else
 	$pdf->RoundedRect(9,$actual,279,10,0,'');
 	$pdf->SetFont('Arial','B',7);
 	$pdf->Cell(6,5,'',0,0,'C');
-	$pdf->Cell(21,10,'',1,0,'C');
-	$pdf->Cell(55,10,'GRADO, APELLIDO Y NOMBRES O',1,0,'C');
-	$pdf->Cell(98,10,'',1,0,'C');
-	$pdf->Cell(50,5,'CANTIDAD DÍAS ASIGNADOS',1,0,'C');
-	$pdf->Cell(20,10,'',1,0,'C');
-	$pdf->Cell(28,5,'FIRMA/HUELLA',0,1,'C');
+	$pdf->Cell(21,10,'',1,0,'C'); // CÃ‰DULA
+	$pdf->Cell(65,10,'GRADO, APELLIDO Y NOMBRES O',1,0,'C');
+	$pdf->Cell(78,5,'CANTIDAD DÃAS ASIGNADOS',1,0,'C'); // FS y En sede agrupados
+	$pdf->Cell(25,10,'GASTO FIJO',1,0,'C');
+	$pdf->Cell(25,10,'VALOR',1,0,'C');
+	$pdf->Cell(58,5,'FIRMA/HUELLA',0,1,'C');
 	
 	$pdf->Cell(6,5,'No.',0,0,'C');
-	$pdf->Cell(21,5,'CÉDULA',0,0,'C');
-	$pdf->Cell(55,5,'CÓDIGO OPERACIONAL DEL PARTICIPANTE',0,0,'C');
-	$pdf->Cell(98,5,'CIUDAD',0,0,'C');
-	$pdf->Cell(18,5,'FS. Pernotado',1,0,'C');
-	$pdf->Cell(21,5,'FS. no Pernotado',1,0,'C');
-	$pdf->Cell(11,5,'En sede',1,0,'C');
-	$pdf->Cell(20,5,'VALOR',0,0,'C');
-	$pdf->Cell(28,5,'CONSIGNACIÓN/GIRO',0,1,'C');
+	$pdf->Cell(21,5,'CÃ‰DULA',0,0,'C');
+	$pdf->Cell(65,5,'CÃ“DIGO OPERACIONAL DEL PARTICIPANTE',0,0,'C');
+	$pdf->Cell(26,5,'FS. Pernotado',1,0,'C');
+	$pdf->Cell(26,5,'FS. no Pernotado',1,0,'C');
+	$pdf->Cell(26,5,'En sede',1,0,'C');
+	$pdf->Cell(25,5,'MENSUAL',0,0,'C'); // subtÃ­tulo de gasto fijo
+	$pdf->Cell(25,5,'',0,0,'C');
+	$pdf->Cell(58,5,'CONSIGNACIÃ“N/GIRO',0,1,'C');
 	$pdf->SetFont('Arial','',7);
+
 
 	$consulta1 = "select * from cx_gas_dis where conse1 = '".$_GET['conse']."' and interno = '".$interno."' order by conse";
 	$cur1 = odbc_exec($conexion,$consulta1); 
@@ -325,20 +331,35 @@ else
 	$y = $pdf->Gety();			
 	$lin = 0;
 	$val_total = 0;
+	$val_gasto_fijo = 0;
 	$f = 0;
 	while($f<$nreg_cur1=odbc_fetch_array($cur1))
 	{
 		$participante = trim(odbc_result($cur1,4));
 		$ciudad_o = trim(odbc_result($cur1,5));
 		$congir = trim(odbc_result($cur1,11));
-		if ($congir == 'S') $firhue = "Anexo Consignación"; 
+		if ($congir == 'S') $firhue = "Anexo ConsignaciÃ³n"; 
 		else if ($congir == 'N') $firhue = " "; 
 		else if ($congir == 'G') $firhue = "Giro"; 
 		else if ($congir == 'T') $firhue = "Transferencia"; 
 		else $firhue = "Transferencia";
-		$data[] = array($f+1, trim(odbc_result($cur1,3)),$participante, $ciudad_o, trim(odbc_result($cur1,6)), trim(odbc_result($cur1,7)), trim(odbc_result($cur1,8)), '$'.trim(odbc_result($cur1,9)), $firhue);
+		$gasto_fijo_mensual = $tarifa4 * 1;
+		$val_gasto_fijo += $gasto_fijo_mensual;
+
+		$data[] = array(
+			$f + 1,
+			trim(odbc_result($cur1, 3)),
+			$participante,
+			trim(odbc_result($cur1, 6)),
+			trim(odbc_result($cur1, 7)),
+			trim(odbc_result($cur1, 8)),
+			'$' . number_format($gasto_fijo_mensual, 0),
+			'$' . trim(odbc_result($cur1, 9)),
+			$firhue
+		);
+		
 		$val_total = $val_total + odbc_result($cur1,10);
-		$pdf->tablewidths = array(7, 21, 55, 98, 18, 21, 11, 20, 28); 
+		$pdf->tablewidths = array(7, 21, 65, 26, 26, 26, 25, 25, 58);
 		$pdf->morepagestable($data);
 		unset($data);
 		control_salto_pag($pdf->GetY());		
@@ -349,8 +370,10 @@ else
 	$actual=$pdf->GetY(); 
 	$pdf->SetFont('Arial','B',7);	
 	$pdf->RoundedRect(9,$actual,279,5,0,'R');
-	$pdf->Cell(230,5,'SUMAN',0,0,'R');
-	$pdf->Cell(20,5,wims_currency($val_total),LR,0,'R');
+	$pdf->Cell(6 + 21 + 65 + 26 + 26 + 26, 5, 'SUMAN', 0, 0, 'R'); // 171 mm
+	$pdf->Cell(25, 5, wims_currency($val_gasto_fijo), 1, 0, 'R');
+	$pdf->Cell(25, 5, wims_currency($val_total), 1, 0, 'R');
+	$pdf->Cell(28, 5, '', 0, 0);
 	$pdf->SetFont('Arial','',7);
 	$actual=$pdf->GetY();
 	
@@ -359,16 +382,16 @@ else
 	$actual=$pdf->GetY();
 	$pdf->Cell(278,5,'_____________________________________________',0,1,'C');	
 	$pdf->Cell(278,3,$fir_res,0,1,'C');
-	$pdf->Cell(278,3,'       RESPONSABLE DE LA MISIÓN       ',0,1,'C');
+	$pdf->Cell(278,3,'       RESPONSABLE DE LA MISIÃ“N       ',0,1,'C');
 
 	$actual=$pdf->GetY();
 	control_salto_pag($pdf->GetY());	
-	$texto="NOTA: RESERVA LEGAL, ACTA DE COMPROMISO DE RESERVA Y TRASLADO DE LA RESERVA LEGAL. Se reitera que en Colombia, la información de inteligencia goza de reserva legal y, por tal razón, la difusión debe realizarse únicamente a los receptores legalmente autorizados, observando los parámetros establecidos en la Ley Estatutaria 1621 de 2013 y el Decreto 1070 de 2015, en especial, lo pertinente a reserva legal, acta de compromiso y protocolos de seguridad y restricción de la información, de acuerdo con los artículos 33, 34, 35, 36, 36, 37 y 38 de la Ley Estatutaria 1621 de 2013. Con la entrega del presente documento se hace traslado de la reserva legal de la información al destinatario del presente documento, en calidad de receptor legal autorizado, quien al recibir el presente documento o conocer de él, manifiesta con su firma o lectura que está suscribiendo acta de compromiso de reserva legal y garantizando de forma expresa (escrita), la reserva legal de la información a la que tuvo acceso. La reserva legal, protocolos y restricciones aplican tanto a la autoridad competente o receptor legal destinatario de la información, como al servidor público que reciba o tenga conocimiento dentro del proceso de entrega, recibo o trazabilidad del presente documento de inteligencia o contrainteligencia, por lo cual, se obliga a garantizar que en ningún caso podrá revelar información, fuentes, métodos, procedimientos, agentes o identidad de quienes desarrollan actividades de inteligencia y contrainteligencia, ni pondrá en peligro la Seguridad y Defensa Nacional. Quienes indebidamente divulguen, entreguen, filtren, comercialicen, empleen o permitan que alguien emplee la información o documentos que gozan de reserva legal, incurrirán en causal de mala conducta, sin perjuicio de las acciones penales a que haya lugar.";
+	$texto="NOTA: RESERVA LEGAL, ACTA DE COMPROMISO DE RESERVA Y TRASLADO DE LA RESERVA LEGAL. Se reitera que en Colombia, la informaciÃ³n de inteligencia goza de reserva legal y, por tal razÃ³n, la difusiÃ³n debe realizarse Ãºnicamente a los receptores legalmente autorizados, observando los parÃ¡metros establecidos en la Ley Estatutaria 1621 de 2013 y el Decreto 1070 de 2015, en especial, lo pertinente a reserva legal, acta de compromiso y protocolos de seguridad y restricciÃ³n de la informaciÃ³n, de acuerdo con los artÃ­culos 33, 34, 35, 36, 36, 37 y 38 de la Ley Estatutaria 1621 de 2013. Con la entrega del presente documento se hace traslado de la reserva legal de la informaciÃ³n al destinatario del presente documento, en calidad de receptor legal autorizado, quien al recibir el presente documento o conocer de Ã©l, manifiesta con su firma o lectura que estÃ¡ suscribiendo acta de compromiso de reserva legal y garantizando de forma expresa (escrita), la reserva legal de la informaciÃ³n a la que tuvo acceso. La reserva legal, protocolos y restricciones aplican tanto a la autoridad competente o receptor legal destinatario de la informaciÃ³n, como al servidor pÃºblico que reciba o tenga conocimiento dentro del proceso de entrega, recibo o trazabilidad del presente documento de inteligencia o contrainteligencia, por lo cual, se obliga a garantizar que en ningÃºn caso podrÃ¡ revelar informaciÃ³n, fuentes, mÃ©todos, procedimientos, agentes o identidad de quienes desarrollan actividades de inteligencia y contrainteligencia, ni pondrÃ¡ en peligro la Seguridad y Defensa Nacional. Quienes indebidamente divulguen, entreguen, filtren, comercialicen, empleen o permitan que alguien emplee la informaciÃ³n o documentos que gozan de reserva legal, incurrirÃ¡n en causal de mala conducta, sin perjuicio de las acciones penales a que haya lugar.";
 	$pdf->Cell(278,3,$linea,0,1,'C');	
 	$pdf->Multicell(278,3,$texto,0,'J');
 	$actual=$pdf->GetY();
 	$pdf->RoundedRect(9,$actual,279,5,0,'');
-	$pdf->Cell(15,5,'Elaboró:    '.$elabora,0,0,'');
+	$pdf->Cell(15,5,'ElaborÃ³:    '.$elabora,0,0,'');
 
 	$nom_pdf="../fpdf/pdf/Planillas/".$_GET['ano']."/PlanGas_".trim($sigla)."_".$_GET['conse']."_".$_GET['ano'].".pdf";
 	$pdf->Output($nom_pdf,"F");

@@ -164,6 +164,14 @@ include('titulo.php');
                   <input type="button" name="actualiza1" id="actualiza1" value="Actualizar">
                 </div>
               </div>
+              <!-- Nueva fila para Gasto fijo mensual -->
+              <div class="row">
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                  <label><font face="Verdana" size="2">Gasto fijo mensual</font></label>
+                  <input type="text" name="valor10" id="valor10" class="form-control numero" value="0.00" onkeyup="paso_val4();">
+                  <input type="hidden" name="valor11" id="valor11" class="form-control numero" value="0">
+                </div>
+              </div>
               <br>
               <hr>
               <div class="row">
@@ -444,6 +452,7 @@ $(document).ready(function () {
   $("#valor4").maskMoney();
   $("#valor6").maskMoney();
   $("#valor8").maskMoney();
+  $("#valor10").maskMoney();
   $("#valor1d").focus(function(){
     this.select();
   });
@@ -531,6 +540,7 @@ function trae_ano1()
         $("#valor4").prop("disabled", false);
         $("#valor6").prop("disabled", false);
         $("#valor8").prop("disabled", false);
+        $("#valor10").prop("disabled", false);
         $("#valor2").focus();
         $("#aceptar1").show();
         $("#actualiza1").hide();
@@ -546,8 +556,9 @@ function trae_ano1()
         $("#valor4").prop("disabled", true);
         $("#valor6").prop("disabled", true);
         $("#valor8").prop("disabled", true);
-        $("#aceptar1").hide();
-        $("#actualiza1").hide();
+        $("#valor10").prop("disabled", true);
+        $("aceptar1").hide();
+        $("actualiza1").hide();
       }
     }
   });
@@ -558,10 +569,12 @@ function trae_salario()
   $("#valor4").val('0.00');
   $("#valor6").val('0.00');
   $("#valor8").val('0.00');
+  $("#valor10").val('0.00');
   paso_val();
   paso_val1();
   paso_val2();
   paso_val3();
+  paso_val4();
   $.ajax({
     type: "POST",
     datatype: "json",
@@ -605,6 +618,14 @@ function trae_salario()
       tarifa3 = tarifa3.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
       $("#valor8").val(tarifa3);
       paso_val3();
+      var tarifa4 = registros.tarifa4;
+      if (tarifa4 == "0")
+      {
+        tarifa4 = "0.00";
+      }
+      tarifa4 = tarifa4.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      $("#valor10").val(tarifa4);
+      paso_val4();
     }
   });
 }
@@ -920,6 +941,14 @@ function paso_val3()
   valor1 = parseFloat(valor1.replace(/,/g,''));
   $("#valor9").val(valor1);
 }
+function paso_val4()
+{
+  var valor;
+  var valor1;
+  valor1 = document.getElementById('valor10').value;
+  valor1 = parseFloat(valor1.replace(/,/g,''));
+  $("#valor11").val(valor1);
+}
 function validacionData()
 {
   var salida = true, detalle = '';
@@ -1127,6 +1156,7 @@ function nuevo1()
       tarifa1: $("#valor5").val(),
       tarifa2: $("#valor7").val(),
       tarifa3: $("#valor9").val(),
+      tarifa4: $("#valor11").val(),
       tipo: tipo
     },
     beforeSend: function ()
@@ -1150,6 +1180,7 @@ function nuevo1()
         $("#valor4").prop("disabled",true);
         $("#valor6").prop("disabled",true);
         $("#valor8").prop("disabled",true);
+        $("#valor10").prop("disabled",true);
         $("#aceptar1").hide();
         $("#actualiza1").hide();
       }
@@ -1194,6 +1225,7 @@ function actualiza1()
         tarifa1: $("#valor5").val(),
         tarifa2: $("#valor7").val(),
         tarifa3: $("#valor9").val(),
+        tarifa4: $("#valor11").val(),
         tipo: tipo
       },
       beforeSend: function ()
@@ -1216,6 +1248,7 @@ function actualiza1()
           $("#valor4").prop("disabled",true);
           $("#valor6").prop("disabled",true);
           $("#valor8").prop("disabled",true);
+          $("#valor10").prop("disabled",true);
           $("#aceptar1").hide();
           $("#actualiza1").hide();
         }
