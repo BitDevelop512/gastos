@@ -1,0 +1,26 @@
+<!doctype html>
+<?php
+session_start();
+error_reporting(0);
+$_SESSION["chat"] = "NO";
+if ($_SESSION["autenticado"] != "SI")
+{
+  	header("location:resultado.php");
+}
+else
+{
+ 	$tipo = $_GET['tipo'];
+?>
+<html lang="es">
+	<frameset rows="250,*" cols="*" frameborder="NO" border="0" framespacing="0">
+		<frame src="libr_auxi1.php?tipo=<?php echo $tipo; ?>" name="R1">
+		<frame src="resultado1.php" name="R2">
+	</frameset>
+	<noframes>
+	<body>
+	</body>
+	</noframes>
+</html>
+<?php
+}
+?>

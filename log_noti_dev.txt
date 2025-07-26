@@ -1,0 +1,35 @@
+29/04/2024 14:42:24 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 14:44:06 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 14:44:58 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 14:46:44 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 14:50:51 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 14:52:05 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 15:03:27 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4771' AND ano='2024' AND unidad='63' # OS3_BASEC2 # 
+29/04/2024 15:04:09 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4771' AND ano='2024' AND unidad='63' # OS3_BASEC2 # 
+29/04/2024 15:05:32 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4771' AND ano='2024' AND unidad='63' # OS3_BASEC2 # 
+29/04/2024 15:11:34 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4771' AND ano='2024' AND unidad='63' # OS3_BASEC2 # 
+29/04/2024 15:29:58 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4776' AND ano='2024' AND unidad='63' # OS3_BASEC2 # 
+29/04/2024 16:15:47 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 16:31:43 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+29/04/2024 16:51:31 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4765' AND ano='2024' AND unidad='63' # SBC_BASEC2 # 
+25/06/2024 16:54:37 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='6757' AND ano='2024' AND unidad='' #  # 
+23/07/2024 12:51:02 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='7587' AND ano='2024' AND unidad='' #  # 
+26/07/2024 20:32:43 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='7808' AND ano='2024' AND unidad='' #  # 
+27/07/2024 11:03:08 am # UPDATE cx_pla_inv SET estado='' WHERE conse='7797' AND ano='2024' AND unidad='' #  # 
+29/07/2024 16:08:13 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='7951' AND ano='2024' AND unidad='' #  # 
+27/08/2024 11:27:40 am # UPDATE cx_pla_inv SET estado='' WHERE conse='8944' AND ano='2024' AND unidad='' #  # 
+25/09/2024 18:59:14 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='9966' AND ano='2024' AND unidad='' #  # 
+26/09/2024 02:31:03 am # UPDATE cx_pla_inv SET estado='' WHERE conse='10015' AND ano='2024' AND unidad='' #  # 
+26/09/2024 12:36:21 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='10056' AND ano='2024' AND unidad='21' # CDO_CPFH2E3 # 
+28/09/2024 15:31:53 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='10309' AND ano='2024' AND unidad='' #  # 
+28/09/2024 15:49:48 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='10310' AND ano='2024' AND unidad='' #  # 
+26/11/2024 06:41:51 am # UPDATE cx_pla_inv SET estado='' WHERE conse='12567' AND ano='2024' AND unidad='' #  # 
+22/03/2025 15:12:44 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='3546' AND ano='2025' AND unidad='' #  # 
+29/03/2025 13:22:32 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='3988' AND ano='2025' AND unidad='' #  # 
+27/04/2025 13:36:18 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='4917' AND ano='2025' AND unidad='' #  # 
+28/04/2025 20:39:26 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='5109' AND ano='2025' AND unidad='356' # SGA_FUHER # 
+28/04/2025 20:40:50 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='5109' AND ano='2025' AND unidad='356' # SGA_FUHER # 
+28/04/2025 20:42:18 pm # UPDATE cx_pla_inv SET estado='' WHERE conse='5109' AND ano='2025' AND unidad='356' # SGA_FUHER # 
+29/04/2025 11:31:48 am # UPDATE cx_pla_inv SET estado='' WHERE conse='5109' AND ano='2025' AND unidad='356' # SGA_FUHER # 
+29/04/2025 11:37:39 am # UPDATE cx_pla_inv SET estado='' WHERE conse='5109' AND ano='2025' AND unidad='356' # SGA_FUHER # 
+30/04/2025 09:29:01 am # UPDATE cx_pla_inv SET estado='' WHERE conse='5109' AND ano='2025' AND unidad='356' # SGA_FUHER # 

@@ -1,0 +1,5 @@
+    $fec_ano = date('Y');
+    $fec_log = date("d/m/Y H:i:s a");
+    $file = fopen("log_jm".$fec_ano.".txt", "a");
+    fwrite($file, $query.PHP_EOL);
+    fclose($file);

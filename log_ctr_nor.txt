@@ -1,0 +1,4 @@
+20/03/2025 15:53:48 pm # UPDATE cx_ctr_nor SET nombre='Ley 1219 Régimen de Contratación con cargo a gastos reservados, 16-06-2008', tipo='1', descarga='1' WHERE conse='56' # ING_SIGAR # 
+17/07/2025 20:16:12 pm # INSERT INTO cx_ctr_nor (conse, nombre, tipo, descarga) VALUES ('83', 'DIRECTIVA PERMANENTE N° 00000043 Lineamentos administración Gastos Reservado 14-07-2025', '5', '1') # ING_SIGAR # 
+17/07/2025 20:18:18 pm # UPDATE cx_ctr_nor SET nombre='DIRECTIVA PERMANENTE N° 00000043 Lineamentos administración Gastos Reservados 14-07-2025', tipo='5', descarga='1' WHERE conse='83' # ING_SIGAR # 
+17/07/2025 20:19:11 pm # UPDATE cx_ctr_nor SET nombre='DIRECTIVA PERMANENTE N° 00000043 Lineamentos administración Gastos Reservados 14-07-2025', tipo='5', descarga='0' WHERE conse='83' # ING_SIGAR # 

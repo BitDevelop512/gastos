@@ -1,0 +1,121 @@
+<?php
+session_start();
+error_reporting(0);
+require('conf.php');
+require('funciones.php');
+include('permisos.php');
+if (is_ajax())
+{
+    $verifica = time();
+    $alea = strtoupper(md5($verifica));
+    $alea = substr($alea,0,5);
+    $conse = $_POST['conse'];
+    $codigo = $_POST['codigo'];
+    $pregunta = "SELECT * FROM cv_pla_bie WHERE conse='$conse' AND codigo='$codigo'";
+    $sql = odbc_exec($conexion,$pregunta);
+    $conse = odbc_result($sql,1);
+    $fecha = substr(odbc_result($sql,2),0,10);
+    $usuario = trim(odbc_result($sql,3));
+    $codigo = odbc_result($sql,4);
+    $clase = odbc_result($sql,5);
+    $n_clase = trim(utf8_encode(odbc_result($sql,6)));
+    $descripcion = trim(utf8_encode(odbc_result($sql,7)));
+    $fec_com = substr(odbc_result($sql,8),0,10);
+    $valor = trim(odbc_result($sql,9));
+    $valor1 = odbc_result($sql,10);
+    $marca = trim(utf8_encode(odbc_result($sql,11)));
+    $color = trim(utf8_encode(odbc_result($sql,12)));
+    $modelo = trim(utf8_encode(odbc_result($sql,13)));
+    $serial = trim(utf8_encode(odbc_result($sql,14)));
+    $soatn = trim(odbc_result($sql,15));
+    $soata = trim(utf8_encode(odbc_result($sql,16)));
+    $soat1 = substr(odbc_result($sql,17),0,10);
+    $soat2 = substr(odbc_result($sql,18),0,10);
+    $seguc = trim(utf8_encode(odbc_result($sql,19)));
+    $seguv = odbc_result($sql,20);
+    $segun = trim(odbc_result($sql,21));
+    $segua = trim(utf8_encode(odbc_result($sql,22)));
+    $segu1 = substr(odbc_result($sql,23),0,10);
+    $segu2 = substr(odbc_result($sql,24),0,10);
+    $unidad = odbc_result($sql,25);
+    $funcionario = trim(utf8_encode(odbc_result($sql,26)));
+    $ordop = trim(utf8_encode(odbc_result($sql,29)));
+    $mision = trim(utf8_encode(odbc_result($sql,30)));
+    $respon = odbc_result($sql,31);
+    $plan = odbc_result($sql,32);
+    $relacion = odbc_result($sql,33);
+    $compania = trim(odbc_result($sql,34));
+    $n_estado = trim(odbc_result($sql,35));
+    $estado = trim(utf8_encode(odbc_result($sql,36)));
+    $egreso = trim(odbc_result($sql,37));
+    $unidad_a = odbc_result($sql,38);
+    $n_unidad = trim(odbc_result($sql,40));
+    $devolutivo = odbc_result($sql,41);
+    $responsable = trim(utf8_encode(odbc_result($sql,42)));
+    $documento = trim(odbc_result($sql,43));
+    $fecha_docu = trim(odbc_result($sql,44));
+    $repositorio = trim(odbc_result($sql,71));
+    if ($repositorio == "")
+    {
+        $alea = $alea."_0";
+        $sql0 = odbc_exec($conexion,"UPDATE cx_pla_bie SET alea='$alea' WHERE conse='$conse' AND codigo='$codigo'");
+        $repositorio = $alea;
+    }
+    $pregunta1 = "SELECT clase FROM cx_ctr_bie WHERE codigo='$clase'";
+    $sql1 = odbc_exec($conexion,$pregunta1);
+    $clase1 = odbc_result($sql1,1);
+    $pregunta2 = "SELECT acto, fechac, observaciones FROM cx_bie_mov WHERE codigos LIKE '$codigo%' AND tipo='6'";
+    $sql2 = odbc_exec($conexion,$pregunta2);
+    $revistas = "";
+    while($i<$row=odbc_fetch_array($sql2))
+    {
+        $num_act = odbc_result($sql2,1);
+        $fec_act = odbc_result($sql2,2);
+        $obs_act = trim(utf8_encode($row["observaciones"]));
+        $revistas .= $fec_act." - ".$num_act." ".$obs_act."<br><br>";
+    }
+    $salida = new stdClass();
+    $salida->conse = $conse;
+    $salida->fecha = $fecha;
+    $salida->usuario = $usuario;
+    $salida->codigo = $codigo;
+    $salida->clase = $clase;
+    $salida->descripcion = $descripcion;
+    $salida->fec_com = $fec_com;
+    $salida->valor = $valor;
+    $salida->valor1 = $valor1;
+    $salida->marca = $marca;
+    $salida->color = $color;
+    $salida->modelo = $modelo;
+    $salida->serial = $serial;
+    $salida->soatn = $soatn;
+    $salida->soata = $soata;
+    $salida->soat1 = $soat1;
+    $salida->soat2 = $soat2;
+    $salida->seguc = $seguc;
+    $salida->seguv = $seguv;
+    $salida->segun = $segun;
+    $salida->segua = $segua;
+    $salida->segu1 = $segu1;
+    $salida->segu2 = $segu2;
+    $salida->unidad = $unidad;
+    $salida->funcionario = $funcionario;
+    $salida->ordop = $ordop;
+    $salida->mision = $mision;
+    $salida->compania = $compania;
+    $salida->n_estado = $n_estado;
+    $salida->estado = $estado;
+    $salida->plan = $plan;
+    $salida->egreso = $egreso;
+    $salida->unidad_a = $unidad_a;
+    $salida->n_unidad = $n_unidad;
+    $salida->devolutivo = $devolutivo;
+    $salida->responsable = $responsable;
+    $salida->documento = $documento;
+    $salida->fecha_docu = $fecha_docu;
+    $salida->repositorio = $repositorio;
+    $salida->clase1 = $clase1;
+    $salida->revistas = $revistas;
+    echo json_encode($salida);
+}
+?>

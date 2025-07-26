@@ -1,0 +1,122 @@
+16/07/2024 16:40:35 pm # UPDATE cx_pla_bie SET valor='2.970.000', valor1='2.97' WHERE conse='1004' AND codigo='A-GR-CA0001004' # ALM_DIADI # 
+16/07/2024 16:41:35 pm # UPDATE cx_pla_bie SET valor='700.000', valor1='700' WHERE conse='1005' AND codigo='A-GR-CA0001005' # ALM_DIADI # 
+16/07/2024 16:46:11 pm # UPDATE cx_pla_bie SET valor='450.000', valor1='450' WHERE conse='1006' AND codigo='A-GR-CA0001006' # ALM_DIADI # 
+23/07/2024 13:45:28 pm # UPDATE cx_pla_bie SET valor='12,900,000.00', valor1='12900000' WHERE conse='847' AND codigo='A-GR-CA0000847' # ALM_DIADI # 
+23/07/2024 15:29:02 pm # UPDATE cx_pla_bie SET valor='12,500,000.00', valor1='12500000' WHERE conse='525' AND codigo='A-GR-CA0000525' # ALM_DIADI # 
+23/07/2024 17:00:58 pm # UPDATE cx_pla_bie SET valor='110,403,999.00', valor1='110403999' WHERE conse='862' AND codigo='A-GR-CA0000862' # ALM_DIADI # 
+23/07/2024 17:03:53 pm # UPDATE cx_pla_bie SET valor='12,900,000.00', valor1='12900000' WHERE conse='863' AND codigo='A-GR-CA0000863' # ALM_DIADI # 
+23/07/2024 17:03:53 pm # UPDATE cx_pla_bie SET valor='12,900,000.00', valor1='12900000' WHERE conse='863' AND codigo='A-GR-CA0000863' # ALM_DIADI # 
+23/07/2024 17:03:53 pm # UPDATE cx_pla_bie SET valor='12,900,000.00', valor1='12900000' WHERE conse='863' AND codigo='A-GR-CA0000863' # ALM_DIADI # 
+23/07/2024 17:12:59 pm # UPDATE cx_pla_bie SET valor='7,250,000.00', valor1='7250000' WHERE conse='864' AND codigo='A-GR-CA0000864' # ALM_DIADI # 
+23/07/2024 17:16:08 pm # UPDATE cx_pla_bie SET valor='7,250,000.00', valor1='7250000' WHERE conse='865' AND codigo='A-GR-CA0000865' # ALM_DIADI # 
+24/07/2024 09:22:41 am # UPDATE cx_pla_bie SET valor='850,000.00', valor1='0' WHERE conse='1013' AND codigo='A-GR-CA0001013' # ALM_DIADI # 
+24/07/2024 11:12:56 am # UPDATE cx_pla_bie SET valor='4,895,801.00', valor1='4895801' WHERE conse='393' AND codigo='A-GR-CA0000393' # ALM_DIADI # 
+24/07/2024 11:13:55 am # UPDATE cx_pla_bie SET valor='5,296,478.00', valor1='5296478' WHERE conse='401' AND codigo='A-GR-CA0000401' # ALM_DIADI # 
+24/07/2024 11:14:42 am # UPDATE cx_pla_bie SET valor='5,296,478.00', valor1='5296478' WHERE conse='402' AND codigo='A-GR-CA0000402' # ALM_DIADI # 
+26/07/2024 08:49:47 am # UPDATE cx_pla_bie SET valor='7,494,363.00', valor1='7494363' WHERE conse='814' AND codigo='A-GR-CA0000814' # ALM_DIADI # 
+29/07/2024 16:09:08 pm # UPDATE cx_pla_bie SET valor='9,834,000.00', valor1='9834000' WHERE conse='792' AND codigo='A-GR-CA0000792' # ALM_DIADI # 
+30/07/2024 17:17:04 pm # UPDATE cx_pla_bie SET valor='3,269,000.00', valor1='3269000' WHERE conse='407' AND codigo='A-GR-CA0000407' # ALM_DIADI # 
+06/08/2024 09:56:20 am # UPDATE cx_pla_bie SET valor='7,199,999.80', valor1='7199999.8' WHERE conse='1075' AND codigo='A-GR-CA0001075' # ALM_DIADI # 
+14/08/2024 15:55:36 pm # UPDATE cx_pla_bie SET valor='9,182,000.00', valor1='0' WHERE conse='1135' AND codigo='A-GR-CA0001135' # ALM_DIADI # 
+09/10/2024 10:50:45 am # UPDATE cx_pla_bie SET valor='6,200,000.00', valor1='6200000' WHERE conse='940' AND codigo='A-GR-CA0000940' # ALM_DIADI # 
+09/10/2024 10:53:30 am # UPDATE cx_pla_bie SET valor='1,000,000.00', valor1='1000000' WHERE conse='941' AND codigo='A-GR-CA0000941' # ALM_DIADI # 
+09/10/2024 10:53:32 am # UPDATE cx_pla_bie SET valor='1,000,000.00', valor1='1000000' WHERE conse='941' AND codigo='A-GR-CA0000941' # ALM_DIADI # 
+09/10/2024 10:53:40 am # UPDATE cx_pla_bie SET valor='1,000,000.00', valor1='1000000' WHERE conse='941' AND codigo='A-GR-CA0000941' # ALM_DIADI # 
+26/11/2024 22:40:01 pm # UPDATE cx_pla_bie SET valor='4,624,000.00', valor1='4624000' WHERE conse='1206' AND codigo='A-GR-CA0001206' # ING_SIGAR # 
+03/12/2024 15:16:34 pm # UPDATE cx_pla_bie SET valor='2,300,000.00', valor1='2300000' WHERE conse='1483' AND codigo='A-GR-CA0001483' # ING_SIGAR # 
+03/12/2024 15:17:32 pm # UPDATE cx_pla_bie SET valor='1,200,000.00', valor1='1200000' WHERE conse='1484' AND codigo='A-GR-CA0001484' # ING_SIGAR # 
+03/12/2024 15:18:26 pm # UPDATE cx_pla_bie SET valor='1,580,000.00', valor1='1580000' WHERE conse='1485' AND codigo='A-GR-CA0001485' # ING_SIGAR # 
+09/12/2024 16:01:11 pm # UPDATE cx_pla_bie SET valor='5,473,220.00', valor1='5473220' WHERE conse='1563' AND codigo='A-GR-CA0001563' # ALM_DIADI # 
+09/12/2024 16:03:27 pm # UPDATE cx_pla_bie SET valor='5,473,220.00', valor1='5473220' WHERE conse='1183' AND codigo='A-GR-CA0001183' # ALM_DIADI # 
+09/12/2024 16:13:37 pm # UPDATE cx_pla_bie SET valor='1,094,800.00', valor1='1094800' WHERE conse='1564' AND codigo='A-GR-CA0001564' # ALM_DIADI # 
+09/12/2024 16:15:26 pm # UPDATE cx_pla_bie SET valor='1,094,800.00', valor1='1094800' WHERE conse='1184' AND codigo='A-GR-CA0001184' # ALM_DIADI # 
+09/12/2024 16:27:16 pm # UPDATE cx_pla_bie SET valor='', valor1='0' WHERE conse='1565' AND codigo='A-GR-CA0001565' # ALM_DIADI # 
+09/12/2024 16:29:38 pm # UPDATE cx_pla_bie SET valor='5,455,200.00', valor1='5455200' WHERE conse='1081' AND codigo='A-GR-CA0001081' # ALM_DIADI # 
+09/12/2024 16:31:21 pm # UPDATE cx_pla_bie SET valor='1,094,800.00', valor1='1094800' WHERE conse='1565' AND codigo='A-GR-CA0001565' # ALM_DIADI # 
+07/02/2025 10:12:20 am # 2,784,600.00 # UPDATE cx_pla_bie SET valor='1,392,300.00', valor1='1392300' WHERE conse='1730' AND codigo='A-GR-CA0001730' # ING_SIGAR # 
+07/02/2025 10:14:53 am # 0.00 # UPDATE cx_pla_bie SET valor='1,392,300.00', valor1='1392300' WHERE conse='1835' AND codigo='A-GR-CA0001835' # ING_SIGAR # 
+07/02/2025 10:18:29 am # 9,888,900.00 # UPDATE cx_pla_bie SET valor='4,944,450.00', valor1='4944450' WHERE conse='1731' AND codigo='A-GR-CA0001731' # ING_SIGAR # 
+07/02/2025 10:24:46 am # 0.00 # UPDATE cx_pla_bie SET valor='4,944,450.00', valor1='4944450' WHERE conse='1836' AND codigo='A-GR-CA0001836' # ING_SIGAR # 
+25/03/2025 16:42:28 pm # 5,661,900.00 # UPDATE cx_pla_bie SET valor='5,642,400.00', valor1='5642400' WHERE conse='1942' AND codigo='A-GR-CA0001942' # ALM_DIADI # 
+25/03/2025 16:43:09 pm # 908,700.00 # UPDATE cx_pla_bie SET valor='928,700.00', valor1='928700' WHERE conse='1943' AND codigo='A-GR-CA0001943' # ALM_DIADI # 
+25/03/2025 16:43:45 pm # 928,700.00 # UPDATE cx_pla_bie SET valor='928,200.00', valor1='928200' WHERE conse='1943' AND codigo='A-GR-CA0001943' # ALM_DIADI # 
+14/04/2025 10:28:32 am # 17,805,550.00 # UPDATE cx_pla_bie SET valor='16,800,000.00', valor1='16800000' WHERE conse='1695' AND codigo='A-GR-CA0001695' # ALM_DIADI # 
+14/04/2025 10:32:56 am # 0.00 # UPDATE cx_pla_bie SET valor='1,005,000.00', valor1='1005000' WHERE conse='2013' AND codigo='A-GR-CA0002013' # ALM_DIADI # 
+14/04/2025 10:34:55 am # 1,005,000.00 # UPDATE cx_pla_bie SET valor='1,005,550.00', valor1='1005550' WHERE conse='2013' AND codigo='A-GR-CA0002013' # ALM_DIADI # 
+07/05/2025 15:13:46 pm # 360,000.00 # UPDATE cx_pla_bie SET valor='180,000.00', valor1='180000' WHERE conse='769' AND codigo='A-GR-CA0000769' # ALM_DIADI # 
+07/05/2025 15:15:11 pm # 0.00 # UPDATE cx_pla_bie SET valor='180,000.00', valor1='180000' WHERE conse='2114' AND codigo='A-GR-CA0002114' # ALM_DIADI # 
+14/05/2025 20:25:08 pm # 0.00 # UPDATE cx_pla_bie SET valor='4,450,000.00', valor1='4450000' WHERE conse='2131' AND codigo='A-GR-CA0002131' # ING_SIGAR # 
+14/05/2025 20:27:24 pm # 8,900,000.00 # UPDATE cx_pla_bie SET valor='4,450,000.00', valor1='4450000' WHERE conse='2118' AND codigo='A-GR-CA0002118' # ING_SIGAR # 
+14/05/2025 20:28:51 pm # 4,450,000.00 # UPDATE cx_pla_bie SET valor='4,450,000.00', valor1='0' WHERE conse='2131' AND codigo='A-GR-CA0002131' # ING_SIGAR # 
+23/05/2025 21:21:29 pm # 11,265,000.00 # UPDATE cx_pla_bie SET valor='2,350,000.00', valor1='2350000' WHERE conse='2048' AND codigo='A-GR-CA0002048' # ING_SIGAR # 
+23/05/2025 21:25:53 pm # 0.00 # UPDATE cx_pla_bie SET valor='885,000.00', valor1='885000' WHERE conse='2159' AND codigo='A-GR-CA0002159' # ING_SIGAR # 
+23/05/2025 21:29:25 pm # 0.00 # UPDATE cx_pla_bie SET valor='390,000.00', valor1='390000' WHERE conse='2160' AND codigo='A-GR-CA0002160' # ING_SIGAR # 
+23/05/2025 21:31:22 pm # 0.00 # UPDATE cx_pla_bie SET valor='130,000.00', valor1='130000' WHERE conse='2161' AND codigo='A-GR-CA0002161' # ING_SIGAR # 
+23/05/2025 21:39:35 pm # 0.00 # UPDATE cx_pla_bie SET valor='2,350,000.00', valor1='2350000' WHERE conse='2162' AND codigo='A-GR-CA0002162' # ING_SIGAR # 
+23/05/2025 21:44:47 pm # 0.00 # UPDATE cx_pla_bie SET valor='885,000.00', valor1='885000' WHERE conse='2163' AND codigo='A-GR-CA0002163' # ING_SIGAR # 
+23/05/2025 21:46:31 pm # 0.00 # UPDATE cx_pla_bie SET valor='390,000.00', valor1='390000' WHERE conse='2164' AND codigo='A-GR-CA0002164' # ING_SIGAR # 
+23/05/2025 21:48:09 pm # 0.00 # UPDATE cx_pla_bie SET valor='130,000.00', valor1='130000' WHERE conse='2165' AND codigo='A-GR-CA0002165' # ING_SIGAR # 
+23/05/2025 21:51:45 pm # 0.00 # UPDATE cx_pla_bie SET valor='2,350,000.00', valor1='2350000' WHERE conse='2166' AND codigo='A-GR-CA0002166' # ING_SIGAR # 
+23/05/2025 21:53:56 pm # 0.00 # UPDATE cx_pla_bie SET valor='885,000.00', valor1='885000' WHERE conse='2167' AND codigo='A-GR-CA0002167' # ING_SIGAR # 
+23/05/2025 21:55:42 pm # 0.00 # UPDATE cx_pla_bie SET valor='390,000.00', valor1='390000' WHERE conse='2168' AND codigo='A-GR-CA0002168' # ING_SIGAR # 
+23/05/2025 21:57:50 pm # 0.00 # UPDATE cx_pla_bie SET valor='130,000.00', valor1='130000' WHERE conse='2169' AND codigo='A-GR-CA0002169' # ING_SIGAR # 
+29/05/2025 08:27:30 am # 17,301,773.00 # UPDATE cx_pla_bie SET valor='57,672.57', valor1='57672.57' WHERE conse='1890' AND codigo='A-GR-CA0001890' # ALM_DIADI # 
+29/05/2025 08:28:15 am # 57,672.57 # UPDATE cx_pla_bie SET valor='5,767,257.65', valor1='5767257.65' WHERE conse='1890' AND codigo='A-GR-CA0001890' # ALM_DIADI # 
+29/05/2025 08:30:59 am # 0.00 # UPDATE cx_pla_bie SET valor='5,767,257.65', valor1='5767257.65' WHERE conse='2185' AND codigo='A-GR-CA0002185' # ALM_DIADI # 
+29/05/2025 08:32:38 am # 0.00 # UPDATE cx_pla_bie SET valor='5,767,257.65', valor1='5767257.65' WHERE conse='2186' AND codigo='A-GR-CA0002186' # ALM_DIADI # 
+29/05/2025 08:36:16 am # 3,967,046.00 # UPDATE cx_pla_bie SET valor='991,761.47', valor1='991761.47' WHERE conse='1892' AND codigo='A-GR-CA0001892' # ALM_DIADI # 
+29/05/2025 08:37:40 am # 0.00 # UPDATE cx_pla_bie SET valor='991,761.47', valor1='991761.47' WHERE conse='2187' AND codigo='A-GR-CA0002187' # ALM_DIADI # 
+29/05/2025 08:41:43 am # 0.00 # UPDATE cx_pla_bie SET valor='991,761.47', valor1='991761.47' WHERE conse='2188' AND codigo='A-GR-CA0002188' # ALM_DIADI # 
+29/05/2025 08:42:57 am # 0.00 # UPDATE cx_pla_bie SET valor='991,761.47', valor1='991761.47' WHERE conse='2189' AND codigo='A-GR-CA0002189' # ALM_DIADI # 
+29/05/2025 08:42:57 am # 991,761.47 # UPDATE cx_pla_bie SET valor='991,761.47', valor1='991761.47' WHERE conse='2189' AND codigo='A-GR-CA0002189' # ALM_DIADI # 
+29/05/2025 08:42:57 am # 991,761.47 # UPDATE cx_pla_bie SET valor='991,761.47', valor1='991761.47' WHERE conse='2189' AND codigo='A-GR-CA0002189' # ALM_DIADI # 
+29/05/2025 21:14:50 pm # 4,450,000.00 # UPDATE cx_pla_bie SET valor='4,450,000.00', valor1='0' WHERE conse='2131' AND codigo='A-GR-CA0002131' # ING_SIGAR # 
+29/05/2025 21:33:18 pm # 4,450,000.00 # UPDATE cx_pla_bie SET valor='2,974,000.00', valor1='2974000' WHERE conse='2118' AND codigo='A-GR-CA0002118' # ING_SIGAR # 
+29/05/2025 21:44:31 pm # 0.00 # UPDATE cx_pla_bie SET valor='639,030.00', valor1='639030' WHERE conse='2192' AND codigo='A-GR-CA0002192' # ING_SIGAR # 
+29/05/2025 21:45:50 pm # 2,974,000.00 # UPDATE cx_pla_bie SET valor='3,539,060.00', valor1='3539060' WHERE conse='2118' AND codigo='A-GR-CA0002118' # ING_SIGAR # 
+29/05/2025 21:49:08 pm # 0.00 # UPDATE cx_pla_bie SET valor='271,910.00', valor1='271910' WHERE conse='2193' AND codigo='A-GR-CA0002193' # ING_SIGAR # 
+29/05/2025 21:59:24 pm # 4,450,000.00 # UPDATE cx_pla_bie SET valor='3,539,060.00', valor1='3539060' WHERE conse='2131' AND codigo='A-GR-CA0002131' # ING_SIGAR # 
+29/05/2025 22:01:55 pm # 0.00 # UPDATE cx_pla_bie SET valor='639,030.00', valor1='639030' WHERE conse='2194' AND codigo='A-GR-CA0002194' # ING_SIGAR # 
+29/05/2025 22:04:39 pm # 0.00 # UPDATE cx_pla_bie SET valor='271,910.00', valor1='271910' WHERE conse='2195' AND codigo='A-GR-CA0002195' # ING_SIGAR # 
+09/06/2025 07:36:01 am # 3,700,000.00 # UPDATE cx_pla_bie SET valor='1,850,000.00', valor1='1850000' WHERE conse='2209' AND codigo='A-GR-CA0002209' # ALM_DIADI # 
+09/06/2025 07:38:25 am # 0.00 # UPDATE cx_pla_bie SET valor='1,850,000.00', valor1='1850000' WHERE conse='2246' AND codigo='A-GR-CA0002246' # ALM_DIADI # 
+09/06/2025 07:44:17 am # 1,125,000.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2228' AND codigo='A-GR-CA0002228' # ALM_DIADI # 
+09/06/2025 07:48:24 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2247' AND codigo='A-GR-CA0002247' # ALM_DIADI # 
+09/06/2025 07:50:16 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2248' AND codigo='A-GR-CA0002248' # ALM_DIADI # 
+09/06/2025 07:59:43 am # 12,375,000.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2229' AND codigo='A-GR-CA0002229' # ALM_DIADI # 
+09/06/2025 08:01:24 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2249' AND codigo='A-GR-CA0002249' # ALM_DIADI # 
+09/06/2025 08:03:29 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2250' AND codigo='A-GR-CA0002250' # ALM_DIADI # 
+09/06/2025 08:07:57 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2251' AND codigo='A-GR-CA0002251' # ALM_DIADI # 
+09/06/2025 08:09:41 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2252' AND codigo='A-GR-CA0002252' # ALM_DIADI # 
+09/06/2025 08:13:15 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2253' AND codigo='A-GR-CA0002253' # ALM_DIADI # 
+09/06/2025 08:15:00 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2254' AND codigo='A-GR-CA0002254' # ALM_DIADI # 
+09/06/2025 08:17:12 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2255' AND codigo='A-GR-CA0002255' # ALM_DIADI # 
+09/06/2025 08:18:57 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2256' AND codigo='A-GR-CA0002256' # ALM_DIADI # 
+09/06/2025 08:20:32 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2257' AND codigo='A-GR-CA0002257' # ALM_DIADI # 
+09/06/2025 08:22:13 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2258' AND codigo='A-GR-CA0002258' # ALM_DIADI # 
+09/06/2025 08:23:46 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2259' AND codigo='A-GR-CA0002259' # ALM_DIADI # 
+09/06/2025 08:25:58 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2260' AND codigo='A-GR-CA0002260' # ALM_DIADI # 
+09/06/2025 08:27:58 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2261' AND codigo='A-GR-CA0002261' # ALM_DIADI # 
+09/06/2025 08:29:58 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2262' AND codigo='A-GR-CA0002262' # ALM_DIADI # 
+09/06/2025 08:32:25 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2263' AND codigo='A-GR-CA0002263' # ALM_DIADI # 
+09/06/2025 08:37:13 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2264' AND codigo='A-GR-CA0002264' # ALM_DIADI # 
+09/06/2025 08:38:58 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2265' AND codigo='A-GR-CA0002265' # ALM_DIADI # 
+09/06/2025 08:40:28 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2266' AND codigo='A-GR-CA0002266' # ALM_DIADI # 
+09/06/2025 09:33:52 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2267' AND codigo='A-GR-CA0002267' # ALM_DIADI # 
+09/06/2025 09:35:37 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2268' AND codigo='A-GR-CA0002268' # ALM_DIADI # 
+09/06/2025 09:37:07 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2269' AND codigo='A-GR-CA0002269' # ALM_DIADI # 
+09/06/2025 09:38:39 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2270' AND codigo='A-GR-CA0002270' # ALM_DIADI # 
+09/06/2025 09:40:10 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2271' AND codigo='A-GR-CA0002271' # ALM_DIADI # 
+09/06/2025 09:41:11 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2272' AND codigo='A-GR-CA0002272' # ALM_DIADI # 
+09/06/2025 09:44:37 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2273' AND codigo='A-GR-CA0002273' # ALM_DIADI # 
+09/06/2025 09:45:55 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2274' AND codigo='A-GR-CA0002274' # ALM_DIADI # 
+09/06/2025 09:47:20 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2275' AND codigo='A-GR-CA0002275' # ALM_DIADI # 
+09/06/2025 09:48:55 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2276' AND codigo='A-GR-CA0002276' # ALM_DIADI # 
+09/06/2025 09:50:48 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2277' AND codigo='A-GR-CA0002277' # ALM_DIADI # 
+09/06/2025 09:52:30 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2278' AND codigo='A-GR-CA0002278' # ALM_DIADI # 
+09/06/2025 09:53:56 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2279' AND codigo='A-GR-CA0002279' # ALM_DIADI # 
+09/06/2025 09:55:28 am # 0.00 # UPDATE cx_pla_bie SET valor='375,000.00', valor1='375000' WHERE conse='2280' AND codigo='A-GR-CA0002280' # ALM_DIADI # 
+13/06/2025 08:35:59 am # 4,046,000.00 # UPDATE cx_pla_bie SET valor='2,023,000.00', valor1='2023000' WHERE conse='2289' AND codigo='A-GR-CA0002289' # ALM_DIADI # 
+13/06/2025 08:38:15 am # 0.00 # UPDATE cx_pla_bie SET valor='2,023,000.00', valor1='2023000' WHERE conse='2293' AND codigo='A-GR-CA0002293' # ALM_DIADI # 
+18/06/2025 12:33:54 pm # 14,250,000.00 # UPDATE cx_pla_bie SET valor='12,999,000.00', valor1='12999000' WHERE conse='2201' AND codigo='A-GR-CA0002201' # ING_SIGAR # 
+18/06/2025 12:38:00 pm # 0.00 # UPDATE cx_pla_bie SET valor='390,000.00', valor1='390000' WHERE conse='2305' AND codigo='A-GR-CA0002305' # ING_SIGAR # 

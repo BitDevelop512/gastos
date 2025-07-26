@@ -1,0 +1,48 @@
+﻿    $fec_log = date("d/m/Y H:i:s a");
+    $file = fopen("log_jm2022.txt", "a");
+    fwrite($file, $fec_log." # ".$pregunta." # ".PHP_EOL);
+    fclose($file);
+
+
+	<handlers>
+     		<add name="fonts" path="*.woff" verb="*" preCondition="integratedMode" type="System.Web.StaticFileHandler" />
+     		<add name="fonts2" path="*.woff2" verb="*" preCondition="integratedMode" type="System.Web.StaticFileHandler" />
+     	</handlers>
+    </system.webServer>
+
+var datos = '\"'+valor+'\",\"'+email+'\",\"'+copia+'\"';
+
+"C:\Program Files\PHP\v7.0\php.exe" -f "C:\inetpub\wwwroot\Soporte\prueba.php"
+
+
+	$valida1 = strpos($ciudad, "Á");
+	$valida1 = intval($valida1);
+	if ($valida1 == "0")
+	{
+		$valida1 = strpos($ciudad, "É");
+		$valida1 = intval($valida1);
+		if ($valida1 == "0")
+		{
+			$valida1 = strpos($ciudad, "Í");
+			$valida1 = intval($valida1);
+			if ($valida1 == "0")
+			{
+				$valida1 = strpos($ciudad, "Ó");
+				$valida1 = intval($valida1);
+				if ($valida1 == "0")
+				{
+					$valida1 = strpos($ciudad, "Ú");
+					$valida1 = intval($valida1);
+					if ($valida1 == "0")
+					{
+						$valida1 = strpos($ciudad, "Ñ");
+						$valida1 = intval($valida1);
+						if ($valida1 == "0")
+						{
+							$ciudad = utf8_encode($ciudad);
+						}
+					}
+				}
+			}
+		}
+	}

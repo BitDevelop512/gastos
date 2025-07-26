@@ -1,0 +1,107 @@
+.texto-derecho {
+    float: right !important;
+    margin-right: 15px;	
+}
+.navbar-brand {
+    float: right !important;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.well2
+{
+    min-height: 20px;
+
+    padding: 10px;
+    background-color: #66AB2C;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+
+}
+
+.multiselect {
+    --width:20em;
+    height:8em !important;		
+    border:solid 1px #c0c0c0;
+    overflow:auto;
+    font-size: 10px !important
+}
+
+.multiselect label {
+    display:block;
+}
+
+.multiselect-on {
+    color:#ffffff;
+    background-color:#000099;
+}
+.famespropios
+{
+    width: 100%;
+    height: 300px;
+}
+
+.botones_flotando{
+    position: absolute; 
+    top: 50px; 
+    right: 3%; 
+    z-index: 3;
+}
+
+.estiloGifLoad{
+    z-index: 20;
+    position: absolute; 
+    left: 40%;
+    top: 40%;
+}
+
+.ui-jqgrid tr.jqgrow td
+{
+	word-wrap: break-word; /* IE 5.5+ and CSS3 */
+    white-space: pre-wrap; /* CSS3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: normal !important;
+    overflow: hidden;
+    height: auto;
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.ui-pg-input text
+{
+	color: #00ff00;
+}
+
+.lista_sencilla
+{
+  display: block;
+  width: 280px;
+  height: 25px;
+  padding: 0px 12px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.lista_sencilla:focus
+{
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}

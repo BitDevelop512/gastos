@@ -1,0 +1,93 @@
+/* Hoja de estilos para Chat  */
+ 
+ body {
+	background: rgb(212,239,223); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(212,239,223,1) 71%, rgba(212,239,223,1) 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(71%,rgba(212,239,223,1)), color-stop(99%,rgba(212,239,223,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(212,239,223,1) 71%,rgba(212,239,223,1) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(212,239,223,1) 71%,rgba(212,239,223,1) 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(212,239,223,1) 71%,rgba(212,239,223,1) 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(212,239,223,1) 71%,rgba(212,239,223,1) 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	color: #000;
+	font-family: "Century Gothic";
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+#contenedor {
+	width: 90%;
+	margin: 1rem auto;
+	border: 1px solid #aaa;
+	background: #82E0AA;	
+	padding: 20px;
+    max-width: 600px;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-o-border-radius: 12px;
+	-webkit-border-radius: 12px;
+}
+
+h2 {
+	color: #641E16;
+	font-family: 'Mukta Vaani', sans-serif;	
+	text-align: center;
+}
+
+h3 {
+	color: #641E16;
+	font-family: 'Mukta Vaani', sans-serif;	
+	text-align: center;
+}
+
+#caja-chat {
+	width: 100%;
+	height: 300px;
+	margin: 1rem auto;
+	border: 1px solid #300;
+	padding:0 1rem;
+	background: #E8F6F3;
+	overflow: scroll; 
+	box-sizing: border-box;	
+	visibility: visible;
+}
+
+#datos-chat {
+	width: 100%;
+	padding: 1px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #300;
+	font-weight: bold;
+	font-family: 'Mukta Vaani', sans-serif;
+	font-size: small;
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+input[type='text'] {
+	width: 100%;
+	height: 40px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+input[type='submit'] {
+	width: 100%;
+	height: 40px;
+	border: 1px solid gray;
+	background: #FCF3CF;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input, textarea {
+	margin-bottom: 3px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}

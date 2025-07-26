@@ -1,0 +1,76 @@
+<?php
+session_start();
+error_reporting(0);
+require('conf.php');
+require('funciones.php');
+if (is_ajax())
+{
+    $tipo = $_POST['tipo'];
+    if ($tipo == "0")
+    {
+        $pregunta = "SELECT * FROM cx_ctr_pag ORDER BY nombre";
+    }
+    else
+    {
+        $nombre = $_POST['nombre'];
+        $nombre1 = utf8_decode($nombre);
+        $pregunta = "SELECT * FROM cx_ctr_pag WHERE nombre LIKE '%$nombre1%' ORDER BY nombre";
+    }
+    $sql = odbc_exec($conexion,$pregunta);
+    $total = odbc_num_rows($sql);
+    $salida = new stdClass();
+    if ($total>0)
+    {
+        $i = 0;
+        while ($i < $row = odbc_fetch_array($sql))
+        {
+            $tipo = trim($row["tipo"]);
+            $salida->rows[$i]['codigo'] = $row['codigo'];
+            $salida->rows[$i]['nombre'] = trim(utf8_encode($row["nombre"]));
+            $salida->rows[$i]['tipo'] = $tipo;
+            switch ($tipo) {
+                case '':
+                    $tipo1 = "NO APLICA";
+                    break;
+                case 'B':
+                    $tipo1 = "BIENES";
+                    break;
+                case 'C':
+                    $tipo1 = "COMBUSTIBLE";
+                    break;
+                case 'G':
+                    $tipo1 = "GRASAS Y LUBRICANTES";
+                    break;                   
+                case 'M':
+                    $tipo1 = "MANTENIMIENTO";
+                    break;
+                case 'T':
+                    $tipo1 = "T&Eacute;CNICO MEC&Aacute;NICA";
+                    break;
+                case 'L':
+                    $tipo1 = "LLANTAS";
+                    break;
+                case 'R':
+                    $tipo1 = "REINTEGRO";
+                    break;
+                case 'X':
+                    $tipo1 = "DESACTIVADO";
+                    break;
+                default:
+                    $tipo1 = "SIN ESPECIFICACI&Oacute;N";
+                    break;
+            }
+            $salida->rows[$i]['tipo1'] = $tipo1;
+            $i++;
+        }
+    	$salida->salida = "1";
+      	$salida->total = $total;
+    }
+    else
+    {
+    	$salida->salida = "0";
+      	$salida->total = "0";
+    }
+    echo json_encode($salida);
+}
+?>

@@ -1,0 +1,168 @@
+08/04/2024 11:58:44 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='71' AND ano='2023' # 
+08/04/2024 11:58:44 am # UPDATE cx_act_reg SET estado='E' WHERE conse='8' AND ano='2024' # 
+08/04/2024 11:58:44 am 
+08/04/2024 15:36:25 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='69' AND ano='2023' # 
+08/04/2024 15:36:25 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='9' AND ano='2024' # 
+08/04/2024 15:36:25 pm 
+08/04/2024 15:54:32 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='68' AND ano='2023' # 
+08/04/2024 15:54:32 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='10' AND ano='2024' # 
+08/04/2024 15:54:32 pm 
+08/04/2024 16:08:20 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='67' AND ano='2023' # 
+08/04/2024 16:08:20 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='11' AND ano='2024' # 
+08/04/2024 16:08:20 pm 
+08/04/2024 16:15:35 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='66' AND ano='2023' # 
+08/04/2024 16:15:35 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='12' AND ano='2024' # 
+08/04/2024 16:15:35 pm 
+08/04/2024 16:28:18 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='65' AND ano='2023' # 
+08/04/2024 16:28:18 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='13' AND ano='2024' # 
+08/04/2024 16:28:18 pm 
+08/04/2024 16:42:44 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='64' AND ano='2023' # 
+08/04/2024 16:42:44 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='14' AND ano='2024' # 
+08/04/2024 16:42:44 pm 
+08/04/2024 20:25:09 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='1' AND ano='2024' # 
+08/04/2024 20:25:09 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='15' AND ano='2024' # 
+08/04/2024 20:25:09 pm 
+10/04/2024 15:14:18 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='70' AND ano='2023' # 
+10/04/2024 15:14:18 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='16' AND ano='2024' # 
+10/04/2024 15:14:18 pm 
+18/04/2024 16:01:53 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='62' AND ano='2023' # 
+18/04/2024 16:01:53 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='17' AND ano='2024' # 
+18/04/2024 16:01:53 pm 
+18/04/2024 16:08:12 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='63' AND ano='2023' # 
+18/04/2024 16:08:12 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='18' AND ano='2024' # 
+18/04/2024 16:08:12 pm 
+30/04/2024 20:08:31 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='59' AND ano='2023' # 
+30/04/2024 20:08:31 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='4' AND ano='2024' # 
+30/04/2024 20:08:31 pm 
+04/05/2024 21:19:47 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='3' AND ano='2024' # 
+04/05/2024 21:19:47 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='19' AND ano='2024' # 
+04/05/2024 21:19:47 pm 
+09/05/2024 14:57:17 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='2' AND ano='2024' # 
+09/05/2024 14:57:17 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='20' AND ano='2024' # 
+09/05/2024 14:57:17 pm 
+19/06/2024 15:17:57 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='5' AND ano='2024' # 
+19/06/2024 15:17:57 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='24' AND ano='2024' # 
+19/06/2024 15:17:57 pm 
+19/06/2024 15:45:43 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='9' AND ano='2024' # 
+19/06/2024 15:45:43 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='23' AND ano='2024' # 
+19/06/2024 15:45:43 pm 
+20/06/2024 14:50:08 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='10' AND ano='2024' # 
+20/06/2024 14:50:08 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='22' AND ano='2024' # 
+20/06/2024 14:50:08 pm 
+20/06/2024 16:53:56 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='11' AND ano='2024' # 
+20/06/2024 16:53:56 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='21' AND ano='2024' # 
+20/06/2024 16:53:56 pm 
+28/06/2024 20:21:56 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='74' AND ano='2022' # 
+28/06/2024 20:21:56 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='1' AND ano='2023' # 
+28/06/2024 20:21:56 pm 
+28/06/2024 20:23:15 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='75' AND ano='2022' # 
+28/06/2024 20:23:15 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='2' AND ano='2023' # 
+28/06/2024 20:23:15 pm 
+16/07/2024 11:10:07 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='6' AND ano='2024' # 
+16/07/2024 11:10:07 am # UPDATE cx_act_reg SET estado='E' WHERE conse='26' AND ano='2024' # 
+16/07/2024 11:10:07 am 
+16/07/2024 11:21:24 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='7' AND ano='2024' # 
+16/07/2024 11:21:24 am # UPDATE cx_act_reg SET estado='E' WHERE conse='27' AND ano='2024' # 
+16/07/2024 11:21:24 am 
+18/07/2024 09:58:52 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='14' AND ano='2024' # 
+18/07/2024 09:58:52 am # UPDATE cx_act_reg SET estado='E' WHERE conse='25' AND ano='2024' # 
+18/07/2024 09:58:52 am 
+06/08/2024 16:52:27 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='8' AND ano='2024' # 
+06/08/2024 16:52:27 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='28' AND ano='2024' # 
+06/08/2024 16:52:27 pm 
+06/08/2024 17:12:20 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='4' AND ano='2024' # 
+06/08/2024 17:12:20 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='29' AND ano='2024' # 
+06/08/2024 17:12:20 pm 
+08/08/2024 10:46:26 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='14' AND ano='2024' # 
+08/08/2024 10:46:26 am # UPDATE cx_act_reg SET estado='E' WHERE conse='25' AND ano='2024' # 
+08/08/2024 10:46:26 am 
+26/08/2024 12:08:08 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='12' AND ano='2024' # 
+26/08/2024 12:08:08 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='31' AND ano='2024' # 
+26/08/2024 12:08:08 pm 
+26/08/2024 12:10:36 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='13' AND ano='2024' # 
+26/08/2024 12:10:36 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='30' AND ano='2024' # 
+26/08/2024 12:10:36 pm 
+06/09/2024 15:43:10 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='19' AND ano='2024' # 
+06/09/2024 15:43:10 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='33' AND ano='2024' # 
+06/09/2024 15:43:10 pm 
+07/09/2024 17:18:17 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='22' AND ano='2024' # 
+07/09/2024 17:18:17 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='32' AND ano='2024' # 
+07/09/2024 17:18:17 pm 
+12/09/2024 09:29:28 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='17' AND ano='2024' # 
+12/09/2024 09:29:28 am # UPDATE cx_act_reg SET estado='E' WHERE conse='35' AND ano='2024' # 
+12/09/2024 09:29:28 am 
+12/09/2024 09:48:16 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='16' AND ano='2024' # 
+12/09/2024 09:48:16 am # UPDATE cx_act_reg SET estado='E' WHERE conse='34' AND ano='2024' # 
+12/09/2024 09:48:16 am 
+12/09/2024 09:51:25 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='18' AND ano='2024' # 
+12/09/2024 09:51:25 am # UPDATE cx_act_reg SET estado='E' WHERE conse='36' AND ano='2024' # 
+12/09/2024 09:51:25 am 
+23/10/2024 09:05:49 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='23' AND ano='2024' # 
+23/10/2024 09:05:49 am # UPDATE cx_act_reg SET estado='E' WHERE conse='38' AND ano='2024' # 
+23/10/2024 09:05:49 am 
+23/10/2024 14:51:50 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='24' AND ano='2024' # 
+23/10/2024 14:51:50 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='37' AND ano='2024' # 
+23/10/2024 14:51:50 pm 
+04/12/2024 11:32:05 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='29' AND ano='2024' # 
+04/12/2024 11:32:05 am # UPDATE cx_act_reg SET estado='E' WHERE conse='39' AND ano='2024' # 
+04/12/2024 11:32:05 am 
+19/12/2024 16:13:42 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='27' AND ano='2024' # 
+19/12/2024 16:13:42 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='42' AND ano='2024' # 
+19/12/2024 16:13:42 pm 
+19/12/2024 16:19:12 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='26' AND ano='2024' # 
+19/12/2024 16:19:12 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='41' AND ano='2024' # 
+19/12/2024 16:19:12 pm 
+19/12/2024 16:23:48 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='28' AND ano='2024' # 
+19/12/2024 16:23:48 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='44' AND ano='2024' # 
+19/12/2024 16:23:48 pm 
+19/12/2024 16:27:46 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='30' AND ano='2024' # 
+19/12/2024 16:27:46 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='43' AND ano='2024' # 
+19/12/2024 16:27:46 pm 
+23/12/2024 11:16:40 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='31' AND ano='2024' # 
+23/12/2024 11:16:40 am # UPDATE cx_act_reg SET estado='E' WHERE conse='40' AND ano='2024' # 
+23/12/2024 11:16:40 am 
+14/01/2025 08:23:48 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='42' AND ano='2024' # 
+14/01/2025 08:23:48 am # UPDATE cx_act_reg SET estado='E' WHERE conse='45' AND ano='2024' # 
+14/01/2025 08:23:48 am 
+27/01/2025 16:28:15 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='32' AND ano='2024' # 
+27/01/2025 16:28:15 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='1' AND ano='2025' # 
+27/01/2025 16:28:15 pm 
+13/02/2025 14:10:41 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='35' AND ano='2024' # 
+13/02/2025 14:10:41 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='2' AND ano='2025' # 
+13/02/2025 14:10:41 pm 
+13/02/2025 14:41:46 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='34' AND ano='2024' # 
+13/02/2025 14:41:46 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='3' AND ano='2025' # 
+13/02/2025 14:41:46 pm 
+03/03/2025 10:42:35 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='38' AND ano='2024' # 
+03/03/2025 10:42:35 am # UPDATE cx_act_reg SET estado='E' WHERE conse='4' AND ano='2025' # 
+03/03/2025 10:42:35 am 
+19/03/2025 15:13:36 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='37' AND ano='2024' # 
+19/03/2025 15:13:36 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='5' AND ano='2025' # 
+19/03/2025 15:13:36 pm 
+27/03/2025 09:50:08 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='40' AND ano='2024' # 
+27/03/2025 09:50:08 am # UPDATE cx_act_reg SET estado='E' WHERE conse='7' AND ano='2025' # 
+27/03/2025 09:50:08 am 
+27/03/2025 09:58:30 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='39' AND ano='2024' # 
+27/03/2025 09:58:30 am # UPDATE cx_act_reg SET estado='E' WHERE conse='6' AND ano='2025' # 
+27/03/2025 09:58:30 am 
+29/04/2025 10:52:42 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='4' AND ano='2025' # 
+29/04/2025 10:52:42 am # UPDATE cx_act_reg SET estado='E' WHERE conse='8' AND ano='2025' # 
+29/04/2025 10:52:42 am 
+29/05/2025 09:41:44 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='3' AND ano='2025' # 
+29/05/2025 09:41:44 am # UPDATE cx_act_reg SET estado='E' WHERE conse='9' AND ano='2025' # 
+29/05/2025 09:41:44 am 
+19/06/2025 15:11:07 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='5' AND ano='2025' # 
+19/06/2025 15:11:07 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='10' AND ano='2025' # 
+19/06/2025 15:11:07 pm 
+19/06/2025 15:13:11 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='7' AND ano='2025' # 
+19/06/2025 15:13:11 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='11' AND ano='2025' # 
+19/06/2025 15:13:11 pm 
+26/06/2025 08:47:55 am # UPDATE cx_reg_rec SET estado='E' WHERE conse='6' AND ano='2025' # 
+26/06/2025 08:47:55 am # UPDATE cx_act_reg SET estado='E' WHERE conse='12' AND ano='2025' # 
+26/06/2025 08:47:55 am 
+14/07/2025 16:43:46 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='9' AND ano='2025' # 
+14/07/2025 16:43:46 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='15' AND ano='2025' # 
+14/07/2025 16:43:46 pm 
+15/07/2025 14:31:10 pm # UPDATE cx_reg_rec SET estado='E' WHERE conse='8' AND ano='2025' # 
+15/07/2025 14:31:10 pm # UPDATE cx_act_reg SET estado='E' WHERE conse='14' AND ano='2025' # 
+15/07/2025 14:31:10 pm 

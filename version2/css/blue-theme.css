@@ -1,0 +1,50 @@
+.flstBubble-strct {
+	position: absolute;
+    display: none;
+    height: auto;  
+}      
+.flstBubble-strct .flst-msg{
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+.bbl1, .bbl2, .flstBubble-strct .flst-msg {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	position: absolute;
+  behavior: url(css/PIE.htc);
+}
+.flstBubble-strct .flst-msg, .bbl1, .bbl2 {
+	padding: 10px 15px;
+	border: 5px solid white;
+	background: #00baff;
+	color: #eaf9ff;
+	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.75);
+   behavior: url(css/PIE.htc);
+}
+.bbl1 img {
+	width: 5px;
+	height: 5px;
+}
+.bbl1, .bbl2 {
+	width: 10px;
+	height: 10px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	padding: 0;
+   behavior: url(css/PIE.htc);
+}
+.bbl1 {
+	top: 90px;
+	border: 2px solid white;
+}
+.bbl2 {
+	width: 20px;
+	height: 20px;
+	top: 55px;
+	border: 3px solid white;
+}

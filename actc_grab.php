@@ -1,0 +1,131 @@
+<?php
+session_start();
+error_reporting(0);
+require('conf.php');
+require('funciones.php');
+include('permisos.php');
+if (is_ajax())
+{
+	$ano = date('Y');
+	$tipo = $_POST['tipo'];
+	$conse = $_POST['conse'];
+	$registro = $_POST['registro'];
+	$num_registro = explode("-",$registro);
+	$registro1 = trim($num_registro[0]);
+	$ano1 = trim($num_registro[1]);
+	$valor = $_POST['valor'];
+	$directiva = $_POST['directiva'];
+	$salario = $_POST['salario'];
+	$firmas = $_POST['firmas'];
+	$firmas = strtr(trim($firmas), $sustituye);
+	$firmas = iconv("UTF-8", "ISO-8859-1", $firmas);
+	$acta = trim($_POST['acta']);
+	$fec_act = $_POST['fec_act'];
+	$constancia = $_POST['constancia'];
+	$folio = $_POST['folio'];
+	$sintesis = $_POST['sintesis'];
+	$sintesis = strtr(trim($sintesis), $sustituye);
+	$sintesis = iconv("UTF-8", "ISO-8859-1", $sintesis);
+	$informacion = $_POST['informacion'];
+	$informacion = strtr(trim($informacion), $sustituye);
+	$informacion = iconv("UTF-8", "ISO-8859-1", $informacion);
+	$neutralizados = $_POST['neutralizados'];
+	$neutralizados = strtr(trim($neutralizados), $sustituye);
+	$neutralizados = iconv("UTF-8", "ISO-8859-1", $neutralizados);
+	$material = $_POST['material'];
+	$material = strtr(trim($material), $sustituye);
+	$material = iconv("UTF-8", "ISO-8859-1", $material);
+	$anticipo = $_POST['anticipo'];
+	$totali = $_POST['totali'];
+	$totaln = $_POST['totaln'];
+	$totalm = $_POST['totalm'];
+	$totala = $_POST['totala'];
+	$impacto = $_POST['impacto'];
+	$impacto = strtr(trim($impacto), $sustituye);
+	$impacto = iconv("UTF-8", "ISO-8859-1", $impacto);
+	$concepto = $_POST['concepto'];
+	$concepto = strtr(trim($concepto), $sustituye);
+	$concepto = iconv("UTF-8", "ISO-8859-1", $concepto);
+	$valoracion = $_POST['valoracion'];
+	$valoracion = strtr(trim($valoracion), $sustituye);
+	$valoracion = iconv("UTF-8", "ISO-8859-1", $valoracion);
+	$aprobacion = $_POST['aprobacion'];
+	$aprobacion = strtr(trim($aprobacion), $sustituye);
+	$aprobacion = iconv("UTF-8", "ISO-8859-1", $aprobacion);
+	$observaciones = $_POST['observaciones'];
+	$observaciones = strtr(trim($observaciones), $sustituye);
+	$observaciones = iconv("UTF-8", "ISO-8859-1", $observaciones);
+	$elaboro = trim($_POST['elaboro']);
+	$elaboro = iconv("UTF-8", "ISO-8859-1", $elaboro);
+	$cargo = trim($_POST['cargo']);
+	$cargo = iconv("UTF-8", "ISO-8859-1", $cargo);
+	$reviso = trim($_POST['reviso']);
+	$reviso = iconv("UTF-8", "ISO-8859-1", $reviso);
+	$cargo1 = trim($_POST['cargo1']);
+	$cargo1 = iconv("UTF-8", "ISO-8859-1", $cargo1);
+	$usuario = $_POST['usuario'];
+	$unidad = $_POST['unidad'];
+	$ciudad = $_POST['ciudad'];
+	$ciudad = iconv("UTF-8", "ISO-8859-1", $ciudad);
+	// Se validan datos en blanco
+	if (trim($usuario) == "")
+	{
+		$conse = 0;
+	}
+	else
+	{
+		if ($tipo == "1")
+		{
+			// Se consulta el maximo de registros por año
+			$cur = odbc_exec($conexion,"SELECT isnull(max(conse),0)+1 AS conse FROM cx_act_cen WHERE ano='$ano'");
+			$consecu = odbc_result($cur,1);
+			$query = "INSERT INTO cx_act_cen (conse, usuario, unidad, estado, ano, registro, ano1, valor, directiva, firmas, sintesis, informacion, totali, neutralizados, totaln, material, totalm, totala, concepto, observaciones, elaboro, acta, constancia, folio, valoracion, reviso, salario, fec_act, impacto, aprobacion, cargo, cargo1, anticipo) VALUES ('$consecu', '$usuario', '$unidad', '', '$ano', '$registro1', '$ano1', '$valor', '$directiva', '$firmas', '$sintesis', '$informacion', '$totali', '$neutralizados', '$totaln', '$material', '$totalm', '$totala', '$concepto', '$observaciones', '$elaboro', '$acta', '$constancia', '$folio', '$valoracion', '$reviso', '$salario', '$fec_act', '$impacto', '$aprobacion', '$cargo', '$cargo1', '$anticipo')";
+			$sql = odbc_exec($conexion, $query);
+			$query1 = "SELECT conse FROM cx_act_cen WHERE conse='$consecu' AND ano='$ano'";
+			$cur1 = odbc_exec($conexion, $query1);
+			$conse = odbc_result($cur1,1);
+		}
+		else
+		{
+			$query = "UPDATE cx_act_cen SET firmas='$firmas', sintesis='$sintesis', informacion='$informacion', totali='$totali', neutralizados='$neutralizados', totaln='$totaln', material='$material', totalm='$totalm', totala='$totala', concepto='$concepto', observaciones='$observaciones', elaboro='$elaboro', acta='$acta', constancia='$constancia', folio='$folio', valoracion='$valoracion', reviso='$reviso', fec_act='$fec_act', impacto='$impacto', aprobacion='$aprobacion', cargo='$cargo', cargo1='$cargo1', anticipo='$anticipo' WHERE conse='$conse' AND registro='$registro1' AND ano1='$ano1'";
+			$sql = odbc_exec($conexion, $query);
+			$query1 = "SELECT ano FROM cx_act_cen WHERE conse='$conse' AND registro='$registro1' AND ano1='$ano1'";
+			$cur1 = odbc_exec($conexion, $query1);
+			$ano = odbc_result($cur1,1);
+		}
+		// Se graba log
+		$fec_log = date("d/m/Y H:i:s a");
+		$file = fopen("log_central.txt", "a");
+		fwrite($file, $fec_log." # ".$query." # ".$usu_usuario." # ".PHP_EOL);
+		fclose($file);
+	}
+	// Ajuste de valores en 0 y blancos
+	$query0 = "UPDATE cx_act_cen SET anticipo='0.00' WHERE anticipo='NaN'";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totali='0.00' WHERE totali='NaN'";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totaln='0.00' WHERE totaln='NaN'";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totalm='0.00' WHERE totalm='NaN'";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totala='0.00' WHERE totala='NaN'";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET anticipo='0.00' WHERE anticipo=''";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totali='0.00' WHERE totali=''";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totaln='0.00' WHERE totaln=''";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totalm='0.00' WHERE totalm=''";
+	$sql0 = odbc_exec($conexion, $query0);
+	$query0 = "UPDATE cx_act_cen SET totala='0.00' WHERE totala=''";
+	$sql0 = odbc_exec($conexion, $query0);
+	// Salida
+	$salida = new stdClass();
+	$salida->salida = $conse;
+	$salida->salida1 = $ano;
+	echo json_encode($salida);
+}
+// 01/08/2024 - Ajuste inclusion cargo reviso
+// 28/01/2025 - Ajuste inclusion campo anticipo
+?>

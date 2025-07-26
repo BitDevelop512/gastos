@@ -1,0 +1,16 @@
+17/04/2024 19:15:05 pm # UPDATE cx_ctr_pag SET nombre='Partida llantas', tipo='L' WHERE codigo='40' # ADM_SIGAR # 
+28/05/2024 11:07:24 am # INSERT INTO cx_ctr_pag (codigo, nombre, tipo) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_pag), 'Elementos para el desarrollo e innovación de equipos para inteligencia', '') # ING_SIGAR # 
+21/08/2024 09:39:39 am # INSERT INTO cx_ctr_pag (codigo, nombre, tipo) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_pag), 'Gastos para la preparación del personal de inteligencia', '') # ADM_SIGAR # 
+21/08/2024 11:26:55 am # UPDATE cx_ctr_pag SET nombre='Gastos para la preparación del personal de Inteligencia', tipo='' WHERE codigo='55' # ADM_SIGAR # 
+31/10/2024 17:47:46 pm # UPDATE cx_ctr_pag SET nombre='Gastos Transferencia de Conocimiento', tipo='' WHERE codigo='51' # ING_SIGAR # 
+18/11/2024 12:06:54 pm # INSERT INTO cx_ctr_pag (codigo, nombre, tipo) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_pag), 'Gastos de protección', '') # ADM_SIGAR # 
+17/12/2024 14:57:33 pm # INSERT INTO cx_ctr_pag (codigo, nombre, tipo) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_pag), 'Poliza Todo Riesgo', 'X') # ING_SIGAR # 
+17/12/2024 14:57:45 pm # INSERT INTO cx_ctr_pag (codigo, nombre, tipo) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_pag), 'SOAT', 'X') # ING_SIGAR # 
+24/01/2025 16:50:45 pm # UPDATE cx_ctr_pag SET nombre='Polizas (Todo Riesgo - SOAT)', tipo='X', gasto='1' WHERE codigo='19' # ING_SIGAR # 
+24/01/2025 16:51:01 pm # UPDATE cx_ctr_pag SET nombre='SOAT', tipo='X', gasto='1' WHERE codigo='58' # ING_SIGAR # 
+27/01/2025 14:18:45 pm # UPDATE cx_ctr_pag SET nombre='Polizas (Todo Riesgo - SOAT)', tipo='', gasto='1' WHERE codigo='19' # ING_SIGAR # 
+27/01/2025 14:19:18 pm # UPDATE cx_ctr_pag SET nombre='SOAT', tipo='', gasto='1' WHERE codigo='58' # ING_SIGAR # 
+06/04/2025 22:15:51 pm # INSERT INTO cx_ctr_rec (codigo, nombre, estado) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_rec), 'CATATUMBO', '') # ING_SIGAR # 
+06/04/2025 22:16:14 pm # INSERT INTO cx_ctr_rec (codigo, nombre, estado) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_rec), 'CCOES', '') # ING_SIGAR # 
+06/04/2025 22:16:23 pm # INSERT INTO cx_ctr_rec (codigo, nombre, estado) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_rec), 'N/A', '') # ING_SIGAR # 
+06/04/2025 22:16:57 pm # UPDATE cx_ctr_rec SET nombre='N/A', estado='X' WHERE codigo='3' # ING_SIGAR # 

@@ -1,0 +1,1106 @@
+19/03/2024 10:47:14 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('798', 'SPR_DIADI', '2', '2023/08/29', 'A', 'APROBADO', '23', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+19/03/2024 10:47:14 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='23' AND ano='2023' AND codigo='0CC01' # SPR_DIADI # 
+ 
+19/03/2024 10:59:26 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('799', 'SPR_DIADI', '2', '2023/09/05', 'A', 'EL 17 DE ENERO DE 2024 EL CAIMI DIO RESPUESTA A LAS OBSERVACIONES MEDIANTE DOCUMENTO CON RADICADO No. 2023-530-0021253-2', '25', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+19/03/2024 10:59:26 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='25' AND ano='2023' AND codigo='A0A65' # SPR_DIADI # 
+ 
+19/03/2024 11:14:36 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('800', 'SPR_DIADI', '2', '2023/11/10', 'A', 'Revisión', '52', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+19/03/2024 11:14:36 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='52' AND ano='2023' AND codigo='9F347' # SPR_DIADI # 
+ 
+19/03/2024 15:17:31 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('801', 'SPR_DIADI', '2', '2023/09/05', 'A', 'Aprobado', '26', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+19/03/2024 15:17:31 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='26' AND ano='2023' AND codigo='5D035' # SPR_DIADI # 
+ 
+04/04/2024 23:10:17 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('802', 'SGA_BR28', '262', '2024/01/09', 'A', 'POR INCONVENIENTES EN LA PLATAFORMA SIGAR SE REENVÍA NUEVAMENTE LA DOCUMENTACIÓN SOPORTE DE LA BR28 Y DEL BIAHE28 EN ARAS DE SOLICITAR AL COMANDO DE LA OCTAVA DIVISÓN EJERCITO PARA CONTINUAR EL PROCESO ANTE CEDE2 PARA EL PAGO DE RECOMPENA', '1', '2024', 'BR28', 'DIV8', 'SGA_DIV8', '0', '') # SGA_BR28 # 
+04/04/2024 23:10:17 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV8' WHERE conse='1' AND ano='2024' AND codigo='D2BD5' # SGA_BR28 # 
+ 
+05/04/2024 18:56:22 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('803', 'SGA_DIV8', '248', '2024/02/08', 'Y', 'ANEXAR EXPEDIENTE EN FORMATO ZIP, YA QUE POR CONTIGENCIA DEL SIGAR, NO SE ENCUENTRA CARGADO', '1', '2024', 'DIV8', 'CEDE2', 'SGA_BIAHE', '0', '') # SGA_DIV8 # 
+05/04/2024 18:56:22 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='1' AND ano='2024' AND codigo='D2BD5' # SGA_DIV8 # 
+ 
+05/04/2024 20:41:19 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('804', 'SGA_BR28', '262', '2024/03/10', 'A', 'SE ENVÍA LA REVISIÓN DEL PRESENTE PAGO DE INFORMACIÓN AL COMANDO SUPERIOR, EN ARAS DE CONTAR CON SU VALIOSO APOYO PARA CONTINUAR CON EL TRAMITE Y PROCEDIMIENTO ANTE EL DEPARTAMETO DE INTELIGNECIA Y CONTRAINTELIGENCIA (CEDE2).', '3', '2024', 'BR28', 'DIV8', 'SGA_DIV8', '2024628006560393', '2024/03/17') # SGA_BR28 # 
+05/04/2024 20:41:19 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV8' WHERE conse='3' AND ano='2024' AND codigo='83806' # SGA_BR28 # 
+ 
+05/04/2024 21:44:02 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('805', 'SGA_BR28', '262', '2024/01/09', 'A', 'SE ENVIA NUEVAMENTE ESTE EXPEDIENTE, DEBIDO A LOS INCOVENIENTES PRESENTADO EN SIGAR.
+ADEMÁS SE ANEXA EL OFICIO DE LAS PRUEBAS DEFINITIVAS DE LABORATORIO, EMITIDO POR LA AUTORIDAD COMPETENTE, CON EL FIN QUE SE TENGA EN CUENTA PARA LA EVALAUACION DEL EXPEDIENTE.', '1', '2024', 'BR28', 'DIV8', 'SGA_DIV8', '0', '') # SGA_BR28 # 
+05/04/2024 21:44:02 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV8' WHERE conse='1' AND ano='2024' AND codigo='D2BD5' # SGA_BR28 # 
+ 
+09/04/2024 17:33:34 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('806', 'SAR_BRIMI1', '18', '2024/03/15', 'A', 'se subsanaron las observaciones que solicito el comité regional', '70', '2023', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+09/04/2024 17:33:34 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='70' AND ano='2023' AND codigo='D0342' # SAR_BRIMI1 # 
+ 
+18/04/2024 15:51:53 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('807', 'SAR_BRIMI1', '18', '2023/12/16', 'A', 'Se envía para revisión del CAIMI', '63', '2023', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+18/04/2024 15:51:53 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='63' AND ano='2023' AND codigo='F4559' # SAR_BRIMI1 # 
+ 
+18/04/2024 15:52:22 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('808', 'SAR_BRIMI1', '18', '2023/12/09', 'A', 'Se envía para revisión del CAIMI', '62', '2023', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+18/04/2024 15:52:22 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='62' AND ano='2023' AND codigo='6F670' # SAR_BRIMI1 # 
+ 
+27/04/2024 12:13:42 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('809', 'SAR_BRIMI1', '18', '2024/04/17', 'Y', 'DEVUELTO POR LISTA DE VERIFICACION (PARA PODER DEVOLVERLO REDACTO LO ANTERIOR)', '8', '2024', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+27/04/2024 12:13:42 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='8' AND ano='2024' AND codigo='9CD0A' # SAR_BRIMI1 # 
+ 
+30/04/2024 16:59:29 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('810', 'SPR_DIADI', '2', '2024/01/18', 'A', 'Aprobado', '54', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+30/04/2024 16:59:29 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='54' AND ano='2023' AND codigo='09793' # SPR_DIADI # 
+ 
+30/04/2024 20:05:11 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('811', 'SGA_DIV2', '87', '2023/10/08', 'A', 'Las observaciones Fueron subsanadas segun oficio N°20245120007600633 enviado al CEDE2', '59', '2023', 'DIV2', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV2 # 
+30/04/2024 20:05:11 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='59' AND ano='2023' AND codigo='F8D8D' # SGA_DIV2 # 
+ 
+06/05/2024 07:04:39 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('812', 'SPR_DIADI', '2', '2024/02/21', 'A', 'Revision', '66', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+06/05/2024 07:04:39 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='66' AND ano='2023' AND codigo='6F24B' # SPR_DIADI # 
+ 
+08/05/2024 11:56:13 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('813', 'SPR_DIADI', '2', '2024/02/26', 'A', 'Revision.', '64', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 11:56:13 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='64' AND ano='2023' AND codigo='1A19D' # SPR_DIADI # 
+ 
+08/05/2024 14:35:28 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('814', 'SPR_DIADI', '2', '2024/03/27', 'A', 'PENDIENTE PRESENTAR A CCR', '71', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 14:35:28 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='71' AND ano='2023' AND codigo='96304' # SPR_DIADI # 
+ 
+08/05/2024 14:37:54 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('815', 'SPR_DIADI', '2', '2024/03/26', 'A', 'PEND PRESENTAR CCR', '70', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 14:37:54 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='70' AND ano='2023' AND codigo='D0342' # SPR_DIADI # 
+ 
+08/05/2024 14:40:26 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('816', 'SPR_DIADI', '2', '2024/03/07', 'A', 'PEND PRESENTAR CCR', '69', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 14:40:26 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='69' AND ano='2023' AND codigo='B5288' # SPR_DIADI # 
+ 
+08/05/2024 14:41:41 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('817', 'SPR_DIADI', '2', '2024/03/01', 'A', 'PEND REVISION', '68', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 14:41:41 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='68' AND ano='2023' AND codigo='52814' # SPR_DIADI # 
+ 
+08/05/2024 14:43:02 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('818', 'SPR_DIADI', '2', '2024/03/01', 'A', 'EN REVISION', '67', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 14:43:02 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='67' AND ano='2023' AND codigo='943EF' # SPR_DIADI # 
+ 
+08/05/2024 14:45:24 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('819', 'SPR_DIADI', '2', '2024/02/26', 'A', 'EN REVISION', '65', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 14:45:24 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='65' AND ano='2023' AND codigo='C41E9' # SPR_DIADI # 
+ 
+08/05/2024 14:48:11 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('820', 'SPR_DIADI', '2', '2024/02/26', 'A', 'CON OBSERVACIONES', '63', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 14:48:11 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='63' AND ano='2023' AND codigo='F4559' # SPR_DIADI # 
+ 
+08/05/2024 15:33:57 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('821', 'SPR_DIADI', '2', '2024/01/22', 'A', 'EVALUADO', '59', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:33:57 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='59' AND ano='2023' AND codigo='F8D8D' # SPR_DIADI # 
+ 
+08/05/2024 15:36:03 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('822', 'SPR_DIADI', '2', '2024/02/19', 'A', 'OBSERVAC.', '62', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:36:03 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='62' AND ano='2023' AND codigo='6F670' # SPR_DIADI # 
+ 
+08/05/2024 15:38:05 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('823', 'SPR_DIADI', '2', '2024/01/23', 'A', 'PEND CCR', '58', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:38:05 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='58' AND ano='2023' AND codigo='28109' # SPR_DIADI # 
+ 
+08/05/2024 15:40:01 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('824', 'SPR_DIADI', '2', '2024/01/22', 'A', 'PEND CCR', '57', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:40:01 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='57' AND ano='2023' AND codigo='117E7' # SPR_DIADI # 
+ 
+08/05/2024 15:41:00 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('825', 'SPR_DIADI', '2', '2024/01/22', 'A', 'PEND CCR', '56', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:41:00 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='56' AND ano='2023' AND codigo='FFF50' # SPR_DIADI # 
+ 
+08/05/2024 15:43:08 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('826', 'SPR_DIADI', '2', '2024/01/13', 'A', 'EVALUADO', '55', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:43:08 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='55' AND ano='2023' AND codigo='1A9B0' # SPR_DIADI # 
+ 
+08/05/2024 15:45:44 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('827', 'SPR_DIADI', '2', '2024/01/13', 'A', 'EVALUADO', '54', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:45:44 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='54' AND ano='2023' AND codigo='09793' # SPR_DIADI # 
+ 
+08/05/2024 15:46:34 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('828', 'SPR_DIADI', '2', '2023/12/21', 'A', 'EVALUADO', '53', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:46:34 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='53' AND ano='2023' AND codigo='C687F' # SPR_DIADI # 
+ 
+08/05/2024 15:46:57 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('829', 'SPR_DIADI', '2', '2023/12/21', 'A', 'EVALUADO', '49', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:46:57 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='49' AND ano='2023' AND codigo='2923B' # SPR_DIADI # 
+ 
+08/05/2024 15:47:41 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('830', 'SPR_DIADI', '2', '2023/12/01', 'A', 'PEND CCR', '48', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:47:41 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='48' AND ano='2023' AND codigo='DC93A' # SPR_DIADI # 
+ 
+08/05/2024 15:48:11 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('831', 'SPR_DIADI', '2', '2023/12/01', 'A', 'EVALUADO', '46', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:48:11 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='46' AND ano='2023' AND codigo='A53EC' # SPR_DIADI # 
+ 
+08/05/2024 15:50:06 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('832', 'SPR_DIADI', '2', '2023/10/10', 'A', 'EVALUADO', '45', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:50:06 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='45' AND ano='2023' AND codigo='2781C' # SPR_DIADI # 
+ 
+08/05/2024 15:50:29 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('833', 'SPR_DIADI', '2', '2023/11/22', 'A', 'EVALUADO', '44', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:50:29 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='44' AND ano='2023' AND codigo='9E294' # SPR_DIADI # 
+ 
+08/05/2024 15:50:53 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('834', 'SPR_DIADI', '2', '2023/11/10', 'A', 'EVALUADO', '43', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:50:53 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='43' AND ano='2023' AND codigo='30EEA' # SPR_DIADI # 
+ 
+08/05/2024 15:52:02 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('835', 'SPR_DIADI', '2', '2023/10/18', 'A', 'NO PORCEDIO ANTE EL CCR Y SE REALIZO LA DEVOLUCION DEL TRAMITE A LA UNIDAD FIN ACLARE OBSERVACIONES EVIDENCIADAS DURANTE EL ANALISIS EFECTUADO EN REUNION DEL COMITE.', '34', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:52:02 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='34' AND ano='2023' AND codigo='4BEC8' # SPR_DIADI # 
+ 
+08/05/2024 15:54:17 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('836', 'SPR_DIADI', '2', '2023/08/29', 'A', 'NO PROCEDIO ANTE EL CCR Y SE REALIZÓ LA DEVOLUCION DE TRAMITE A LA UNIDAD, MANIFESTANDO LAS INCONSISTENIAS EVIDENCIADA EN EL ANALISIS EN REUNION DEL COMITÉ.', '27', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:54:17 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='27' AND ano='2023' AND codigo='0896B' # SPR_DIADI # 
+ 
+08/05/2024 15:55:56 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('837', 'SPR_DIADI', '2', '2022/01/26', 'A', 'EVALUADO.', '46', '2022', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/05/2024 15:55:56 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='46' AND ano='2022' AND codigo='17F47' # SPR_DIADI # 
+ 
+08/05/2024 17:03:24 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('838', 'SGA_BR30', '102', '2024/01/29', 'A', 'NO SE REALIZAN OBSERVACIONES', '2', '2024', 'BR30', 'DIV2', 'SGA_DIV2', '0', '') # SGA_BR30 # 
+08/05/2024 17:03:24 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV2' WHERE conse='2' AND ano='2024' AND codigo='5B25D' # SGA_BR30 # 
+ 
+08/05/2024 17:09:19 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('839', 'SGA_DIV2', '87', '2024/03/09', 'A', 'Se da tramite a la unidad superior para su tramite', '2', '2024', 'DIV2', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV2 # 
+08/05/2024 17:09:19 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='2' AND ano='2024' AND codigo='5B25D' # SGA_DIV2 # 
+ 
+11/05/2024 09:13:40 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('840', 'SAR_BRIMI1', '18', '2024/05/07', 'A', 'Se cumplió con las observaciones', '9', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+11/05/2024 09:13:40 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='9' AND ano='2024' AND codigo='1E6F2' # SAR_BRIMI1 # 
+ 
+11/05/2024 09:16:07 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('841', 'SAR_BRIMI1', '18', '2024/05/03', 'A', 'Se cumplió con las observaciones', '10', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+11/05/2024 09:16:07 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='10' AND ano='2024' AND codigo='61008' # SAR_BRIMI1 # 
+ 
+13/05/2024 13:48:54 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('842', 'SPR_DIADI', '2', '2024/03/01', 'A', 'OBSERVACIONES', '68', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+13/05/2024 13:48:54 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='68' AND ano='2023' AND codigo='52814' # SPR_DIADI # 
+ 
+20/05/2024 10:26:54 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('843', 'SAR_BRIMI2', '28', '2024/05/20', 'A', 'Se envía expediente para revisión y aprobación de acuerdo a protocolos y normatividad vigente.', '7', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+20/05/2024 10:26:54 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='7' AND ano='2024' AND codigo='2B1ED' # SAR_BRIMI2 # 
+ 
+20/05/2024 14:31:31 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('844', 'SAR_BRIMI2', '28', '2024/05/20', 'Y', 'Se requiere argumentar con datos de interés la información plasmada en la Síntesis de la Información y el Concepto: Resumen Resultado Operacional / Utilidad / Empleo, así mismo colocar los datos faltantes de:
+
+- Fecha de la prórroga
+- Estructura', '6', '2024', 'BRIMI2', 'CAIMI', 'SAR_BAIMI3', '0', '') # SAR_BRIMI2 # 
+20/05/2024 14:31:31 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='6' AND ano='2024' AND codigo='BB445' # SAR_BRIMI2 # 
+ 
+21/05/2024 09:37:38 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('845', 'SAR_BRIMI1', '18', '2024/05/08', 'A', 'Expediente cumple con los requisitos de la Directiva Ministerial Permanente No. 02/2019', '15', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+21/05/2024 09:37:38 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='15' AND ano='2024' AND codigo='7EFF9' # SAR_BRIMI1 # 
+ 
+21/05/2024 10:21:51 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('846', 'SAR_BRIMI1', '18', '2024/05/20', 'A', 'SE verificaros las observaciones solucionadas de acuerdo a soportes', '11', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+21/05/2024 10:21:51 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='11' AND ano='2024' AND codigo='527B2' # SAR_BRIMI1 # 
+ 
+27/05/2024 15:19:07 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('847', 'SAR_BRIMI2', '28', '2024/05/27', 'Y', 'Se requiere realizar las aclaraciones correspondientes de acuerdo a oficio anexo.', '6', '2024', 'BRIMI2', 'CAIMI', 'SAR_BAIMI3', '0', '') # SAR_BRIMI2 # 
+27/05/2024 15:19:07 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='6' AND ano='2024' AND codigo='BB445' # SAR_BRIMI2 # 
+ 
+29/05/2024 07:42:57 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('848', 'SAR_BRCIM1', '40', '2024/05/29', 'Y', 'Se evidencio que en el informe de contacto de Radicado No. 2024-553-0096580-2 de fecha 24 de febrero del 2024, en su ítem 13 (información suministrada) en la página 9, califican la información con un B2, sin embargo en el ítem 14 (observaciones del agente sobre la fuente) relacionan que la información tiene credibilidad tipo C, lo cual no tiene trazabilidad de un ítem a otro, de igual forma en el ítem 17 (Información operacional) del mismo documento, se observa que el párrafo 3 y 4 contiene la misma información, sin existir una explicación del por qué. 
+
+Así mismo, en el informe de recolección de información (avance) de radicado No. 2024-553-0097484-2 de fecha 25 de febrero del 2024, en su ítem 3 (información recolectada) en el primer párrafo, relacionan el informe de contacto de Radicado No. 2024-553-0096580-2 de fecha 23 de febrero del 2024, fecha que no concuerda con el documento físico el cual fue elaborado con fecha 24 de febrero del 2024. 
+
+Por otra parte se revisó el informe de Contrainteligencia Externo de radicado No. 2024-553-0007509-3 de fecha 04 de marzo del 2024, evidenciando que dicho informe no cuenta con el recibido del Comandante de la unidad territorial (BACN4) al cual fue dirigido el informe. 
+
+De igual forma, se verifico el informe de resultados de radicado No. 2024-553-0119346-2 de fecha 13 de marzo del 2024, evidenciando que no clasificaron si dicho informe es INTERNO o EXTERNO. 
+
+Así mismo, se evidencio que en el documento comunicación del inicio del trámite de pago de recompensas a la fuente humana, de radicado No. 2024-551-0046093-4 de fecha 14 de marzo del 2024, la fuente humana solo firmo el documento mas no plasmo la huella, por lo que se solicita aclarar dicha situación. 
+
+Por otra parte, se evidenció el faltante de unos documentos en el expediente de trámite de pago de recompensas, así: 
+
+*	Falta anexar Radiograma de resultado del SICOE. 
+*	Faltan los oficios donde solicitan al BACN4 y BIBOY, el no pago de recompensas a la fuente.
+*	Oficio del BACIF2 dirigido al CDTE de la BRCIM1, donde informan que no realizaran más tramites de pago de información o recompensas a la fuente, diferentes al que están realizando ante CEDE2. 
+*	Realizar oficio a fuentes y agencias (CACIM), solicitando evidencia del registro de la fuente. 
+*	Una vez se tenga respuesta por fuentes y agencias, anexar dicha respuesta al expediente.
+*	Oficio dirigido al GAHD, solicitando certificación que la fuente no pertenece al programa de reinserción. 
+*	Faltan los separadores de cada documento en el expediente de trámite de recompensas, de acuerdo a la lista de verificación de la Directiva Ministerial Permanente 02-2019. 
+
+Por lo anterior se ordena a ese Comando, realizar oficios aclarando cada una de las observaciones anteriormente relacionadas y hacer llegar a la BRCIM1 en el menor tiempo posible dichas aclaraciones, junto con los documentos faltantes del expediente de pago de recompensas, lo anterior con el fin de elevar dicho trámite ante CACIM y dar cumplimiento a los tiempos estipulados en la Directiva Ministerial Permanente 02-2019.', '14', '2024', 'BRCIM1', 'CACIM', 'SGR_BACIF2', '0', '') # SAR_BRCIM1 # 
+29/05/2024 07:42:57 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SAR_BRCIM1 # 
+ 
+30/05/2024 08:38:29 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('849', 'SAR_CAIMI', '8', '2024/05/10', 'Y', 'Se realiza devolución mediante oficio con radicado No. 2024-530-0272609-2 con el fin que el BAIME2 subsane unas observaciones encontradas por el CAIMI.', '9', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+30/05/2024 08:38:29 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='9' AND ano='2024' AND codigo='1E6F2' # SAR_CAIMI # 
+ 
+31/05/2024 10:07:03 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('850', 'SAR_BRIMI2', '28', '2024/05/31', 'A', 'Se envía expediente para revisión y aprobación de acuerdo al procedimiento y normatividad vigente.', '6', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+31/05/2024 10:07:03 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='6' AND ano='2024' AND codigo='BB445' # SAR_BRIMI2 # 
+ 
+04/06/2024 11:36:34 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('851', 'SAR_CAIMI', '8', '2024/05/10', 'Y', 'Se devuleve expediente mediante oficio con radicado No. 2024-530-0280509-2 de fecha 04-Jun-2024 con el fin que el BAIME2 subsane unas observaciones encontradas por este Comando.', '10', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+04/06/2024 11:36:34 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='10' AND ano='2024' AND codigo='61008' # SAR_CAIMI # 
+ 
+04/06/2024 11:44:35 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('852', 'SAR_CAIMI', '8', '2024/05/20', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2024-530-0280508-2 de fecha 04 de junio de 2024 con el fin que el BAIME2 subsane una serie de observaciobnes encontradas por este Comando.', '11', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+04/06/2024 11:44:35 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='11' AND ano='2024' AND codigo='527B2' # SAR_CAIMI # 
+ 
+04/06/2024 11:55:36 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('853', 'SAR_CAIMI', '8', '2024/05/10', 'Y', 'Se devolvío el expediente mediante oficio con radicado No. 2024-530-0280511-2 de fecha 04 de junio de 2024 con el fin que el BAIME1 subsane unas observaciones encontradas por este Comando.', '15', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME1', '0', '') # SAR_CAIMI # 
+04/06/2024 11:55:36 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='15' AND ano='2024' AND codigo='7EFF9' # SAR_CAIMI # 
+ 
+11/06/2024 08:07:57 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('854', 'SAR_CAIMI', '8', '2024/05/20', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2024-530-0285116-2 de fecha 06 de junio de 2024 con el fin que el BAIMI4 subsane una serie de observaciones.', '7', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIMI4', '0', '') # SAR_CAIMI # 
+11/06/2024 08:07:57 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='7' AND ano='2024' AND codigo='2B1ED' # SAR_CAIMI # 
+ 
+13/06/2024 17:12:49 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('855', 'SAR_BRIMI1', '18', '2024/04/30', 'A', 'Se devuelve para que subsanen observaciones', '9', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+13/06/2024 17:12:49 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='9' AND ano='2024' AND codigo='1E6F2' # SAR_BRIMI1 # 
+ 
+13/06/2024 17:13:32 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('856', 'SAR_CAIMI', '8', '2024/05/10', 'Y', 'Se devuelve para que subsanen observaciones', '9', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+13/06/2024 17:13:32 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='9' AND ano='2024' AND codigo='1E6F2' # SAR_CAIMI # 
+ 
+13/06/2024 17:14:33 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('857', 'SAR_BRIMI1', '18', '2024/05/08', 'Y', 'Se devuelve para que subsanen observaciones', '5', '2024', 'BRIMI1', 'CAIMI', 'SAR_BAIME1', '0', '') # SAR_BRIMI1 # 
+13/06/2024 17:14:33 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='5' AND ano='2024' AND codigo='EC9FB' # SAR_BRIMI1 # 
+ 
+17/06/2024 14:14:50 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('858', 'SAR_CAIMI', '8', '2024/05/31', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2024-530-0298637-2 de fecha 31 de mayo de 2024 con el fin que el BAIMI3 subsane observaciones encoentradas por este Comando.', '6', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIMI3', '0', '') # SAR_CAIMI # 
+17/06/2024 14:14:50 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='6' AND ano='2024' AND codigo='BB445' # SAR_CAIMI # 
+ 
+17/06/2024 14:21:10 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('859', 'SAR_BRIMI1', '18', '2024/06/13', 'A', 'Se reviso el cumplimiento a las observaciones realizadas.', '11', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+17/06/2024 14:21:10 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='11' AND ano='2024' AND codigo='527B2' # SAR_BRIMI1 # 
+ 
+17/06/2024 14:22:26 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('860', 'SAR_BRIMI1', '18', '2024/06/13', 'A', 'se cumplió con las observaciones realizadas.', '10', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+17/06/2024 14:22:26 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='10' AND ano='2024' AND codigo='61008' # SAR_BRIMI1 # 
+ 
+17/06/2024 14:24:13 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('861', 'SAR_BRIMI1', '18', '2024/06/12', 'A', 'se cumplió con las observaciones realizadas', '9', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+17/06/2024 14:24:13 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='9' AND ano='2024' AND codigo='1E6F2' # SAR_BRIMI1 # 
+ 
+18/06/2024 08:56:46 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('862', 'SAR_BRIMI1', '18', '2024/06/14', 'A', 'se verifico el expediente y quedo pendiente la respuesta del GAHD, la respuesta del alto comisionado para la paz y la respuesta de policia judicial de unos PIPH faltantes y los resultados definitivos de las PIPH, una vez den respuesta a quienes se solicito se procedera a enviarse al CAIMI.', '5', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+18/06/2024 08:56:46 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='5' AND ano='2024' AND codigo='EC9FB' # SAR_BRIMI1 # 
+ 
+25/06/2024 08:04:49 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('863', 'SPR_DIADI', '2', '2024/05/23', 'A', 'Revisión', '3', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+25/06/2024 08:04:49 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='3' AND ano='2024' AND codigo='83806' # SPR_DIADI # 
+ 
+27/06/2024 08:34:56 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('864', 'SAR_BRIMI1', '18', '2024/06/17', 'A', 'Expediente cumple con los párametros de la Directiva Ministerial Permanente No. 02/2019', '8', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+27/06/2024 08:34:56 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='8' AND ano='2024' AND codigo='9CD0A' # SAR_BRIMI1 # 
+ 
+27/06/2024 08:37:16 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('865', 'SAR_BRIMI1', '18', '2024/06/17', 'A', 'Expediente cumple con los párametros de la Directiva Ministerial Permanente No. 02/2019', '12', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+27/06/2024 08:37:16 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='12' AND ano='2024' AND codigo='97A6F' # SAR_BRIMI1 # 
+ 
+27/06/2024 08:38:20 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('866', 'SAR_BRIMI1', '18', '2024/06/17', 'A', 'Expediente cumple con los párametros de la Directiva Ministerial Permanente No. 02/2019', '13', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+27/06/2024 08:38:20 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='13' AND ano='2024' AND codigo='12336' # SAR_BRIMI1 # 
+ 
+27/06/2024 13:46:03 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('867', 'SAR_BRIMI1', '18', '2024/06/17', 'A', 'Se envía expediente acorde a los párametros de la Directiva Ministerial No. 02/2019', '4', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+27/06/2024 13:46:03 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='4' AND ano='2024' AND codigo='0A123' # SAR_BRIMI1 # 
+ 
+28/06/2024 09:16:57 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('868', 'SAR_BRIMI2', '28', '2024/05/24', 'A', 'Se envía expediente para revisión y aprobación de acuerdo al procedimiento y normatividad vigente.', '7', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+28/06/2024 09:16:57 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='7' AND ano='2024' AND codigo='2B1ED' # SAR_BRIMI2 # 
+ 
+28/06/2024 09:30:21 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('869', 'SAR_BRCIM1', '40', '2024/06/06', 'A', 'Mediante oficio radicado No. 2024-551-0285354-2 de fecha 06 de junio del 2024, se envío el expediente físico para el pago de recompensas al CACIM.', '14', '2024', 'BRCIM1', 'CACIM', 'SAR_CACIM', '0', '') # SAR_BRCIM1 # 
+28/06/2024 09:30:21 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CACIM' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SAR_BRCIM1 # 
+ 
+28/06/2024 16:35:54 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('870', 'SGA_BR29', '132', '2024/06/28', 'A', 'el expediente fue enviado a la division', '74', '2022', 'BR29', 'CECAU', 'SGA_CECAU', '0', '') # SGA_BR29 # 
+28/06/2024 16:35:54 pm # UPDATE cx_reg_rec SET estado='B', usuario2='SGA_CECAU' WHERE conse='74' AND ano='2022' AND codigo='805C2' # SGA_BR29 # 
+ 
+28/06/2024 16:37:34 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('871', 'SGA_BR29', '132', '2022/10/17', 'A', 'El expediente se envio a la division', '75', '2022', 'BR29', 'CECAU', 'SGA_CECAU', '0', '') # SGA_BR29 # 
+28/06/2024 16:37:34 pm # UPDATE cx_reg_rec SET estado='B', usuario2='SGA_CECAU' WHERE conse='75' AND ano='2022' AND codigo='D87F0' # SGA_BR29 # 
+ 
+28/06/2024 16:37:35 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('872', 'SGA_BR29', '132', '2022/10/17', 'A', 'El expediente se envio a la division', '75', '2022', 'BR29', 'CECAU', 'SGA_CECAU', '0', '') # SGA_BR29 # 
+28/06/2024 16:37:35 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_CECAU' WHERE conse='75' AND ano='2022' AND codigo='D87F0' # SGA_BR29 # 
+ 
+28/06/2024 16:41:55 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('873', 'SGA_CECAU', '329', '2022/09/24', 'A', 'NO HAY OBSERVACIONES', '75', '2022', 'CECAU', 'DIV3', 'SAR_DIV3', '0', '') # SGA_CECAU # 
+28/06/2024 16:41:55 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='75' AND ano='2022' AND codigo='D87F0' # SGA_CECAU # 
+ 
+28/06/2024 16:42:58 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('874', 'SGA_CECAU', '329', '2022/09/24', 'A', 'NO HAY OBSERVACIONES', '74', '2022', 'CECAU', 'DIV3', 'SAR_DIV3', '0', '') # SGA_CECAU # 
+28/06/2024 16:42:58 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_DIV3' WHERE conse='74' AND ano='2022' AND codigo='805C2' # SGA_CECAU # 
+ 
+28/06/2024 19:49:47 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('875', 'SAR_DIV3', '116', '2024/06/28', 'A', 'EL BAMHE 4 MEDIANTE OFICIO RADICADO 2024849012168243 DEL 16-05-2024 REALIZA SOLICITUD PARA ELEVAR ANTE EL COMITE CENTRAL DE RECOMPENSA-CEDE2 RECONSIDERACIÓN DE EVALUACIÓN DE LA ORDOP-032-ARIETE DEBIDO A QUE HABIAN REALIZADO LAS ACLARACIONES Y SUBSANADO LAS OBSERVACIONES POR LAS CUALES NO PROCEDIO EL TRAMITE DE REOMPENSSAS Y POR EL CUAL FUE DEVUELTO, MISMA FORMA, LA VIGESIMA NOVENA BRIGADA MEDIANTE OFICIO 2024629012692273 DEL 20-05-2024, ELEVA LA SOLICITUD ANTE EL COMANDO DE LA TERCERA DIVISIÓN, DOCUMENTACIÓN LA CUAL ES VERIFICADA Y ANALIZADA, SOLICITUD Y DOCUMENTACIÓN LA CUAL ES TRAMITADA ANTE EL COMITE CENTRAL DE RECOMPENSAS SEGUN OFICIO RADICADO 2024513012889113 DEL 22 DE MAYO DEL 2024, CON EL FIN DE QUE SEA ANALIZADA.', '74', '2022', 'DIV3', 'CEDE2', 'SPR_DIADI', '0', '') # SAR_DIV3 # 
+28/06/2024 19:49:47 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='74' AND ano='2022' AND codigo='805C2' # SAR_DIV3 # 
+ 
+28/06/2024 20:12:03 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('876', 'SAR_DIV3', '116', '2022/10/17', 'A', 'EL BAMHE 4 MEDIANTE OFICIO RADICADO 202484012167833 DEL 16-05-2024 REALIZA SOLICITUD PARA ELEVAR ANTE EL COMITE CENTRAL DE RECOMPENSA-CEDE2 RECONSIDERACIÓN DE EVALUACIÓN DE LA ORDOP-034-SATURNO DEBIDO A QUE HABIAN REALIZADO LAS ACLARACIONES Y SUBSANADO LAS OBSERVACIONES POR LAS CUALES NO PROCEDIO EL TRAMITE DE REOMPENSSAS Y POR EL CUAL FUE DEVUELTO, MISMA FORMA, LA VIGESIMA NOVENA BRIGADA MEDIANTE OFICIO 2024629012696853 DEL 20-05-2024, ELEVA LA SOLICITUD ANTE EL COMANDO DE LA TERCERA DIVISIÓN, DOCUMENTACIÓN LA CUAL ES VERIFICADA Y ANALIZADA, SOLICITUD Y DOCUMENTACIÓN LA CUAL ES TRAMITADA ANTE EL COMITE CENTRAL DE RECOMPENSAS SEGUN OFICIO RADICADO 2024513012876153 DEL 22 DE MAYO DEL 2024, CON EL FIN DE QUE SEA ANALIZADA.', '75', '2022', 'DIV3', 'CEDE2', 'SPR_DIADI', '0', '') # SAR_DIV3 # 
+28/06/2024 20:12:03 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='75' AND ano='2022' AND codigo='D87F0' # SAR_DIV3 # 
+ 
+03/07/2024 14:58:18 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('877', 'SAR_BRIMI2', '28', '2024/07/03', 'A', 'Se envía expediente para revisión y aprobación de acuerdo al procedimiento y normatividad vigente.', '6', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+03/07/2024 14:58:18 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='6' AND ano='2024' AND codigo='BB445' # SAR_BRIMI2 # 
+ 
+05/07/2024 15:49:45 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('878', 'SPR_DIADI', '2', '2024/06/19', 'A', 'en Revisión.', '11', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+05/07/2024 15:49:45 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='11' AND ano='2024' AND codigo='527B2' # SPR_DIADI # 
+ 
+05/07/2024 15:50:56 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('879', 'SPR_DIADI', '2', '2024/06/19', 'A', 'En Revisión.', '10', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+05/07/2024 15:50:56 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='10' AND ano='2024' AND codigo='61008' # SPR_DIADI # 
+ 
+05/07/2024 15:55:28 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('880', 'SPR_DIADI', '2', '2024/06/19', 'A', 'En Revisión.', '9', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+05/07/2024 15:55:28 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='9' AND ano='2024' AND codigo='1E6F2' # SPR_DIADI # 
+ 
+05/07/2024 16:18:28 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('881', 'SPR_DIADI', '2', '2024/06/19', 'A', 'En Revisión.', '5', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+05/07/2024 16:18:28 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='5' AND ano='2024' AND codigo='EC9FB' # SPR_DIADI # 
+ 
+08/07/2024 10:09:40 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('882', 'SAR_CACIM', '39', '2024/06/06', 'A', '1.	En el informe recolección de información avance radicado No. 2024-553-0097484-2, de fecha 25 de febrero del 2024, en el Literal III. INFORMACION RECOLECTADA, los agentes de contrainteligencia indican que realizaron actividades de coordinación con fuente humana casual informal en la ciudad de Pasto (Nariño), el día 23 de febrero del 2023, actividad que no da trazabilidad porque en todos los documentos soportes se indica que todas las actividades son del año en curso (2024). 
+
+2.	En el informe contacto radicado No. 2024-553-0096580-2, de fecha 25 de febrero del 2024, en el Literal OPERACIÓN, ítem 12. OBJETIVO, se indica que la fuente humana casual informal suministro sobre 05 construcciones utilizadas como laboratorio para la elaboración CHC, en la vereda Santacruz de Guachavez (Nariño), lo cual no incide con lo plasmado en el ítem 13. INFORMACIÓN SUMINISTRADA, en donde la fuente humana casual informal, manifiesta que hay 05 construcciones utilizadas como laboratorio para la elaboración CHC, en la vereda Pedregal del municipio de Santacruz de Guachavez (Nariño).', '14', '2024', 'CACIM', 'CACIM', 'SAR_CACIM', '0', '') # SAR_CACIM # 
+08/07/2024 10:09:40 am # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SAR_CACIM # 
+ 
+09/07/2024 15:54:07 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('883', 'SAR_CAIMI', '8', '2024/06/20', 'Y', 'Se realiza devolución mediante oficio con radicado No. 2024-530-0339112-2 de fecha 04 de Julio de 2024 con el fin que el BAIME3 subsane observaciones encontradas por el CAIMI.', '4', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME3', '0', '') # SAR_CAIMI # 
+09/07/2024 15:54:07 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='4' AND ano='2024' AND codigo='0A123' # SAR_CAIMI # 
+ 
+11/07/2024 16:52:18 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('884', 'SAR_CAIMI', '8', '2024/06/20', 'Y', 'se realiza devolución mediante oficio con radicado No. 2024-530-0347213-2 de fecha 10 de julio de 2024 con el fin que el BAIME2 susbsane unas observaciones encoentradas por el CAIMI', '12', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+11/07/2024 16:52:18 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='12' AND ano='2024' AND codigo='97A6F' # SAR_CAIMI # 
+ 
+15/07/2024 10:05:03 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('885', 'SAR_CAIMI', '8', '2024/06/20', 'Y', 'Se realiza devolución expediente mediante oficio con radicado No. 2024-530-0352124-2 de fecha 15 de julio de 2024 con el fin que el BAIME2 subsane una serie de observaciones encontradas por este Comando.', '8', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+15/07/2024 10:05:03 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='8' AND ano='2024' AND codigo='9CD0A' # SAR_CAIMI # 
+ 
+17/07/2024 08:56:52 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('886', 'SAR_BRIMI1', '18', '2024/07/11', 'A', 'se verifico el expediente de acuerdo a directiva de pago de recompensas.', '17', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+17/07/2024 08:56:52 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='17' AND ano='2024' AND codigo='2C872' # SAR_BRIMI1 # 
+ 
+17/07/2024 09:02:42 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('887', 'SAR_BRIMI1', '18', '2024/06/28', 'A', 'se reviso el expediente de acuerdo a directiva', '54', '2022', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+17/07/2024 09:02:42 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='54' AND ano='2022' AND codigo='BFD32' # SAR_BRIMI1 # 
+ 
+17/07/2024 11:18:21 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('888', 'SGA_BR27', '201', '2024/06/26', 'A', 'Por parte de la BR27 se genero el oficio No 2024627016384393: MDN-COGFM-COEJC-SECEJ-JEMOP-DIV6-CBR27-B2-19.3 con las observaciones encontradas, las cuales fueron respondidas mediante oficio N° 2024972016728733 del 29-JUN-2024 del BAEEV9, documentación que fue anexada al expediente físico.', '20', '2024', 'BR27', 'DIV6', 'SGA_DIV6', '0', '') # SGA_BR27 # 
+17/07/2024 11:18:21 am # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV6' WHERE conse='20' AND ano='2024' AND codigo='67CBE' # SGA_BR27 # 
+ 
+18/07/2024 10:15:18 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('889', 'SAR_CACIM', '39', '2024/06/06', 'A', 'Envió expediente para revisión.', '14', '2024', 'CACIM', 'CACIM', 'SAR_CACIM', '0', '') # SAR_CACIM # 
+18/07/2024 10:15:18 am # UPDATE cx_reg_rec SET estado='E', usuario4='SAR_CACIM' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SAR_CACIM # 
+ 
+18/07/2024 10:18:24 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('890', 'SAR_CACIM', '39', '2024/06/06', 'A', 'Envió expediente para revisión.', '14', '2024', 'CACIM', 'CACIM', 'SAR_CACIM', '0', '') # SAR_CACIM # 
+18/07/2024 10:18:24 am # UPDATE cx_reg_rec SET estado='E', usuario4='SAR_CACIM' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SAR_CACIM # 
+ 
+19/07/2024 14:13:25 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('891', 'SAR_CAIMI', '8', '2024/06/20', 'Y', 'Se realiza devolución expediente mediante oficio con radicado No. 2024-530-0365421-2 de fecha 19 de julio de 2024 con el fin que el BAIME2 subsane observaciones encontradas por este comando.', '13', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+19/07/2024 14:13:25 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='13' AND ano='2024' AND codigo='12336' # SAR_CAIMI # 
+ 
+24/07/2024 08:09:26 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('892', 'SAR_CAIMI', '8', '2024/07/11', 'Y', 'Se realiza devolución mediante oficio con radicado No. 2024-530-0373427-2 de fecha 23 de julio de 2024 con el fin que el BAIME2 subsane una serie de observaciones encontradas por este Comando.', '17', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+24/07/2024 08:09:26 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='17' AND ano='2024' AND codigo='2C872' # SAR_CAIMI # 
+ 
+24/07/2024 14:17:11 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('893', 'SAR_BRIMI1', '18', '2024/07/23', 'Y', 'corregir fuit', '4', '2024', 'BRIMI1', 'CAIMI', 'SAR_BAIME3', '0', '') # SAR_BRIMI1 # 
+24/07/2024 14:17:11 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='4' AND ano='2024' AND codigo='0A123' # SAR_BRIMI1 # 
+ 
+24/07/2024 16:02:15 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('894', 'SAR_BRIMI1', '18', '2024/07/24', 'A', 'cumple con los parametros establecidos y se solicita la respectiva revisión.', '4', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+24/07/2024 16:02:15 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='4' AND ano='2024' AND codigo='0A123' # SAR_BRIMI1 # 
+ 
+26/07/2024 09:56:50 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('895', 'SAR_BRIMI1', '18', '2024/07/26', 'A', 'Se verifico el expediente por parte de esta Unidad, se solicita su verificación para avanzar en el proceso.', '16', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+26/07/2024 09:56:50 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='16' AND ano='2024' AND codigo='D2BE4' # SAR_BRIMI1 # 
+ 
+29/07/2024 15:34:25 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('896', 'SGA_BR30', '102', '2024/07/29', 'Y', 'Se realiza devolución del expediente de pago de recompensa del resultado operacional de fecha 02 de julio de 2024, ya que no se encuentra organizado de acuerdo a la norma vigente de gestión documental', '24', '2024', 'BR30', 'DIV2', 'SGA_BIROV', '0', '') # SGA_BR30 # 
+29/07/2024 15:34:25 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='24' AND ano='2024' AND codigo='2CC1B' # SGA_BR30 # 
+ 
+31/07/2024 08:31:53 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('897', 'SAR_BRIMI1', '18', '2024/07/31', 'Y', 'anexar el expediente actualizado', '8', '2024', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+31/07/2024 08:31:53 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='8' AND ano='2024' AND codigo='9CD0A' # SAR_BRIMI1 # 
+ 
+31/07/2024 09:31:52 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('898', 'SAR_BRIMI1', '18', '2024/07/31', 'A', 'se verificó el cumplimiento a los parametros de la directiva y a las observaciones realizadas por el CAIMI', '8', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+31/07/2024 09:31:52 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='8' AND ano='2024' AND codigo='9CD0A' # SAR_BRIMI1 # 
+ 
+01/08/2024 11:33:38 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('899', 'SPR_DIADI', '2', '2024/07/02', 'A', '29-ago-2022: Mediante radiograma N° 2022513001850061, la DIV3 informó el inicio trámite pago de recompensa del expediente ORDOP - 032 ARIETE, al CEDE2.
+
+10-oct-2022: Mediante radiograma N° 2022513002183461, la DIV3 solicitó prórroga al trámite pago de recompensa del expediente ORDOP - 032 ARIETE, al CEDE2.
+
+09-nov-2022: Mediante oficio N° 2022-206-0038888-3, el CEDE2 autorizó la prórroga a la DIV3, indicando plazo máximo de allegar el expediente trámite pago de recompensa del expediente ORDOP - 032 ARIETE el 02-ene-2023 a CEDE2.
+
+16-ene-2023: Mediante documento N° 2023513000059141 de fecha 14-ene-2023 llego por primera vez el expediente trámite pago de recompensa ORDOP - 032 ARIETE, al CEDE2.
+
+17-feb-2023: Mediante oficio N° 2023-206-0008081-3, el CEDE2 solicitó aclaración a las observaciones encontradas, con plazo el día 24-mar-2023.
+
+14-mar-2023: Mediante oficio N° 2023513000194501 de fecha 01-feb-2023, la DIV3 informó sobre la acción disciplinaria tomada (anotación de demerito) por el incumplimiento y extemporaneidad con la que llegó el trámite pago de la recompensas al CEDE2.
+
+27-mar-2023: La DIV3 dio respuesta a las observaciones mediante documento N° 2023513000623981 de fecha 24-mar-2023, no subsanando la totalidad de las observaciones y documentos requeridos.
+
+20-jun-2023: Fue presentado el trámite al Comité Central de Recompensas quienes no aprobaron ni procedió el mismo, razón a que no se encontraba completo.
+
+29-jun-2023: Mediante oficio N° 2023-206-0025700-3, el CEDE2 realizo la devolución del expediente trámite pago de recompensa e igualmente indico la razón por la cual el trámite no había procedido.
+
+22-may-2024: Mediante oficio N° 2024513012889113, la DIV3 solicitó al CEDE2 reconsideración de evaluación al trámite pago de recompensa correspondiente a la ORDOP - 032 ARIETE, adjuntando los soportes que aclaran las dudas y observaciones que habían quedado pendientes ante el CCR.
+
+25-jun-2024: La reconsideración solicitada por la DIV3 y sus soportes fueron presentados al Comité Central de Recompensas, fueron revisados, verificados y analizados, evidenciando que cumplían y fue aprobada la reconsideración.
+
+26-jun-2024: Mediante oficio N° 2024-206-0021853-3 informó al Comandante DIV3 sobre la aprobación y autorización de la reconsideración elevada al CCR.
+
+02-jul-2024: Mediante oficio N° 2024513016653383 de fecha 28-jun-2024 llegó por segunda vez el expediente trámite pago de recompensa ORDOP - 032 ARIETE, al CEDE2.', '74', '2022', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+01/08/2024 11:33:38 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='74' AND ano='2022' AND codigo='805C2' # SPR_DIADI # 
+ 
+01/08/2024 15:01:15 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('900', 'SPR_DIADI', '2', '2024/07/02', 'A', '22-sep-2022: Mediante radiograma N° 2022513002042331, la DIV3 informó el inicio trámite pago de recompensa del expediente ORDOP - 034 SATURNO, al CEDE2.
+
+08-nov-2022: Mediante radiograma N° 2022513002411151, la DIV3 solicitó prórroga al trámite pago de recompensa del expediente ORDOP - 034 SATURNO, al CEDE2.
+
+13-nov-2022: Mediante oficio N° 2022-206-0039362-3, el CEDE2 autorizó la prórroga a la DIV3, indicando plazo máximo de allegar el expediente trámite pago de recompensa del expediente ORDOP - 034 SATURNO el 24-ene-2023 a CEDE2.
+
+16-ene-2023: Mediante documento N° 2023513000059621 de fecha 14-ene-2023 llego por primera vez el expediente trámite pago de recompensa ORDOP - 034 SATURNO, al CEDE2.
+
+20-feb-2023: Mediante oficio N° 2023-206-0006370-3, el CEDE2 solicitó aclaración a las observaciones encontradas, con plazo el día 10-mar-2023.
+
+14-mar-2023: Mediante oficio N° 2023513000194501 de fecha 01-feb-2023, la DIV3 informó sobre la acción disciplinaria tomada (anotación de demerito) por el incumplimiento y extemporaneidad con la que llegó el trámite pago de la recompensas al CEDE2.
+
+14-mar-2023: Mediante radiograma N° 2023-206-9664-3 se recabó a la DIV3 el plazo vencido a lo requerido por CEDE2 mediante oficio N° 2023-206-0006370-3.
+
+15-mar-2023: La DIV3 dio respuesta a las observaciones mediante documento N° 2023513000513561 de fecha 14-mar-2023, no subsanando la totalidad de las observaciones y documentos requeridos.
+
+20-jun-2023: Fue presentado el trámite al Comité Central de Recompensas quienes no aprobaron ni procedió el mismo, razón a que no se encontraba completo.
+
+29-jun-2023: Mediante oficio N° 2023-206-0025674-3, el CEDE2 realizó la devolución del expediente trámite pago de recompensa e igualmente indico la razón por la cual el trámite no había procedido.
+
+22-may-2024: Mediante oficio N° 2024513012876153, la DIV3 solicitó al CEDE2 reconsideración de evaluación al trámite pago de recompensa correspondiente a la ORDOP - 034 SATURNO, adjuntando los soportes que aclaran las dudas y observaciones que habían quedado pendientes ante el CCR.
+
+25-jun-2024: La reconsideración solicitada por la DIV3 y sus soportes fueron presentados al Comité Central de Recompensas, fueron revisados, verificados y analizados, evidenciando que cumplían y fue aprobada la reconsideración.
+
+26-jun-2024: Mediante oficio N° 2024-206-0021854-3 informó al Cdte DIV3 sobre la aprobación y autorización de la reconsideración elevada al CCR.
+
+02-jul-2024: Mediante oficio N° 2024513016654043 de fecha 28-jun-2024 llegó por segunda vez el expediente trámite pago de recompensa ORDOP - 034 SATURNO, al CEDE2.', '75', '2022', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+01/08/2024 15:01:15 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='75' AND ano='2022' AND codigo='D87F0' # SPR_DIADI # 
+ 
+01/08/2024 15:59:25 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('901', 'SPR_DIADI', '2', '2024/06/24', 'A', '14-jun-2023: Mediante radiograma N° 2023-530-0316571-2, el CAIMI solicito inicio trámite pago de recompensa ORDOP 012 JAPON - OFRAG 004, al CEDE2.
+
+12-jul-2023: Mediante radiograma N° 2023-530-0366079-2, el CAIMI solicitó prórroga al trámite pago de recompensa del expediente ORDOP - 012 JAPON - OFRAG 004, al CEDE2.
+
+14-jul-2023: Mediante radiograma N° 2023-206-0369054-2, el CEDE2 autorizó la prórroga al CAIMI, indicando plazo máximo de allegar el expediente trámite pago de recompensa del expediente ORDOP - 012 JAPON - OFRAG 004 el 19-oct-2023 a CEDE2.
+
+18-oct-2023: Mediante oficio N° 2023-530-0545428-2 el CAIMI realizó el envió del expediente trámite pago de recompensas ORDOP - 012 JAPON - OFRAG 004, al CEDE2.
+
+18-oct-2023: El CAIMI con oficio N° 2023-530-0544842-2 realizó el envió de documentación faltante completando el trámite pago de recompensas ORDOP - 012 JAPON - OFRAG 004, al CEDE2.
+
+26-oct-2023: El CAIMI con oficio N° 2023-530-0562000-2 realizó el envió de documentación faltante completando el trámite pago de recompensas ORDOP - 012 JAPON - OFRAG 004, al CEDE2.
+
+12-feb-2024: Mediante oficio N° 2024-206-0070896-2, el CEDE2 solicitó aclaración a las observaciones encontradas, con plazo el día 01-mar-2024.
+
+27-feb-2024: El CAIMI dio respuesta a las observaciones mediante documento N° 2024-530-0101864-2, subsanando las observaciones.
+
+19-mar-2024: Fue presentado al Comité Central el trámite pago de recompensa quienes una vez verificada, revisada la documentación adjunta tomaron la decisión de que mencionado trámite no procedía toda vez que en el análisis surgieron algunas observaciones que generaron dudas en la ejecución de la Operación Militar, para lo cual tomaron la decisión de que No procedía el trámite y indicaron realizar la devolución del trámite a la unidad.
+
+21-mar-2024: Mediante oficio N° 2024-2060-0135698-2, el CEDE2 realizó la devolución del trámite pago de recompensa expediente ORDOP - 012 JAPON - OFRAG 004, al CEDE2.
+
+09-may-2024: Mediante oficio N° 2024-530-0238626-2, el CAIMI solicito reconsideración al trámite pago de recompensa del expediente ORDOP - 012 JAPON - OFRAG 004 al CEDE2, e igualmente adjunto los soportes que aclaran las dudas a las observaciones generadas en el CCR.
+
+11-jun-2024: Mediante oficio N° 2023-206-0292280-2 el CEDE2 informó al CAIMI de la aprobación de la reconsideración al trámite pago de recompensas ORDOP - 012 JAPON - OFRAG 004, al CEDE2.
+
+24-jun-2024: Mediante oficio N° 2023-530-0318756-2 el CAIMI realizó el envió por segunda vez del expediente trámite pago de recompensas ORDOP - 012 JAPON - OFRAG 004, al CEDE2.', '34', '2023', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+01/08/2024 15:59:25 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='34' AND ano='2023' AND codigo='4BEC8' # SPR_DIADI # 
+ 
+01/08/2024 18:36:19 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('902', 'SGA_BR30', '102', '2024/07/29', 'A', '1.	Analizados los documentos relacionados en el expediente de solicitud de recompensa ORDOP Júpiter 014 se logra evidenciar que el formato de recolección Táctica No. 2024654016808813 del 01 de julio de 2024, el informe de inteligencia No. 2024654016809183 y el boletín 184 poseen la misma información y lo único que cambia en los documentos anteriormente relacionados es que al informe de Inteligencia y el boletín le incluyeron coordenadas, pero no se evidencia procesamiento y análisis de la información desconociendo el instructivo de registro de información en el formato de recolección táctica de información. De acuerdo al Boletín Informativo No 2024-206-0001361-3 procedimiento Recolección Táctica de Información de fecha 17 de enero de 2024 en el cual tiene como objetivo dar a conocer la actualización del formato de recolección de información táctica y su diligenciamiento.
+
+2.	Después de analizados los documentos que hacen parte del expediente se logra evidenciar que la documentación llega en copia a lo cual es importante resaltar que la documentación debe ser en original.
+
+3.	En el documento FPJ N° 110016099144202400795 el funcionario de Policía Nacional registro el documento con fecha 02 de junio del 2024 y en el cuerpo del documento hace relación a los hechos acaecidos el día 02 de julio del 2024.', '24', '2024', 'BR30', 'DIV2', 'SGA_DIV2', '0', '') # SGA_BR30 # 
+01/08/2024 18:36:19 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV2' WHERE conse='24' AND ano='2024' AND codigo='2CC1B' # SGA_BR30 # 
+ 
+02/08/2024 14:36:52 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('903', 'SGA_BR4', '213', '2024/07/19', 'Y', '1. Se evidencia que la lista de verificacion se encuentra mal foliada.
+
+2. Se evidencia que el anexo de la docuemntacion subida al sistema se encuentra de forme desorganizada, se debe anexar segun anexo fisico. 
+
+3. El expediente fisico presenta 19 observaciones, para lo cual se requiere realicen las aclaraciones con el fin de darle tramite y cumpla los requisitos de legalidad y conexidad.', '23', '2024', 'BR4', 'DIV7', 'SGA_BIOSP', '0', '') # SGA_BR4 # 
+02/08/2024 14:36:52 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='23' AND ano='2024' AND codigo='23C12' # SGA_BR4 # 
+ 
+03/08/2024 07:39:24 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('904', 'SGA_BR27', '201', '2024/08/03', 'A', 'Se ordenó anexar al expediente físico la lista de verificación extraída de la plataforma SIGAR, de igual forma oficio anexando las fotografías del resultado.', '25', '2024', 'BR27', 'DIV6', 'SGA_DIV6', '0', '') # SGA_BR27 # 
+03/08/2024 07:39:24 am # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV6' WHERE conse='25' AND ano='2024' AND codigo='5ED6A' # SGA_BR27 # 
+ 
+05/08/2024 08:36:11 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('905', 'SPR_DIADI', '2', '2024/07/05', 'Y', 'Aclaración de observaciones durante la revisión.', '14', '2024', 'DIADI', 'CEDE2', 'SGR_BACIF2', '0', '') # SPR_DIADI # 
+05/08/2024 08:36:11 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SPR_DIADI # 
+ 
+05/08/2024 10:52:19 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('906', 'SAR_BRCIM1', '40', '2024/06/06', 'A', 'se envio oficio de Radicado No. 2024-551-0393620-2:MDN-COGFM-COEJC-SECEJ-JEMOP-CACIM-BRCIM1-COMANDOJEM-B-4 -25.2 de fecha 02 de agosto del 2024, dirigido al señor JEM del CACIM, dandole respuestas a las observaciones remitidas por el comite central mediante oficio de radicado 2024-206-0371593-2:MDN-COGFM-COEJC-SECEJ-JEMPP-CEDE2-DIADI-25.2, de fecha 23 de julio del 2024, con el fin de continuar con el tramite del pago de recompensas solicitado por BACIF2.', '14', '2024', 'BRCIM1', 'CACIM', 'SAR_CACIM', '0', '') # SAR_BRCIM1 # 
+05/08/2024 10:52:19 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CACIM' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SAR_BRCIM1 # 
+ 
+08/08/2024 10:51:20 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('907', 'SAR_CACIM', '39', '2024/06/06', 'A', 'Expediente enviado para revisión.', '14', '2024', 'CACIM', 'CACIM', 'SAR_CACIM', '0', '') # SAR_CACIM # 
+08/08/2024 10:51:20 am # UPDATE cx_reg_rec SET estado='E', usuario4='SAR_CACIM' WHERE conse='14' AND ano='2024' AND codigo='7E76B' # SAR_CACIM # 
+ 
+08/08/2024 17:52:17 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('908', 'SGA_BR29', '132', '2024/08/07', 'A', 'La unidad solicitante (BAMHE4) remitió expediente al comando de la BR29 mediante oficio remisorio 2024849019099253 de fecha 25-JUL-2024. Realizada la revisión este comando (BR29) realizó observaciones al expediente ORFRAG 003 de la ORDOP 014 JACOB, las cuales fueron enviadas a la unidad solicitante mediante oficio 2024629019984433 de fecha 02-AGO-2024 para su respectiva aclaración. 
+Este comando recibió respuesta de las observaciones realizadas mediante oficio Rad 2024849020389793 de fecha 07-AGO-2024 con sus respectivas aclaraciones. Acto seguido el BAMHE4 remite el expediente a la BR29 mediante oficio remisorio Rad. 2024849020395663 de fecha 07-AGO-2024. Seguidamente la BR29 remite el expediente al comité regional de la DIV03 mediante oficio remisorio Rad 2024629020486853 de fecha 08-AGO-2024', '19', '2024', 'BR29', 'CECAU', 'SGA_CECAU', '0', '') # SGA_BR29 # 
+08/08/2024 17:52:17 pm # UPDATE cx_reg_rec SET estado='B', usuario2='SGA_CECAU' WHERE conse='19' AND ano='2024' AND codigo='13640' # SGA_BR29 # 
+ 
+08/08/2024 18:53:03 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('909', 'SGA_CECAU', '329', '2024/08/08', 'A', 'Se verifica la documentación soporte para el tramite de pago de recompensa la cual fue verificada por el SGA_BR29, la cual cumple con los parametros estipulados', '19', '2024', 'CECAU', 'DIV3', 'SAR_DIV3', '0', '') # SGA_CECAU # 
+08/08/2024 18:53:03 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_DIV3' WHERE conse='19' AND ano='2024' AND codigo='13640' # SGA_CECAU # 
+ 
+09/08/2024 14:22:43 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('910', 'SPR_DIADI', '2', '2024/07/15', 'A', 'Pendiente presentar comité central', '7', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+09/08/2024 14:22:43 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='7' AND ano='2024' AND codigo='2B1ED' # SPR_DIADI # 
+ 
+09/08/2024 14:23:58 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('911', 'SPR_DIADI', '2', '2024/07/15', 'A', 'PEND PRESENTAR COMITÉ CENTRAL.', '6', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+09/08/2024 14:23:58 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='6' AND ano='2024' AND codigo='BB445' # SPR_DIADI # 
+ 
+12/08/2024 10:54:14 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('912', 'SAR_BRIMI1', '18', '2024/08/07', 'A', 'se dio respuesta a los requerimientos del comando superior.', '17', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+12/08/2024 10:54:14 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='17' AND ano='2024' AND codigo='2C872' # SAR_BRIMI1 # 
+ 
+12/08/2024 10:54:37 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('913', 'SAR_BRIMI1', '18', '2024/08/07', 'A', 'se dio respuesta a los requerimientos del comando superior.', '13', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+12/08/2024 10:54:37 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='13' AND ano='2024' AND codigo='12336' # SAR_BRIMI1 # 
+ 
+12/08/2024 10:55:10 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('914', 'SAR_BRIMI1', '18', '2024/08/07', 'A', 'se dio respuesta a los requerimientos del comando superior.', '12', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+12/08/2024 10:55:10 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='12' AND ano='2024' AND codigo='97A6F' # SAR_BRIMI1 # 
+ 
+14/08/2024 14:04:23 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('915', 'SGA_DIV6', '190', '2024/08/09', 'Y', 'DE ACUERDO A LA REVISIÓN REALIZA POR EL COMITÉ REGIONAL PARA EL PAGO DE RECOMPENSAS Y PAGOS DE INFORMACIÓN, SE DETERMINA QUE LA SOLICITUD FUE CARGADA DE FORMA EXTEMPORÁNEA, NO SE INFORMÓ EN LOS TIEMPOS ESTABLECIDOS EL INICIO DE TRÁMITE Y EL MONTO SOLICITADO NO SUPERA LOS 10 SALARIOS MÍNIMOS LEGALES VIGENTES, POR TAL MOTIVO NO CORRESPONDE A UN PAGO DE RECOMPENSA. LA UNIDAD DEBE RENDIR UN INFORME PARA TOMAR LAS MEDIDA CORRECTIVAS NECESARIAS E INICIAR LA SOLICITUD DE PAGO DE INFORMACIÓN, ESTOS PARÁMETROS QUEDAN REGISTRADOS EN EL ACTA DE REUNIÓN DE TRABAJO No. 2024516009459266 Y SE INFORMARÁ POR ESCRITO A LA UNIDAD.', '25', '2024', 'DIV6', 'CEDE2', 'SGA_BICAS', '0', '') # SGA_DIV6 # 
+14/08/2024 14:04:23 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='25' AND ano='2024' AND codigo='5ED6A' # SGA_DIV6 # 
+ 
+14/08/2024 14:10:43 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('916', 'SGA_DIV6', '190', '2024/08/01', 'Y', 'El expediente no es recepcionado por la unidad centralizadora debido a que mediante radicado No. 2024627018168583 emitido por la BR27 y radicado No. 2024972018008433 emitido por el BAEEV9, redactan que la fuente desiste para continuar con el trámite de pago de recompensa.', '20', '2024', 'DIV6', 'CEDE2', 'SGA_BAEEV9', '0', '') # SGA_DIV6 # 
+14/08/2024 14:10:43 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='20' AND ano='2024' AND codigo='67CBE' # SGA_DIV6 # 
+ 
+15/08/2024 09:18:49 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('917', 'SAR_CAIMI', '8', '2024/08/05', 'Y', 'El valor solicitado no corresponde con la solicitud de valores estimados', '13', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+15/08/2024 09:18:49 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='13' AND ano='2024' AND codigo='12336' # SAR_CAIMI # 
+ 
+15/08/2024 09:21:55 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('918', 'SAR_CAIMI', '8', '2024/07/23', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2024-530-0413032-2 de fecha 13 de agosto de 2024, con el fin que el BAIME3 subsane unas observaciones encontradas por este Comando.', '16', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME3', '0', '') # SAR_CAIMI # 
+15/08/2024 09:21:55 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='16' AND ano='2024' AND codigo='D2BE4' # SAR_CAIMI # 
+ 
+15/08/2024 10:57:29 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('919', 'SAR_BRIMI1', '18', '2024/08/05', 'A', 'Se cumplio con la revision de los requerimientos y se remite a esa Unidad para su revisión.', '13', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+15/08/2024 10:57:29 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='13' AND ano='2024' AND codigo='12336' # SAR_BRIMI1 # 
+ 
+17/08/2024 10:23:43 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('920', 'SGA_BR6', '158', '2024/08/17', 'A', 'SE SOLICITAD QUE LA DIVISION REVISE ESTE DOCUMENTO GRACIAS PARA SU TRAMITE CORRESPONDIENTE.', '22', '2024', 'BR6', 'DIV5', 'SGA_DIV5', '0', '') # SGA_BR6 # 
+17/08/2024 10:23:43 am # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV5' WHERE conse='22' AND ano='2024' AND codigo='802FA' # SGA_BR6 # 
+ 
+20/08/2024 17:57:30 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('921', 'SGA_BR4', '213', '2024/07/19', 'A', 'La unidad envio las aclaraciones realizadas durante la revicion del expediente', '23', '2024', 'BR4', 'DIV7', 'SGA_DIV7', '0', '') # SGA_BR4 # 
+20/08/2024 17:57:30 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV7' WHERE conse='23' AND ano='2024' AND codigo='23C12' # SGA_BR4 # 
+ 
+22/08/2024 16:35:42 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('922', 'SAR_BRIMI1', '18', '2024/08/22', 'A', 'SE VERIFICA INFORMACIÓN Y SE ELEVA AL CAIMI PARA SU VERIFICACIÓN Y APROBACIÓN', '18', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+22/08/2024 16:35:42 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='18' AND ano='2024' AND codigo='2524F' # SAR_BRIMI1 # 
+ 
+26/08/2024 07:54:27 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('923', 'SPR_DIADI', '2', '2024/07/15', 'A', 'Aprobado CCR', '7', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+26/08/2024 07:54:27 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='7' AND ano='2024' AND codigo='2B1ED' # SPR_DIADI # 
+ 
+26/08/2024 08:33:06 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('924', 'SPR_DIADI', '2', '2024/06/19', 'A', 'Aprobado CCR.', '10', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+26/08/2024 08:33:06 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='10' AND ano='2024' AND codigo='61008' # SPR_DIADI # 
+ 
+26/08/2024 10:46:34 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('925', 'SPR_DIADI', '2', '2024/07/15', 'A', 'Aprobado CCR.', '6', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+26/08/2024 10:46:34 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='6' AND ano='2024' AND codigo='BB445' # SPR_DIADI # 
+ 
+26/08/2024 13:05:14 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('926', 'SPR_DIADI', '2', '2024/06/19', 'A', 'Aprobado CCR', '11', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+26/08/2024 13:05:14 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='11' AND ano='2024' AND codigo='527B2' # SPR_DIADI # 
+ 
+27/08/2024 09:41:44 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('927', 'SPR_DIADI', '2', '2024/08/26', 'A', 'Para revisar.', '13', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+27/08/2024 09:41:44 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='13' AND ano='2024' AND codigo='12336' # SPR_DIADI # 
+ 
+27/08/2024 09:43:06 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('928', 'SPR_DIADI', '2', '2024/08/26', 'A', 'EN REVISION CEDE2', '12', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+27/08/2024 09:43:06 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='12' AND ano='2024' AND codigo='97A6F' # SPR_DIADI # 
+ 
+05/09/2024 16:03:55 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('929', 'SAR_BRIMI1', '18', '2024/07/26', 'A', 'para su revision y verificacion', '16', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+05/09/2024 16:03:55 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='16' AND ano='2024' AND codigo='D2BE4' # SAR_BRIMI1 # 
+ 
+07/09/2024 17:11:28 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('930', 'SGA_DIV5', '157', '2024/07/16', 'A', '', '22', '2024', 'DIV5', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV5 # 
+07/09/2024 17:11:28 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='22' AND ano='2024' AND codigo='802FA' # SGA_DIV5 # 
+ 
+13/09/2024 17:24:40 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('931', 'SPR_DIADI', '2', '2024/09/05', 'A', 'Pendiente a verificacion por parte de personal de Planeacion recompensas de la DIADI', '19', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+13/09/2024 17:24:40 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='19' AND ano='2024' AND codigo='13640' # SPR_DIADI # 
+ 
+18/09/2024 08:17:08 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('932', 'SPR_DIADI', '2', '2024/09/11', 'A', 'EN REVISION EN CEDE2', '18', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+18/09/2024 08:17:08 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='18' AND ano='2024' AND codigo='2524F' # SPR_DIADI # 
+ 
+18/09/2024 08:20:50 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('933', 'SPR_DIADI', '2', '2024/09/11', 'A', 'EN REVISION POR EL CEDE2', '17', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+18/09/2024 08:20:50 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='17' AND ano='2024' AND codigo='2C872' # SPR_DIADI # 
+ 
+18/09/2024 08:22:12 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('934', 'SPR_DIADI', '2', '2024/09/11', 'A', 'EN REVISION POR EL CEDE2', '16', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+18/09/2024 08:22:12 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='16' AND ano='2024' AND codigo='D2BE4' # SPR_DIADI # 
+ 
+18/09/2024 15:17:56 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('935', 'SPR_DIADI', '2', '2024/09/09', 'A', 'En revision por parte de CEDE2', '19', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+18/09/2024 15:17:56 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='19' AND ano='2024' AND codigo='13640' # SPR_DIADI # 
+ 
+24/09/2024 09:21:44 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('936', 'SGA_DIV7', '212', '2024/08/17', 'Y', 'Envió observaciones expediente pago de recompensa "006 JABALÍ" con oficio N° 2024517025340903 /MDN-COGFM-COEJC-SECEJ-JEMOP-DIV-7-D2-25.20', '23', '2024', 'DIV7', 'CEDE2', 'SGA_BIOSP', '0', '') # SGA_DIV7 # 
+24/09/2024 09:21:44 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='23' AND ano='2024' AND codigo='23C12' # SGA_DIV7 # 
+ 
+24/09/2024 11:59:41 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('937', 'SGA_BR17', '235', '2024/09/21', 'Y', 'Se rechaza el tramite de pago de recompensa de acuerdo a observaciones relacionadas en el oficio N°2024617025461613 de fecha 23 de septiembre de 2024.', '31', '2024', 'BR17', 'DIV7', 'SGA_BIVEL', '0', '') # SGA_BR17 # 
+24/09/2024 11:59:41 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='31' AND ano='2024' AND codigo='265DA' # SGA_BR17 # 
+ 
+04/10/2024 17:07:03 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('938', 'SGA_BR4', '213', '2024/07/19', 'A', 'Se envian respuesta observaciones mediante oficio Radicado N°.2024604026623773 de fecha 03 de octubre del 2024', '23', '2024', 'BR4', 'DIV7', 'SGA_DIV7', '0', '') # SGA_BR4 # 
+04/10/2024 17:07:03 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV7' WHERE conse='23' AND ano='2024' AND codigo='23C12' # SGA_BR4 # 
+ 
+04/10/2024 19:53:16 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('939', 'SGA_BR17', '235', '2024/09/30', 'A', 'Se envía al comando superior de acuerdo a oficio N°2024617026651623 de fecha 03 de octubre de 2024, anexando la respuesta de la unidad (BIVEL), a las observaciones hechas de acuerdo a oficio con el que se rechazo. 
+
+A fecha 04 de octubre de 2024, la unidad (BIVEL) no ha enviado el documento firmado, de comunicación del inicio de tramite de pago de recompensa a la fuente humana.', '31', '2024', 'BR17', 'DIV7', 'SGA_DIV7', '0', '') # SGA_BR17 # 
+04/10/2024 19:53:16 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV7' WHERE conse='31' AND ano='2024' AND codigo='265DA' # SGA_BR17 # 
+ 
+05/10/2024 10:09:28 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('940', 'SGA_DIV7', '212', '2024/10/03', 'A', 'Se subsanaron las novedades encontradas en la revisión por parte de la DIV7.', '23', '2024', 'DIV7', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV7 # 
+05/10/2024 10:09:28 am # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='23' AND ano='2024' AND codigo='23C12' # SGA_DIV7 # 
+ 
+08/10/2024 13:11:19 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('941', 'SGA_BR8', '163', '2024/08/08', 'Y', 'Se rechaza, teniendo en cuenta que debe adjuntar el expediente', '33', '2024', 'BR8', 'DIV5', 'SGA_BAMUR', '0', '') # SGA_BR8 # 
+08/10/2024 13:11:19 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='33' AND ano='2024' AND codigo='470CC' # SGA_BR8 # 
+ 
+08/10/2024 17:01:22 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('942', 'SGA_BR8', '163', '2024/08/08', 'A', 'De acuerdo a la verificación que se realizó al expediente por parte de la Brigada para la fecha, se dejaron observaciones consignadas en el oficio No. 2024608020498603 de fecha 2024-AGO-08 enviado al BAMUR5.', '33', '2024', 'BR8', 'DIV5', 'SGA_DIV5', '0', '') # SGA_BR8 # 
+08/10/2024 17:01:22 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV5' WHERE conse='33' AND ano='2024' AND codigo='470CC' # SGA_BR8 # 
+ 
+22/10/2024 07:04:51 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('943', 'SGA_DIV2', '87', '2024/08/01', 'A', 'Se envia el expediente con las aclaraciones a las observaciones encontradas en el oficio N°2024512021755343 del 21 de agosto del 2024.', '24', '2024', 'DIV2', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV2 # 
+22/10/2024 07:04:51 am # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='24' AND ano='2024' AND codigo='2CC1B' # SGA_DIV2 # 
+ 
+24/10/2024 07:45:14 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('944', 'SAR_BRIMI2', '28', '2024/10/09', 'Y', 'Se realiza devolución de expediente con el fin de realizar las aclaraciones pertinentes de acuerdo a oficio anexo y enviado por SICDI', '28', '2024', 'BRIMI2', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_BRIMI2 # 
+24/10/2024 07:45:14 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='28' AND ano='2024' AND codigo='DD92B' # SAR_BRIMI2 # 
+ 
+25/10/2024 15:14:16 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('945', 'SAR_BRIMI1', '18', '2024/10/25', 'A', 'se encuentra acorde a la directiva ministerial No. 02 del 2019.', '27', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+25/10/2024 15:14:16 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='27' AND ano='2024' AND codigo='FA15C' # SAR_BRIMI1 # 
+ 
+25/10/2024 17:49:21 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('946', 'SGA_DIV7', '212', '2024/10/07', 'Y', 'Envió observaciones expediente pago de recompensa "006 SATURNO" oficio radicado No.2024517028939603', '31', '2024', 'DIV7', 'CEDE2', 'SGA_BIVEL', '0', '') # SGA_DIV7 # 
+25/10/2024 17:49:21 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='31' AND ano='2024' AND codigo='265DA' # SGA_DIV7 # 
+ 
+29/10/2024 19:43:18 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('947', 'SGA_BR17', '235', '2024/10/29', 'A', 'Se envía al D2 oficio N°2024617029288083 de fecha 29-oct-2024, con la respuesta a las observaciones emitidas por el BIVEL.', '31', '2024', 'BR17', 'DIV7', 'SGA_DIV7', '0', '') # SGA_BR17 # 
+29/10/2024 19:43:18 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV7' WHERE conse='31' AND ano='2024' AND codigo='265DA' # SGA_BR17 # 
+ 
+31/10/2024 10:46:24 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('948', 'SAR_CAIMI', '8', '2024/10/23', 'Y', 'Se realiza la devolución del expediente mediante oficio con radicado No. 2024-530-0572466-2 de fecha 31 de octubre de 2024 con el fin que el BAIME2 subsane una serie de observaciones encontradas por el CAIMI.', '27', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+31/10/2024 10:46:24 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='27' AND ano='2024' AND codigo='FA15C' # SAR_CAIMI # 
+ 
+05/11/2024 07:58:47 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('949', 'SPR_DIADI', '2', '2024/10/25', 'A', 'En verificacion por parte del personal de recompensas de la DIADI.', '24', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+05/11/2024 07:58:47 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='24' AND ano='2024' AND codigo='2CC1B' # SPR_DIADI # 
+ 
+05/11/2024 08:02:08 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('950', 'SPR_DIADI', '2', '2024/10/25', 'A', 'En revision por parte del personal de recompensas de la DIADI-', '23', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+05/11/2024 08:02:08 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='23' AND ano='2024' AND codigo='23C12' # SPR_DIADI # 
+ 
+06/11/2024 07:33:00 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('951', 'SAR_BRIMI2', '28', '2024/10/09', 'Y', 'Se realiza devolución de expediente con el fin de realizar las aclaraciones pertinentes de acuerdo a oficio anexo en la plataforma SIGAR y SICDI.', '30', '2024', 'BRIMI2', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_BRIMI2 # 
+06/11/2024 07:33:00 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='30' AND ano='2024' AND codigo='493A6' # SAR_BRIMI2 # 
+ 
+06/11/2024 07:51:42 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('952', 'SAR_BRIMI2', '28', '2024/10/09', 'Y', 'Se realiza la devolución del expediente con el fin de realizar las aclaraciones pertinentes de acuerdo a oficio anexo en la plataforma SIGAR y SICDI.', '30', '2024', 'BRIMI2', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_BRIMI2 # 
+06/11/2024 07:51:42 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='30' AND ano='2024' AND codigo='493A6' # SAR_BRIMI2 # 
+ 
+06/11/2024 10:33:02 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('953', 'SAR_BRIMI2', '28', '2024/11/05', 'A', 'Se envía expediente para revisión y aprobación de acuerdo al procedimiento y normatividad vigente.', '28', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+06/11/2024 10:33:02 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='28' AND ano='2024' AND codigo='DD92B' # SAR_BRIMI2 # 
+ 
+14/11/2024 16:29:39 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('954', 'SAR_CAIMI', '8', '2024/11/06', 'Y', 'Se realiza oficio de radicado No. 2024-530-0599547-2 de fecha 14 de noviembre del 2024 con la finalidad de dar mayor claridad a algunos documentos presentados dentro del expedinte.', '28', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_CAIMI # 
+14/11/2024 16:29:39 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='28' AND ano='2024' AND codigo='DD92B' # SAR_CAIMI # 
+ 
+15/11/2024 11:46:56 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('955', 'SAR_BRIMI1', '18', '2024/11/15', 'A', 'Se envía información expediente 018 ASAIAS, se revisa información anexa al expediente sin novedad', '26', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+15/11/2024 11:46:56 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='26' AND ano='2024' AND codigo='EA586' # SAR_BRIMI1 # 
+ 
+15/11/2024 11:48:19 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('956', 'SAR_BRIMI1', '18', '2024/10/25', 'A', 'Expediente revisado, solicito su revisión.', '27', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+15/11/2024 11:48:19 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='27' AND ano='2024' AND codigo='FA15C' # SAR_BRIMI1 # 
+ 
+19/11/2024 11:38:34 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('957', 'SGA_BR28', '262', '2024/11/09', 'Y', 'Se devuelve el expediente de recompensa toda vez que tiene inconsistencias de acuerdo al oficio que se anexa a la plataforma', '36', '2024', 'BR28', 'DIV8', 'SGA_BIAHE', '0', '') # SGA_BR28 # 
+19/11/2024 11:38:34 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='36' AND ano='2024' AND codigo='3972F' # SGA_BR28 # 
+ 
+20/11/2024 10:54:44 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('958', 'SAR_BRIMI2', '28', '2024/11/19', 'A', 'Se envía expediente para revisión y aprobación de acuerdo al procedimiento y normatividad vigente.', '30', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+20/11/2024 10:54:44 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='30' AND ano='2024' AND codigo='493A6' # SAR_BRIMI2 # 
+ 
+22/11/2024 18:03:44 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('959', 'SAR_CAIMI', '8', '2024/11/13', 'Y', 'Se realiza devolución del expedientemediante oficio con radicado No. 2024-530-0618645-2 de fecha 22 de noviembre de 2024, con el fin que el BAIME2 subsane una serie de observaciones encontradas por este Comando.', '26', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+22/11/2024 18:03:44 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='26' AND ano='2024' AND codigo='EA586' # SAR_CAIMI # 
+ 
+26/11/2024 09:40:51 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('960', 'SGA_BR28', '262', '2024/11/09', 'A', 'SE REMITE EL PRESENTE EXPEDIENTE PARA PAGO DE RECOMPENSA AL COMANDO SUPERIOR CON EL PROPOSITO DE EVALORAR LA INFORMACIÓN RELACIONADA EN EL EXPEDIENTE Y CONTAR CON SU VALIOSO APOYO PARA SER ELEVADA AL COMANDO SUPERIOR', '38', '2024', 'BR28', 'DIV8', 'SGA_DIV8', '0', '') # SGA_BR28 # 
+26/11/2024 09:40:51 am # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV8' WHERE conse='38' AND ano='2024' AND codigo='8A06A' # SGA_BR28 # 
+ 
+26/11/2024 10:33:32 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('961', 'SAR_CAIMI', '8', '2024/11/20', 'Y', 'Se efectua devolución del expediente por requerir aclarar observaciones dentro de la documentación soporte.', '30', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_CAIMI # 
+26/11/2024 10:33:32 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='30' AND ano='2024' AND codigo='493A6' # SAR_CAIMI # 
+ 
+26/11/2024 10:40:40 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('962', 'SAR_CAIMI', '8', '2024/11/18', 'Y', 'Se realiza devolución del expediente en razón a que se requiere aclaraciones en documentos que reposan en el expediente.', '27', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+26/11/2024 10:40:40 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='27' AND ano='2024' AND codigo='FA15C' # SAR_CAIMI # 
+ 
+27/11/2024 19:13:37 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('963', 'SAR_BRIMI1', '18', '2024/10/25', 'A', 'Se verifico y se envia para su revisión y aprobación', '27', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+27/11/2024 19:13:37 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='27' AND ano='2024' AND codigo='FA15C' # SAR_BRIMI1 # 
+ 
+28/11/2024 14:37:46 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('964', 'SAR_BRCIM1', '40', '2024/09/27', 'A', 'De acuerdo a las observaciones presentadas mediante oficio de radicado No. 2024-550-00554652-2 del 22 de octubre 2024 del CACIM, se subsanaron para continuar el proceso. de igual manera se aclara que hace falta el informe de resultado de la prueba PIPH', '29', '2024', 'BRCIM1', 'CACIM', 'SAR_CACIM', '0', '') # SAR_BRCIM1 # 
+28/11/2024 14:37:46 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CACIM' WHERE conse='29' AND ano='2024' AND codigo='89D9B' # SAR_BRCIM1 # 
+ 
+04/12/2024 11:17:59 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('965', 'SAR_CACIM', '39', '2024/11/26', 'A', 'De la misma manera, es de aclarar que mención a lo anterior, se encuentra pendiente la recepción del documento que suministra la parte judicial que comprende al análisis de resultados del PIPH, de las sustancias incautadas en el desarrollo en la operación militar, documento que hasta el momento no lo han suministrado; por lo cual una vez se cuente con este documento será allegado a la unidad superior para ser anexado en el expediente del pago de recompensas', '29', '2024', 'CACIM', 'CACIM', 'SAR_CACIM', '0', '') # SAR_CACIM # 
+04/12/2024 11:17:59 am # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='29' AND ano='2024' AND codigo='89D9B' # SAR_CACIM # 
+ 
+05/12/2024 11:23:56 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('966', 'SAR_BRIMI2', '28', '2024/12/04', 'A', 'Se envía expediente para revisión y aprobación de acuerdo al procedimiento y normatividad vigente.', '30', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+05/12/2024 11:23:56 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='30' AND ano='2024' AND codigo='493A6' # SAR_BRIMI2 # 
+ 
+05/12/2024 11:29:16 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('967', 'SAR_BRIMI2', '28', '2024/11/04', 'A', 'Se envía expediente para revisión y aprobación de acuerdo al procedimiento y normatividad vigente.', '28', '2024', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+05/12/2024 11:29:16 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='28' AND ano='2024' AND codigo='DD92B' # SAR_BRIMI2 # 
+ 
+06/12/2024 09:30:56 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('968', 'SPR_DIADI', '2', '2024/12/05', 'A', 'El expediente se encuentra en revision por parte del personal de planeacion de recompensas de DIADI - CEDE2.', '29', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+06/12/2024 09:30:56 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='29' AND ano='2024' AND codigo='89D9B' # SPR_DIADI # 
+ 
+09/12/2024 15:34:05 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('969', 'SGA_DIV8', '248', '2024/12/02', 'Y', 'NO FUE POSIBLE REALIZAR ESTUDIO DEL EXPEDIENTE, YA QUE NO FUE ANEXADO LOS SOPORTES.', '42', '2024', 'DIV8', 'CEDE2', 'SGA_BATOT29', '0', '') # SGA_DIV8 # 
+09/12/2024 15:34:05 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='42' AND ano='2024' AND codigo='C6DAB' # SGA_DIV8 # 
+ 
+12/12/2024 10:09:52 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('970', 'SGA_DIV8', '248', '2024/11/25', 'Y', 'SE DEVUELVE EL EXPEDIENTE DEBIDO A OBSERVACIONES EMITIDAS EN OFICIO N° 2024518033543553 DE FECHA 10-12-2024.', '38', '2024', 'DIV8', 'CEDE2', 'SGA_BIAHE', '0', '') # SGA_DIV8 # 
+12/12/2024 10:09:52 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='38' AND ano='2024' AND codigo='8A06A' # SGA_DIV8 # 
+ 
+12/12/2024 10:33:43 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('971', 'SAR_BRIMI1', '18', '2024/12/11', 'A', 'revisado y pendiente aprobacion comite regional', '34', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+12/12/2024 10:33:43 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='34' AND ano='2024' AND codigo='2716D' # SAR_BRIMI1 # 
+ 
+12/12/2024 10:34:38 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('972', 'SAR_BRIMI1', '18', '2024/12/11', 'A', 'Revisado y aprobado, pendiente revision comite regional.', '26', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+12/12/2024 10:34:38 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='26' AND ano='2024' AND codigo='EA586' # SAR_BRIMI1 # 
+ 
+12/12/2024 11:03:52 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('973', 'SAR_CAIMI', '8', '2024/12/11', 'Y', 'Se realiza devolución porque encuentra mal escaneado el expediente debido a que le faltan folios', '26', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+12/12/2024 11:03:52 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='26' AND ano='2024' AND codigo='EA586' # SAR_CAIMI # 
+ 
+12/12/2024 12:33:08 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('974', 'SAR_BRIMI1', '18', '2024/12/12', 'A', 'envió Expediente completo', '26', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+12/12/2024 12:33:08 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='26' AND ano='2024' AND codigo='EA586' # SAR_BRIMI1 # 
+ 
+16/12/2024 16:48:29 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('975', 'SGA_DIV7', '212', '2024/10/07', 'A', 'La Unidad subsanó las novedades encontradas en la revisión por parte de la DIV7, por lo tanto el expediente de recompensa cumple los parámetros establecidos en la Directiva Ministerial 02 del 2019, para su trámite ante el Comité Central de Recompensas de Ejercito.', '31', '2024', 'DIV7', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV7 # 
+16/12/2024 16:48:29 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='31' AND ano='2024' AND codigo='265DA' # SGA_DIV7 # 
+ 
+20/12/2024 08:41:12 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('976', 'SAR_BRIMI1', '18', '2024/12/19', 'A', 'Se revisa cargue del expediente OCEANIDAS y queda pendiente a la revisión por parte del comite regional.', '35', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+20/12/2024 08:41:12 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='35' AND ano='2024' AND codigo='DE313' # SAR_BRIMI1 # 
+ 
+26/12/2024 15:07:40 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('977', 'SAR_BRIMI1', '18', '2024/12/21', 'A', 'Se reviso y envío a Comite Regional para su aprobación', '32', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+26/12/2024 15:07:40 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='32' AND ano='2024' AND codigo='99F4C' # SAR_BRIMI1 # 
+ 
+27/12/2024 10:46:28 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('978', 'SGA_DIV5', '157', '2024/10/10', 'Y', 'Radicado N° 2024515034681373 MDN-COGFM-COEJC-SECEJ-JEMOP-DIV5-JEM-D2- 25.20 
+
+Ibagué - Tolima, 19 de diciembre de 2024
+
+Señor Coronel
+EDWARD VICENTE MARTÍNEZ ANTELIZ
+Comandante Octava Brigada
+Armenia - Quindío.
+DE USO EXCLUSIVO
+
+Asunto: Devolución "Expediente ORDOP 013 JÚPITER - OFRAG - 003 - BR8"
+
+Respetuosamente, me permito informar a ese comando, la devolución del trámite pago de recompensa realizado ante esta unidad centralizadora con registro SIGAR N° 33, correspondiente a la Operación Militar ORDOP 013 JÚPITER Orden fragmentaria N° 003, trámite informado por esa brigada mediante radiograma radicado Nº 2024608027076003 fecha 08-oct-2024; operación militar desarrollada por tropas del Batallón de Alta Montaña N° 5 "General Urbano Castellanos Castillo"; resultado reportado mediante radiograma N° 3551 el día 18 de julio de 2024.
+
+No obstante, y teniendo en cuenta la Directiva Ministerial N° 02 de 2019 que establece los "criterios para el pago de recompensas y pago de información en actividades de inteligencia y contrainteligencia" título VIII. "documentos para el trámite de las solicitudes de pago de recompensas", "...Parágrafo 3: Los comités correspondientes de pago de recompensas en caso de considerarlo necesario, podrán requerir otros documentos para fortalecer los mecanismos de control..."
+
+En relación a lo anterior y una vez revisada la documentación enviada mediante oficio N° 2024608032007483, así como de los soportes adjuntos a este, esta unidad determina rechazar el expediente y notificar a la unidad solicitante de que ante esta decisión NO PROCEDE, toda vez que no se cumplió con los requisitos mínimos de acuerdo a la directiva ministerial 02/2019 (ANEXO 1: Lista de Verificación) para considerar una solicitud pago de recompensas como a continuación se expone cada uno de los numerales:
+
+1.	Enviar anexo A de la fuente CC N******9571
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+2.	No se evidencia documento o certificación expedida por el comandante de la unidad indicando que no tramitará pago alguno ante el grupo de atención humanitaria al desmovilizado (GAHD) u otro organismo por el mismo resultado.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+3.	Certificación de que el informante NO pertenece al programa de reinserción expedido por el grupo de atención humanitaria al desmovilizado (GAHD).
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+4.	No se evidencia acta donde conste la negociación efectuada con la fuente humana, sin determinar la cifra para el pago.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+5.	No se evidencia tarjeta necrodactilia de los muertos en desarrollo de operaciones militares.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+6.	Adjuntar copia legible del libro radicador con el que cuenta la unidad del periodo comprendido entre el día 07 de julio hasta el día 20 julio del 2024, así mismo del folio de apertura de este libro.
+
+RTA//: De acuerdo a documentos anexos la unidad no aportó la totalidad de los folios solicitados, lo cual no permite despejar las dudas razonables a lugar, evidenciadas en el proceso de registro de los documentos que soportan la solicitud o trámite, así mismo en los folios que se adjuntan se logra evidenciar inconsistencias como posibles alteraciones en fechas y registros faltantes (espacios en blanco - folio 192).
+
+7.	Adjuntar copia impresa de la misión de trabajo que sustentó las actividades de recolección de información táctica que cumplió el SV. Arias Loaiza Carlos Alberto en el día 10 de julio de 2024.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+8.	Copia legible del libro de misiones de trabajo del S2 BAMUR5, donde se registró la misión desarrollada por el SV. Arias Loaiza Carlos Alberto el día 09 de julio de 2024, en la cual se recolectó la información relacionada en el formato de recolección de información táctica (FRIT) N° 3463.
+
+RTA//: Una vez verificados los soportes (folios 11 -12 - 13 y 14) no se evidenció anotación o registro de misión que valide la actividad desarrollada (recolección información).
+
+9.	Copia legible del libro de órdenes verbales S2 BAMUR5 del mes de julio de 2024.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+10.	Copia legible de los boletines de información de los siguientes días:
+
+RTA//: Los boletines de la unidad BAMOG (18 de mayo 2024 y 08 de junio 2024) no se adjuntaron, así mismo los del S2 BAMUR5 fue enviado el del día 04 de julio 2024 y del día 09 de julio 2024 no se adjuntó al requerimiento.
+
+11.	Copia legible de los formatos de recolección de información táctica (FRIT) del lapso 04 al 10 de julio generados por el S2 BAMUR.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad indica la existencia de estos documentos, sin embargo, en los soportes adjuntos no se evidencia copia de lo solicitado, se aclara que la unidad adjuntó copia del día 09 de julio, sin hacer aclaración de la ausencia de lo requerido o faltantes (FRITS generados los días 04, 05, 06, 07, 08 y 10 de julio), lo cual no permite determinar el motivo de la ausencia de los demás documentos.
+
+12.	Copia legible del acta reunión breaffing del comandante o actualización del comandante de los días 09 al 15 de julio del 2024.
+
+RTA//: Se verifica las actas de reunión breaffing adjuntas así: N° 3238, N° 3239, N° 3240, N° 3241, N° 3242, N° 3243 y N° 3244, de los días 09 al 15 de julio, sin embargo, genera suspicacia el hecho de que los radicados de diferentes días sean consecutivos, de igual forma no se aclara por parte de la unidad este hecho.
+
+13.	Copia legible del libro del servicio COT en los días 09 al 15 de julio del 2024.
+
+RTA//: Se verifica las copias adjuntas (folios 10 al 33), en el cual se evidencia los reportes de las unidades, así como las anotaciones referentes al día de los hechos.
+
+14.	Copia legible del libro del oficial de inteligencia del BAMUR5, en los días 09 al 15 de julio del 2024.
+
+RTA//: No se evidenció copias del libro del oficial de inteligencia, sin embargo, se verifica las copias enviadas (folios 50 al 79) del libro servicio inteligencia, en la cual no se logró determinar anotación o reporte de la recolección de información, anotación necesaria ante la no existencia de la misión de trabajo que sustentó las actividades desarrolladas por el agente el día 09 de julio de 2024.
+Se recomienda además a la unidad y al área de inteligencia se realicé el registro de las actividades desarrolladas en el marco de la actividad de inteligencia, toda vez que se denota anotaciones repetitivas y muy generalizadas del día a día, se recalca que se debe aplicar y cumplir los lineamientos establecidos en la directiva 00000252/2021 (página 14 de 42) en el acápite tareas del suboficial de servicio, numeral 05: Registrar todas las actividades de la dependencia en el libro (minuta).
+
+15.	Copia legible del cuaderno del comandante de la unidad AZOR2, para los días 09 al 15 de julio del 2024.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+16.	Hacer aclaración sobre cuál fue el medio utilizado para la difusión de la información por parte del comando de la unidad al pelotón AZOR2, comandada por el ST. Ortega Farfán Santiago, unidad que logra el resultado operacional relacionado en el radiograma N° 3551 el día 18 de julio de 2024.
+
+RTA//: Mediante oficio 2024608032007483 25 noviembre de 2024 la unidad solicitante indica que este documento no existe.
+
+17.	Copia del oficio N° 2024608020498603 de fecha 08 de agosto de 2024, en el cual la octava brigada notifica las novedades evidencias al Batallón de Alta Montaña N° 5 "General Urbano Castellanos Castillo"
+
+RTA//: Se verifica el oficio N° 2024608020498603 de fecha 08 de agosto de 2024, en el cual inicialmente se identificaron novedades e inconsistencias en la recolección y entrega de soportes que debe tener un expediente pago recompensa (Directiva 02/2019), lo cual era determinante para que el área de inteligencia en el B2 BR08 rechazara el trámite de recompensa teniendo como referencia las tareas competentes a los B2 referidos en la directiva 00000252/2021 (página 30 de 42) en el numeral 08: (...aplicar los procedimientos del proceso de producción de inteligencia y contrainteligencia...) para lo cual, no se tuvo en cuenta las actividades enmarcadas en el flujograma del procedimiento de gastos reservados P-JEMPP-CEDE2-189 versión 4 fecha emisión 10-enero-2024.
+
+Es necesario aclarar que en ningún caso procederá ante este comando la alteración o modificación de los documentos ya analizados, de acuerdo con lo contemplado en los artículos 286 al 2891 (Delitos contra la Fe Pública) del Código Penal.
+
+Además de recordar que de acuerdo a la directiva 212/2022 y en concordancia al protocolo para el trámite de recompensas en el cual se indica que: (...Es el comandante de la unidad donde se manejó la fuente de información, una vez tome la decisión de gestionar el pago de recompensa dando cumplimiento de la Normatividad Vigente, verificando que los documentos exigidos para el trámite y cancelación de los pagos de recompensas se encuentren ajustados a la norma relacionados con el tema...), por lo cual se exhorta al personal integrante del área de inteligencia S2 BAMUR5, el apego irrestricto a la Ley 1862 de 2017 y su marco normativo a fin de no configurarse posible falta disciplinaria enmarcadas en la Ley.
+
+De igual forma realizar los controles y verificaciones correspondientes basados a la normatividad vigente y de acuerdo a estas actividades, recomendar al comandante, con el fin de evitar trámites innecesarios que no cumplen con los requisitos mínimos exigidos.', '33', '2024', 'DIV5', 'CEDE2', 'SGA_BAMUR', '0', '') # SGA_DIV5 # 
+27/12/2024 10:46:28 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='33' AND ano='2024' AND codigo='470CC' # SGA_DIV5 # 
+ 
+31/12/2024 09:15:16 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('979', 'SAR_CAIMI', '8', '2024/12/21', 'Y', 'Volver a Escanear expediente le hace falta documentación', '32', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+31/12/2024 09:15:16 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='32' AND ano='2024' AND codigo='99F4C' # SAR_CAIMI # 
+ 
+31/12/2024 09:34:04 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('980', 'SAR_BRIMI1', '18', '2024/12/21', 'A', 'escaneado nuevamente', '32', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+31/12/2024 09:34:04 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='32' AND ano='2024' AND codigo='99F4C' # SAR_BRIMI1 # 
+ 
+03/01/2025 08:37:25 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('981', 'SAR_CAIMI', '8', '2024/12/21', 'Y', 'Se realiza devolución mediante oficio con radicado No. 2025-530-0001069-2 de fecha 02 de enero de 2025 con el fin que el BAIME2 subsane una serie de observaciones encontradas por este Comando.', '32', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+03/01/2025 08:37:25 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='32' AND ano='2024' AND codigo='99F4C' # SAR_CAIMI # 
+ 
+08/01/2025 16:04:41 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('982', 'SPR_DIADI', '2', '2024/12/19', 'A', 'En revision en CEDE2', '26', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+08/01/2025 16:04:41 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='26' AND ano='2024' AND codigo='EA586' # SPR_DIADI # 
+ 
+13/01/2025 07:57:17 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('983', 'SAR_CAIMI', '8', '2024/12/10', 'Y', 'Se realiza devolucón mediante oficio con radicado No. 2025-530-0012754-2 de fecha 10 de enero de 2025 con el fin que el BAIME2 subsane una serie de observaciones encontradas por este Comando.', '34', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+13/01/2025 07:57:17 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='34' AND ano='2024' AND codigo='2716D' # SAR_CAIMI # 
+ 
+13/01/2025 15:35:48 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('984', 'SAR_CAIMI', '8', '2024/12/18', 'Y', 'Se realiza la devolución del expediente en razón a que presenta novedades en la documentación soporte.', '35', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+13/01/2025 15:35:48 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='35' AND ano='2024' AND codigo='DE313' # SAR_CAIMI # 
+ 
+14/01/2025 09:36:46 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('985', 'SPR_DIADI', '2', '2024/12/19', 'A', 'En revision', '27', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+14/01/2025 09:36:46 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='27' AND ano='2024' AND codigo='FA15C' # SPR_DIADI # 
+ 
+16/01/2025 16:29:29 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('986', 'SGA_BR28', '262', '2024/11/09', 'A', 'se envía el presente expediente para continuar trámite ante el comando superior', '38', '2024', 'BR28', 'DIV8', 'SGA_DIV8', '0', '') # SGA_BR28 # 
+16/01/2025 16:29:29 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV8' WHERE conse='38' AND ano='2024' AND codigo='8A06A' # SGA_BR28 # 
+ 
+18/01/2025 13:38:40 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('987', 'SAR_BRIMI1', '18', '2024/12/21', 'Y', 'CORREGIR EL VALOR', '32', '2024', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+18/01/2025 13:38:40 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='32' AND ano='2024' AND codigo='99F4C' # SAR_BRIMI1 # 
+ 
+22/01/2025 05:36:41 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('988', 'SAR_BRIMI1', '18', '2025/01/21', 'A', 'Revisado para su aprobación', '32', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+22/01/2025 05:36:41 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='32' AND ano='2024' AND codigo='99F4C' # SAR_BRIMI1 # 
+ 
+23/01/2025 10:23:52 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('989', 'SPR_DIADI', '2', '2025/01/22', 'A', 'El tramite pago de información se encuentra en revisión por parte del personal de la sección de recompensas del CEDE2.', '42', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+23/01/2025 10:23:52 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='42' AND ano='2024' AND codigo='C6DAB' # SPR_DIADI # 
+ 
+26/01/2025 16:56:32 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('990', 'SGA_FUDRA2', '280', '2025/01/20', 'A', 'Una vez recepcionado el expediente para el pago de información se solicito a la unidad BADRA4 mediante oficio de radicado No 2025776001814273 anexar al expediente el perfil delictivo de sujeto Miler Quiñones Castillo (Alias Papo o Pisa Suave) presunto cabecilla de finanzas de GAOr Estructura Ariel Aldana e igualmente copia del oficio del informe dejando a disposición de la autoridad competente los sujetos capturados y el material incautado.', '2', '2025', 'FUDRA2', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_FUDRA2 # 
+26/01/2025 16:56:32 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SPR_DIADI' WHERE conse='2' AND ano='2025' AND codigo='AE1F2' # SGA_FUDRA2 # 
+ 
+31/01/2025 15:38:35 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('991', 'SAR_BRIMI1', '18', '2024/12/11', 'A', 'Se subsanaron las observaciones solicitadas por el CAIMI y se envía para que el comité regional de recompensas realice el comité', '34', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+31/01/2025 15:38:35 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='34' AND ano='2024' AND codigo='2716D' # SAR_BRIMI1 # 
+ 
+06/02/2025 13:30:38 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('992', 'SAR_BRIMI1', '18', '2025/02/06', 'A', 'Se revisa el expediente y se envia para analisis del comite regional.', '35', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+06/02/2025 13:30:38 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='35' AND ano='2024' AND codigo='DE313' # SAR_BRIMI1 # 
+ 
+08/02/2025 03:39:38 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('993', 'SGA_BR30', '102', '2025/02/05', 'A', 'No se encontraron observaciones durante la verificaciones por el suboficial Gestión Administrativo', '4', '2025', 'BR30', 'DIV2', 'SGA_DIV2', '0', '') # SGA_BR30 # 
+08/02/2025 03:39:38 am # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV2' WHERE conse='4' AND ano='2025' AND codigo='9F5C6' # SGA_BR30 # 
+ 
+10/02/2025 16:48:23 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('994', 'SPR_DIADI', '2', '2025/01/27', 'A', 'El presente tramite de recompensas esta en revision por parte del personal de DIADI - CEDE 2', '32', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+10/02/2025 16:48:23 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='32' AND ano='2024' AND codigo='99F4C' # SPR_DIADI # 
+ 
+18/02/2025 15:01:52 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('995', 'SGA_DIV8', '248', '2024/11/25', 'A', 'La evaluación del expediente de recompensa se consolidó el día 14 de febrero de 2025, en razón a que la unidad solicitante aportó documentos que estaban pendiente por entregar para su respectivo trámite. Es necesario añadir que la Octava División solicitó prorroga ante el Cede2 mediante oficio No. 2024518033547263 de fecha 10 diciembre de 2024, siendo esta prórroga autorizada mediante radiograma No. 2024-206-0663942-2 de fecha 13 diciembre de 2024.
+
+El D2 de la Octava División emitió observaciones, las cuales fueron remitidas al escalón táctico Brigada mediante oficio No. 2024518033543553 de fecha 10 de diciembre de 2024, en donde dieron respuesta mediante oficio No. 202562800060493 de fecha 11 de enero de 2025 anexando documentos faltantes.
+
+Únicamente se valoró las sustancias químicas que cuenta con pruebas preliminares de laboratorio. Las demás sustancias químicas reportadas en el radiograma de resultados, que se hallaron en el lugar de los hechos, no fueron valoradas, debido a que no cuentan con su plena identificación por parte del funcionario de policía judicial, lo que no permitió establecer con exactitud a qué clase de sustancias químicas corresponde y la cantidad de lo incautado. Queda pendiente el informe de laboratorio definitivo de la sustancia que tiene PIPH, el cual es remitido por el ente judicial.
+
+No fue posible darle valor al material de transporte incautado, ya que no se adjuntó los soportes periciales del caso.
+
+No se valoró el armamento y municiones, ya que la Unidad solicitante no adjuntó informes periciales necesarios para poder realizarlo.
+
+No se valoró las capturas, debido a que la Unidad solicitante no logró demostrar que estos individuos sean miembros de este GAO, sustentándolo mediante información de inteligencia debidamente soportada, prontuario o perfil delictivo, y/o ubicación en la estructura delincuencial mediante un organigrama simplificado.', '38', '2024', 'DIV8', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV8 # 
+18/02/2025 15:01:52 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='38' AND ano='2024' AND codigo='8A06A' # SGA_DIV8 # 
+ 
+18/02/2025 17:37:40 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('996', 'SPR_DIADI', '2', '2025/02/13', 'A', 'el Tramite se encuentra en revisión por personal de CEDE2 DIADI', '35', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+18/02/2025 17:37:40 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='35' AND ano='2024' AND codigo='DE313' # SPR_DIADI # 
+ 
+20/02/2025 17:33:20 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('997', 'SAR_BRIMI1', '18', '2025/02/20', 'A', 'Se reviso y se envía para verificación del Comite Regional de recompensas.', '37', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+20/02/2025 17:33:20 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='37' AND ano='2024' AND codigo='930A8' # SAR_BRIMI1 # 
+ 
+24/02/2025 16:19:19 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('998', 'SAR_BRIMI1', '18', '2025/02/24', 'A', 'se reviso y se envia para su evaluación', '40', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+24/02/2025 16:19:19 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='40' AND ano='2024' AND codigo='32F25' # SAR_BRIMI1 # 
+ 
+24/02/2025 16:20:21 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('999', 'SAR_BRIMI1', '18', '2025/02/24', 'A', 'Se reviso y se envia para su evaluación', '39', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+24/02/2025 16:20:21 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='39' AND ano='2024' AND codigo='CAB42' # SAR_BRIMI1 # 
+ 
+25/02/2025 15:14:57 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1000', 'SAR_CAIMI', '8', '2025/02/19', 'Y', 'Se realiza la devolución mediante oficio con radicado No. 2025-530-0123537-2 de fecha 25 de febrero de 2025 con el fin que el BAIME2 subsane una serie de observaciones encontradas por este Comando.', '37', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+25/02/2025 15:14:57 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='37' AND ano='2024' AND codigo='930A8' # SAR_CAIMI # 
+ 
+26/02/2025 15:18:27 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1001', 'SAR_CAIMI', '8', '2025/02/24', 'Y', 'Se realiza la devolución del expediente con la finalidad de que la unidad aclare algunas novedades documentales evidenciadas.', '39', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+26/02/2025 15:18:27 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='39' AND ano='2024' AND codigo='CAB42' # SAR_CAIMI # 
+ 
+27/02/2025 11:19:56 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1002', 'SAR_CAIMI', '8', '2025/02/24', 'Y', 'Se realiza devolución expediente mediante oficio con radicado 2025-530-0128033-2 de fecha 27 de febrero de 2025 con el fin que el BAIME2 subsane una serie de observaciones encontradas por este Comando.', '40', '2024', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+27/02/2025 11:19:56 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='40' AND ano='2024' AND codigo='32F25' # SAR_CAIMI # 
+ 
+11/03/2025 16:43:54 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1003', 'SAR_BRIMI1', '18', '2025/03/10', 'A', 'Revisada pendiente para verificación comite regional', '37', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+11/03/2025 16:43:54 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='37' AND ano='2024' AND codigo='930A8' # SAR_BRIMI1 # 
+ 
+20/03/2025 16:34:53 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1004', 'SAR_BRIMI1', '18', '2025/02/24', 'Y', 'Esta mal cargado', '39', '2024', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+20/03/2025 16:34:53 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='39' AND ano='2024' AND codigo='CAB42' # SAR_BRIMI1 # 
+ 
+21/03/2025 07:43:36 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1005', 'SAR_BRIMI1', '18', '2025/02/20', 'Y', 'Faltan firmas en el expediente, se debe cargar completo para evitar observaciones del cómite regional y central', '40', '2024', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+21/03/2025 07:43:36 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='40' AND ano='2024' AND codigo='32F25' # SAR_BRIMI1 # 
+ 
+21/03/2025 07:46:25 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1006', 'SAR_BRIMI1', '18', '2025/02/20', 'A', 'Revisado y pendiente de su aprobación', '39', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+21/03/2025 07:46:25 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='39' AND ano='2024' AND codigo='CAB42' # SAR_BRIMI1 # 
+ 
+21/03/2025 12:29:26 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1007', 'SAR_BRIMI1', '18', '2025/02/20', 'A', 'Se reviso y se envía para evaluación del Comite Regional', '40', '2024', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+21/03/2025 12:29:26 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='40' AND ano='2024' AND codigo='32F25' # SAR_BRIMI1 # 
+ 
+07/04/2025 11:13:37 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1008', 'SPR_DIADI', '2', '2025/03/19', 'A', 'Se encuentra en revision de CEDE2', '37', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+07/04/2025 11:13:37 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='37' AND ano='2024' AND codigo='930A8' # SPR_DIADI # 
+ 
+07/04/2025 11:14:37 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1009', 'SPR_DIADI', '2', '2025/03/26', 'A', 'Se encuentra en revision por parte de personal de CEDE2', '40', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+07/04/2025 11:14:37 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='40' AND ano='2024' AND codigo='32F25' # SPR_DIADI # 
+ 
+07/04/2025 11:15:59 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1010', 'SPR_DIADI', '2', '2025/03/26', 'A', 'Se encuentra en revision por parte de personal de CEDE2', '39', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+07/04/2025 11:15:59 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='39' AND ano='2024' AND codigo='CAB42' # SPR_DIADI # 
+ 
+15/04/2025 09:16:23 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1011', 'SAR_BRIMI2', '28', '2025/04/10', 'Y', 'Se realiza devolución mediante oficio con radicado No. 2025-541-0215729-2 de fecha 14 de abril de 2025, con el fin que el BAIMI5 subsane una serie de observaciones encontradas por la BRIMI2.', '1', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI5', '0', '') # SAR_BRIMI2 # 
+15/04/2025 09:16:23 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='1' AND ano='2025' AND codigo='04889' # SAR_BRIMI2 # 
+ 
+17/04/2025 20:26:33 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1012', 'SAR_BRIMI2', '28', '2025/04/16', 'A', 'Se recibió el expediente de acuerdo oficio remisorio con radicado N° 2025-542-0221288-2 de fecha 16 de abril de 2025 (BAIMI5), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con radicado N° 2025-541-0222596-2 de fecha 17 de abril de 2025.', '1', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+17/04/2025 20:26:33 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='1' AND ano='2025' AND codigo='04889' # SAR_BRIMI2 # 
+ 
+25/04/2025 14:22:41 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1013', 'SGA_DIV2', '87', '2025/02/04', 'A', '1. En lo que compete al CI3MO2, se verifico que la información fuera reportada en el boletín de informaciones N°20 de la Trigesíma
+Brigada de fecha 20 de enero del 2025, efectivamente se hizo, posteriormente fue cargada a la plataforma del Sistema Gestión
+Operacional (SIGOP).
+2. La unidad no aporta las pruebas finales que den pie a la evaluación de las sustancias en un 100%.
+____________________________________________________________________________________________________________', '4', '2025', 'DIV2', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV2 # 
+25/04/2025 14:22:41 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='4' AND ano='2025' AND codigo='9F5C6' # SGA_DIV2 # 
+ 
+28/04/2025 18:14:48 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1014', 'SAR_CAIMI', '8', '2025/04/17', 'Y', 'Se realiza la devolución del expedinte en razón a la desición tomada el día 28 de abril del 2025 por el comité regional de recompensas, debido a que el expediente no cuenta con la totalidad de la documentación exigida de acuerdo a la directiva ministerial permanente 02/2019.', '1', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIMI5', '0', '') # SAR_CAIMI # 
+28/04/2025 18:14:48 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='1' AND ano='2025' AND codigo='04889' # SAR_CAIMI # 
+ 
+30/04/2025 08:32:58 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1015', 'SAR_BRIMI2', '28', '2025/04/29', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-541-0240507-2 de fecha 29 de abril de 2025, con el fin que el BAIMI7 subsane las observaciones encontradas por este Comando.', '6', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_BRIMI2 # 
+30/04/2025 08:32:58 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='6' AND ano='2025' AND codigo='77347' # SAR_BRIMI2 # 
+ 
+30/04/2025 09:24:38 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1016', 'SAR_BRIMI1', '18', '2025/04/28', 'A', 'Revisado y pendiente aprobación comite regional.', '5', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+30/04/2025 09:24:38 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='5' AND ano='2025' AND codigo='E4FD6' # SAR_BRIMI1 # 
+ 
+30/04/2025 09:24:55 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1017', 'SAR_BRIMI1', '18', '2025/04/28', 'A', 'Revisado y pendiente aprobación comite regional.', '3', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+30/04/2025 09:24:55 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='3' AND ano='2025' AND codigo='9B599' # SAR_BRIMI1 # 
+ 
+30/04/2025 09:27:00 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1018', 'SAR_BRIMI1', '18', '2025/04/28', 'A', 'Revisado y pendiente aprobación comite regional.', '13', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+30/04/2025 09:27:00 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='13' AND ano='2025' AND codigo='B1F81' # SAR_BRIMI1 # 
+ 
+01/05/2025 15:45:40 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1019', 'SPR_DIADI', '2', '2025/04/29', 'A', 'Se encuentra en proceso de revisión por parte de personal de CEDE2', '4', '2025', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+01/05/2025 15:45:40 pm # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='4' AND ano='2025' AND codigo='9F5C6' # SPR_DIADI # 
+ 
+02/05/2025 07:02:33 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1020', 'SAR_CAIMI', '8', '2025/04/30', 'Y', 'Se realiza la devolución del expediente por encontrase escaneado de manera inadecuada, realizar las debidas coordinaciones con la Brigada de Inteligencia Militar No.1 para recibir las orientaciones pertinentes.', '13', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIME4', '0', '') # SAR_CAIMI # 
+02/05/2025 07:02:33 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='13' AND ano='2025' AND codigo='B1F81' # SAR_CAIMI # 
+ 
+02/05/2025 07:44:54 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1021', 'SAR_BRIMI2', '28', '2025/04/30', 'Y', 'Se realiza devolución del expediente teniendo en cuenta que no se encuentra cargado el soporte para su revisión por parte del comando BRIMI2, (Cargar de acuerdo a la lista de verificación de la directiva ministerial No. 0012).', '15', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI4', '0', '') # SAR_BRIMI2 # 
+02/05/2025 07:44:54 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='15' AND ano='2025' AND codigo='2A627' # SAR_BRIMI2 # 
+ 
+03/05/2025 11:14:03 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1022', 'SAR_BRIMI1', '18', '2025/04/28', 'A', 'Revisado y aprobado, para la revisión del comité regional.', '13', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+03/05/2025 11:14:03 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='13' AND ano='2025' AND codigo='B1F81' # SAR_BRIMI1 # 
+ 
+05/05/2025 08:17:01 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1023', 'SAR_CAIMI', '8', '2025/05/05', 'Y', 'Se realiza la devolución del expediente en razón a que este no ha sido verificado por la Brigada de Inteligencia Militar No.1, el trámite debe seguir el debido conducto regular.', '13', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIME4', '0', '') # SAR_CAIMI # 
+05/05/2025 08:17:01 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='13' AND ano='2025' AND codigo='B1F81' # SAR_CAIMI # 
+ 
+06/05/2025 08:14:42 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1024', 'SAR_CAIMI', '8', '2025/04/28', 'Y', 'Se realiza la devolución del expedinete por presentar inconsistencias en la documentación las cuales se requiere sean solucionadas antes de ser presentado al comité regional de recompensas.', '5', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+06/05/2025 08:14:42 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='5' AND ano='2025' AND codigo='E4FD6' # SAR_CAIMI # 
+ 
+07/05/2025 10:36:44 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1025', 'SAR_CAIMI', '8', '2025/04/28', 'Y', 'Se realiza devolución expediente mediante oficio con radicado No. 2025-400-0254346-2 de fecha 07 de mayo de 2025 con el fin que el BAIME2 subsane una serie de observaciones encontradas por el CAIMI.', '3', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+07/05/2025 10:36:44 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='3' AND ano='2025' AND codigo='9B599' # SAR_CAIMI # 
+ 
+07/05/2025 18:03:44 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1026', 'SAR_BRIMI1', '18', '2025/05/07', 'A', 'Revisado y enviado para su aprobación', '7', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+07/05/2025 18:03:44 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='7' AND ano='2025' AND codigo='446AE' # SAR_BRIMI1 # 
+ 
+08/05/2025 16:26:59 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1027', 'SAR_BRIMI2', '28', '2025/05/08', 'Y', 'Se realiza devolución del expediente teniendo en cuenta que no se encuentra cargado el soporte para su revisión por parte del comando BRIMI2, (Cargar de acuerdo a la lista de verificación de la Directiva Ministerial Permanente No. 0012).', '16', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI2', '0', '') # SAR_BRIMI2 # 
+08/05/2025 16:26:59 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='16' AND ano='2025' AND codigo='F1842' # SAR_BRIMI2 # 
+ 
+12/05/2025 17:36:36 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1028', 'SGA_BR5', '95', '2025/05/08', 'Y', 'LA LISTA DE VERIFICACIÓN NO ESTA ELABORADA DE ACUERDO A LA FOLIACIÓN Y NUMEROS DE RADICADOS DE LOS DOCUMENTOS', '17', '2025', 'BR5', 'DIV2', 'SGA_BAADA2', '0', '') # SGA_BR5 # 
+12/05/2025 17:36:36 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='17' AND ano='2025' AND codigo='F6D55' # SGA_BR5 # 
+ 
+13/05/2025 17:52:13 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1029', 'SGA_BR5', '95', '2025/05/08', 'Y', 'NO SE REALIZO LA ELABORACIÓN DE LA LISTA DE VERIFICACIÓN ACORDE A LA DOCUMENTACIÓN RELACIONADA EN EL EXPEDIENTE', '18', '2025', 'BR5', 'DIV2', 'SGA_BAADA2', '0', '') # SGA_BR5 # 
+13/05/2025 17:52:13 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='18' AND ano='2025' AND codigo='B5554' # SGA_BR5 # 
+ 
+13/05/2025 18:29:27 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1030', 'SAR_BRIMI2', '28', '2025/05/09', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-541-0267192-2 de fecha 13 de mayo de 2025, con el fin que el BAIMI4 subsane las observaciones encontradas por el Comando BRIMI2.', '15', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI4', '0', '') # SAR_BRIMI2 # 
+13/05/2025 18:29:27 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='15' AND ano='2025' AND codigo='2A627' # SAR_BRIMI2 # 
+ 
+14/05/2025 12:52:38 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1031', 'SGA_BR5', '95', '2025/05/08', 'A', 'SE LE DEVOLVIÓN 2 VECES EL EXPEDIENTE A LA UNIDAD, YA QUE NO HABIA CARGADO EL EXPEDIENTE A LA PLATAFORMA Y NO HABÍAN DILIGENCIADO LA LISTA DE VERIFICACIÓN.', '18', '2025', 'BR5', 'DIV2', 'SGA_DIV2', '0', '') # SGA_BR5 # 
+14/05/2025 12:52:38 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV2' WHERE conse='18' AND ano='2025' AND codigo='B5554' # SGA_BR5 # 
+ 
+14/05/2025 17:24:30 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1032', 'SAR_CAIMI', '8', '2025/05/07', 'Y', 'Se realiza devolución medianto oficio con radicado No. 2025-400-0269307-2 del 14 de mayo de 2025 con el fin que el BAIME2 subsane una serie de observaciones encontradas por el CAIMI.', '7', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+14/05/2025 17:24:30 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='7' AND ano='2025' AND codigo='446AE' # SAR_CAIMI # 
+ 
+16/05/2025 14:34:39 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1033', 'SAR_BRIMI2', '28', '2025/05/15', 'A', 'Se recibió el expediente de acuerdo oficio remisorio con radicado N° 2025-538-0256616-2 de fecha 7 de mayo de 2025 (BAIMI7), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con radicado N° 2025-541-0274052-2 de fecha 16 de mayo del 2025.', '6', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+16/05/2025 14:34:39 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='6' AND ano='2025' AND codigo='77347' # SAR_BRIMI2 # 
+ 
+16/05/2025 17:31:13 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1034', 'SAR_BRIMI2', '28', '2025/05/16', 'Y', 'Se hace la devolución del expediente teniendo en cuenta que la lista de verificación se encuentra cargada incompleta y por ende no permite continuar con el proceso según lo establecido en el procedimiento.', '15', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI4', '0', '') # SAR_BRIMI2 # 
+16/05/2025 17:31:13 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='15' AND ano='2025' AND codigo='2A627' # SAR_BRIMI2 # 
+ 
+19/05/2025 15:28:44 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1035', 'SAR_BRIMI2', '28', '2025/05/16', 'A', 'Se recibió el expediente de acuerdo oficio remisorio con radicado N° 2025-542-0272035-2 de fecha 15 de mayo de 2025 (BAIMI4), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con radicado N° 2025-541-0274169-2 de fecha 16 de mayo del 2025.', '15', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+19/05/2025 15:28:44 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='15' AND ano='2025' AND codigo='2A627' # SAR_BRIMI2 # 
+ 
+22/05/2025 17:06:22 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1036', 'SAR_BRIMI1', '18', '2025/04/28', 'A', 'Se envía con el fin de que sea evaluado por el comité regional de recompensas', '3', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+22/05/2025 17:06:22 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='3' AND ano='2025' AND codigo='9B599' # SAR_BRIMI1 # 
+ 
+27/05/2025 17:58:47 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1037', 'SAR_BRIMI2', '28', '2025/05/14', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-541-0294616-2 de fecha 27 de mayo de 2025, con el fin que el BAIMI7 subsane las observaciones encontradas por este Comando.', '10', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_BRIMI2 # 
+27/05/2025 17:58:47 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='10' AND ano='2025' AND codigo='3FA5F' # SAR_BRIMI2 # 
+ 
+03/06/2025 07:23:04 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1038', 'SPR_DIADI', '2', '2025/05/26', 'A', 'El presente tramite pago de recompensa se encuentra en revision por personal de DIADI - CEDE2', '3', '2025', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+03/06/2025 07:23:04 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='3' AND ano='2025' AND codigo='9B599' # SPR_DIADI # 
+ 
+03/06/2025 15:14:33 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1039', 'SAR_CAIMI', '8', '2025/05/16', 'Y', 'Se realiza devolución expediente mediante oficio con radicado No. 2025-400-0305361-2 de fecha 03 de junio de 2025 con elfin que el BAIMI4 subsane una serie de observaciones encontradas por este Comando.', '15', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIMI4', '0', '') # SAR_CAIMI # 
+03/06/2025 15:14:33 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='15' AND ano='2025' AND codigo='2A627' # SAR_CAIMI # 
+ 
+04/06/2025 08:55:48 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1040', 'SPR_DIADI', '2', '2025/02/17', 'A', 'Expediente tramitado en CEDE2 y presentado a CCR.', '38', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+04/06/2025 08:55:48 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='38' AND ano='2024' AND codigo='8A06A' # SPR_DIADI # 
+ 
+04/06/2025 08:57:08 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1041', 'SPR_DIADI', '2', '2025/02/13', 'A', 'El expediente se presento a CCR', '34', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+04/06/2025 08:57:08 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='34' AND ano='2024' AND codigo='2716D' # SPR_DIADI # 
+ 
+04/06/2025 08:59:37 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1042', 'SPR_DIADI', '2', '2024/12/19', 'A', 'El expédiente se encuentra en CEDE2', '30', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+04/06/2025 08:59:37 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='30' AND ano='2024' AND codigo='493A6' # SPR_DIADI # 
+ 
+04/06/2025 09:00:16 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1043', 'SPR_DIADI', '2', '2024/12/19', 'A', 'El expédiente se encuentra en CEDE2', '28', '2024', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+04/06/2025 09:00:16 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='28' AND ano='2024' AND codigo='DD92B' # SPR_DIADI # 
+ 
+04/06/2025 12:29:04 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1044', 'SAR_CAIMI', '8', '2025/05/27', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-400-0307625-2 de fecha 04 de junio de 2025 con el fin que el BAIMI7 susbsane una serie de observaciones ecnontradas por este Comando.', '6', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_CAIMI # 
+04/06/2025 12:29:04 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='6' AND ano='2025' AND codigo='77347' # SAR_CAIMI # 
+ 
+05/06/2025 18:31:18 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1045', 'SAR_BRIMI2', '28', '2025/06/05', 'A', 'Se recibió el expediente de acuerdo oficio remisorio con radicado N° 2025-538-0306554-2 de fecha 03 de junio de 2025 (BAIMI7), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con radicado N° 2025-541-0311354-2 de fecha 05 de junio del 2025.', '10', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+05/06/2025 18:31:18 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='10' AND ano='2025' AND codigo='3FA5F' # SAR_BRIMI2 # 
+ 
+06/06/2025 11:54:11 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1046', 'SGA_BRCNA1', '304', '2025/06/06', 'Y', 'FALTA INCLUIR VALOR SOLICITADO', '26', '2025', 'BRCNA1', 'CONAT', 'SGA_BACN4', '0', '') # SGA_BRCNA1 # 
+06/06/2025 11:54:11 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='26' AND ano='2025' AND codigo='BD655' # SGA_BRCNA1 # 
+ 
+09/06/2025 08:52:13 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1047', 'SAR_BRIMI1', '18', '2025/06/05', 'A', 'Se pasa revista del expediente y se envia para su respectivo analisis', '5', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+09/06/2025 08:52:13 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='5' AND ano='2025' AND codigo='E4FD6' # SAR_BRIMI1 # 
+ 
+10/06/2025 09:55:55 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1048', 'SAR_BRIMI1', '18', '2025/06/10', 'A', 'Se revisa el expediente y se envía para la aprobación del Comite Regional.', '8', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+10/06/2025 09:55:55 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='8' AND ano='2025' AND codigo='D6FFC' # SAR_BRIMI1 # 
+ 
+10/06/2025 09:57:38 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1049', 'SAR_BRIMI1', '18', '2025/06/10', 'Y', 'se revisa y se devuelva para corregir observaciones', '7', '2025', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+10/06/2025 09:57:38 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='7' AND ano='2025' AND codigo='446AE' # SAR_BRIMI1 # 
+ 
+10/06/2025 16:51:24 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1050', 'SAR_BRIMI1', '18', '2025/06/10', 'A', 'Se reviso y analizó la documentación del expediente, se envía para la revisión y aprobación del Comitre Regional.', '7', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+10/06/2025 16:51:24 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='7' AND ano='2025' AND codigo='446AE' # SAR_BRIMI1 # 
+ 
+11/06/2025 16:11:21 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1051', 'SAR_BRIMI2', '28', '2025/05/16', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-541-0322625-2 de fecha 11 de junio de 2025, con el fin que el BAIMI7 subsane las observaciones encontradas por este Comando.', '12', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_BRIMI2 # 
+11/06/2025 16:11:21 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='12' AND ano='2025' AND codigo='B9B2B' # SAR_BRIMI2 # 
+ 
+12/06/2025 11:19:37 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1052', 'SAR_BRIMI1', '18', '2025/06/11', 'Y', 'Se revisa la documentación soporte y la lista de verificación se encuentra incompleta.', '9', '2025', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+12/06/2025 11:19:37 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='9' AND ano='2025' AND codigo='3AD01' # SAR_BRIMI1 # 
+ 
+16/06/2025 13:53:54 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1053', 'SAR_BRIMI1', '18', '2025/06/13', 'A', 'Se revisa y envia para el analisis del comite regional de recompensas', '9', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+16/06/2025 13:53:54 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='9' AND ano='2025' AND codigo='3AD01' # SAR_BRIMI1 # 
+ 
+16/06/2025 17:38:40 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1054', 'SGA_BRCNA1', '304', '2025/06/16', 'Y', 'FALTA INCLUIR DOCUMENTACIÓN "EXPEDIENTE"', '26', '2025', 'BRCNA1', 'CONAT', 'SGA_BACN4', '0', '') # SGA_BRCNA1 # 
+16/06/2025 17:38:40 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='26' AND ano='2025' AND codigo='BD655' # SGA_BRCNA1 # 
+ 
+18/06/2025 08:25:26 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1055', 'SAR_CAIMI', '8', '2025/06/04', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-400-0337676-2 de fecha 17 de junio de 2025 con el fin que el BAIME2 subsane observaciones encontradas por este Comando.', '9', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+18/06/2025 08:25:26 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='9' AND ano='2025' AND codigo='3AD01' # SAR_CAIMI # 
+ 
+18/06/2025 08:26:53 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1056', 'SAR_CAIMI', '8', '2025/06/04', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-400-0335474-2 de fecha 17 de junio de 2025 con el fin que el BAIME2 subsane observaciones encontradas por este Comando.', '8', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_CAIMI # 
+18/06/2025 08:26:53 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='8' AND ano='2025' AND codigo='D6FFC' # SAR_CAIMI # 
+ 
+18/06/2025 15:14:31 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1057', 'SGA_BRCNA1', '304', '2025/06/18', 'Y', 'Revisar lista de verificación', '26', '2025', 'BRCNA1', 'CONAT', 'SGA_BACN4', '0', '') # SGA_BRCNA1 # 
+18/06/2025 15:14:31 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='26' AND ano='2025' AND codigo='BD655' # SGA_BRCNA1 # 
+ 
+18/06/2025 18:55:42 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1058', 'SGA_BRCNA1', '304', '2025/06/18', 'A', 'De acuerdo a oficio radicado No. 2025638018311183 de fecha 17 de junio de 2025, enviado al CONAT.', '26', '2025', 'BRCNA1', 'CONAT', 'SGA_CONAT', '0', '') # SGA_BRCNA1 # 
+18/06/2025 18:55:42 pm # UPDATE cx_reg_rec SET estado='B', usuario2='SGA_CONAT' WHERE conse='26' AND ano='2025' AND codigo='BD655' # SGA_BRCNA1 # 
+ 
+19/06/2025 15:59:51 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1059', 'SAR_BRIMI2', '28', '2025/06/18', 'A', 'Se recibió el expediente de acuerdo oficio remisorio con rad: N° 2025-538-0340693-2 de fecha 7 de mayo de 2025 (BAIMI7), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con rad: N° 2025-541-0343045-2 de fecha 19 de junio del 2025.', '6', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+19/06/2025 15:59:51 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='6' AND ano='2025' AND codigo='77347' # SAR_BRIMI2 # 
+ 
+20/06/2025 09:19:13 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1060', 'SPR_DIADI', '2', '2025/06/18', 'A', 'proceso de revisión.', '5', '2025', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+20/06/2025 09:19:13 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='5' AND ano='2025' AND codigo='E4FD6' # SPR_DIADI # 
+ 
+20/06/2025 10:01:20 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1061', 'SPR_DIADI', '2', '2025/06/18', 'A', 'Proceso Revisión.', '7', '2025', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+20/06/2025 10:01:20 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='7' AND ano='2025' AND codigo='446AE' # SPR_DIADI # 
+ 
+20/06/2025 10:27:24 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1062', 'SGA_CONAT', '332', '2025/06/20', 'A', 'informe verificación expediente pago de recompensas unidad BACN4, acuerdo a radicado No.2025507018782313: MDN-COGFM-COEJC-SECEJ- JEMOP-DAVAA-CONAT-JEM-C2.20.25', '26', '2025', 'CONAT', 'DAVAA', 'SGA_DAVAA', '0', '') # SGA_CONAT # 
+20/06/2025 10:27:24 am # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DAVAA' WHERE conse='26' AND ano='2025' AND codigo='BD655' # SGA_CONAT # 
+ 
+24/06/2025 15:49:12 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1063', 'SAR_CAIMI', '8', '2025/06/05', 'Y', 'Se realiza devolución del expediente mediante oficio con radicado No. 2025-400-0350804-2 de fecha 24 de junio de 2025 con el fin que el BAIMI7 subsane una serie de observaciones encontradas por este Comando.', '10', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_CAIMI # 
+24/06/2025 15:49:12 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='10' AND ano='2025' AND codigo='3FA5F' # SAR_CAIMI # 
+ 
+25/06/2025 18:59:35 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1064', 'SAR_BRIMI2', '28', '2025/06/24', 'A', 'Se recibió el expediente de acuerdo a oficio remisorio con rad: N° 2025-538-0351410-2 de fecha 24 de junio de 2025 (BAIMI7), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con rad: N° 2025-541-0353780-2 de fecha 25 de junio del 2025.', '12', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+25/06/2025 18:59:35 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='12' AND ano='2025' AND codigo='B9B2B' # SAR_BRIMI2 # 
+ 
+26/06/2025 16:28:06 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1065', 'SGA_BR30', '102', '2025/06/23', 'A', 'No se logra evidenciar como el BIROV13 como realizo la difusión del informe de inteligencia con la información en el cual condujo la operación MOISES 003 por parte del BAACA30 
+
+En el acta reunión del BAACA30 del 19-05-2025 en los participantes relacionan al comandante del BADRE3, el comandante del BAACA30, pero en las firmas en las planillas de firmas no se evidencia la firma de ninguno de los antes relacionados y está firmando el S3 del BAACA30.
+
+En el Boletín No 11078 de fecha 21/05/2025 y el radiograma del resultado 2025652015449583, en el ítem resumen relacionan el informe de inteligencia No 2025654012314473 el cual no acorde con ninguno de los informes de inteligencia relacionados en el expediente por lo que no cuenta con la respectiva trazabilidad.', '30', '2025', 'BR30', 'DIV2', 'SGA_DIV2', '0', '') # SGA_BR30 # 
+26/06/2025 16:28:06 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SGA_DIV2' WHERE conse='30' AND ano='2025' AND codigo='ED20A' # SGA_BR30 # 
+ 
+01/07/2025 07:34:51 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1066', 'SGA_BR3', '117', '2025/07/01', 'Y', 'Cargar los soportes expediente pdf y cambiar funte en desarrollo por informal', '34', '2025', 'BR3', 'DIV3', 'SGA_BIPIC', '0', '') # SGA_BR3 # 
+01/07/2025 07:34:51 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='34' AND ano='2025' AND codigo='E87AF' # SGA_BR3 # 
+ 
+01/07/2025 11:37:20 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1067', 'SGA_BR3', '117', '2025/07/01', 'Y', 'FOLIAR EL EXPEDIENTE CON SU RESPECTIVO FUVID Y ORGANIZAR EL MISMO CON DE ACUERDO A LISTA DE VERIFICACION DE LA DIRECTIVA 0012.', '35', '2025', 'BR3', 'DIV3', 'SGA_BIPIC', '0', '') # SGA_BR3 # 
+01/07/2025 11:37:20 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='35' AND ano='2025' AND codigo='CB977' # SGA_BR3 # 
+ 
+03/07/2025 13:17:01 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1068', 'SGA_BR3', '117', '2025/07/03', 'Y', 'LLENAR LISTA VERIFICACION', '36', '2025', 'BR3', 'DIV3', 'SGA_BIPIC', '0', '') # SGA_BR3 # 
+03/07/2025 13:17:01 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='36' AND ano='2025' AND codigo='3E0E0' # SGA_BR3 # 
+ 
+03/07/2025 14:59:21 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1069', 'SGA_BR27', '201', '2025/07/01', 'Y', 'Algunos documentos del expediente no son legibles se requiere que vuelvan a escanear y enviar de nuevo el expediente', '25', '2025', 'BR27', 'DIV6', 'SGA_BAACA27', '0', '') # SGA_BR27 # 
+03/07/2025 14:59:21 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='25' AND ano='2025' AND codigo='EA360' # SGA_BR27 # 
+ 
+04/07/2025 10:37:30 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1070', 'SAR_CAIMI', '8', '2025/06/26', 'Y', 'Se realiza la devolución del expediente en razón a que presenta observaciones las cuales deben ser subsanadas dentro de los tiempos establecidos.', '12', '2025', 'CAIMI', 'CAIMI', 'SAR_BAIMI7', '0', '') # SAR_CAIMI # 
+04/07/2025 10:37:30 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='12' AND ano='2025' AND codigo='B9B2B' # SAR_CAIMI # 
+ 
+04/07/2025 16:39:06 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1071', 'SGA_DAVAA', '300', '2025/07/01', 'A', 'Con relación a lo anterior, y teniendo en cuenta que no se encontraron observaciones de valor al expediente 013 "MACEDÓN, la División de Aviación Asalto Aéreo como unidad centralizadora, continuara con el trámite pago de recompensa como lo estipula la Directiva Ministerial Permanente No. 0012 " Política ministerial que define criterios para el pago de recompensas y pago de información en actividades de inteligencia, contrainteligencia e investigación criminal" de fecha 01 de abril de 2025; donde se remitirá mencionada documentación mediante oficio remisorio dirigido al Departamento de Inteligencia y Contrainteligencia del Ejército nacional, con el fin de que el comité central evalué y realice el pago de recompensa del expediente en mención.', '26', '2025', 'DAVAA', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DAVAA # 
+04/07/2025 16:39:06 pm # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='26' AND ano='2025' AND codigo='BD655' # SGA_DAVAA # 
+ 
+07/07/2025 09:02:00 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1072', 'SPR_DIADI', '2', '2025/06/25', 'A', 'Revision', '6', '2025', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+07/07/2025 09:02:00 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='6' AND ano='2025' AND codigo='77347' # SPR_DIADI # 
+ 
+07/07/2025 14:09:08 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1073', 'SGA_BR3', '117', '2025/07/07', 'Y', 'CAMBIAR LISTA DE VERIFICACION', '36', '2025', 'BR3', 'DIV3', 'SGA_BIPIC', '0', '') # SGA_BR3 # 
+07/07/2025 14:09:08 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='36' AND ano='2025' AND codigo='3E0E0' # SGA_BR3 # 
+ 
+08/07/2025 08:57:52 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1074', 'SGA_BR3', '117', '2025/07/08', 'A', 'SE VERIFICO TRAZABILIDAD DE LA DOCUMENTACION SOPORTE', '36', '2025', 'BR3', 'DIV3', 'SAR_DIV3', '0', '') # SGA_BR3 # 
+08/07/2025 08:57:52 am # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_DIV3' WHERE conse='36' AND ano='2025' AND codigo='3E0E0' # SGA_BR3 # 
+ 
+08/07/2025 18:00:42 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1075', 'SAR_BRIMI1', '18', '2025/06/13', 'A', 'se revisa la documentación se envía el expediente con todas las observaciones resueltas', '9', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+08/07/2025 18:00:42 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='9' AND ano='2025' AND codigo='3AD01' # SAR_BRIMI1 # 
+ 
+08/07/2025 18:03:39 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1076', 'SAR_BRIMI1', '18', '2025/06/10', 'A', 'se revisa la documentación y la unidad solicitante envÍa respuesta a las observaciones pendiente el certificado de certeza por parte de la PONAL', '8', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+08/07/2025 18:03:39 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='8' AND ano='2025' AND codigo='D6FFC' # SAR_BRIMI1 # 
+ 
+09/07/2025 16:33:25 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1077', 'SGA_BR27', '201', '2025/07/06', 'Y', 'De acuerdo a lo orientado por el comando superior se debe cargar citando la Directiva Ministerial 02 del 2019.', '25', '2025', 'BR27', 'DIV6', 'SGA_BAACA27', '0', '') # SGA_BR27 # 
+09/07/2025 16:33:25 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='25' AND ano='2025' AND codigo='EA360' # SGA_BR27 # 
+ 
+10/07/2025 14:50:08 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1078', 'SAR_BRCIM1', '40', '2025/07/02', 'Y', 'revisar foliacion con el nuevo documento que se debe agregar de acuerdo a la lista de la directiva', '31', '2025', 'BRCIM1', 'CACIM', 'SGR_BACIF3', '0', '') # SAR_BRCIM1 # 
+10/07/2025 14:50:08 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='31' AND ano='2025' AND codigo='F2D55' # SAR_BRCIM1 # 
+ 
+11/07/2025 11:22:25 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1079', 'SAR_BRIMI1', '18', '2025/07/02', 'Y', 'Realizar correciones a las observaciones y aclaraciones expuestas.', '13', '2025', 'BRIMI1', 'CAIMI', 'SAR_BAIME4', '0', '') # SAR_BRIMI1 # 
+11/07/2025 11:22:25 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='13' AND ano='2025' AND codigo='B1F81' # SAR_BRIMI1 # 
+ 
+11/07/2025 18:03:43 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1080', 'SAR_BRIMI1', '18', '2025/06/20', 'Y', 'se verifico los documentos del expediente sin encontrar observaciones y se envia', '14', '2025', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+11/07/2025 18:03:43 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='14' AND ano='2025' AND codigo='46FE6' # SAR_BRIMI1 # 
+ 
+12/07/2025 09:22:40 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1081', 'SGA_DIV2', '87', '2025/07/12', 'A', 'Revisión de la documentación', '30', '2025', 'DIV2', 'CEDE2', 'SPR_DIADI', '0', '') # SGA_DIV2 # 
+12/07/2025 09:22:40 am # UPDATE cx_reg_rec SET estado='D', usuario4='SPR_DIADI' WHERE conse='30' AND ano='2025' AND codigo='ED20A' # SGA_DIV2 # 
+ 
+15/07/2025 09:01:29 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1082', 'SAR_BRIMI1', '18', '2025/06/30', 'Y', 'Se realiza devolucion para modificar la lista de verificación, por que la lista de verificación de la Directiva actual no se encuentra cargada', '14', '2025', 'BRIMI1', 'CAIMI', 'SAR_BAIME2', '0', '') # SAR_BRIMI1 # 
+15/07/2025 09:01:29 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='14' AND ano='2025' AND codigo='46FE6' # SAR_BRIMI1 # 
+ 
+15/07/2025 17:21:43 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1083', 'SAR_BRCIM1', '40', '2025/07/02', 'A', 'Se anexa respuesta certificación informante no pertenece al programa de reinserción expedido por el GAHD de numero de radicado RS20250703133384 de fecha 03-07-2025.
+
+Se anexa informe aclaratorio compañía de fronteras con numero de radicado 2025-553-0361971-2 de fecha 29-06-2025.
+
+Se anexa informe aclaratorio observación BADRE12 con numero de radicado 2025974019631233 de fecha 27-06-2025.', '31', '2025', 'BRCIM1', 'CACIM', 'SAR_CACIM', '0', '') # SAR_BRCIM1 # 
+15/07/2025 17:21:43 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CACIM' WHERE conse='31' AND ano='2025' AND codigo='F2D55' # SAR_BRCIM1 # 
+ 
+16/07/2025 06:44:50 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1084', 'SPR_DIADI', '2', '2025/07/11', 'A', 'Revision.', '9', '2025', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+16/07/2025 06:44:50 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='9' AND ano='2025' AND codigo='3AD01' # SPR_DIADI # 
+ 
+16/07/2025 06:53:36 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1085', 'SPR_DIADI', '2', '2025/07/11', 'A', 'Revision.', '8', '2025', 'DIADI', 'CEDE2', 'SPR_DIADI', '0', '') # SPR_DIADI # 
+16/07/2025 06:53:36 am # UPDATE cx_reg_rec SET estado='E', usuario4='SPR_DIADI' WHERE conse='8' AND ano='2025' AND codigo='D6FFC' # SPR_DIADI # 
+ 
+16/07/2025 16:03:44 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1086', 'SAR_BRIMI2', '28', '2025/07/15', 'A', 'Se recibió el expediente de acuerdo oficio remisorio con radicado N° 2025-538-0386384-2 de fecha 14 de julio del 2025 (BAIMI7), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con radicado N° 2025-541-0390864-2 de fecha 16 de julio del 2025.', '10', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+16/07/2025 16:03:44 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='10' AND ano='2025' AND codigo='3FA5F' # SAR_BRIMI2 # 
+ 
+17/07/2025 17:22:35 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1087', 'SAR_BRIMI2', '28', '2025/05/15', 'Y', 'Se realiza la devolución del expediente mediante oficio rad: No 2025-541-0392782-2 de fecha 17 de julio del 2025, argumentado según oficio Rad: No. 2025-400-0390747-2 de fecha 16 de julio del 2025, emitido por el Comando de Apoyo de Combate de Inteligencia Militar (CAIMI).', '15', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI4', '0', '') # SAR_BRIMI2 # 
+17/07/2025 17:22:35 pm # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='15' AND ano='2025' AND codigo='2A627' # SAR_BRIMI2 # 
+ 
+21/07/2025 15:51:04 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1088', 'SAR_BRIMI1', '18', '2025/07/18', 'A', 'Se revisa el expediente y se envia para su analisis y aprobación', '13', '2025', 'BRIMI1', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI1 # 
+21/07/2025 15:51:04 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='13' AND ano='2025' AND codigo='B1F81' # SAR_BRIMI1 # 
+ 
+21/07/2025 16:26:24 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1089', 'SAR_BRIMI2', '28', '2025/07/18', 'A', 'Se recibió el expediente de acuerdo a oficio remisorio con rad: N° 2025-542-0394289-2 de fecha 18 de julio de 2025 (BAIMI4), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con rad: N° 2025-541-0399044-2 de fecha 21 de julio del 2025.', '15', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+21/07/2025 16:26:24 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='15' AND ano='2025' AND codigo='2A627' # SAR_BRIMI2 # 
+ 
+21/07/2025 16:32:49 pm # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1090', 'SAR_BRIMI2', '28', '2025/07/18', 'A', 'Se recibió el expediente de acuerdo a oficio remisorio con rad: N° 2025-538-0395382-2 de fecha 18 de julio de 2025 (BAIMI7), verificando la respuesta a las observaciones y se envía al usuario CAIMI (SAR_CAIMI) mediante oficio remisorio con rad: N° 2025-541-0399045-2 de fecha 21 de julio del 2025.', '12', '2025', 'BRIMI2', 'CAIMI', 'SAR_CAIMI', '0', '') # SAR_BRIMI2 # 
+21/07/2025 16:32:49 pm # UPDATE cx_reg_rec SET estado='C', usuario3='SAR_CAIMI' WHERE conse='12' AND ano='2025' AND codigo='B9B2B' # SAR_BRIMI2 # 
+ 
+22/07/2025 10:52:19 am # INSERT INTO cx_reg_rev (conse, usuario, unidad, fec_rec, resultado, observaciones, consecu, ano, unidad1, unidad2, usuario1, oficio, fec_ofi) VALUES ('1091', 'SAR_BRIMI2', '28', '2025/07/03', 'Y', 'Se hace la devolución del expediente para que la unidad realice las correcciones que origina el Comando de la Brigada de Inteligencia Militar No. 2 (BRIMI2), debido a que presenta observaciones según verificación de la Sección de Logística B-4 (Análisis de Recompensas) según oficio rad: No 2025-541-0400558-2 de fecha 22 de julio del 2025', '16', '2025', 'BRIMI2', 'CAIMI', 'SAR_BAIMI2', '0', '') # SAR_BRIMI2 # 
+22/07/2025 10:52:19 am # UPDATE cx_reg_rec SET estado='Y', usuario1='', usuario2='', usuario3='', usuario4='', usuario5='' WHERE conse='16' AND ano='2025' AND codigo='F1842' # SAR_BRIMI2 # 
+ 

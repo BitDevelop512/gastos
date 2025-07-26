@@ -1,0 +1,344 @@
+USE [gastos]
+GO
+/****** Object:  UserDefinedFunction [dbo].[Cf_rep_X627]    Script Date: 13/03/2024 17:09:35 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+--drop table xx_pru_0001
+
+/*	*       *********************************************************
+	*       * Reporte 627 SIGAR
+	*       * GILMAR MUÑOZ RESTREPO
+	*       * CX COMPUTERS
+	*       * Copyright (C) 2022 
+	*		*
+	*		* 05/01/2022 14:00
+	*		* 30/09/2022 14:00
+	*		* 12/03/2024 11:30 ajuste varios
+*/
+
+--declare @fec_ini datetime= '20231101', @fec_fin datetime= '20231231',@pp_fmr int= 1,@pp_rcs int= 2
+ALTER  Function [dbo].[Cf_rep_X627] (@fec_ini datetime, @fec_fin datetime,@pp_fmr int,@pp_rcs int)
+				
+returns  @Tr_pri table (ord_regi int default 0,Cam_00 varchar(20) default '',Cam_01 numeric(20,2) default 0,Cam_02 numeric(20,2) default 0,
+     Cam_03 numeric(20,2) default 0,Cam_04 numeric(20,2) default 0,Cam_05 numeric(20,2) default 0,Cam_06 numeric(20,2) default 0,Cam_07 numeric(20,2) default 0,
+     Cam_08 numeric(20,2) default 0,Cam_09 numeric(20,2) default 0,Cam_10 numeric(20,2) default 0,Cam_11 numeric(20,2) default 0,Cam_12 numeric(20,2) default 0,
+     Cam_13 numeric(20,2) default 0,Cam_14 numeric(20,2) default 0,Cam_15 numeric(20,2) default 0,
+     unidad int default 0,dependencia int default 0,Sub_unid int default 0,unic int default 0)
+--
+  --with encryption 
+--
+begin		--Inicializa
+--set nocount on
+declare @xx_ord int= 0,
+		@nro_cpr int,@ide_uni int,@ide_un0 int,@ide_un1 int,@ide_sub int,@ide_per int,
+		@nro_vec int,@nro_pas int,@sal_001 numeric(20,2),@xx_vmp varchar(800),@xx_sgl varchar(20),@yy_cmp varchar(30),
+		@xx_vlo numeric(20,2),@xx_cop int,@xx_tpg int,@xx_deb numeric(20,2) ,@xx_cre numeric(20,2),@xx_tip int ,@xx_dat varchar(max),
+		@xx_cnc varchar(120),@zz_sgl varchar(20),
+		@xx_mes int= 0,@xx_ano int= 0,@xx_sma int = 0,
+		@xx_pac numeric(20,2)= 0
+/*		*/
+declare  @kx_tra table (nro_comp int,comprobante int,unidad int,concepto int,tp_gas int,
+         debito numeric(20,2),credito numeric (20,2),tipo1 varchar(1),datos varchar(8000),unidad1 int,periodo int, ano int,fecha datetime)
+/*
+	Filtro Unidades Formato= 1 */
+if @pp_fmr= 1 Begin
+	Insert into @Tr_pri(ord_regi,unidad,dependencia,Sub_unid,Cam_00,unic,Cam_01) 
+					select (ROW_NUMBER() OVER(ORDER BY subdependencia ASC) )-1,unidad,dependencia,subdependencia,sigla,unic,
+					(select saldo from cx_sal_uni where unidad= subdependencia and cast(fecha as date)= cast(@fec_ini as date) )  
+					from cx_org_sub where exists(select * from cx_sal_uni where unidad= subdependencia and fecha>= @fec_ini and fecha< (@fec_fin + 1) ) and especial= 0
+--select * from @Tr_pri
+-- Para acumulado PAC
+	if @pp_rcs= 0 Select @xx_pac= sum(valor1) from cx_crp where CONVERT(date,fecha1,102)>= @fec_ini and CONVERT(date,fecha1,102)<= @fec_fin
+	if @pp_rcs> 0 Select @xx_pac= sum(valor1) from cx_crp where recurso = @pp_rcs and CONVERT(date,fecha1,102)>= @fec_ini and CONVERT(date,fecha1,102)<= @fec_fin
+	update @Tr_pri set Cam_07= @xx_pac where ord_regi= 0
+--	print @xx_pac
+end
+
+/*
+	Filtro Unidades formato> 1 */
+if @pp_fmr> 1 begin
+	--select @ide_sub= dependencia from cx_org_sub where subdependencia= @pp_fmr
+	select  @ide_un0= unidad,@ide_sub= dependencia from cx_org_sub where subdependencia= @pp_fmr
+	if @ide_un0< 4  Insert into @Tr_pri(ord_regi,unidad,dependencia,Sub_unid,Cam_00,unic,Cam_01) 
+	      select (ROW_NUMBER() OVER(ORDER BY subdependencia ASC) )-1,unidad,dependencia,subdependencia,sigla,unic,
+		   isnull((select saldo from cx_sal_uni where unidad= subdependencia and cast(fecha as date)= cast(@fec_ini as date) ),0)  
+		   from cx_org_sub where dependencia= @ide_sub
+	if @ide_un0> 3  begin
+		declare @Kx_spe table(Cx_unid int) 
+		insert into @Kx_spe Select unidad  from cx_org_sub where unidad= @ide_un0 or especial= @ide_un0 group by unidad
+		select @xx_sma= count(*) from @Kx_spe
+		if @xx_sma= 1 insert into @Tr_pri(ord_regi,unidad,dependencia,Sub_unid,Cam_00,unic,Cam_01) 
+			  select (ROW_NUMBER() OVER(ORDER BY subdependencia ASC) )-1,unidad,dependencia,subdependencia,sigla,unic,
+			   isnull((select saldo from cx_sal_uni where unidad= subdependencia and cast(fecha as date)= cast(@fec_ini as date) ),0)  
+			   from cx_org_sub where exists(select * from @Kx_spe where Cx_unid= unidad)
+	   		if @xx_sma> 1 begin
+				select @xx_sma= 0
+				declare kur_lla6 Cursor for Select Cx_unid from @Kx_spe order by Cx_unid
+				open kur_lla6
+					fetch next from kur_lla6 into @ide_un0
+					while @@fetch_status= 0	begin
+					select @xx_sma= isnull(max(ord_regi),-1) + 1 from @Tr_pri	
+					insert into @Tr_pri(ord_regi,unidad,dependencia,Sub_unid,Cam_00,unic,Cam_01) 
+						select  @xx_sma,unidad,dependencia,subdependencia,sigla,unic,
+							   isnull((select saldo from cx_sal_uni where unidad= subdependencia and cast(fecha as date)= cast(@fec_ini as date) ),0)  
+							   from cx_org_sub where unidad= @ide_un0 and unic= 1
+					select @xx_sma= max(ord_regi) + 1 from @Tr_pri
+					insert into @Tr_pri(ord_regi,unidad,dependencia,Sub_unid,Cam_00,unic,Cam_01) 
+					select ((ROW_NUMBER() OVER(ORDER BY dependencia ASC) )-1) + @xx_sma,unidad,dependencia,subdependencia,sigla,unic,
+						   isnull((select saldo from cx_sal_uni where unidad= subdependencia and cast(fecha as date)= cast(@fec_ini as date) ),0)  
+						   from cx_org_sub where unidad= @ide_un0 and unic!= 1
+						   select @xx_sma= max(ord_regi) + 1 from @Tr_pri
+					fetch next from kur_lla6 into @ide_un0
+					end
+				close kur_lla6
+				deallocate kur_lla6
+			end
+	end
+	select @zz_sgl= cam_00 from @Tr_pri where ord_regi= 0
+end
+/*
+	Filtro Transa Formato= 1	*/
+if @pp_fmr= 1 begin
+	if @pp_rcs= 0 begin
+		insert into @kx_tra(nro_comp,comprobante,unidad,concepto,tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha) 
+			select (select ord_regi from @Tr_pri where Sub_unid= cv_lib_ban.unidad ),comprobante,unidad,concepto,
+			tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha from cv_lib_ban  
+			where not ((concepto= 8 and tp_gas= 0) or (concepto= 9 and tp_gas= 0) or (concepto= 10 and tp_gas= 0)) and  
+				fecha>= @fec_ini and fecha< (@fec_fin + 1) and exists(select * from @Tr_pri where Sub_unid= cv_lib_ban.unidad) 
+	end
+	if @pp_rcs> 0 begin
+		insert into @kx_tra(nro_comp,comprobante,unidad,concepto,tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha) 
+			select (select ord_regi from @Tr_pri where Sub_unid= cv_lib_ban.unidad ),comprobante,unidad,concepto,
+			tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha from cv_lib_ban  
+			where not ((concepto= 8 and tp_gas= 0) or (concepto= 9 and tp_gas= 0) or (concepto= 10 and tp_gas= 0)) and  
+			fecha>= @fec_ini and fecha< (@fec_fin + 1) and exists(select * from @Tr_pri where Sub_unid= cv_lib_ban.unidad) and recurso= @pp_rcs
+	end
+end
+/*
+	Filtro Transa Formato> 1	*/
+if @pp_fmr> 1 begin
+	if @pp_rcs= 0 begin
+		insert into @kx_tra(nro_comp,comprobante,unidad,concepto,tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha) 
+				select (select ord_regi from @Tr_pri where Sub_unid= cv_lib_ban.unidad ),comprobante,unidad,concepto,
+				tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha from cv_lib_ban  
+				where fecha>= @fec_ini and fecha< (@fec_fin + 1) and exists(select * from @Tr_pri where Sub_unid= cv_lib_ban.unidad) 
+	end
+	if @pp_rcs> 0 begin
+		insert into @kx_tra(nro_comp,comprobante,unidad,concepto,tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha) 
+			select (select ord_regi from @Tr_pri where Sub_unid= cv_lib_ban.unidad ),comprobante,unidad,concepto,
+			tp_gas,debito,credito,tipo1,datos,unidad1,periodo,ano,fecha from cv_lib_ban  
+			where fecha>= @fec_ini and fecha< (@fec_fin + 1) and exists(select * from @Tr_pri where Sub_unid= cv_lib_ban.unidad) and recurso= @pp_rcs
+	end
+end
+/*
+	Control de Transaciones	*/
+declare kur_lla2 Cursor for Select nro_comp,comprobante,unidad,concepto,tp_gas,debito,credito,tipo1,datos,unidad1,periodo 
+        from @kx_tra order by fecha
+open kur_lla2
+	fetch next from kur_lla2 into @xx_ord,@nro_cpr,@ide_uni,@xx_cop,@xx_tpg,@xx_deb,@xx_cre,@xx_tip,@xx_dat,@ide_un1,@ide_per
+	while @@fetch_status= 0	begin
+	/*	
+		Excep Marco	*/	
+		if @pp_fmr> 1 and @xx_tpg= 99 and @xx_tip= 2 begin
+			Update @Tr_pri set Cam_10= (Cam_10 + @xx_deb) where ord_regi= @xx_ord
+			if @xx_ord> 00 Update @Tr_pri set Cam_08= (Cam_08 + @xx_deb) where ord_regi= @xx_ord
+			if @xx_cop= 18 Update @Tr_pri set Cam_09= (Cam_09 + @xx_deb) where ord_regi= @xx_ord
+			select @xx_tip= 20
+		end	
+	/*	
+		Tipo1= 1	*/	
+		if @xx_tip= 1 begin-- tipo1 1
+			/*		*/
+			if @pp_fmr= 1 and @xx_ord= 0 Begin	-- 31/01/2023
+--				if (@xx_cop= 1 or @xx_cop= 11 or @xx_cop= 25) and @ide_un1< 8 	begin
+				-- 12/03/2024 16:50
+				if (@xx_cop= 1 or @xx_cop= 11 or @xx_cop= 25 or @xx_cop= 27) and @ide_un1< 8 Begin
+					update @Tr_pri set Cam_05= (Cam_05 + @xx_cre) where ord_regi= @xx_ord
+	--				update @Tr_pri set Cam_08= (Cam_08 + @xx_cre) where ord_regi= @xx_ord  --22/04/2022
+				end
+	--
+				if @xx_cop= 13 Update @Tr_pri set Cam_07= (Cam_07 + @xx_cre) where ord_regi= @xx_ord
+				if @xx_cop= 16 Begin
+					if @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 - @xx_cre) where ord_regi= @xx_ord
+					if @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 - @xx_cre) where ord_regi= @xx_ord
+					if @xx_tpg= 03 Update @Tr_pri set Cam_10= (Cam_10 - @xx_cre) where ord_regi= @xx_ord
+--					if @xx_tpg< 04 Update @Tr_pri set Cam_06= (Cam_06 - @xx_cre) where ord_regi= @xx_ord  --21/04/2022
+				end
+				if @xx_cop= 19 Update @Tr_pri set Cam_07= (Cam_07 + @xx_cre) where ord_regi= @xx_ord
+				if @xx_cop= 21 Update @Tr_pri set Cam_07= (Cam_07 + @xx_cre) where ord_regi= @xx_ord	-- 22/04/2022
+			--	if @xx_cop= 21 or @xx_cop= 19 or @xx_cop= 13 print @xx_cre
+			end
+			/*		*/ 
+			if @pp_fmr= 1 and @xx_ord> 0 Begin
+				if (@xx_cop= 1 or @xx_cop= 11 or @xx_cop= 25) begin
+					if @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 - @xx_cre) where ord_regi= @xx_ord
+					if @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 - @xx_cre) where ord_regi= @xx_ord
+					if @xx_tpg= 03 Update @Tr_pri set Cam_10= (Cam_10 - @xx_cre) where ord_regi= @xx_ord
+				end
+				if @xx_cop= 16 begin
+					if @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 - @xx_cre) where ord_regi= @xx_ord
+					if @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 - @xx_cre) where ord_regi= @xx_ord
+					if @xx_tpg= 03 Update @Tr_pri set Cam_10= (Cam_10 - @xx_cre) where ord_regi= @xx_ord
+--					if @xx_tpg< 04 Update @Tr_pri set Cam_06= (Cam_06 - @xx_cre) where ord_regi= @xx_ord  --21/04/2022
+				end
+				if @xx_cop= 20 begin
+					if @xx_tpg= 02 Update @Tr_pri set Cam_03= (Cam_03 + @xx_cre) where ord_regi= @xx_ord
+					if @xx_tpg= 03 Update @Tr_pri set Cam_04= (Cam_04 + @xx_cre) where ord_regi= @xx_ord
+				end
+			end
+			/*	
+				*/
+			if @pp_fmr> 1 and @xx_ord= 0 begin
+				if (@xx_cop= 1 or @xx_cop= 11 or @xx_cop= 25) begin
+					update @Tr_pri set Cam_05= (Cam_05 + @xx_cre) where Sub_unid= @ide_un1
+					if @xx_tpg= 01 update @Tr_pri set Cam_08= (Cam_08 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0
+					if @xx_tpg= 02 update @Tr_pri set Cam_09= (Cam_09 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0		
+					if @xx_tpg= 03 update @Tr_pri set Cam_10= (Cam_10 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0		
+					if @xx_tpg= 04 update @Tr_pri set Cam_11= (Cam_11 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0			
+					if @xx_tpg= 05 update @Tr_pri set Cam_12= (Cam_12 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0			
+				end 
+				if @xx_cop= 08 update @Tr_pri set Cam_02= (Cam_02 + @xx_cre) where ord_regi= @xx_ord
+				if @xx_cop= 10 update @Tr_pri set Cam_04= (Cam_04 + @xx_cre) where ord_regi= @xx_ord
+				if @xx_cop= 16 begin
+					update @Tr_pri set Cam_06= (Cam_06 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0
+					if @xx_tpg= 01 update @Tr_pri set Cam_08= (Cam_08 - @xx_cre) where Sub_unid= @ide_un1-- and ord_regi= 0  30/09/2022 14:00
+					if @xx_tpg= 02 update @Tr_pri set Cam_09= (Cam_09 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0	
+					if @xx_tpg= 03 update @Tr_pri set Cam_10= (Cam_10 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0	
+					if @xx_tpg= 04 update @Tr_pri set Cam_11= (Cam_11 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0		
+					if @xx_tpg= 05 update @Tr_pri set Cam_12= (Cam_12 - @xx_cre) where Sub_unid= @ide_un1 and ord_regi> 0		
+				end 
+			end
+			/*	No esta Entrando*/  
+			if @pp_fmr> 1 and @xx_ord> 0 begin
+				-- 31/01/2023
+				if (@xx_cop= 1 or @xx_cop= 11 or @xx_cop= 25) begin 
+					update @Tr_pri set Cam_05= (Cam_05 + @xx_cre),Cam_07= (Cam_07 - @xx_cre) where ord_regi= @xx_ord	
+					if @xx_tpg= 01 update @Tr_pri set Cam_07= (Cam_07 + @xx_cre),Cam_08= (Cam_08 - @xx_cre) where ord_regi= @xx_ord			
+					if @xx_tpg= 02 update @Tr_pri set Cam_07= (Cam_07 + @xx_cre),Cam_09= (Cam_09 - @xx_cre) where ord_regi= @xx_ord			
+					if @xx_tpg= 03 update @Tr_pri set Cam_07= (Cam_07 + @xx_cre),Cam_10= (Cam_10 - @xx_cre) where ord_regi= @xx_ord			
+					if @xx_tpg= 04 update @Tr_pri set Cam_11= (Cam_11 - @xx_cre) where ord_regi= @xx_ord			
+					if @xx_tpg= 05 update @Tr_pri set Cam_12= (Cam_12 - @xx_cre) where ord_regi= @xx_ord			
+				end
+				if @xx_cop= 16 update @Tr_pri set Cam_06= (Cam_06 - @xx_cre),Cam_08= (Cam_08 - @xx_cre) where ord_regi= @xx_ord			
+			end
+		end
+	/*	
+		Tipo1= 2	*/
+		if @xx_tip= 2 begin-- tipo1 2
+			select @xx_cnc= char(10) + ' @xx_tip= 2 ' 
+			select @xx_dat= dbo.Cf_crytor(@xx_dat,'')	-- Conversor datos
+			declare Ku_rba cursor for select val_regi from dbo.Cf_Split(@xx_dat,'#')
+			open Ku_rba
+			fetch next from Ku_rba into @xx_vmp
+			while @@fetch_status= 0
+				begin
+					if len( @xx_vmp)> 1
+						begin
+							select @xx_sgl= substring(@xx_vmp,1,CHARINDEX('|', @xx_vmp)-1) 
+							select @xx_vmp= substring(@xx_vmp, CHARINDEX('|', @xx_vmp)+ 1,len(@xx_vmp)) + '|'
+							select @xx_vlo= cast(replace(substring(@xx_vmp,1,CHARINDEX('|', @xx_vmp)- 1),',','') as numeric(20,2))
+							if len(@xx_sgl)> 0
+								begin
+									if not exists(select *  from @tr_pri where Cam_00= @xx_sgl) select @xx_sgl= cam_00 from @tr_pri where ord_regi= @xx_ord
+									if @pp_fmr= 1 and @xx_ord= 0
+										begin
+										if (@xx_sgl= 'COEEJ' or @xx_sgl= 'FUDAT') and @ide_uni= 1 select @xx_sgl= 'CEDE2' 
+										if @xx_cop= 06 and @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 07 and @xx_tpg= 01 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 07 and @xx_tpg= 02 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 07 and @xx_tpg= 03 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 08 and @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 08 and @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 08 and @xx_tpg= 99 Update @Tr_pri set Cam_02= (Cam_02 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 09 and @xx_tpg= 99 Update @Tr_pri set Cam_03= (Cam_03 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 10 and @xx_tpg= 99 Update @Tr_pri set Cam_04= (Cam_04 + @xx_vlo) where Cam_00= @xx_sgl
+										-- 12/03/2024 16:50
+										if @xx_cop= 24 and @xx_tpg= 01 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 27 and @xx_tpg= 01 Update @Tr_pri set Cam_05= (Cam_05 + @xx_vlo) where Cam_00= @xx_sgl
+									end
+								/*	*/
+									if @pp_fmr= 1 and @xx_ord> 0
+										begin
+										if @xx_cop= 08 and @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 08 and @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 09 and @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 09 and @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 10 and @xx_tpg= 03 Update @Tr_pri set Cam_10= (Cam_10 + @xx_vlo) where Cam_00= @xx_sgl
+										if @xx_cop= 18                 Update @Tr_pri set Cam_05= (Cam_05 + @xx_vlo) where Cam_00= @xx_sgl	-- Tiene Duda Sra. Consuelo 04/01/2022
+									end
+								/*	*/
+									if @pp_fmr> 1 select @xx_ord= @xx_ord
+								/*	*/
+									if @pp_fmr> 1 begin --and @xx_ord> 0
+											if @zz_sgl!=@xx_sgl Update @Tr_pri  set Cam_06= (Cam_06 + @xx_vlo) where Cam_00= @xx_sgl
+											--if @xx_cop= 07 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl -- 06/05/2022
+											--if @xx_cop= 08 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 09 begin
+												--Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl  --06/05/2022
+												Update @Tr_pri set Cam_03= (Cam_03 + @xx_vlo) where ord_regi= 0
+											end
+											-- 31/01/2023
+											if @xx_cop= 01 and @xx_tpg= 01 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_08= (Cam_08 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 11 and @xx_tpg= 01 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_08= (Cam_08 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 25 and @xx_tpg= 01 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_08= (Cam_08 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 01 and @xx_tpg= 02 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_09= (Cam_09 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 11 and @xx_tpg= 02 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_09= (Cam_09 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 25 and @xx_tpg= 02 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_09= (Cam_09 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 01 and @xx_tpg= 03 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_10= (Cam_10 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 11 and @xx_tpg= 03 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_10= (Cam_10 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 25 and @xx_tpg= 03 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_10= (Cam_10 - @xx_vlo) where Cam_00= @xx_sgl
+
+											if @xx_cop= 06 and @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 + @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 08 and @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 + @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 09 and @xx_tpg= 01 Update @Tr_pri set Cam_08= (Cam_08 + @xx_vlo) where Cam_00= @xx_sgl
+											--if @xx_cop= 11 and @xx_tpg= 01 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_08= (Cam_08 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 18 and @xx_tpg= 01 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 08 and @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 + @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 09 and @xx_tpg= 02 Update @Tr_pri set Cam_09= (Cam_09 + @xx_vlo) where Cam_00= @xx_sgl
+											--if @xx_cop= 11 and @xx_tpg= 02 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_09= (Cam_09 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 18 and @xx_tpg= 02 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 10 and @xx_tpg= 03 Update @Tr_pri set Cam_10= (Cam_10 + @xx_vlo) where Cam_00= @xx_sgl
+											--if @xx_cop= 11 and @xx_tpg= 03 and  @xx_sgl!= 'CEDE2' Update @Tr_pri set Cam_10= (Cam_10 - @xx_vlo) where Cam_00= @xx_sgl
+											if @xx_cop= 18 and @xx_tpg= 03 Update @Tr_pri set Cam_13= (Cam_13 + @xx_vlo) where Cam_00= @xx_sgl
+									end
+							end
+					end
+			fetch next from Ku_rba into @xx_vmp
+			end
+			close Ku_rba
+			deallocate Ku_rba
+		end -- FInalizo Opcion Tipo1= 2
+	/*	
+		Tipo1= 3	*/
+		if @xx_tip= 3 begin-- tipo1 3
+			select @xx_tip= 3
+		end
+	fetch next from kur_lla2 into @xx_ord, @nro_cpr,@ide_uni,@xx_cop,@xx_tpg,@xx_deb,@xx_cre,@xx_tip,@xx_dat,@ide_un1,@ide_per
+	end
+close kur_lla2
+deallocate kur_lla2
+/*
+	Totalizador */
+if @pp_rcs> 1 update @Tr_pri set Cam_01= 0
+update @Tr_pri set Cam_08= (Cam_08 -Cam_05) where ord_regi= 0
+--
+if @pp_fmr= 1 begin		-- 22/04/2022 Resultado OK
+	update @Tr_pri set Cam_06= (Cam_02 + Cam_03 + Cam_04 )  where ord_regi> 0   -- Alfredo Dudas
+	Update @Tr_pri set Cam_07= ((Cam_01 + Cam_06 )- Cam_05) where ord_regi> 0
+	Update @Tr_pri set Cam_07= (Cam_01 + (select sum(Cam_05 ) from @Tr_pri where ord_regi> 0) + Cam_07) - 
+	       isnull((select sum(Cam_06 ) from @Tr_pri where ord_regi> 0),0) where ord_regi= 0
+end
+else begin
+	Update @Tr_pri set Cam_07= (((Cam_01 + Cam_02 + Cam_03 + Cam_04)) + 
+	isnull((select sum(Cam_05) from @Tr_pri where ord_regi> 0),0) ) - 
+	isnull((select sum(cam_06) from @Tr_pri where ord_regi> 0),0) where ord_regi= 0
+	Update @Tr_pri set Cam_07= ((Cam_01 + Cam_02 + Cam_03 + Cam_04 + Cam_06)- cam_05)  where ord_regi> 0
+end
+Update @Tr_pri set Cam_14= (Cam_08 + Cam_09 + Cam_10 + Cam_11 + Cam_12 + Cam_13 )
+Update @Tr_pri set Cam_15= (Cam_07 - Cam_14)
+--select * from @Tr_pri
+return
+end
+

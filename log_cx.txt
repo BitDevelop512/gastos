@@ -1,0 +1,15 @@
+06/11/2024 17:55:28 pm # UPDATE cx_pla_pag SET val_fuen_a='4,000,000.00' WHERE conse='11620' AND conse1='1' AND ano='2024' # JEM_BRIMI1 # 
+06/11/2024 20:07:39 pm # UPDATE cx_pla_pag SET val_fuen_a='6,000,000.00' WHERE conse='11779' AND conse1='1' AND ano='2024' # CDO_CPCFR3 # 
+06/11/2024 20:08:52 pm # UPDATE cx_pla_pag SET val_fuen_a='6,000,000.00' WHERE conse='11779' AND conse1='1' AND ano='2024' # SGR_BACIF3 # 
+06/11/2024 21:45:21 pm # UPDATE cx_pla_pag SET val_fuen_a='1,000,000.00' WHERE conse='11850' AND conse1='1' AND ano='2024' # OS2_BATOT13 # 
+06/11/2024 21:48:37 pm # UPDATE cx_pla_pag SET val_fuen_a='1,000,000.00' WHERE conse='11850' AND conse1='1' AND ano='2024' # OS2_BATOT13 # 
+06/11/2024 21:49:30 pm # UPDATE cx_pla_pag SET val_fuen_a='1,000,000.00' WHERE conse='11850' AND conse1='1' AND ano='2024' # CDO_BATOT13 # 
+07/11/2024 01:41:12 am # UPDATE cx_pla_pag SET val_fuen_a='6,000,000.00' WHERE conse='11779' AND conse1='1' AND ano='2024' # CDO_BACIF3 # 
+07/11/2024 08:02:06 am # UPDATE cx_pla_pag SET val_fuen_a='5,000,000.00' WHERE conse='11629' AND conse1='1' AND ano='2024' # SPP_BRIMI1 # 
+07/11/2024 08:02:12 am # UPDATE cx_pla_pag SET val_fuen_a='1,500,000.00' WHERE conse='11641' AND conse1='1' AND ano='2024' # SPP_BRIMI1 # 
+07/11/2024 08:02:19 am # UPDATE cx_pla_pag SET val_fuen_a='3,000,000.00' WHERE conse='11646' AND conse1='1' AND ano='2024' # SPP_BRIMI1 # 
+07/11/2024 08:02:25 am # UPDATE cx_pla_pag SET val_fuen_a='4,000,000.00' WHERE conse='11647' AND conse1='1' AND ano='2024' # SPP_BRIMI1 # 
+07/11/2024 08:03:04 am # UPDATE cx_pla_pag SET val_fuen_a='5,000,000.00' WHERE conse='11629' AND conse1='1' AND ano='2024' # OB4_BRIMI1 # 
+07/11/2024 08:03:10 am # UPDATE cx_pla_pag SET val_fuen_a='1,500,000.00' WHERE conse='11641' AND conse1='1' AND ano='2024' # OB4_BRIMI1 # 
+07/11/2024 08:03:16 am # UPDATE cx_pla_pag SET val_fuen_a='3,000,000.00' WHERE conse='11646' AND conse1='1' AND ano='2024' # OB4_BRIMI1 # 
+07/11/2024 08:03:21 am # UPDATE cx_pla_pag SET val_fuen_a='4,000,000.00' WHERE conse='11647' AND conse1='1' AND ano='2024' # OB4_BRIMI1 # 

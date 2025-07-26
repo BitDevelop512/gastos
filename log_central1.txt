@@ -1,0 +1,207 @@
+21/03/2024 10:34:50 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='22' AND ano='2023' # 
+21/03/2024 10:34:50 am # UPDATE cx_act_cen SET estado='F' WHERE conse='2' AND ano='2024' # 
+21/03/2024 10:34:50 am 
+21/03/2024 10:54:07 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='33' AND ano='2023' # 
+21/03/2024 10:54:07 am # UPDATE cx_act_cen SET estado='F' WHERE conse='3' AND ano='2024' # 
+21/03/2024 10:54:07 am 
+21/03/2024 15:06:28 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='19' AND ano='2023' # 
+21/03/2024 15:06:28 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='1' AND ano='2024' # 
+21/03/2024 15:06:28 pm 
+22/03/2024 11:24:00 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='23' AND ano='2023' # 
+22/03/2024 11:24:00 am # UPDATE cx_act_cen SET estado='F' WHERE conse='4' AND ano='2024' # 
+22/03/2024 11:24:00 am 
+22/03/2024 11:24:51 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='25' AND ano='2023' # 
+22/03/2024 11:24:51 am # UPDATE cx_act_cen SET estado='F' WHERE conse='5' AND ano='2024' # 
+22/03/2024 11:24:51 am 
+22/03/2024 11:25:31 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='52' AND ano='2023' # 
+22/03/2024 11:25:31 am # UPDATE cx_act_cen SET estado='F' WHERE conse='7' AND ano='2024' # 
+22/03/2024 11:25:31 am 
+22/03/2024 11:26:06 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='14' AND ano='2023' # 
+22/03/2024 11:26:06 am # UPDATE cx_act_cen SET estado='F' WHERE conse='8' AND ano='2024' # 
+22/03/2024 11:26:06 am 
+22/03/2024 11:27:04 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='42' AND ano='2023' # 
+22/03/2024 11:27:04 am # UPDATE cx_act_cen SET estado='F' WHERE conse='9' AND ano='2024' # 
+22/03/2024 11:27:04 am 
+26/03/2024 15:14:08 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='24' AND ano='2023' # 
+26/03/2024 15:14:08 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='6' AND ano='2024' # 
+26/03/2024 15:14:08 pm 
+04/04/2024 07:14:16 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='26' AND ano='2023' # 
+04/04/2024 07:14:16 am # UPDATE cx_act_cen SET estado='F' WHERE conse='10' AND ano='2024' # 
+04/04/2024 07:14:16 am 
+04/04/2024 07:15:20 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='32' AND ano='2023' # 
+04/04/2024 07:15:20 am # UPDATE cx_act_cen SET estado='F' WHERE conse='11' AND ano='2024' # 
+04/04/2024 07:15:20 am 
+04/04/2024 07:17:45 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='37' AND ano='2023' # 
+04/04/2024 07:17:45 am # UPDATE cx_act_cen SET estado='F' WHERE conse='12' AND ano='2024' # 
+04/04/2024 07:17:45 am 
+04/04/2024 07:19:23 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='41' AND ano='2023' # 
+04/04/2024 07:19:23 am # UPDATE cx_act_cen SET estado='F' WHERE conse='13' AND ano='2024' # 
+04/04/2024 07:19:23 am 
+04/04/2024 07:21:38 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='47' AND ano='2023' # 
+04/04/2024 07:21:38 am # UPDATE cx_act_cen SET estado='F' WHERE conse='14' AND ano='2024' # 
+04/04/2024 07:21:38 am 
+16/05/2024 14:03:50 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='46' AND ano='2022' # 
+16/05/2024 14:03:50 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='15' AND ano='2024' # 
+16/05/2024 14:03:50 pm 
+17/05/2024 18:11:08 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='59' AND ano='2023' # 
+17/05/2024 18:11:08 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='25' AND ano='2024' # 
+17/05/2024 18:11:08 pm 
+17/05/2024 18:12:59 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='72' AND ano='2023' # 
+17/05/2024 18:12:59 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='24' AND ano='2024' # 
+17/05/2024 18:12:59 pm 
+17/05/2024 18:13:35 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='55' AND ano='2023' # 
+17/05/2024 18:13:35 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='23' AND ano='2024' # 
+17/05/2024 18:13:35 pm 
+17/05/2024 18:14:04 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='54' AND ano='2023' # 
+17/05/2024 18:14:04 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='22' AND ano='2024' # 
+17/05/2024 18:14:04 pm 
+17/05/2024 18:15:05 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='53' AND ano='2023' # 
+17/05/2024 18:15:05 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='21' AND ano='2024' # 
+17/05/2024 18:15:05 pm 
+17/05/2024 18:17:09 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='49' AND ano='2023' # 
+17/05/2024 18:17:09 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='20' AND ano='2024' # 
+17/05/2024 18:17:09 pm 
+17/05/2024 18:17:36 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='46' AND ano='2023' # 
+17/05/2024 18:17:36 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='19' AND ano='2024' # 
+17/05/2024 18:17:36 pm 
+17/05/2024 18:18:04 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='44' AND ano='2023' # 
+17/05/2024 18:18:04 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='18' AND ano='2024' # 
+17/05/2024 18:18:04 pm 
+17/05/2024 18:18:31 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='43' AND ano='2023' # 
+17/05/2024 18:18:31 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='17' AND ano='2024' # 
+17/05/2024 18:18:31 pm 
+17/05/2024 18:18:58 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='45' AND ano='2023' # 
+17/05/2024 18:18:58 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='16' AND ano='2024' # 
+17/05/2024 18:18:58 pm 
+24/06/2024 14:17:30 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='62' AND ano='2023' # 
+24/06/2024 14:17:30 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='26' AND ano='2024' # 
+24/06/2024 14:17:30 pm 
+24/06/2024 15:00:19 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='70' AND ano='2023' # 
+24/06/2024 15:00:19 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='27' AND ano='2024' # 
+24/06/2024 15:00:19 pm 
+24/06/2024 18:32:27 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='58' AND ano='2023' # 
+24/06/2024 18:32:27 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='28' AND ano='2024' # 
+24/06/2024 18:32:27 pm 
+24/06/2024 18:33:41 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='48' AND ano='2023' # 
+24/06/2024 18:33:41 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='29' AND ano='2024' # 
+24/06/2024 18:33:41 pm 
+24/06/2024 18:36:47 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='71' AND ano='2023' # 
+24/06/2024 18:36:47 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='30' AND ano='2024' # 
+24/06/2024 18:36:47 pm 
+24/06/2024 18:38:39 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='57' AND ano='2023' # 
+24/06/2024 18:38:39 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='31' AND ano='2024' # 
+24/06/2024 18:38:39 pm 
+24/06/2024 18:41:32 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='2' AND ano='2024' # 
+24/06/2024 18:41:32 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='32' AND ano='2024' # 
+24/06/2024 18:41:32 pm 
+24/06/2024 18:43:05 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='1' AND ano='2024' # 
+24/06/2024 18:43:05 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='33' AND ano='2024' # 
+24/06/2024 18:43:05 pm 
+18/07/2024 09:58:50 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='68' AND ano='2023' # 
+18/07/2024 09:58:50 am # UPDATE cx_act_cen SET estado='F' WHERE conse='38' AND ano='2024' # 
+18/07/2024 09:58:50 am 
+18/07/2024 15:51:52 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='67' AND ano='2023' # 
+18/07/2024 15:51:52 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='37' AND ano='2024' # 
+18/07/2024 15:51:52 pm 
+18/07/2024 15:52:39 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='64' AND ano='2023' # 
+18/07/2024 15:52:39 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='36' AND ano='2024' # 
+18/07/2024 15:52:39 pm 
+18/07/2024 15:54:08 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='66' AND ano='2023' # 
+18/07/2024 15:54:08 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='35' AND ano='2024' # 
+18/07/2024 15:54:08 pm 
+18/07/2024 15:57:20 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='65' AND ano='2023' # 
+18/07/2024 15:57:20 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='34' AND ano='2024' # 
+18/07/2024 15:57:20 pm 
+13/08/2024 15:52:56 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='3' AND ano='2024' # 
+13/08/2024 15:52:56 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='42' AND ano='2024' # 
+13/08/2024 15:52:56 pm 
+13/08/2024 15:56:29 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='34' AND ano='2023' # 
+13/08/2024 15:56:29 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='41' AND ano='2024' # 
+13/08/2024 15:56:29 pm 
+13/08/2024 15:57:12 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='75' AND ano='2022' # 
+13/08/2024 15:57:12 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='40' AND ano='2024' # 
+13/08/2024 15:57:12 pm 
+13/08/2024 15:57:44 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='74' AND ano='2022' # 
+13/08/2024 15:57:44 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='39' AND ano='2024' # 
+13/08/2024 15:57:44 pm 
+30/08/2024 10:31:38 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='7' AND ano='2024' # 
+30/08/2024 10:31:38 am # UPDATE cx_act_cen SET estado='F' WHERE conse='43' AND ano='2024' # 
+30/08/2024 10:31:38 am 
+30/08/2024 10:32:19 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='10' AND ano='2024' # 
+30/08/2024 10:32:19 am # UPDATE cx_act_cen SET estado='F' WHERE conse='44' AND ano='2024' # 
+30/08/2024 10:32:19 am 
+30/08/2024 10:33:43 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='6' AND ano='2024' # 
+30/08/2024 10:33:43 am # UPDATE cx_act_cen SET estado='F' WHERE conse='45' AND ano='2024' # 
+30/08/2024 10:33:43 am 
+30/08/2024 10:35:19 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='11' AND ano='2024' # 
+30/08/2024 10:35:19 am # UPDATE cx_act_cen SET estado='F' WHERE conse='46' AND ano='2024' # 
+30/08/2024 10:35:19 am 
+02/09/2024 16:53:20 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='14' AND ano='2024' # 
+02/09/2024 16:53:20 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='47' AND ano='2024' # 
+02/09/2024 16:53:20 pm 
+01/11/2024 10:42:54 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='13' AND ano='2024' # 
+01/11/2024 10:42:54 am # UPDATE cx_act_cen SET estado='F' WHERE conse='51' AND ano='2024' # 
+01/11/2024 10:42:54 am 
+01/11/2024 10:45:16 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='8' AND ano='2024' # 
+01/11/2024 10:45:16 am # UPDATE cx_act_cen SET estado='F' WHERE conse='50' AND ano='2024' # 
+01/11/2024 10:45:16 am 
+01/11/2024 10:46:39 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='4' AND ano='2024' # 
+01/11/2024 10:46:39 am # UPDATE cx_act_cen SET estado='F' WHERE conse='49' AND ano='2024' # 
+01/11/2024 10:46:39 am 
+01/11/2024 10:47:26 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='9' AND ano='2024' # 
+01/11/2024 10:47:26 am # UPDATE cx_act_cen SET estado='F' WHERE conse='48' AND ano='2024' # 
+01/11/2024 10:47:26 am 
+26/11/2024 14:31:07 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='4' AND ano='2024' # 
+26/11/2024 14:31:07 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='49' AND ano='2024' # 
+26/11/2024 14:31:07 pm 
+09/12/2024 08:12:58 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='12' AND ano='2024' # 
+09/12/2024 08:12:58 am # UPDATE cx_act_cen SET estado='F' WHERE conse='52' AND ano='2024' # 
+09/12/2024 08:12:58 am 
+09/12/2024 08:14:04 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='16' AND ano='2024' # 
+09/12/2024 08:14:04 am # UPDATE cx_act_cen SET estado='F' WHERE conse='53' AND ano='2024' # 
+09/12/2024 08:14:04 am 
+09/12/2024 08:21:13 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='18' AND ano='2024' # 
+09/12/2024 08:21:13 am # UPDATE cx_act_cen SET estado='F' WHERE conse='54' AND ano='2024' # 
+09/12/2024 08:21:13 am 
+09/12/2024 08:22:01 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='19' AND ano='2024' # 
+09/12/2024 08:22:01 am # UPDATE cx_act_cen SET estado='F' WHERE conse='55' AND ano='2024' # 
+09/12/2024 08:22:01 am 
+26/12/2024 14:26:00 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='24' AND ano='2024' # 
+26/12/2024 14:26:00 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='57' AND ano='2024' # 
+26/12/2024 14:26:00 pm 
+07/01/2025 08:03:45 am # UPDATE cx_reg_rec SET estado='F' WHERE conse='17' AND ano='2024' # 
+07/01/2025 08:03:45 am # UPDATE cx_act_cen SET estado='F' WHERE conse='56' AND ano='2024' # 
+07/01/2025 08:03:45 am 
+17/03/2025 14:36:18 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='5' AND ano='2024' # 
+17/03/2025 14:36:18 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='1' AND ano='2025' # 
+17/03/2025 14:36:18 pm 
+17/03/2025 14:38:59 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='23' AND ano='2024' # 
+17/03/2025 14:38:59 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='2' AND ano='2025' # 
+17/03/2025 14:38:59 pm 
+17/03/2025 14:39:54 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='29' AND ano='2024' # 
+17/03/2025 14:39:54 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='3' AND ano='2025' # 
+17/03/2025 14:39:54 pm 
+15/05/2025 12:05:02 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='22' AND ano='2024' # 
+15/05/2025 12:05:02 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='8' AND ano='2025' # 
+15/05/2025 12:05:02 pm 
+15/05/2025 12:06:47 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='42' AND ano='2024' # 
+15/05/2025 12:06:47 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='7' AND ano='2025' # 
+15/05/2025 12:06:47 pm 
+15/05/2025 12:07:45 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='31' AND ano='2024' # 
+15/05/2025 12:07:45 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='6' AND ano='2025' # 
+15/05/2025 12:07:45 pm 
+15/05/2025 12:08:56 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='27' AND ano='2024' # 
+15/05/2025 12:08:56 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='5' AND ano='2025' # 
+15/05/2025 12:08:56 pm 
+15/05/2025 12:10:38 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='26' AND ano='2024' # 
+15/05/2025 12:10:38 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='4' AND ano='2025' # 
+15/05/2025 12:10:38 pm 
+10/06/2025 16:42:48 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='32' AND ano='2024' # 
+10/06/2025 16:42:48 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='9' AND ano='2025' # 
+10/06/2025 16:42:48 pm 
+10/06/2025 16:43:27 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='34' AND ano='2024' # 
+10/06/2025 16:43:27 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='10' AND ano='2025' # 
+10/06/2025 16:43:27 pm 
+10/06/2025 16:43:56 pm # UPDATE cx_reg_rec SET estado='F' WHERE conse='38' AND ano='2024' # 
+10/06/2025 16:43:56 pm # UPDATE cx_act_cen SET estado='F' WHERE conse='11' AND ano='2025' # 
+10/06/2025 16:43:56 pm 

@@ -1,0 +1,1 @@
+17/01/2025 13:28:33 pm # UPDATE cx_ctr_cue SET nombre='FONDO INTERNO', cuenta='309040418', banco='1' WHERE conse='2' # 

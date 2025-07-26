@@ -1,0 +1,9 @@
+17/01/2025 21:09:06 pm # UPDATE cx_usu_web SET usuario='CMARTINEZ_DIADI' WHERE conse='1470' AND usuario='ADM_SIGAR' # 
+23/01/2025 16:09:08 pm # UPDATE cx_usu_web SET usuario='TRANS_STAFJEMIC' WHERE conse='1639' AND usuario='TRANSP_STAFJEMI' # 
+26/02/2025 16:47:01 pm # UPDATE cx_usu_web SET usuario='CDO_CP4BU43' WHERE conse='1648' AND usuario='CDO_CP3BU43' # 
+01/03/2025 21:16:10 pm # UPDATE cx_usu_web SET usuario='TRANSP_DAICO' WHERE conse='1644' AND usuario='TRANS_STAFJEMIC' # 
+13/03/2025 15:11:35 pm # UPDATE cx_usu_web SET usuario='SAC6_CAIMI' WHERE conse='1650' AND usuario='C6_CAIMI' # 
+23/04/2025 14:43:32 pm # UPDATE cx_usu_web SET usuario='SGA_GMMAT' WHERE conse='37' AND usuario='SGA_GBMAT' # 
+23/04/2025 14:43:46 pm # UPDATE cx_usu_web SET usuario='OS2_GMMAT' WHERE conse='36' AND usuario='OS2_GBMAT' # 
+23/04/2025 14:44:00 pm # UPDATE cx_usu_web SET usuario='CDO_GMMAT' WHERE conse='35' AND usuario='CDO_GBMAT' # 
+28/05/2025 19:25:42 pm # UPDATE cx_usu_web SET usuario='AGALINDO_SIGAR' WHERE conse='1730' AND usuario='JGALINDO_SIGAR' # 
