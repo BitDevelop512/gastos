@@ -176,8 +176,18 @@ include('titulo.php');
               <center>
                 <img src="imagenes/cargando1.gif" alt="Cargando...">
               </center>
-            </div>
+            </div>            
             <form name="formu" method="post">
+              <div class="row">
+                <!-- Aviso de advertencia -->
+                <div style="background-color: #fff3cd; border: 1px solid #ffeeba; padding: 10px; border-radius: 5px; color: #856404; margin-bottom: 8px; display: flex; align-items: center;">
+                        <span style="font-size: 1.2em; margin-right: 8px;">⚠</span>
+                        <span>
+                        <strong>Aviso:</strong> El <em>Plan de Inversión</em> ha sido deshabilitado por directiva institucional vigente. Solo la <strong>Solicitud de Recursos</strong> está habilitada para usuarios autorizados.
+                        </span>
+                    </div>
+                </div>
+
               <div class="row">
                 <div class="col col-lg-4 col-sm-4 col-md-4 col-xs-4">
                   <label><font face="Verdana" size="2">Registrar Necesidad en Formato:</font></label>
@@ -215,7 +225,6 @@ include('titulo.php');
                   <input type="hidden" name="v_rtm" id="v_rtm" class="form-control" value="<?php echo $v_rtm; ?>" readonly="readonly">
                   <input type="hidden" name="v_rtm1" id="v_rtm1" class="form-control" value="<?php echo $v_rtm1; ?>" readonly="readonly">
                   <select name="tp_plan" id="tp_plan" class="form-control select2" tabindex="1">
-                    <option value="1">PLAN DE INVERSION</option>
                     <option value="2">SOLICITUD DE RECURSOS</option>
                   </select>
                 </div>
@@ -1931,7 +1940,6 @@ $(document).ready(function () {
   $("#factor").change(trae_estructura);
   $("#fecha").prop("disabled",true);
   $("#lugar").prop("disabled",true);
-  $("#periodo").prop("disabled",true);
   $("#ano").prop("disabled",true);
   $("#anexos").button();
   $("#anexos").css({ width: '200px', 'padding-top': '8px', 'padding-bottom': '8px' });
@@ -1943,6 +1951,8 @@ $(document).ready(function () {
   $("#ajuste").spinner({ min: 0 });
   $("#ajuste").width(50);
   $("#periodo").val('<?php echo $mes; ?>');
+  valida_tipo();
+  
   $("#mis_1").prop("disabled",true);
   // Si es asistente direccion o ayudantia
   var admin = $("#admin").val();
@@ -2494,193 +2504,80 @@ function val_mis1(valor,valor1)
     } 
   }
 }
-function valida_tipo()
-{
-  var valida = $("#tp_plan").val();
-  if (valida == "1")
-  {
-    $("#tp_plan1").show();
-    $("#con_sol").hide();
-    $("#lb_organiza").show();
-    $("#lb_oficiales").show();
-    $("#lb_auxiliares").show();
-    $("#lb_suboficiales").show();
-    $("#lb_soldados").show();
-    $("#lb_ordop").show();
-    $("#lb_ordop1").show();
-    $("#lb_misiones").show();
-    $("#cm_oficiales").show();
-    $("#cm_auxiliares").show();
-    $("#cm_suboficiales").show();
-    $("#cm_soldados").show();
-    $("#cm_ordop").show();
-    $("#add_field").show();
-    $("#mis_1").show();
-    $("#periodo").val(<?php echo $mes; ?>);
-    $("#ano").val(<?php echo $ano; ?>);
-    $("#periodo").prop("disabled",true);
+function valida_tipo() {
+  // Primero habilitamos todos los meses
+  for (let i = 1; i <= 12; i++) {
+      $(`#periodo option[value="${i}"]`).prop('disabled', false);
   }
-  else
-  {
-    $("#tp_plan1").hide();
-    $("#con_sol").show();
-    $("#con_sol").val('1');
-    $("#periodo").val(<?php echo $mes1; ?>);
-    $("#ano").val(<?php echo $ano1; ?>);
-    var v_mes1 = $("#periodo").val();
-    $("#periodo").prop("disabled",false);
-    switch (v_mes1)
-    {
-			case '1':
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-        break;
-			case '2':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '3':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '4':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-        break;
-			case '5':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '6':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '7':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '8':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '9':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '10':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='12']").attr("disabled","disabled");
-				break;
-			case '11':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				break;
-			case '12':
-				$("#periodo>option[value='1']").attr("disabled","disabled");
-				$("#periodo>option[value='2']").attr("disabled","disabled");
-				$("#periodo>option[value='3']").attr("disabled","disabled");
-				$("#periodo>option[value='4']").attr("disabled","disabled");
-				$("#periodo>option[value='5']").attr("disabled","disabled");
-				$("#periodo>option[value='6']").attr("disabled","disabled");
-				$("#periodo>option[value='7']").attr("disabled","disabled");
-				$("#periodo>option[value='8']").attr("disabled","disabled");
-				$("#periodo>option[value='9']").attr("disabled","disabled");
-				$("#periodo>option[value='10']").attr("disabled","disabled");
-				$("#periodo>option[value='11']").attr("disabled","disabled");
-				break;
-			default:
-				break;
-		}
+
+  switch ($mes) {
+      case '1': // Enero - deshabilitar de marzo a diciembre
+          for (let i = 3; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '2': // Febrero - deshabilitar de abril a diciembre
+          for (let i = 4; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '3': // Marzo - deshabilitar de mayo a diciembre
+          for (let i = 5; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '4': // Abril - deshabilitar de junio a diciembre
+          for (let i = 6; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '5': // Mayo - deshabilitar de julio a diciembre
+          for (let i = 7; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '6': // Junio - deshabilitar de agosto a diciembre
+          for (let i = 8; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '7': // Julio - deshabilitar de septiembre a diciembre
+          for (let i = 9; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '8': // Agosto - deshabilitar de enero a julio
+          for (let i = 1; i <= 7; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '9': // Septiembre - deshabilitar de enero a agosto y noviembre a diciembre
+          for (let i = 1; i <= 8; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          for (let i = 11; i <= 12; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '10': // Octubre - deshabilitar de enero a septiembre y diciembre
+          for (let i = 1; i <= 9; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          $(`#periodo option[value="12"]`).prop('disabled', true);
+          break;
+      case '11': // Noviembre - deshabilitar de enero a octubre
+          for (let i = 1; i <= 10; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      case '12': // Diciembre - deshabilitar de enero a noviembre
+          for (let i = 1; i <= 11; i++) {
+              $(`#periodo option[value="${i}"]`).prop('disabled', true);
+          }
+          break;
+      default:
+          break;
   }
-  total_planes();
 }
 </script>
 <script>
