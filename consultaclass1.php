@@ -214,15 +214,6 @@ class ConsultaClass
         $compania = $this->getCompania();
         $usu = $this->getUsu();
         $unidad1 = $this->getUnidad1();
-        $mes = $this->getMes();
-        if (($mes == "1") or ($mes == "12"))
-        {
-            $mes1 = $mes;
-        }
-        else
-        {
-            $mes1 = $mes-1;
-        }
         $ano = $this->getAno();
         $admin = $this->getAdmin();
         $nunidad = $this->getNunidad();
@@ -237,23 +228,23 @@ class ConsultaClass
             switch ($admin)
             {
                 case '3':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND periodo='$mes' AND ano='$ano' AND compania!='$compania'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano' AND compania!='$compania'";
                     break;
                 case '4':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ((tipo='1' AND periodo='$mes' AND usuario4='$usu') OR (tipo='2' AND periodo='$mes1')) AND ano='$ano'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ((tipo='1' AND usuario4='$usu') OR tipo='2') AND ano='$ano'";
                     break;
                 case '27':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ((tipo='1' AND periodo='$mes' AND usuario3='$usu' AND usuario4='') OR (tipo='2' AND periodo='$mes1')) AND ano='$ano'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ((tipo='1' AND usuario3='$usu' AND usuario4='') OR tipo='2') AND ano='$ano'";
                     break;
                 case '6':
                 case '11':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ((tipo='1' AND periodo='$mes') OR (tipo='2' AND periodo='$mes1')) AND ano='$ano'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano'";
                     break;
                 case '7':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND periodo='$mes1' AND ano='$ano' AND tipo='2'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano' AND tipo='2'";
                     break;
                 default:
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND periodo='$mes' AND ano='$ano'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano'";
                     break;
             }
         }
@@ -262,21 +253,19 @@ class ConsultaClass
             switch ($admin)
             {
                 case '3':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND periodo='$mes' AND ano='$ano' AND estado='P' AND usuario!='$usu'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano' AND estado='P' AND usuario!='$usu'";
                     break;
                 case '4':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND periodo='$mes' AND ano='$ano' AND estado IN ('A','D','E','F')";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano' AND estado IN ('A','D','E','F')";
                     break;
                 case '6':
                 case '7':
                 case '9':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND periodo='$mes' AND ano='$ano'";
-                    break;
                 case '10':
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ((tipo='1' AND periodo='$mes') OR (tipo='2' AND periodo='$mes1')) AND ano='$ano'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano'";
                     break;
                 default:
-                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND periodo='$mes' AND ano='$ano'";
+                    $query = "SELECT * FROM cv_rev_pla WHERE unidad IN ($unidad) AND ano='$ano'";
                     break;
             }
         }
