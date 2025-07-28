@@ -40,14 +40,13 @@ else
 		$numero .= "'".odbc_result($cur0,1)."',";
 	}
 	$numero = substr($numero,0,-1);
-	$query = "SELECT tipo, periodo, ano FROM cx_pla_inv WHERE conse='$conse' AND ano='$ano' AND estado NOT IN ('','X','Y') ORDER BY conse, ano";
+	$query = "SELECT tipo, ano FROM cx_pla_inv WHERE conse='$conse' AND ano='$ano' AND estado NOT IN ('','X','Y') ORDER BY conse, ano";
 	$sql = odbc_exec($conexion, $query);
 	$planes = odbc_num_rows($sql);
 	$tipo = odbc_result($sql,1);
-	$periodo = odbc_result($sql,2);
 	if ($planes > 0)
 	{
-		$ano = odbc_result($sql,3);
+		$ano = odbc_result($sql,2);
 		$ano = trim($ano);
 	}
 	if ($tipo == "2")
@@ -58,9 +57,30 @@ else
 	{
 		if (($adm_usuario == "4") or ($adm_usuario == "27"))
 	  {
+			$ano = date('Y');
+			$query = "SELECT * FROM cx_pla_inv WHERE unidad IN ($numero) AND ano='$ano' AND estado NOT IN ('','X','Y') AND tipo='1' ORDER BY conse, ano";
+	  }
+	  else
+	  {
+			$query = "SELECT * FROM cx_pla_inv WHERE unidad IN ($numero) AND ano='$ano' AND estado NOT IN ('','X','Y') AND tipo='1' ORDER BY conse, ano";
+	  }
+		if (($adm_usuario == "6"))
+		{
 			if (($nun_usuario == "1") or ($nun_usuario == "2") or ($nun_usuario == "3"))
 			{
-		  	$ano = date('Y');
+				if (!empty($_GET['conse']))
+				{
+					$pdf = "./fpdf/638.php?conse=".$conse."&ano=".$ano;
+				}
+				else
+				{
+					$pdf = "nota_con.php";
+					$sigue = "0";
+				}
+			}
+			else
+			{
+				$ano = date('Y');
 				$mes = date('m');
 				if ($mes == "12")
 				{
@@ -71,36 +91,50 @@ else
 				{
 					$mes = $mes+1;
 				}
-				$pdf = "./fpdf/638_1.php?periodo=".$mes."&ano=".$ano;
-			}
-			else
-			{
-				if ($planes > 0)
+				$query = "SELECT conse FROM cx_pla_inv WHERE unidad ='$uni_usuario' AND tipo='1' AND estado NOT IN ('','X','Y')";
+				$sql = odbc_exec($conexion, $query);
+				$total = odbc_num_rows($sql);
+				$total = intval($total);
+				if ($total > 0)
 				{
-			    $pdf = "./fpdf/638.php?conse=".$conse."&ano=".$ano;
+					$pdf = "./fpdf/638_1.php?periodo=".$mes."&ano=".$ano."&contador=".$total;
 				}
 				else
 				{
-					$pdf = "nota_con.php";
-					$sigue = "0";
+					$query0 = "SELECT COUNT(1) AS consolida FROM cx_pla_con WHERE unidad='$uni_usuario'";
+					$sql0 = odbc_exec($conexion, $query0);
+					$total0 = odbc_result($sql0,1);
+					$total0 = intval($total0);
+					if ($total0 > 0)
+					{
+						$pdf = "./fpdf/638_1.php?periodo=".$mes."&ano=".$ano."&contador=".$total;
+					}
+					else
+					{
+						$query1 = "SELECT conse FROM cx_pla_inv WHERE unidad IN ($numero) AND tipo='1' AND estado NOT IN ('','X','Y') ORDER BY unidad";
+						$sql1 = odbc_exec($conexion, $query1);
+						$total1 = odbc_num_rows($sql1);
+						$total1 = intval($total1);
+						if ($total1 > 0)
+						{
+							$pdf = "./fpdf/638_1.php?periodo=".$mes."&ano=".$ano."&contador=".$total;
+						}
+						else
+						{
+							$pdf = "nota_con.php";
+							$sigue = "0";
+						}
+					}
 				}
 			}
 		}
 		else
 		{
-			if ($adm_usuario == "6")
+			if (($adm_usuario == "7") or ($adm_usuario == "9"))
 			{
 				if (($nun_usuario == "1") or ($nun_usuario == "2") or ($nun_usuario == "3"))
 				{
-					if (!empty($_GET['conse']))
-					{
-						$pdf = "./fpdf/638.php?conse=".$conse."&ano=".$ano;
-					}
-					else
-					{
-						$pdf = "nota_con.php";
-						$sigue = "0";
-					}
+					$pdf = "./fpdf/638.php?conse=".$conse."&ano=".$ano;
 				}
 				else
 				{
@@ -115,97 +149,38 @@ else
 					{
 						$mes = $mes+1;
 					}
-					$query = "SELECT conse FROM cx_pla_inv WHERE unidad ='$uni_usuario' AND periodo='$mes' AND ano='$ano' AND tipo='1' AND estado NOT IN ('','X','Y')";
-					$sql = odbc_exec($conexion, $query);
-					$total = odbc_num_rows($sql);
-					$total = intval($total);
-					if ($total > 0)
+					if ($adm_usuario == "7")
 					{
-						$pdf = "./fpdf/638_1.php?periodo=".$mes."&ano=".$ano."&contador=".$total;
+						$query = "SELECT conse FROM cx_pla_con WHERE unidad='$uni_usuario' AND estado='H'";
 					}
 					else
 					{
-						$query0 = "SELECT COUNT(1) AS consolida FROM cx_pla_con WHERE unidad='$uni_usuario'";
-						$sql0 = odbc_exec($conexion, $query0);
-						$total0 = odbc_result($sql0,1);
-						$total0 = intval($total0);
-						if ($total0 > 0)
-						{
-							$pdf = "./fpdf/638_1.php?periodo=".$mes."&ano=".$ano."&contador=".$total;
-						}
-						else
-						{
-							$query1 = "SELECT conse FROM cx_pla_inv WHERE unidad IN ($numero) AND periodo='$mes' AND ano='$ano' AND tipo='1' AND estado NOT IN ('','X','Y') ORDER BY unidad";
-							$sql1 = odbc_exec($conexion, $query1);
-							$total1 = odbc_num_rows($sql1);
-							$total1 = intval($total1);
-							if ($total1 > 0)
-							{
-								$pdf = "./fpdf/638_1.php?periodo=".$mes."&ano=".$ano."&contador=".$total;
-							}
-							else
-							{
-								$pdf = "nota_con.php";
-								$sigue = "0";
-							}
-						}
+						$query = "SELECT conse FROM cx_pla_con WHERE unidad='$uni_usuario' AND estado='I'";
+					}
+					$sql = odbc_exec($conexion, $query);
+					$total = odbc_num_rows($sql);
+					if ($total>0)
+					{
+						$conse = odbc_result($sql,1);
+						$pdf = "./fpdf/638_2.php?conse=".$conse."&ano=".$ano;
+					}
+					else
+					{
+						$pdf = "nota_con.php";
+						$sigue = "0";
 					}
 				}
 			}
 			else
 			{
-				if (($adm_usuario == "7") or ($adm_usuario == "9"))
+				if (empty($_GET['conse']))
 				{
-					if (($nun_usuario == "1") or ($nun_usuario == "2") or ($nun_usuario == "3"))
-					{
-						$pdf = "./fpdf/638.php?conse=".$conse."&ano=".$ano;
-					}
-					else
-					{
-						$ano = date('Y');
-						$mes = date('m');
-						if ($mes == "12")
-						{
-							$mes = 1;
-							$ano = $ano+1;
-						}
-						else
-						{
-							$mes = $mes+1;
-						}
-						if ($adm_usuario == "7")
-						{
-							$query = "SELECT conse FROM cx_pla_con WHERE unidad='$uni_usuario' AND estado='H' AND periodo='$mes' AND ano='$ano'";
-						}
-						else
-						{
-							$query = "SELECT conse FROM cx_pla_con WHERE unidad='$uni_usuario' AND estado='I' AND periodo='$mes' AND ano='$ano'";
-						}
-						$sql = odbc_exec($conexion, $query);
-						$total = odbc_num_rows($sql);
-						if ($total>0)
-						{
-							$conse = odbc_result($sql,1);
-							$pdf = "./fpdf/638_2.php?conse=".$conse."&ano=".$ano;
-						}
-						else
-						{
-							$pdf = "nota_con.php";
-							$sigue = "0";
-						}
-					}
+					$pdf = "nota_con.php";
+					$sigue = "0";
 				}
 				else
 				{
-					if (empty($_GET['conse']))
-					{
-						$pdf = "nota_con.php";
-						$sigue = "0";
-					}
-					else
-					{
-						$pdf = "./fpdf/638.php?conse=".$conse."&ano=".$ano;
-					}
+					$pdf = "./fpdf/638.php?conse=".$conse."&ano=".$ano;
 				}
 			}
 		}
