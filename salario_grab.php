@@ -13,8 +13,6 @@ if (is_ajax())
 	$tarifa2 = $_POST['tarifa2'];
 	$tarifa3 = $_POST['tarifa3'];
 	$tarifa4 = $_POST['tarifa4'];
-	$tope_slr_ind = $_POST['tope_slr_ind'];
-	$tope_slr_max = $_POST['tope_slr_max'];
 	$tipo = $_POST['tipo'];
 	$query = "SELECT tarifa4 FROM cx_ctr_ano WHERE ano='$ano'";
 	$cur = odbc_exec($conexion, $query);
@@ -22,11 +20,11 @@ if (is_ajax())
 	if ($tipo == "0")
 	{
 		$query_c = "(SELECT isnull(max(conse),0)+1 FROM cx_ctr_ano)";
-		$graba = "INSERT INTO cx_ctr_ano (conse, tarifa1, tarifa2, tarifa3, salario, ano, tarifa4, tope_slr_ind, tope_slr_max) VALUES ($query_c, '$tarifa1', '$tarifa2', '$tarifa3', '$salario', '$ano', '$tarifa4', '$tope_slr_ind', '$tope_slr_max')";
+		$graba = "INSERT INTO cx_ctr_ano (conse, tarifa1, tarifa2, tarifa3, salario, ano, tarifa4) VALUES ($query_c, '$tarifa1', '$tarifa2', '$tarifa3', '$salario', '$ano', '$tarifa4')";
 	}
 	else
 	{
-		$graba = "UPDATE cx_ctr_ano SET tarifa1='$tarifa1', tarifa2='$tarifa2', tarifa3='$tarifa3', salario='$salario', tarifa4='$tarifa4', tope_slr_ind='$tope_slr_ind', tope_slr_max='$tope_slr_max' WHERE ano='$ano'";
+		$graba = "UPDATE cx_ctr_ano SET tarifa1='$tarifa1', tarifa2='$tarifa2', tarifa3='$tarifa3', salario='$salario', tarifa4='$tarifa4' WHERE ano='$ano'";
 	}
 	if (!odbc_exec($conexion, $graba))
 	{

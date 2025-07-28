@@ -86,20 +86,10 @@ include('titulo.php');
                   <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
                     <label><font face="Verdana" size="2">Valor Individual (SMLV)</font></label>
                     <input type="number" name="salario_ind" id="salario_ind" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0; calcular_valor_nominal();">
-                    <div id="error_ind" style="display:none;color:red;">El valor registrado excede el tope m&aacute;ximo individual permitido para este material (Norma 043). Verifique el registro.</div>
                   </div>
                   <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
                     <label><font face="Verdana" size="2">Tope M&aacute;ximo (SMLV)</font></label>
                     <input type="number" name="salario_max" id="salario_max" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0; calcular_valor_nominal();">
-                    <div id="error_max" style="display:none;color:red;">El valor registrado excede el tope m&aacute;ximo permitido para este material (Norma 043). Verifique el registro.</div>
-                  </div>
-                  <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                    <label><font face="Verdana" size="2">Valor Nominal (COP)</font></label>
-                    <input type="text" name="valor_nominal" id="valor_nominal" class="form-control numero" value="0.00" autocomplete="off" tabindex="3" readonly>
-                  </div>
-                  <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                    <label><font face="Verdana" size="2">Tope Nominal (COP)</font></label>
-                    <input type="text" name="tope_nominal" id="tope_nominal" class="form-control numero" value="0.00" autocomplete="off" tabindex="3" readonly>
                   </div>
                 </div>
               </div>
@@ -188,14 +178,6 @@ include('titulo.php');
                   <label><font face="Verdana" size="2">Gasto fijo mensual</font></label>
                   <input type="text" name="valor10" id="valor10" class="form-control numero" value="0.00" onkeyup="paso_val4();">
                   <input type="hidden" name="valor11" id="valor11" class="form-control numero" value="0">
-                </div>
-                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                  <label><font face="Verdana" size="2">Tope M&aacute;ximo Individual</font></label>
-                  <input type="number" name="tope_slr_ind" id="tope_slr_ind" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0;">
-                </div>
-                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                  <label><font face="Verdana" size="2">Tope M&aacute;ximo General</font></label>
-                  <input type="number" name="tope_slr_max" id="tope_slr_max" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0;">
                 </div>
               </div>
               <br>
@@ -652,18 +634,6 @@ function trae_salario()
       tarifa4 = tarifa4.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
       $("#valor10").val(tarifa4);
       paso_val4();
-      var tope_slr_ind = registros.tope_slr_ind;
-      if (tope_slr_ind == "0")
-      {
-        tope_slr_ind = "0";
-      }
-      $("#tope_slr_ind").val(tope_slr_ind);
-      var tope_slr_max = registros.tope_slr_max;
-      if (tope_slr_max == "0")
-      {
-        tope_slr_max = "0";
-      }
-      $("#tope_slr_max").val(tope_slr_max);
     }
   });
 }
@@ -1123,8 +1093,6 @@ function actu(valor, valor1, valor2, valor3, valor4, valor5, valor6, valor7, val
   else
   {
     $("#div_directiva7").hide();
-    $("#tope_nominal").val('0');
-    $("#valor_nominal").val('0');
     $("#valor").prop("disabled", false);
     $("#valor1").prop("disabled", false);
   }
@@ -1225,8 +1193,6 @@ function nuevo1()
       tarifa2: $("#valor7").val(),
       tarifa3: $("#valor9").val(),
       tarifa4: $("#valor11").val(),
-      tope_slr_ind: $("#tope_slr_ind").val(),
-      tope_slr_max: $("#tope_slr_max").val(),
       tipo: tipo
     },
     beforeSend: function ()
@@ -1251,8 +1217,6 @@ function nuevo1()
         $("#valor6").prop("disabled",true);
         $("#valor8").prop("disabled",true);
         $("#valor10").prop("disabled",true);
-        $("#tope_slr_ind").prop("disabled",true);
-        $("#tope_slr_max").prop("disabled",true);
         $("#aceptar1").hide();
         $("#actualiza1").hide();
       }
@@ -1298,8 +1262,6 @@ function actualiza1()
         tarifa2: $("#valor7").val(),
         tarifa3: $("#valor9").val(),
         tarifa4: $("#valor11").val(),
-        tope_slr_ind: $("#tope_slr_ind").val(),
-        tope_slr_max: $("#tope_slr_max").val(),
         tipo: tipo
       },
       beforeSend: function ()
@@ -1323,8 +1285,6 @@ function actualiza1()
           $("#valor6").prop("disabled",true);
           $("#valor8").prop("disabled",true);
           $("#valor10").prop("disabled",true);
-          $("#tope_slr_ind").prop("disabled",true);
-          $("#tope_slr_max").prop("disabled",true);
           $("#aceptar1").hide();
           $("#actualiza1").hide();
         }
@@ -1555,40 +1515,16 @@ else
 function calcular_valor_nominal()
 {
   var valor_salario = parseFloat(document.getElementById("valor3").value);
-  var tope_slr_ind = parseFloat(document.getElementById("tope_slr_ind").value);
-  var tope_slr_max = parseFloat(document.getElementById("tope_slr_max").value);
   var salario_ind = parseFloat(document.getElementById("salario_ind").value);
   var salario_max = parseFloat(document.getElementById("salario_max").value);
   var valor_nominal = salario_ind * valor_salario;
   var tope_nominal = salario_max * valor_salario;
-
-  if (salario_max > tope_slr_max) {
-    $("#error_max").show();
-    $("#aceptar").prop("disabled", true);
-    $("#actualiza").prop("disabled", true);
-  } else {
-    $("#error_max").hide();
-    $("#aceptar").prop("disabled", false);
-    $("#actualiza").prop("disabled", false);
-  }
-
-  if (salario_ind > tope_slr_ind) {
-    $("#error_ind").show();
-    $("#aceptar").prop("disabled", true);
-    $("#actualiza").prop("disabled", true);
-  } else {
-    $("#error_ind").hide();
-    $("#aceptar").prop("disabled", false);
-    $("#actualiza").prop("disabled", false);
-  }
 
   if (isNaN(valor_nominal))
   {
     valor_nominal = 0;
   }
   valor_nominal = valor_nominal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-
-  document.getElementById("valor_nominal").value = valor_nominal;
   document.getElementById("valor").value = valor_nominal;
 
   if (isNaN(tope_nominal))
@@ -1596,8 +1532,6 @@ function calcular_valor_nominal()
     tope_nominal = 0;
   }
   tope_nominal = tope_nominal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-
-  document.getElementById("tope_nominal").value = tope_nominal;
   document.getElementById("valor1").value = tope_nominal;
 }
 </script>
