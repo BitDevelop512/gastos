@@ -14,11 +14,13 @@ if (is_ajax())
 	$valor1 = trim($_POST['valor1']);
 	$porcen = floatval($_POST['porcen']);
 	$directiva = $_POST['directiva'];
+	$salario_ind = $_POST['salario_ind'];
+	$salario_max = $_POST['salario_max'];
 	if ($valor1 == "")
 	{
 		$valor1 = "0.00";
 	}
-	$query = "UPDATE cx_ctr_mat SET nombre='$material', unidad='$unidad', valor='$valor', valor1='$valor1', porcen='$porcen', directiva='$directiva' WHERE codigo='$conse'";
+	$query = "UPDATE cx_ctr_mat SET nombre='$material', unidad='$unidad', valor='$valor', valor1='$valor1', porcen='$porcen', directiva='$directiva', vl_individual='$salario_ind', tope_max='$salario_max' WHERE codigo='$conse'";
 	$sql = odbc_exec($conexion, $query);
 	$query1 = "SELECT codigo FROM cx_ctr_mat WHERE codigo='$conse'";
 	$cur = odbc_exec($conexion, $query1);
