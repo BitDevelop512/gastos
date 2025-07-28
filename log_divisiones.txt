@@ -1,2 +1,0 @@
-26/02/2025 11:09:08 am # INSERT INTO cx_org_uni (unidad, nombre) VALUES ('23', 'FUTOM') # 
-26/02/2025 11:28:48 am # INSERT INTO cx_org_uni (unidad, nombre) VALUES ('24', 'COEUR') # 

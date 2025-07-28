@@ -1,9 +1,0 @@
-21/05/2024 21:00:03 pm # UPDATE cx_pla_tra SET placa='QSS86G' WHERE conse='1419' # ING_SIGAR # 
-27/05/2024 21:06:43 pm # UPDATE cx_pla_tra SET placa='MYU696' WHERE conse='1473' # DRODRIGUE_DIADI # 
-12/06/2024 09:24:53 am # UPDATE cx_pla_tra SET placa='VJS67G' WHERE conse='1460' # DRODRIGUE_DIADI # 
-17/07/2024 09:48:58 am # UPDATE cx_pla_tra SET placa='DWX92E' WHERE conse='1500' # DRODRIGUE_DIADI # 
-01/10/2024 17:47:21 pm # UPDATE cx_pla_tra SET placa='IRR49G' WHERE conse='1252' # TRANSP2_DIADI # 
-07/01/2025 14:57:33 pm # UPDATE cx_pla_tra SET placa='HVM66C' WHERE conse='1532' # DRODRIGUE_DIADI # 
-07/01/2025 15:39:53 pm # UPDATE cx_pla_tra SET placa='HVM66H' WHERE conse='1532' # DRODRIGUE_DIADI # 
-04/03/2025 15:07:13 pm # JNU93E # UPDATE cx_pla_tra SET placa='JNU93H' WHERE conse='1579' # TRANSP2_DIADI # 
-14/07/2025 07:23:05 am # NYNY44 # UPDATE cx_pla_tra SET placa='NYN440' WHERE conse='1619' # DRODRIGUE_DIADI # 

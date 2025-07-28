@@ -1,1 +1,0 @@
-26/09/2024 19:02:41 pm # INSERT INTO cx_ctr_oms (codigo, conse, nombre, estado) VALUES ('142', '2', 'Erlinson Echavarría Escobar (a. Ramiro)', '') # 

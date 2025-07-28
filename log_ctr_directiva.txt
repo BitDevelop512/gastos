@@ -1,7 +1,0 @@
-14/04/2025 09:29:39 am # UPDATE cx_ctr_dir SET nombre='No. 0011 del 28 de Febrero de 2025', tipo='1', valor1='6', valor2='5' WHERE codigo='5' # SPR_DIADI # 
-14/04/2025 09:30:39 am # UPDATE cx_ctr_dir SET nombre='No. 0011 del 28 de Febrero de 2025', tipo='1', valor1='6', valor2='5' WHERE codigo='5' # SPR_DIADI # 
-14/04/2025 09:46:17 am # INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_dir), '', '0', '0', '0') # SPR_DIADI # 
-14/04/2025 15:46:32 pm # UPDATE cx_ctr_dir SET nombre='No. 0011 del 28 de Febrero de 2025', tipo='1', valor1='', valor2='0' WHERE codigo='5' # SPR_DIADI # 
-14/04/2025 15:47:27 pm # UPDATE cx_ctr_dir SET nombre='No. 0011 del 28 de Febrero de 2025', tipo='1', valor1='6', valor2='1' WHERE codigo='5' # SPR_DIADI # 
-21/04/2025 17:08:53 pm # INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_dir), 'N° 0012 del 01 de abril de 2025', '0', '0', '0') # ING_SIGAR # 
-24/06/2025 14:32:33 pm # INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_dir), '', '0', '0', '0') # SPR_DIADI # 

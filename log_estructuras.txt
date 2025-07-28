@@ -1,2 +1,0 @@
-16/07/2024 15:17:11 pm # INSERT INTO cx_ctr_est (codigo, conse, nombre, estado) VALUES ('197', '2', 'SE. Ismael Ruiz', '') # 
-26/09/2024 19:02:46 pm # INSERT INTO cx_ctr_est (codigo, conse, nombre, estado) VALUES ('198', '2', 'SE-18', '') # 

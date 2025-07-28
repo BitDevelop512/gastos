@@ -1,6 +1,0 @@
-30/12/2024 11:52:22 am # INSERT INTO cx_ctr_ano (conse, tarifa1, tarifa2, tarifa3, salario, ano) VALUES ((SELECT isnull(max(conse),0)+1 FROM cx_ctr_ano), '180000', '90000', '45000', '1423500', '2025') # ADM_SIGAR # 
-23/01/2025 10:34:07 am # UPDATE cx_ctr_ano SET tarifa1='180000', tarifa2='90000', tarifa3='45000', salario='1423500' WHERE ano='2025' # SPR_DIADI # 
-10/04/2025 17:09:32 pm # UPDATE cx_ctr_ano SET tarifa1='180000', tarifa2='90000', tarifa3='45000', salario='1423500' WHERE ano='2025' # SPR_DIADI # 
-10/04/2025 17:11:36 pm # UPDATE cx_ctr_ano SET tarifa1='180000', tarifa2='90000', tarifa3='45000', salario='1423500' WHERE ano='2025' # SPR_DIADI # 
-14/04/2025 09:29:48 am # INSERT INTO cx_ctr_ano (conse, tarifa1, tarifa2, tarifa3, salario, ano) VALUES ((SELECT isnull(max(conse),0)+1 FROM cx_ctr_ano), '180000', '90000', '45000', '1423500', '') # SPR_DIADI # 
-14/04/2025 09:30:43 am # UPDATE cx_ctr_ano SET tarifa1='180000', tarifa2='90000', tarifa3='45000', salario='1423500' WHERE ano='2025' # SPR_DIADI # 
