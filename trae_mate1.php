@@ -26,6 +26,8 @@ if (is_ajax())
             $salida->rows[$i]['valor1'] = trim($row['valor1']);
             $salida->rows[$i]['porcen'] = trim($row['porcen']);
             $salida->rows[$i]['directiva'] = $row['directiva'];
+            $salida->rows[$i]['salario_ind'] = trim($row['vl_individual']);
+            $salida->rows[$i]['salario_max'] = trim($row['tope_max']);
             $i++;
         }
     	$salida->salida = "1";

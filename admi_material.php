@@ -30,11 +30,6 @@ include('titulo.php');
         <div id="soportes">
           <h3>Creaci&oacute;n Material Recompensa</h3>
           <div>
-            <div id="load">
-              <center>
-                <img src="imagenes/cargando1.gif" alt="Cargando...">
-              </center>
-            </div>
             <form name="formu" method="post">
               <div class="row">
                 <div class="col col-lg-5 col-sm-5 col-md-5 col-xs-5">
@@ -83,6 +78,19 @@ include('titulo.php');
                     <input type="button" name="aceptar" id="aceptar" value="Crear">
                     <input type="button" name="actualiza" id="actualiza" value="Actualizar">
                   </center>
+                </div>
+              </div>
+              <br>
+              <div id="div_directiva7" style="display:none;">
+                <div class="row">
+                  <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                    <label><font face="Verdana" size="2">Valor Individual (SMLV)</font></label>
+                    <input type="number" name="salario_ind" id="salario_ind" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0; calcular_valor_nominal();">
+                  </div>
+                  <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                    <label><font face="Verdana" size="2">Tope M&aacute;ximo (SMLV)</font></label>
+                    <input type="number" name="salario_max" id="salario_max" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0; calcular_valor_nominal();">
+                  </div>
                 </div>
               </div>
               <hr>
@@ -718,7 +726,7 @@ function trae_material()
       salida2 += "<table width='100%' align='center' border='0' id='a-table1'>";
       $.each(registros.rows, function (index, value)
       {
-        var paso = '\"'+value.codigo+'\",\"'+value.nombre+'\",\"'+value.unidad+'\",\"'+value.valor+'\",\"'+value.valor1+'\",\"'+value.porcen+'\",\"'+value.directiva+'\"';
+        var paso = '\"'+value.codigo+'\",\"'+value.nombre+'\",\"'+value.unidad+'\",\"'+value.valor+'\",\"'+value.valor1+'\",\"'+value.porcen+'\",\"'+value.directiva+'\",\"'+value.salario_ind+'\",\"'+value.salario_max+'\"';
         salida2 += "<tr><td width='65%' height='35'>"+value.nombre+"</td>";
         salida2 += "<td width='15%' align='right' height='35'>"+value.valor+"</td>";
         salida2 += "<td width='15%' align='right' height='35'>"+value.valor1+"</td>";
@@ -764,7 +772,7 @@ function trae_material1()
       salida2 += "<table width='100%' align='center' border='0' id='a-table1'>";
       $.each(registros.rows, function (index, value)
       {
-        var paso = '\"'+value.codigo+'\",\"'+value.nombre+'\",\"'+value.unidad+'\",\"'+value.valor+'\",\"'+value.valor1+'\",\"'+value.porcen+'\",\"'+value.directiva+'\"';
+        var paso = '\"'+value.codigo+'\",\"'+value.nombre+'\",\"'+value.unidad+'\",\"'+value.valor+'\",\"'+value.valor1+'\",\"'+value.porcen+'\",\"'+value.directiva+'\",\"'+value.salario_ind+'\",\"'+value.salario_max+'\"';
         salida2 += "<tr><td width='65%' height='35'>"+value.nombre+"</td>";
         salida2 += "<td width='15%' align='right' height='35'>"+value.valor+"</td>";
         salida2 += "<td width='15%' align='right' height='35'>"+value.valor1+"</td>";
@@ -1012,7 +1020,9 @@ function nuevo()
       valor: $("#valor").val(),
       valor1: $("#valor1").val(),
       porcen: $("#porcen").val(),
-      directiva: $("#directiva1").val()
+      directiva: $("#directiva1").val(),
+      salario_ind: $("#salario_ind").val(),
+      salario_max: $("#salario_max").val()
     },
     beforeSend: function ()
     {
@@ -1037,6 +1047,11 @@ function nuevo()
         $("#valor1").val('0.00');
         $("#porcen").val('0.00');
         $("#directiva1").val('1');
+        $("#salario_ind").val('0');
+        $("#salario_max").val('0');
+        $("#div_directiva7").hide();
+        $("#valor").prop("disabled", false);
+        $("#valor1").prop("disabled", false);
         trae_material();
         $("#material").focus();
       }
@@ -1050,7 +1065,7 @@ function nuevo()
     }
   });
 }
-function actu(valor, valor1, valor2, valor3, valor4, valor5, valor6)
+function actu(valor, valor1, valor2, valor3, valor4, valor5, valor6, valor7, valor8)
 {
   var valor, valor1, valor2, valor3, valor4, valor5, valor6;
   var text = String.fromCharCode(13);
@@ -1067,6 +1082,20 @@ function actu(valor, valor1, valor2, valor3, valor4, valor5, valor6)
   $("#valor1").val(valor4);
   $("#porcen").val(valor5);
   $("#directiva1").val(valor6);
+  $("#salario_ind").val(valor7);
+  $("#salario_max").val(valor8);
+  if (valor6 == "7")
+  {
+    $("#div_directiva7").show();
+    $("#valor").prop("disabled", true);
+    $("#valor1").prop("disabled", true);
+  }
+  else
+  {
+    $("#div_directiva7").hide();
+    $("#valor").prop("disabled", false);
+    $("#valor1").prop("disabled", false);
+  }
   $("#aceptar").hide();
   $("#actualiza").show();
 }
@@ -1101,7 +1130,9 @@ function actualiza()
         valor: $("#valor").val(),
         valor1: $("#valor1").val(),
         porcen: $("#porcen").val(),
-        directiva: $("#directiva1").val()
+        directiva: $("#directiva1").val(),
+        salario_ind: $("#salario_ind").val(),
+        salario_max: $("#salario_max").val()
       },
       beforeSend: function ()
       {
@@ -1126,6 +1157,11 @@ function actualiza()
           $("#valor1").val('0.00');
           $("#porcen").val('0.00');
           $("#directiva1").val('1');
+          $("#salario_ind").val('0');
+          $("#salario_max").val('0');
+          $("#div_directiva7").hide();
+          $("#valor").prop("disabled", false);
+          $("#valor1").prop("disabled", false);
           trae_material();
           $("#material").focus();
           $("#aceptar").show();
@@ -1461,6 +1497,42 @@ function check(e)
   patron = /[0-9]/;
   tecla_final = String.fromCharCode(tecla);
   return patron.test(tecla_final);
+}
+$("#directiva1").change(function () {
+if ($("#directiva1").val() == "7")
+{
+  $("#div_directiva7").show();
+  $("#valor").prop("disabled", true);
+  $("#valor1").prop("disabled", true);
+}
+else
+{
+  $("#div_directiva7").hide();
+  $("#valor").prop("disabled", false);
+  $("#valor1").prop("disabled", false);
+}
+});
+function calcular_valor_nominal()
+{
+  var valor_salario = parseFloat(document.getElementById("valor3").value);
+  var salario_ind = parseFloat(document.getElementById("salario_ind").value);
+  var salario_max = parseFloat(document.getElementById("salario_max").value);
+  var valor_nominal = salario_ind * valor_salario;
+  var tope_nominal = salario_max * valor_salario;
+
+  if (isNaN(valor_nominal))
+  {
+    valor_nominal = 0;
+  }
+  valor_nominal = valor_nominal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  document.getElementById("valor").value = valor_nominal;
+
+  if (isNaN(tope_nominal))
+  {
+    tope_nominal = 0;
+  }
+  tope_nominal = tope_nominal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  document.getElementById("valor1").value = tope_nominal;
 }
 </script>
 </body>
