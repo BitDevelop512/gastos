@@ -45,6 +45,7 @@ if (is_ajax())
 	$v1s = $_POST['v1s'];
 	$v2s = $_POST['v2s'];
 	$v3s = $_POST['v3s'];
+	$v5s = $_POST['v5s'];
 	$valores = $_POST['valores'];
 	$valores1 = $_POST['valores1'];
 	$v4s = $_POST['v4s'];
@@ -115,6 +116,11 @@ if (is_ajax())
 	{
 		$k[$i] = trim($num_v4s[$i]);
 	}
+	$num_v5s = explode("|",$v5s);
+	for ($i=0;$i<count($num_v5s);++$i)
+	{
+		$l[$i] = trim($num_v5s[$i]);
+	}
 	// Se validan datos en blanco
 	$error = 0;
 	if ((trim($usuario) == "") or (trim($ciudad) == ""))
@@ -176,7 +182,7 @@ if (is_ajax())
 						// Se graba discriminado de planilla de gastos
 						$cur2 = odbc_exec($conexion,"SELECT isnull(max(conse),0)+1 AS conse1 FROM cx_gas_dis");
 						$conse1 = odbc_result($cur2,1);
-						$graba1 = "INSERT INTO cx_gas_dis (conse, conse1, cedula, nombre, ciudad, v1, v2, v3, valor, valor1, v4, interno) VALUES ('$conse1', '$consecu', '$a[$i]', '$b[$i]', '$c[$i]', '$d[$i]', '$e[$i]', '$f[$i]', '$g[$i]', '$h[$i]', '$k[$i]', '$interno')";
+						$graba1 = "INSERT INTO cx_gas_dis (conse, conse1, cedula, nombre, ciudad, v1, v2, v3, valor, valor1, v4, v5, interno) VALUES ('$conse1', '$consecu', '$a[$i]', '$b[$i]', '$c[$i]', '$d[$i]', '$e[$i]', '$f[$i]', '$g[$i]', '$h[$i]', '$k[$i]', '$l[$i]', '$interno')";
 						odbc_exec($conexion, $graba1);
 						// Se graba log
 						$fec_log = date("d/m/Y H:i:s a");

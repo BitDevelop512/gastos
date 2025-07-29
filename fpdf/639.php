@@ -304,8 +304,7 @@ else
 	$pdf->Cell(6,5,'',0,0,'C');
 	$pdf->Cell(21,10,'',1,0,'C'); // CÉDULA
 	$pdf->Cell(65,10,'GRADO, APELLIDO Y NOMBRES O',1,0,'C');
-	$pdf->Cell(78,5,'CANTIDAD DÍAS ASIGNADOS',1,0,'C'); // FS y En sede agrupados
-	$pdf->Cell(25,10,'GASTO FIJO',1,0,'C');
+	$pdf->Cell(104,5,'CANTIDAD DÍAS ASIGNADOS',1,0,'C'); // FS y En sede agrupados
 	$pdf->Cell(25,10,'VALOR',1,0,'C');
 	$pdf->Cell(58,5,'FIRMA/HUELLA',0,1,'C');
 	
@@ -315,7 +314,7 @@ else
 	$pdf->Cell(26,5,'FS. Pernotado',1,0,'C');
 	$pdf->Cell(26,5,'FS. no Pernotado',1,0,'C');
 	$pdf->Cell(26,5,'En sede',1,0,'C');
-	$pdf->Cell(25,5,'MENSUAL',0,0,'C'); // subtítulo de gasto fijo
+	$pdf->Cell(26,5,'Mes',1,0,'C');
 	$pdf->Cell(25,5,'',0,0,'C');
 	$pdf->Cell(58,5,'CONSIGNACIÓN/GIRO',0,1,'C');
 	$pdf->SetFont('Arial','',7);
@@ -353,13 +352,13 @@ else
 			trim(odbc_result($cur1, 6)),
 			trim(odbc_result($cur1, 7)),
 			trim(odbc_result($cur1, 8)),
-			'$' . number_format($gasto_fijo_mensual, 0),
+			trim(odbc_result($cur1, 14)),
 			'$' . trim(odbc_result($cur1, 9)),
 			$firhue
 		);
 		
 		$val_total = $val_total + odbc_result($cur1,10);
-		$pdf->tablewidths = array(7, 21, 65, 26, 26, 26, 25, 25, 58);
+		$pdf->tablewidths = array(7, 21, 65, 26, 26, 26, 26, 25, 57);
 		$pdf->morepagestable($data);
 		unset($data);
 		control_salto_pag($pdf->GetY());		
@@ -370,8 +369,7 @@ else
 	$actual=$pdf->GetY(); 
 	$pdf->SetFont('Arial','B',7);	
 	$pdf->RoundedRect(9,$actual,279,5,0,'R');
-	$pdf->Cell(6 + 21 + 65 + 26 + 26 + 26, 5, 'SUMAN', 0, 0, 'R'); // 171 mm
-	$pdf->Cell(25, 5, wims_currency($val_gasto_fijo), 1, 0, 'R');
+	$pdf->Cell(6 + 21 + 65 + 26 + 26 + 26 + 26, 5, 'SUMAN', 0, 0, 'R'); // 171 mm
 	$pdf->Cell(25, 5, wims_currency($val_total), 1, 0, 'R');
 	$pdf->Cell(28, 5, '', 0, 0);
 	$pdf->SetFont('Arial','',7);
