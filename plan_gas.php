@@ -227,6 +227,7 @@ include('titulo.php');
                 <input type="hidden" name="v2s" id="v2s" class="form-control" readonly="readonly">
                 <input type="hidden" name="v3s" id="v3s" class="form-control" readonly="readonly">
                 <input type="hidden" name="v4s" id="v4s" class="form-control" readonly="readonly">
+                <input type="hidden" name="v5s" id="v5s" class="form-control" readonly="readonly">
                 <input type="hidden" name="valores" id="valores" class="form-control" readonly="readonly">
                 <input type="hidden" name="valores1" id="valores1" class="form-control" readonly="readonly">
                 <input type="hidden" name="centra" id="centra" class="form-control" value="<?php echo $unic; ?>" readonly="readonly">
@@ -472,7 +473,7 @@ $(document).ready(function () {
     {
       var z = x_1;
       FieldCount++;
-      $("#add_form table").append('<tr><td colspan="1" class="espacio1"><div id="lbl1_'+z+'"><label><font face="Verdana" size="2">C&eacute;dula</font></label></div><input type="text" name="ced_'+z+'" id="ced_'+z+'" class="form-control" onchange="javascript:this.value=this.value.toUpperCase();" maxlength="15" autocomplete="off"></td><td>&nbsp;</td><td colspan="9"><div id="lbl2_'+z+'"><label><font face="Verdana" size="2">Grado, Apellido, Nombre o C&oacute;digo Operacional Participante</font></label></div><input type="text" name="nom_'+z+'" id="nom_'+z+'" class="form-control" onchange="javascript:this.value=this.value.toUpperCase();" maxlength="100" autocomplete="off"></td></tr><tr><td colspan="11" class="espacio1"><div id="lbl3_'+z+'"><label><font face="Verdana" size="2">Ciudad</font></label></div><input type="text" name="ciu_'+z+'" id="ciu_'+z+'" class="form-control" onchange="javascript:this.value=this.value.toUpperCase();" maxlength="254" autocomplete="off"></td></tr><tr><td width="18%" class="espacio1"><div id="lbl4_'+z+'"><label><font face="Verdana" size="2">F.S. Pernoctado</font></label></div><input type="text" name="v1_'+z+'" id="v1_'+z+'" class="form-control numero" value="0" onkeypress="return check(event);" onblur="calculo('+z+');"></td><td width="1%">&nbsp;</td><td width="18%"><div id="lbl5_'+z+'"><label><font face="Verdana" size="2">F.S. No Pernocta</font></label></div><input type="text" name="v2_'+z+'" id="v2_'+z+'" class="form-control numero" value="0" onkeypress="return check(event);" onblur="calculo('+z+');"></td><td width="1%">&nbsp;</td><td width="18%"><div id="lbl6_'+z+'"><label><font face="Verdana" size="2">En Sede</font></label></div><input type="text" name="v3_'+z+'" id="v3_'+z+'" class="form-control numero" value="0" onkeypress="return check(event);" onblur="calculo('+z+');"></td><td width="1%">&nbsp;</td><td width="18%"><div id="lbl7_'+z+'"><label><font face="Verdana" size="2">Valor</font></label></div><input type="text" name="vag_'+z+'" id="vag_'+z+'" class="form-control numero" value="0.00" onfocus="blur();" readonly="readonly"><input type="hidden" name="vat_'+z+'" id="vat_'+z+'" class="form-control numero" value="0"></td><td width="1%">&nbsp;</td><td width="18%"><div id="lbl8_'+z+'"><label><font face="Verdana" size="2">Consignaci&oacute;n</font></label></div><select name="v4_'+z+'" id="v4_'+z+'" class="form-control select2"><option value="S">SI</option><option value="N">NO</option><option value="T">Transferencia</option><option value="G">Giro</option></select></td><td width="1%">&nbsp;</td><td width="5%"><div id="lbl9_'+z+'"><label><font face="Verdana" size="2">&nbsp;</font></label></div><div id="del_'+z+'"><a href="#" onclick="borra('+z+')"><img src="imagenes/boton2.jpg" border="0"></a></div></td></tr><tr><td colspan="11"><hr></td></tr>');
+      $("#add_form table").append('<tr><td colspan="1" class="espacio1"><div id="lbl1_'+z+'"><label><font face="Verdana" size="2">C&eacute;dula</font></label></div><input type="text" name="ced_'+z+'" id="ced_'+z+'" class="form-control" onchange="javascript:this.value=this.value.toUpperCase();" maxlength="15" autocomplete="off"></td><td>&nbsp;</td><td colspan="9"><div id="lbl2_'+z+'"><label><font face="Verdana" size="2">Grado, Apellido, Nombre o C&oacute;digo Operacional Participante</font></label></div><input type="text" name="nom_'+z+'" id="nom_'+z+'" class="form-control" onchange="javascript:this.value=this.value.toUpperCase();" maxlength="100" autocomplete="off"></td></tr><tr><td colspan="11" class="espacio1"><div id="lbl3_'+z+'"><label><font face="Verdana" size="2">Ciudad</font></label></div><input type="text" name="ciu_'+z+'" id="ciu_'+z+'" class="form-control" onchange="javascript:this.value=this.value.toUpperCase();" maxlength="254" autocomplete="off"></td></tr><tr><td width="20%" class="espacio1"><div id="lbl4_'+z+'"><label><font face="Verdana" size="2">F.S. Pernoctado</font></label></div><input type="text" name="v1_'+z+'" id="v1_'+z+'" class="form-control numero" value="0" onkeypress="return check(event);" onblur="calculo('+z+');"></td><td width="1%">&nbsp;</td><td width="20%"><div id="lbl5_'+z+'"><label><font face="Verdana" size="2">F.S. No Pernocta</font></label></div><input type="text" name="v2_'+z+'" id="v2_'+z+'" class="form-control numero" value="0" onkeypress="return check(event);" onblur="calculo('+z+');"></td><td width="1%">&nbsp;</td><td width="20%"><div id="lbl6_'+z+'"><label><font face="Verdana" size="2">En Sede</font></label></div><input type="text" name="v3_'+z+'" id="v3_'+z+'" class="form-control numero" value="0" onkeypress="return check(event);" onblur="calculo('+z+');"></td><td width="1%">&nbsp;</td><td width="10%" class="espacio1"><div id="lbl7_'+z+'"><label><font face="Verdana" size="2">Mes</font></label></div><input type="text" name="v5_'+z+'" id="v5_'+z+'" class="form-control numero" value="0" onkeypress="return check(event);" onblur="if (this.value == 1 || this.value == 0) {calculo('+z+');} else {this.value = 0; calculo('+z+');}"></td><td width="1%">&nbsp;</td><td width="20%"><div id="lbl8_'+z+'"><label><font face="Verdana" size="2">Valor</font></label></div><input type="text" name="vag_'+z+'" id="vag_'+z+'" class="form-control numero" value="0.00" onfocus="blur();" readonly="readonly"><input type="hidden" name="vat_'+z+'" id="vat_'+z+'" class="form-control numero" value="0"></td><td width="1%">&nbsp;</td><td width="20%"><div id="lbl9_'+z+'"><label><font face="Verdana" size="2">Consignaci&oacute;n</font></label></div><select name="v4_'+z+'" id="v4_'+z+'" class="form-control select2" style="width:300px"><option value="S">SI</option><option value="N">NO</option><option value="T">Transferencia</option><option value="G">Giro</option></select></td><td width="1%">&nbsp;</td><td width="5%"><div id="lbl10_'+z+'"><label><font face="Verdana" size="2">&nbsp;</font></label></div><div id="del_'+z+'"><a href="#" onclick="borra('+z+')"><img src="imagenes/boton2.jpg" border="0"></a></div></td></tr><tr><td colspan="11"><hr></td></tr>');
       //var v_ced = [<?php //echo $ayu_lla1; ?>];
       //$("#ced_"+z).autocomplete({source: v_ced});
       //var v_nom = [<?php //echo $ayu_lla2; ?>];
@@ -607,12 +608,13 @@ function pregunta1()
 }
 function calculo(valor)
 {
-  var valor, valor1, valor2, valor3, valor4, valor5, valor6, valor7, valor8, valor9, valor10, valor11, dias;
+  var valor, valor1, valor2, valor3, valor4, valor5, valor6, valor7, valor8, valor9, valor10, valor11, valor12, valor13, dias;
   dias = $("#dias").val();
   dias = parseInt(dias);
   valor1 = $("#tarifa4").val();
   valor2 = $("#tarifa5").val();
   valor3 = $("#tarifa6").val();
+  valor12 = $("#tarifa8").val();
   valor4 = $("#v1_"+valor).val();
   if (valor4 == "")
   {
@@ -637,7 +639,34 @@ function calculo(valor)
   valor7 = valor1*valor4;
   valor8 = valor2*valor5;
   valor9 = valor3*valor6;
-  valor10 = valor7+valor8+valor9;
+  valor13 = $("#v5_"+valor).val();
+  if (valor13 == "")
+  {
+    $("#v5_"+valor).val('0');
+    valor13 = $("#v5_"+valor).val();
+  }
+  valor13 = parseFloat(valor13);
+  if (valor13 > 0)
+  {
+    valor10 = valor12;
+    $("#v1_"+valor).prop("disabled",true);
+    $("#v2_"+valor).prop("disabled",true);
+    $("#v3_"+valor).prop("disabled",true);
+  }
+  else if ((valor4 > 0) || (valor5 > 0) || (valor6 > 0))
+  {
+    valor10 = valor7+valor8+valor9;
+    $("#v5_"+valor).prop("disabled",true);
+    $("#v1_"+valor).prop("disabled",false);
+    $("#v2_"+valor).prop("disabled",false);
+    $("#v3_"+valor).prop("disabled",false);
+  }else{
+    valor10 = "0";
+    $("#v5_"+valor).prop("disabled",false);
+    $("#v1_"+valor).prop("disabled",false);
+    $("#v2_"+valor).prop("disabled",false);
+    $("#v3_"+valor).prop("disabled",false);
+  }
   valor10 = parseFloat(valor10);
   valor10 = valor10.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
   $("#vag_"+valor).val(valor10);
@@ -651,7 +680,7 @@ function calculo(valor)
     $("#v1_"+valor).val('0');
     $("#v2_"+valor).val('0');
     $("#v3_"+valor).val('0');
-    calculo(valor);
+    return;
   }
   paso_val(valor);
   suma();
@@ -749,6 +778,10 @@ function suma1()
         {
           document.getElementById(saux).setAttribute("disabled","disabled");
         }
+        if (saux.indexOf('v5_')!=-1)
+        {
+          document.getElementById(saux).setAttribute("disabled","disabled");
+        }
         if (saux.indexOf('vag_')!=-1)
         {
           document.getElementById(saux).setAttribute("disabled","disabled");
@@ -793,6 +826,8 @@ function borra(valor)
   $("#v3_"+valor).hide();
   $("#v4_"+valor).val('0');
   $("#v4_"+valor).hide();
+  $("#v5_"+valor).val('0');
+  $("#v5_"+valor).hide();
   $("#vag_"+valor).val('0');
   $("#vag_"+valor).hide();
   $("#vat_"+valor).val('0');
@@ -892,6 +927,16 @@ function paso()
     {
       valor = document.getElementById(saux).value;
       document.getElementById('v4s').value=document.getElementById('v4s').value+valor+"|";
+    }
+  }
+  document.getElementById('v5s').value="";
+  for (i=0;i<document.formu.elements.length;i++)
+  {
+    saux = document.formu.elements[i].name;
+    if (saux.indexOf('v5_')!=-1)
+    {
+      valor = document.getElementById(saux).value;
+      document.getElementById('v5s').value=document.getElementById('v5s').value+valor+"|";
     }
   }
   validacionData();
@@ -997,8 +1042,10 @@ function validacionData()
     v2 = parseInt(v2);
     var v3 = $("#v3_"+i).val();
     v3 = parseInt(v3);
+    var v5 = $("#v5_"+i).val();
+    v5 = parseInt(v5);
     var total_dias = v1+v2+v3;
-    if (total_dias == "0")
+    if (total_dias == "0" && v5 == "0")
     {
       v_dias1++;
     }
@@ -1053,6 +1100,7 @@ function nuevo()
         valores: $("#valores").val(),
         valores1: $("#valores1").val(),
         v4s: $("#v4s").val(),
+        v5s: $("#v5s").val(),
         t_sol: $("#t_sol").val(),
         tarifa1: $("#tarifa4").val(),
         tarifa2: $("#tarifa5").val(),
@@ -1138,6 +1186,10 @@ function nuevo()
                 document.getElementById(saux).setAttribute("disabled","disabled");
               }
               if (saux.indexOf('v4_')!=-1)
+              {
+                document.getElementById(saux).setAttribute("disabled","disabled");
+              }
+              if (saux.indexOf('v5_')!=-1)
               {
                 document.getElementById(saux).setAttribute("disabled","disabled");
               }
