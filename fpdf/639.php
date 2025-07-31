@@ -161,9 +161,13 @@ else
 					$act = $this->GetY();
 					$this->SetFont('Arial','',7);		
 					$this->SetXY($l,$h);
-					if ($this->tablewidths[$col] == 20) $this->MultiCell($this->tablewidths[$col],$lineheight,$txt,0,'R');
-					elseif ($this->tablewidths[$col] == 55 or $this->tablewidths[$col] == 98) $this->MultiCell($this->tablewidths[$col],$lineheight,$txt,0,'L');
-					else $this->MultiCell($this->tablewidths[$col],$lineheight,$txt,0,'C');
+					if (isset($this->tablealigns[$col])) {
+						$this->MultiCell($this->tablewidths[$col],$lineheight,$txt,0,$this->tablealigns[$col]);
+					} else {
+						if ($this->tablewidths[$col] == 20) $this->MultiCell($this->tablewidths[$col],$lineheight,$txt,0,'R');
+						elseif ($this->tablewidths[$col] == 55 or $this->tablewidths[$col] == 98) $this->MultiCell($this->tablewidths[$col],$lineheight,$txt,0,'C');
+						else $this->MultiCell($this->tablewidths[$col],$lineheight,$txt,0,'C');
+					}
 					$l += $this->tablewidths[$col];
 					
 					if(!isset($tmpheight[$row.'-'.$this->page])) $tmpheight[$row.'-'.$this->page] = 0;
@@ -279,11 +283,11 @@ else
 
 	$actual=$pdf->GetY();
 	$pdf->RoundedRect(9,$actual,279,5,0,'');
-	$pdf->Cell(40,5,'T FUERA SEDE PERNOCA:',0,0,'L');
+	$pdf->Cell(40,5,'T FUERA SEDE PERNOCT:',0,0,'L');
 	$pdf->SetFont('Arial','B',7);	
 	$pdf->Cell(25,5,'$'.number_format($tarifa1,2),L,0,'C');
 	$pdf->SetFont('Arial','',7);		
-	$pdf->Cell(50,5,'T FUERA DE LA SEDE NP:',L,0,'L');	
+	$pdf->Cell(50,5,'T FUERA SEDE NO PERNOCT:',L,0,'L');	
 	$pdf->SetFont('Arial','B',7);	
 	$pdf->Cell(25,5,'$'.number_format($tarifa2,2),L,0,'C');		
 	$pdf->SetFont('Arial','',7);		
@@ -291,7 +295,7 @@ else
 	$pdf->SetFont('Arial','B',7);		
 	$pdf->Cell(25,5,'$'.number_format($tarifa3,2),L,0,'C');	
 	$pdf->SetFont('Arial','',7);		
-	$pdf->Cell(30,5,'GASTO FIJO MENSUAL:',L,0,'R');
+	$pdf->Cell(30,5,'PARTIDA MENSUAL:',L,0,'R');
 	$pdf->SetFont('Arial','B',7);		
 	$pdf->Cell(24,5,'$'.number_format($tarifa4,2),L,1,'C');	
 	$pdf->SetFont('Arial','',7);		
@@ -311,8 +315,8 @@ else
 	$pdf->Cell(6,5,'No.',0,0,'C');
 	$pdf->Cell(21,5,'CÉDULA',0,0,'C');
 	$pdf->Cell(65,5,'CÓDIGO OPERACIONAL DEL PARTICIPANTE',0,0,'C');
-	$pdf->Cell(26,5,'FS. Pernotado',1,0,'C');
-	$pdf->Cell(26,5,'FS. no Pernotado',1,0,'C');
+	$pdf->Cell(26,5,'FS. Pernoctado',1,0,'C');
+	$pdf->Cell(26,5,'FS. no Pernoctado',1,0,'C');
 	$pdf->Cell(26,5,'En sede',1,0,'C');
 	$pdf->Cell(26,5,'Mes',1,0,'C');
 	$pdf->Cell(25,5,'',0,0,'C');
@@ -359,6 +363,7 @@ else
 		
 		$val_total = $val_total + odbc_result($cur1,10);
 		$pdf->tablewidths = array(7, 21, 65, 26, 26, 26, 26, 25, 57);
+		$pdf->tablealigns = array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'R', 'C'); 
 		$pdf->morepagestable($data);
 		unset($data);
 		control_salto_pag($pdf->GetY());		

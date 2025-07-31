@@ -20,7 +20,7 @@ if (is_ajax())
 	$ordop1 = encrypt1($ordop1, $llave);
 	$ordop1 = trim($ordop1);
 	$conse = $_POST['conse'];
-	$query = "SELECT conse, misiones, estado, n_misiones, tipo FROM cx_pla_inv WHERE ((usuario='$usu_usuario') OR (usuario='$log_usuario')) AND unidad='$uni_usuario' AND ordop='$ordop' AND n_ordop='$ordop1' AND estado IN ('D','F','G','H','W') AND periodo IN ('$periodo','$periodo1','$periodo2') AND ano='$ano' ORDER BY conse";
+	$query = "SELECT conse, misiones, estado, n_misiones, tipo FROM cx_pla_inv WHERE ((usuario='$usu_usuario') OR (usuario='$log_usuario')) AND unidad='$uni_usuario' AND ordop='$ordop' AND n_ordop='$ordop1' AND estado IN ('D','F','G','H','W') AND ano='$ano' ORDER BY conse";
 	$cur = odbc_exec($conexion, $query);
 	$respuesta = array();
 	$i = 0;

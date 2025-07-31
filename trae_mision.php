@@ -13,7 +13,7 @@ if (is_ajax())
 	$periodo2 = intval($periodo)-1;
 	$actu = "UPDATE cx_pla_inv SET n_ordop='' WHERE n_ordop='kg=='";
 	$sql = odbc_exec($conexion, $actu);
-	$query = "SELECT ordop, n_ordop FROM cx_pla_inv WHERE ((usuario='$usu_usuario') OR (usuario='$log_usuario')) AND unidad='$uni_usuario' AND estado NOT IN ('','Y','X') AND periodo IN ('$periodo','$periodo1','$periodo2') AND ano='$ano' GROUP BY ordop, n_ordop";
+	$query = "SELECT ordop, n_ordop FROM cx_pla_inv WHERE ((usuario='$usu_usuario') OR (usuario='$log_usuario')) AND unidad='$uni_usuario' AND estado NOT IN ('','Y','X') AND ano='$ano' GROUP BY ordop, n_ordop";
 	$cur = odbc_exec($conexion, $query);
 	$respuesta = array();
 	$i = 0;
