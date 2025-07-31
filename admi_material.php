@@ -64,14 +64,14 @@ include('titulo.php');
                   ?>
                 </div>
                 <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                  <label><font face="Verdana" size="2">Valor</font></label>
+                  <label><font face="Verdana" size="2">Valor (SMLMV)</font></label>
                   <input type="text" name="valor" id="valor" class="form-control numero" value="0.00" autocomplete="off" tabindex="3">
                   <br>
                   <label><font face="Verdana" size="2">Porcentaje</font></label>
                   <input type="text" name="porcen" id="porcen" class="form-control numero" value="0.00" onkeypress="return check(event);" autocomplete="off" tabindex="6">
                 </div>
                 <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                  <label><font face="Verdana" size="2">Tope M&aacute;ximo</font></label>
+                  <label><font face="Verdana" size="2">Tope M&aacute;ximo (SMLMV)</font></label>
                   <input type="text" name="valor1" id="valor1" class="form-control numero" value="0.00" autocomplete="off" tabindex="4">
 									<br><br>
                   <center>
@@ -84,12 +84,12 @@ include('titulo.php');
               <div id="div_directiva7" style="display:none;">
                 <div class="row">
                   <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                    <label><font face="Verdana" size="2">Valor Individual (SMLV)</font></label>
-                    <input type="number" name="salario_ind" id="salario_ind" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0; calcular_valor_nominal();">
+                    <label><font face="Verdana" size="2">Valor Individual (COP)</font></label>
+                    <input type="text" name="salario_ind" id="salario_ind" class="form-control numero" value="0" autocomplete="off" tabindex="3" onblur="if (this.value < 0) this.value=0; calcular_valor_nominal();">
                   </div>
                   <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
-                    <label><font face="Verdana" size="2">Tope M&aacute;ximo (SMLV)</font></label>
-                    <input type="number" name="salario_max" id="salario_max" class="form-control" value="0" autocomplete="off" tabindex="3" oninput="if (this.value < 0) this.value=0; calcular_valor_nominal();">
+                    <label><font face="Verdana" size="2">Tope M&aacute;ximo (COP)</font></label>
+                    <input type="text" name="salario_max" id="salario_max" class="form-control numero" value="0" autocomplete="off" tabindex="3" onblur="if (this.value < 0) this.value=0; calcular_valor_nominal();">
                   </div>
                 </div>
               </div>
@@ -461,6 +461,8 @@ $(document).ready(function () {
   $("#valor6").maskMoney();
   $("#valor8").maskMoney();
   $("#valor10").maskMoney();
+  $("#salario_ind").maskMoney();
+  $("#salario_max").maskMoney();
   $("#valor1d").focus(function(){
     this.select();
   });
@@ -722,7 +724,7 @@ function trae_material()
       var salida2 = "";
       valida = registros.salida;
       valida1 = registros.total;
-      salida1 += "<br><table width='100%' align='center' border='0'><tr><td width='65%' height='35'><font size='2'><b>Material</b></font></td><td width='15%' height='35'><center><font size='2'><b>Valor</b></font></center></td><td width='15%' height='35'><center><font size='2'><b>Tope M&aacute;ximo</b></font></center></td><td width='5%' height='35'>&nbsp;</td></tr></table>";
+      salida1 += "<br><table width='100%' align='center' border='0'><tr><td width='65%' height='35'><font size='2'><b>Material</b></font></td><td width='15%' height='35'><center><font size='2'><b>Valor (SMLMV)</b></font></center></td><td width='15%' height='35'><center><font size='2'><b>Tope M&aacute;ximo (SMLMV)</b></font></center></td><td width='5%' height='35'>&nbsp;</td></tr></table>";
       salida2 += "<table width='100%' align='center' border='0' id='a-table1'>";
       $.each(registros.rows, function (index, value)
       {
@@ -1504,35 +1506,44 @@ if ($("#directiva1").val() == "7")
   $("#div_directiva7").show();
   $("#valor").prop("disabled", true);
   $("#valor1").prop("disabled", true);
+  $("#valor").val('0.00');
+  $("#valor1").val('0.00');
 }
 else
 {
   $("#div_directiva7").hide();
   $("#valor").prop("disabled", false);
   $("#valor1").prop("disabled", false);
+  $("#salario_ind").val('0.00');
+  $("#salario_max").val('0.00');
+  $("#valor").val('0.00');
+  $("#valor1").val('0.00');
 }
 });
-function calcular_valor_nominal()
-{
-  var valor_salario = parseFloat(document.getElementById("valor3").value);
-  var salario_ind = parseFloat(document.getElementById("salario_ind").value);
-  var salario_max = parseFloat(document.getElementById("salario_max").value);
-  var valor_nominal = salario_ind * valor_salario;
-  var tope_nominal = salario_max * valor_salario;
-
-  if (isNaN(valor_nominal))
-  {
-    valor_nominal = 0;
-  }
-  valor_nominal = valor_nominal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-  document.getElementById("valor").value = valor_nominal;
-
-  if (isNaN(tope_nominal))
-  {
-    tope_nominal = 0;
-  }
-  tope_nominal = tope_nominal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-  document.getElementById("valor1").value = tope_nominal;
+function calcular_valor_nominal() {
+  // Obtener valores de los inputs
+  var valor_salario = parseFloat(document.getElementById("valor3").value.replace(/,/g, '')) || 0;
+  var salario_ind = document.getElementById("salario_ind").value.replace(/,/g, '');
+  var salario_max = document.getElementById("salario_max").value.replace(/,/g, '');
+  
+  // Convertir a números
+  salario_ind = parseFloat(salario_ind) || 0;
+  salario_max = parseFloat(salario_max) || 0;
+  
+  // Realizar cálculos
+  var valor_nominal = valor_salario ? salario_ind / valor_salario : 0;
+  var tope_nominal = valor_salario ? salario_max / valor_salario : 0;
+  
+  // Formatear resultados con 2 decimales y separadores de miles
+  document.getElementById("valor").value = valor_nominal.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+  
+  document.getElementById("valor1").value = tope_nominal.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
 }
 </script>
 </body>
