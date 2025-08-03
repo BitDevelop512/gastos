@@ -298,6 +298,92 @@ include('titulo.php');
             <div id="dialogo2"></div>
             <div id="dialogo3"></div>
           </div>
+          <h3>Creación Items Listas de Verificación</h3>
+          <div>
+            <form name="formuLista" method="post">
+              <div class="row">
+                <div class="col col-lg-5 col-sm-5 col-md-5 col-xs-5">
+                  <label><font face="Verdana" size="2">Documentación (Item Lista de Verificación)</font></label>
+                  <input type="hidden" name="conseLista" id="conseLista" class="form-control numero" value="0" readonly="readonly" tabindex="0">
+                  <textarea name="documentacion" id="documentacion" class="form-control" rows="5" onblur="val_caracteres('documentacion');" maxlength="1500" autocomplete="off" tabindex="1"></textarea>
+                </div>
+                <div class="col col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                  <label><font face="Verdana" size="2">Recompensa</font></label>
+                  <select name="es_recompensa" id="es_recompensa" class="form-control select2" tabindex="2">
+                    <option value="0">No</option>
+                    <option value="1">SI</option>
+                  </select>
+                  <br>
+                  <label><font face="Verdana" size="2">Directiva Ministerial</font></label>
+                  <?php
+                  $menu10_10 = odbc_exec($conexion,"SELECT * FROM cx_ctr_dir WHERE tiene_lista = 1 ORDER BY codigo DESC");
+                  $menu10 = "<select name='directiva1Lista' id='directiva1Lista' class='form-control select2' tabindex='5'>";
+                  $i = 1;
+                  while($i<$row=odbc_fetch_array($menu10_10))
+                  {
+                    $nombre = trim(utf8_encode($row['nombre']));
+                    $menu10 .= "\n<option value=$row[codigo]>".$nombre."</option>";
+                    $i++;
+                  }
+                  $menu10 .= "\n</select>";
+                  echo $menu10;
+                  ?>
+                </div>
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                  <label><font face="Verdana" size="2">Información</font></label>
+                  <select name="es_informacion" id="es_informacion" class="form-control select2" tabindex="2">
+                    <option value="0">No</option>
+                    <option value="1">SI</option>
+                  </select>
+                  <br>
+				  <label><font face="Verdana" size="2">Orden</font></label>
+					<input type="hidden" name="orden0" id="orden0" class="form-control numero" value="0" readonly="readonly">
+					<input type="text" name="orden" id="orden" class="form-control numero" value="0">
+
+                </div>
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                  <center>
+                    <input type="button" name="aceptarLista" id="aceptarLista" value="Crear Item">
+                    <input type="button" name="actualizaLista" id="actualizaLista" value="Actualizar Item">
+                  </center>
+                </div>
+              </div>
+              <br>
+              <div id="div_directiva1Lista" style="display:none;">
+              </div>
+              <hr>
+              <br>
+              <div class="row">
+                <div class="col col-lg-1 col-sm-1 col-md-1 col-xs-1"></div>
+                <div class="col col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                  <label><div class="centrado"><font face="Verdana" size="2">Buscar por Descripción:</font></div></label>
+                </div>
+                <div class="col col-lg-4 col-sm-4 col-md-4 col-xs-4">
+                  <input type="text" name="filtroLista" id="filtroLista" class="form-control" maxlength="50" autocomplete="off">
+                </div>
+                <div class="col col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                  <?php
+                  $menu11_11 = odbc_exec($conexion,"SELECT * FROM cx_ctr_dir WHERE tiene_lista = 1 ORDER BY codigo DESC");
+                  $menu11 = "<select name='directiva2Lista' id='directiva2Lista' class='form-control select2' onchange='trae_lista();'>";
+                  $i = 1;
+                  while($i<$row=odbc_fetch_array($menu11_11))
+                  {
+                    $nombre = trim(utf8_encode($row['nombre']));
+                    $menu11 .= "\n<option value=$row[codigo]>".$nombre."</option>";
+                    $i++;
+                  }
+                  $menu11 .= "\n</select>";
+                  echo $menu11;
+                  ?>
+                </div>
+              </div>
+              <div id="espacio11"></div>
+              <div id="tabla31"></div>
+              <div id="resultados41"></div>
+            </form>
+            <div id="dialogo4"></div>
+            <div id="dialogo5"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1545,6 +1631,85 @@ function calcular_valor_nominal() {
     maximumFractionDigits: 2
   });
 }
+function trae_lista()
+{
+  $.ajax({
+    type: "POST",
+    datatype: "json",
+    url: "trae_lista.php",
+    data:
+    {
+      documentacion: $("#filtro1").val(),
+      directiva: $("#directiva2Lista").val()
+    },
+    beforeSend: function ()
+    {
+      $("#load").show();
+    },
+    error: function ()
+    {
+      $("#load").hide();
+    },
+    success: function (data)
+    {
+      $("#load").hide();
+      $("#tabla31").html('');
+      $("#resultados41").html('');
+      var registros = JSON.parse(data);
+      var valida,valida1;
+      var salida1 = "";
+      var salida2 = "";
+      valida = registros.salida;
+      valida1 = registros.total;
+      salida1 += "<br><table width='100%' align='center' border='0'><tr><td width='65%' height='35'><font size='2'><b>Documentación (Item Lista de Verificación)</b></font></td><td width='15%' height='35'><center><font size='2'><b>Orden</b></font></center></td><td width='15%' height='35'><center><font size='2'><b>Reco</b></font></center></td><td width='15%' height='35'><center><font size='2'><b>Info</b></font></center></td><td width='5%' height='35'>&nbsp;</td></tr></table>";
+      salida2 += "<table width='100%' align='center' border='0' id='c-table1'>";
+      $.each(registros.rows, function (index, value)
+      {
+        var paso = '\"'+value.conse+'\",\"'+value.orden+'\",\"'+value.documentacion+'\",\"'+value.es_recompensa+'\",\"'+value.es_informacion+'\",\"'+value.directiva+'\"';
+        salida2 += "<tr><td width='65%' height='35'>"+value.documentacion+"</td>";
+        salida2 += "<td width='15%' align='center' height='35'>"+value.orden+"</td>";
+        salida2 += "<td width='15%' align='center' height='35'>"+value.es_recompensa+"</td>";
+        salida2 += "<td width='15%' align='center' height='35'>"+value.es_informacion+"</td>";
+        salida2 += "<td width='5%' height='35'><center><a href='#' onclick='actu("+paso+")'><img src='imagenes/editar.png' width='20' height='20' border='0' title='Modificar'></a></center></td></tr>";
+      });
+      salida2 += "</table>";
+      $("#tabla31").append(salida1);
+      $("#resultados41").append(salida2);
+    }
+  });
+}
+function actuLista(valor, valor1, valor2, valor3, valor4, valor5)
+{
+  var valor, valor1, valor2, valor3, valor4, valor5;
+  var text = String.fromCharCode(13);
+  var var_ocu = valor2.split('<br>');
+  var var_ocu1 = var_ocu.length;
+  for (var i=0; i<var_ocu1; i++)
+  {
+    valor2 = valor2.replace("<br>", text);
+  }
+  $("#conse").val(valor);
+  $("#orden").val(valor1);
+  $("#documentacion").val(valor2);
+  $("#es_recompensa").val(valor3);
+  $("#es_informacion").val(valor4);
+  $("#directiva1Lista").val(valor5);
+  if (valor5 == "7")
+  {
+    $("#div_directiva1Lista").show();
+    $("#valor").prop("disabled", true);
+    $("#valor1").prop("disabled", true);
+  }
+  else
+  {
+    $("#div_directiva1Lista").hide();
+    $("#valor").prop("disabled", false);
+    $("#valor1").prop("disabled", false);
+  }
+  $("#aceptar").hide();
+  $("#actualiza").show();
+}
+
 </script>
 </body>
 </html>
