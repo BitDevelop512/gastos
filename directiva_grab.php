@@ -13,14 +13,15 @@ if (is_ajax())
 	$valor1 = $_POST['valor1'];
 	$valor2 = $_POST['valor2'];
 	$tipo = $_POST['tipo'];
+	$tiene_lista = $_POST['tiene_lista'];
 	if ($tipo == "0")
 	{
 		$query_c = "(SELECT isnull(max(codigo),0)+1 FROM cx_ctr_dir)";
-		$graba = "INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2) VALUES ($query_c, '$nombre', '$tipod', '$valor1', '$valor2')";
+		$graba = "INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2, tiene_lista) VALUES ($query_c, '$nombre', '$tipod', '$valor1', '$valor2', '$tiene_lista')";
 	}
 	else
 	{
-		$graba = "UPDATE cx_ctr_dir SET nombre='$nombre', tipo='$tipod', valor1='$valor1', valor2='$valor2' WHERE codigo='$conse'";
+		$graba = "UPDATE cx_ctr_dir SET nombre='$nombre', tipo='$tipod', valor1='$valor1', valor2='$valor2', tiene_lista='$tiene_lista' WHERE codigo='$conse'";
 	}
 	if (!odbc_exec($conexion, $graba))
 	{

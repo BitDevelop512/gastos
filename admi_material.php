@@ -224,6 +224,18 @@ include('titulo.php');
                   <input type="text" name="valor2d" id="valor2d" class="form-control numero" value="0">
                 </div>
                 <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                  <label><font face="Verdana" size="2">Tiene Lista Verific</font></label>
+                  <select name="tiene_lista" id="tiene_lista" class="form-control select2" onchange="trae_cam_lis();">
+                    <option value="0">NO</option>
+                    <option value="1">SI</option>
+                  </select>
+			    </div>
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                  <label><font face="Verdana" size="2">Cant. Campos</font></label>
+                  <input type="hidden" name="cant_campos" id="cant_campos" class="form-control numero" value="0" readonly="readonly">
+                  <input type="text" name="cant_campos" id="cant_campos1" class="form-control numero" value="0">
+                </div>
+                <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
                   <br>
                   <input type="button" name="aceptar3" id="aceptar3" value="Crear">
                   <input type="button" name="actualiza3" id="actualiza3" value="Actualizar">
@@ -298,7 +310,7 @@ include('titulo.php');
             <div id="dialogo2"></div>
             <div id="dialogo3"></div>
           </div>
-          <h3>Creación Items Listas de Verificación</h3>
+          <h3>Creación Listas de Verificación</h3>
           <div>
             <form name="formuLista" method="post">
               <div class="row">
@@ -316,17 +328,17 @@ include('titulo.php');
                   <br>
                   <label><font face="Verdana" size="2">Directiva Ministerial</font></label>
                   <?php
-                  $menu10_10 = odbc_exec($conexion,"SELECT * FROM cx_ctr_dir WHERE tiene_lista = 1 ORDER BY codigo DESC");
-                  $menu10 = "<select name='directiva1Lista' id='directiva1Lista' class='form-control select2' tabindex='5'>";
+                  $menu11_11 = odbc_exec($conexion,"SELECT * FROM cx_ctr_dir WHERE tiene_lista = 1 ORDER BY codigo DESC");
+                  $menu11 = "<select name='directiva1Lista' id='directiva1Lista' class='form-control select2' tabindex='5'>";
                   $i = 1;
-                  while($i<$row=odbc_fetch_array($menu10_10))
+                  while($i<$row=odbc_fetch_array($menu11_11))
                   {
                     $nombre = trim(utf8_encode($row['nombre']));
-                    $menu10 .= "\n<option value=$row[codigo]>".$nombre."</option>";
+                    $menu11 .= "\n<option value=$row[codigo]>".$nombre."</option>";
                     $i++;
                   }
-                  $menu10 .= "\n</select>";
-                  echo $menu10;
+                  $menu11 .= "\n</select>";
+                  echo $menu11;
                   ?>
                 </div>
                 <div class="col col-lg-2 col-sm-2 col-md-2 col-xs-2">
@@ -363,26 +375,26 @@ include('titulo.php');
                 </div>
                 <div class="col col-lg-3 col-sm-3 col-md-3 col-xs-3">
                   <?php
-                  $menu11_11 = odbc_exec($conexion,"SELECT * FROM cx_ctr_dir WHERE tiene_lista = 1 ORDER BY codigo DESC");
-                  $menu11 = "<select name='directiva2Lista' id='directiva2Lista' class='form-control select2' onchange='trae_lista();'>";
+                  $menu12_12 = odbc_exec($conexion,"SELECT * FROM cx_ctr_dir WHERE tiene_lista = 1 ORDER BY codigo DESC");
+                  $menu12 = "<select name='directiva2Lista' id='directiva2Lista' class='form-control select2' onchange='trae_lista1();'>";
                   $i = 1;
-                  while($i<$row=odbc_fetch_array($menu11_11))
+                  while($i<$row=odbc_fetch_array($menu12_12))
                   {
                     $nombre = trim(utf8_encode($row['nombre']));
-                    $menu11 .= "\n<option value=$row[codigo]>".$nombre."</option>";
+                    $menu12 .= "\n<option value=$row[codigo]>".$nombre."</option>";
                     $i++;
                   }
-                  $menu11 .= "\n</select>";
-                  echo $menu11;
+                  $menu12 .= "\n</select>";
+                  echo $menu12;
                   ?>
                 </div>
               </div>
-              <div id="espacio11"></div>
-              <div id="tabla31"></div>
-              <div id="resultados41"></div>
+              <div id="espacio1Lista"></div>
+              <div id="tabla3Lista"></div>
+              <div id="resultados4Lista"></div>
             </form>
-            <div id="dialogo4"></div>
-            <div id="dialogo5"></div>
+            <div id="dialogoLista"></div>
+            <div id="dialogo1Lista"></div>
           </div>
         </div>
       </div>
@@ -511,6 +523,66 @@ $(document).ready(function () {
       }
     }
   });
+  
+  $("#dialogoLista").dialog({
+    autoOpen: false,
+    title: "SIGAR",
+    height: 220,
+    width: 410,
+    modal: true,
+    closeOnEscape: false,
+    resizable: false,
+    draggable: false,
+    show:
+    {
+      effect: "blind",
+      duration: 1000
+    },
+    hide:
+    {
+      effect: "explode",
+      duration: 1000
+    },
+    buttons: [
+      {
+        text: "Ok",
+        click: function() {
+          $(this).dialog("close");
+        }
+      }
+    ]
+  });
+  $("#dialogo1Lista").dialog({
+    autoOpen: false,
+    title: "SIGAR",
+    height: 170,
+    width: 450,
+    modal: true,
+    closeOnEscape: false,
+    resizable: false,
+    draggable: false,
+    show:
+    {
+      effect: "blind",
+      duration: 1000
+    },
+    hide:
+    {
+      effect: "explode",
+      duration: 1000
+    },
+    buttons: {
+      "Aceptar": function() {
+        $(this).dialog("close");
+        validacionDataLista();
+      },
+      Cancelar: function() {
+        $(this).dialog("close");
+      }
+    }
+  });
+  
+  
   $("#soportes").accordion({
     heightStyle: "content"
   });
@@ -540,6 +612,15 @@ $(document).ready(function () {
   $("#actualiza3").click(actualiza3);
   $("#actualiza3").css({ width: '200px', 'padding-top': '8px', 'padding-bottom': '8px' });
   $("#actualiza3").hide();
+
+  $("#aceptarLista").button();
+  $("#aceptarLista").click(preguntaLista);
+  $("#aceptarLista").css({ width: '120px', 'padding-top': '8px', 'padding-bottom': '8px' });
+  $("#actualizaLista").button();
+  $("#actualizaLista").click(actualizaLista);
+  $("#actualizaLista").css({ width: '120px', 'padding-top': '8px', 'padding-bottom': '8px' });
+  $("#actualizaLista").hide();
+
   $("#valor").maskMoney();
   $("#valor1").maskMoney();
   $("#valor2").maskMoney();
@@ -560,6 +641,11 @@ $(document).ready(function () {
   trae_material();
   $("#filtro").keyup(trae_material1);
   $("#material").focus();
+  
+  trae_lista();
+  $("#filtroLista").keyup(trae_lista1);
+  $("#documentacion").focus();
+  
   var MaxInputs       = 999;
   var InputsWrapper   = $("#add_form table tr");
   var AddButton       = $("#add_field");
@@ -734,9 +820,11 @@ function trae_directiva()
     $("#valor0d").val('0');
     $("#valor1d").val('0');
     $("#valor2d").val('0');
+	$("#tiene_lista").val('0');
     $("#tipod").prop("disabled",true);
     $("#valor1d").prop("disabled",true);
     $("#valor2d").prop("disabled",true);
+    $("#tiene_lista").prop("disabled",true);
   }
   else
   {
@@ -756,16 +844,19 @@ function trae_directiva()
         var tipo = registros.tipo;
         var valor1 = registros.valor1;
         var valor2 = registros.valor2;
+        var tiene_lista = registros.tiene_lista;
         $("#directiva3").val(nombre);
         $("#tipod").val(tipo);
         $("#valor0d").val(conse);
         $("#valor1d").val(valor1);
         $("#valor2d").val(valor2);
+        $("#tiene_lista").val(tiene_lista);
         $("#aceptar3").hide();
         $("#actualiza3").show();
         $("#tipod").prop("disabled",false);
         $("#valor1d").prop("disabled",false);
         $("#valor2d").prop("disabled",false);
+        $("#tiene_lista").prop("disabled",false);
       }
     });
   }
@@ -785,6 +876,21 @@ function trae_tipo()
     $("#valor2d").prop("disabled",false);
   }
 }
+
+function trae_cam_lis()
+{ // ojo continúa aqui
+  var conse = $("#valor0d").val();
+  var tiene_lista = $("#tiene_lista").val();
+  if (tiene_lista == "0")
+  {
+
+  }
+  if (conse == "0")
+  {
+
+  }
+}
+
 function trae_material()
 {
   $.ajax({
@@ -923,6 +1029,58 @@ function campos()
     }
   });
 }
+
+function camposLista()
+{
+  $("#contadorLista").val('1');
+  var directiva = $("#directivaCamposLista").val();
+  $.ajax({
+    type: "POST",
+    datatype: "json",
+    url: "trae_directiva.php",
+    data:
+    {
+      directiva: directiva
+    },
+    success: function (data)
+    {
+      var registros = JSON.parse(data);
+      var conse = registros.conse;
+      var nombre = registros.nombre;
+      var tipo1 = registros.tipo;
+      var valor1 = registros.valor1;
+      var valor2 = registros.valor2;
+      var v_niveles = 0;
+      if (tipo == "1")
+      {
+        v_niveles = valor1;
+      }
+      else
+      {
+        v_niveles = valor2;
+      }
+      if (tipo1 == "0")
+      {
+        $("#tipo1").hide();
+      }
+      else
+      {
+        $("#tipo1").show();
+      }
+      $("#niveles").val(v_niveles);
+      for (var i=0; i<999; i++)
+      {
+        $("#del_"+i).click();
+      }
+      for (var i=0; i<v_niveles; i++)
+      {
+        $("#add_field").click();
+      }
+      cargar(v_niveles);
+    }
+  });
+}
+
 function cargar(valor)
 {
   var valor;
@@ -1005,6 +1163,15 @@ function pregunta2()
   $("#dialogo3").dialog("open");
   $("#dialogo3").closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
 }
+
+function preguntaLista()
+{
+  var detalle = "<center><h3>Esta seguro de continuar ?</h3></center>";
+  $("#dialogo1Lista").html(detalle);
+  $("#dialogo1Lista").dialog("open");
+  $("#dialogo1Lista").closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
+}
+
 function paso_val()
 {
   var valor;
@@ -1079,6 +1246,34 @@ function validacionData()
     nuevo();
   }
 }
+
+function validacionDataLista()
+{
+  var salida = true, detalle = '';
+  var valor = $("#documentacion").val();
+  valor = valor.trim().length;
+  if (valor == "0")
+  {
+    salida = false;
+    detalle += "<center><h3>Debe ingresar documentacion (Item lista de verificación)</h3></center>";
+  }
+  if (!$("#directiva1Lista").val()) 
+  {
+    salida = false;
+    detalle += "<center><h3>Debe seleccionar una Directiva</h3></center>";
+  }
+  if (salida == false)
+  {
+    $("#dialogoLista").html(detalle);
+    $("#dialogoLista").dialog("open");
+    $("#dialogoLista").closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
+  }
+  else
+  {
+    nuevoLista();
+  }
+}
+
 function val_direc()
 {
   var conse = $("#valor0d").val();
@@ -1092,6 +1287,7 @@ function val_direc()
     if (conse == "0")
     {
       $("#tipod").prop("disabled",false);
+	  $("#tiene_lista").prop("disabled",false);
     }
   }
 }
@@ -1467,7 +1663,8 @@ function nuevo2()
       nombre: $("#directiva3").val(),
       valor1: $("#valor1d").val(),
       valor2: $("#valor2d").val(),
-      tipo: tipo
+      tipo: tipo,
+      tiene_lista: $("#tiene_lista").val(),
     },
     beforeSend: function ()
     {
@@ -1489,6 +1686,7 @@ function nuevo2()
         $("#tipod").prop("disabled",true);
         $("#valor1d").prop("disabled",true);
         $("#valor2d").prop("disabled",true);
+        $("#tiene_lista").prop("disabled",true);
         $("#aceptar3").hide();
         $("#actualiza3").hide();
       }
@@ -1516,7 +1714,8 @@ function actualiza3()
       nombre: $("#directiva3").val(),
       valor1: $("#valor1d").val(),
       valor2: $("#valor2d").val(),
-      tipo: tipo
+      tipo: tipo,
+      tiene_lista: $("#tiene_lista").val(),
     },
     beforeSend: function ()
     {
@@ -1538,6 +1737,7 @@ function actualiza3()
         $("#tipod").prop("disabled", true);
         $("#valor1d").prop("disabled", true);
         $("#valor2d").prop("disabled", true);
+        $("#tiene_lista").prop("disabled", true);
         $("#aceptar3").hide();
         $("#actualiza3").hide();
       }
@@ -1631,6 +1831,7 @@ function calcular_valor_nominal() {
     maximumFractionDigits: 2
   });
 }
+
 function trae_lista()
 {
   $.ajax({
@@ -1639,8 +1840,107 @@ function trae_lista()
     url: "trae_lista.php",
     data:
     {
-      documentacion: $("#filtro1").val(),
+      documentacion: $("#filtroLista").val(),
       directiva: $("#directiva2Lista").val()
+    },
+    beforeSend: function ()
+    {
+      $("#loadLista").show();
+    },
+    error: function ()
+    {
+      $("#loadLista").hide();
+    },
+    success: function (data)
+    {
+      $("#load").hide();
+      $("#tabla3Lista").html('');
+      $("#resultados4Lista").html('');
+      var registros = JSON.parse(data);
+      var valida,valida1;
+      var salida1 = "";
+      var salida2 = "";
+      valida = registros.salida;
+      valida1 = registros.total;
+      salida1 += "<br><table width='100%' align='center' border='0'><tr><td width='65%' height='35'><font size='2'><b>Documentación (Item Lista de Verificación)</b></font></td><td width='10%' height='35'><center><font size='2'><b>Orden</b></font></center></td><td width='10%' height='35'><center><font size='2'><b>Reco</b></font></center></td><td width='10%' height='35'><center><font size='2'><b>Info</b></font></center></td><td width='5%' height='35'>&nbsp;</td></tr></table>";
+      salida2 += "<table width='100%' align='center' border='0' id='a-table1'>";
+      $.each(registros.rows, function (index, value)
+      {
+        var paso = '\"'+value.conse+'\",\"'+value.orden+'\",\"'+value.documentacion+'\",\"'+value.es_recompensa+'\",\"'+value.es_informacion+'\",\"'+value.directiva+'\"';
+        salida2 += "<tr><td width='65%' height='35'>"+value.documentacion+"</td>";
+        salida2 += "<td width='10%' align='center' height='35'>"+value.orden+"</td>";
+        salida2 += "<td width='10%' align='center' height='35'>"+value.es_recompensa+"</td>";
+        salida2 += "<td width='10%' align='center' height='35'>"+value.es_informacion+"</td>";
+        salida2 += "<td width='5%' height='35'><center><a href='#' onclick='actuLista("+paso+")'><img src='imagenes/editar.png' width='20' height='20' border='0' title='Modificar'></a></center></td></tr>";
+      });
+      salida2 += "</table>";
+      $("#tabla3Lista").append(salida1);
+      $("#resultados4Lista").append(salida2);
+    }
+  });
+}
+
+function trae_lista1()
+{
+  $.ajax({
+    type: "POST",
+    datatype: "json",
+    url: "trae_lista1.php",
+    data:
+    {
+      documentacion: $("#filtroLista").val(),
+      directiva: $("#directiva2Lista").val()
+    },
+    beforeSend: function ()
+    {
+      $("#loadLista").show();
+    },
+    error: function ()
+    {
+      $("#loadLista").hide();
+    },
+    success: function (data)
+    {
+      $("#load").hide();
+      $("#tabla3Lista").html('');
+      $("#resultados4Lista").html('');
+      var registros = JSON.parse(data);
+      var valida,valida1;
+      var salida1 = "";
+      var salida2 = "";
+      valida = registros.salida;
+      valida1 = registros.total;
+      salida1 += "<br><table width='100%' align='center' border='0'><tr><td width='65%' height='35'><font size='2'><b>Documentación (Item Lista de Verificación)</b></font></td><td width='10%' height='35'><center><font size='2'><b>Orden</b></font></center></td><td width='10%' height='35'><center><font size='2'><b>Reco</b></font></center></td><td width='10%' height='35'><center><font size='2'><b>Info</b></font></center></td><td width='5%' height='35'>&nbsp;</td></tr></table>";
+      salida2 += "<table width='100%' align='center' border='0' id='a-table1'>";
+      $.each(registros.rows, function (index, value)
+      {
+        var paso = '\"'+value.conse+'\",\"'+value.orden+'\",\"'+value.documentacion+'\",\"'+value.es_recompensa+'\",\"'+value.es_informacion+'\",\"'+value.directiva+'\"';
+        salida2 += "<tr><td width='65%' height='35'>"+value.documentacion+"</td>";
+        salida2 += "<td width='10%' align='center' height='35'>"+value.orden+"</td>";
+        salida2 += "<td width='10%' align='center' height='35'>"+value.es_recompensa+"</td>";
+        salida2 += "<td width='10%' align='center' height='35'>"+value.es_informacion+"</td>";
+        salida2 += "<td width='5%' height='35'><center><a href='#' onclick='actuLista("+paso+")'><img src='imagenes/editar.png' width='20' height='20' border='0' title='Modificar'></a></center></td></tr>";
+      });
+      salida2 += "</table>";
+      $("#tabla3Lista").append(salida1);
+      $("#resultados4Lista").append(salida2);
+    }
+  });
+}
+
+function nuevoLista()
+{
+  $.ajax({
+    type: "POST",
+    datatype: "json",
+    url: "lista_grab.php",
+    data:
+    {
+      documentacion: $("#documentacion").val(),
+      orden: $("#orden").val(),
+      es_recompensa: $("#es_recompensa").val(),
+      es_informacion: $("#es_informacion").val(),
+      directiva: $("#directiva1Lista").val()
     },
     beforeSend: function ()
     {
@@ -1653,31 +1953,31 @@ function trae_lista()
     success: function (data)
     {
       $("#load").hide();
-      $("#tabla31").html('');
-      $("#resultados41").html('');
       var registros = JSON.parse(data);
-      var valida,valida1;
-      var salida1 = "";
-      var salida2 = "";
+      var valida, detalle;
       valida = registros.salida;
-      valida1 = registros.total;
-      salida1 += "<br><table width='100%' align='center' border='0'><tr><td width='65%' height='35'><font size='2'><b>Documentación (Item Lista de Verificación)</b></font></td><td width='15%' height='35'><center><font size='2'><b>Orden</b></font></center></td><td width='15%' height='35'><center><font size='2'><b>Reco</b></font></center></td><td width='15%' height='35'><center><font size='2'><b>Info</b></font></center></td><td width='5%' height='35'>&nbsp;</td></tr></table>";
-      salida2 += "<table width='100%' align='center' border='0' id='c-table1'>";
-      $.each(registros.rows, function (index, value)
+      if (valida > 0)
       {
-        var paso = '\"'+value.conse+'\",\"'+value.orden+'\",\"'+value.documentacion+'\",\"'+value.es_recompensa+'\",\"'+value.es_informacion+'\",\"'+value.directiva+'\"';
-        salida2 += "<tr><td width='65%' height='35'>"+value.documentacion+"</td>";
-        salida2 += "<td width='15%' align='center' height='35'>"+value.orden+"</td>";
-        salida2 += "<td width='15%' align='center' height='35'>"+value.es_recompensa+"</td>";
-        salida2 += "<td width='15%' align='center' height='35'>"+value.es_informacion+"</td>";
-        salida2 += "<td width='5%' height='35'><center><a href='#' onclick='actu("+paso+")'><img src='imagenes/editar.png' width='20' height='20' border='0' title='Modificar'></a></center></td></tr>";
-      });
-      salida2 += "</table>";
-      $("#tabla31").append(salida1);
-      $("#resultados41").append(salida2);
+        $("#conseLista").val('0');
+        $("#documentacion").val('');
+        $("#orden").val('0');
+        $("#es_recompensa").val('0');
+        $("#es_informacion").val('0');
+        $("#directiva1Lista").val('1');
+        trae_lista();
+        $("#documentacion").focus();
+      }
+      else
+      {
+        detalle = "<center><h3>Error durante la grabación</h3></center>";
+        $("#dialogoLista").html(detalle);
+        $("#dialogoLista").dialog("open");
+        $("#dialogoLista").closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
+      }
     }
   });
 }
+
 function actuLista(valor, valor1, valor2, valor3, valor4, valor5)
 {
   var valor, valor1, valor2, valor3, valor4, valor5;
@@ -1688,26 +1988,85 @@ function actuLista(valor, valor1, valor2, valor3, valor4, valor5)
   {
     valor2 = valor2.replace("<br>", text);
   }
-  $("#conse").val(valor);
+  $("#conseLista").val(valor);
   $("#orden").val(valor1);
   $("#documentacion").val(valor2);
   $("#es_recompensa").val(valor3);
   $("#es_informacion").val(valor4);
   $("#directiva1Lista").val(valor5);
-  if (valor5 == "7")
+  
+  $("#div_directiva1Lista").show();
+  $("#conseLista").prop("disabled", false);
+  $("#orden").prop("disabled", false);
+  
+  $("#aceptarLista").hide();
+  $("#actualizaLista").show();
+}
+
+function actualizaLista()
+{
+  var salida = true, documentacion = '';  
+  if (salida == false)
   {
-    $("#div_directiva1Lista").show();
-    $("#valor").prop("disabled", true);
-    $("#valor1").prop("disabled", true);
+    $("#dialogoLista").html(detalle);
+    $("#dialogoLista").dialog("open");
+    $("#dialogoLista").closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
   }
   else
   {
-    $("#div_directiva1Lista").hide();
-    $("#valor").prop("disabled", false);
-    $("#valor1").prop("disabled", false);
+    $.ajax({
+      type: "POST",
+      datatype: "json",
+      url: "lista_actu.php",
+      data:
+      {
+        conse: $("#conseLista").val(),
+        orden: $("#orden").val(),
+        documentacion: $("#documentacion").val(),
+        es_recompensa: $("#es_recompensa").val(),
+        es_informacion: $("#es_informacion").val(),
+        directiva: $("#directiva1Lista").val(),
+      },
+      beforeSend: function ()
+      {
+        $("#load").show();
+      },
+      error: function ()
+      {
+        $("#load").hide();
+      },
+      success: function (data)
+      {
+        $("#load").hide();
+        var registros = JSON.parse(data);
+        var valida, detalle;
+        valida = registros.salida;
+        if (valida > 0)
+        {
+          $("#conseLista").val('0');
+          $("#orden").val('');
+          $("#documentacion").val('');
+          $("#es_recompensa").val('0');
+          $("#es_informacion").val('0');
+          $("#directiva1Lista").val('1');
+          $("#div_directivaLista").hide();
+          $("#valor").prop("disabled", false);
+          $("#valor1").prop("disabled", false);
+          trae_lista();
+          $("#documentacion").focus();
+          $("#aceptarLista").show();
+          $("#actualizaLista").hide();
+        }
+        else
+        {
+          detalle = "<center><h3>Error durante la grabación</h3></center>";
+          $("#dialogoLista").html(detalle);
+          $("#dialogoLista").dialog("open");
+          $("#dialogoLista").closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
+        }
+      }
+    });
   }
-  $("#aceptar").hide();
-  $("#actualiza").show();
 }
 
 </script>

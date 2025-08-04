@@ -5,7 +5,10 @@ require('conf.php');
 require('funciones.php');
 if (is_ajax())
 {
-    $pregunta = "SELECT *, (SELECT SUBSTRING(documentacion, 0, 25)) AS documentacion1 FROM lista_0012 ORDER BY directiva, es_informacion, orden";
+    $documentacion = $_POST['documentacion'];
+    $documentacion1 = utf8_decode($documentacion);
+    $directiva = $_POST['directiva'];
+    $pregunta = "SELECT *, (SELECT SUBSTRING(documentacion, 0, 25)) AS documentacion1 FROM lista_0012 WHERE UPPER(documentacion) LIKE UPPER('%$documentacion1%') AND directiva='$directiva' ORDER BY es_informacion, orden";
 	//var_dump($pregunta);
     $sql = odbc_exec($conexion,$pregunta);
     $total = odbc_num_rows($sql);

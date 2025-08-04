@@ -1,0 +1,5 @@
+04/08/2025 01:05:22 am # UPDATE cx_ctr_dir SET nombre='', tipo='0', valor1='5', valor2='10', tiene_lista='' WHERE codigo='9' # ADMIN # 
+04/08/2025 01:08:44 am # UPDATE cx_ctr_dir SET nombre='No. 043 del 2025', tipo='1', valor1='5', valor2='6', tiene_lista='' WHERE codigo='7' # ADMIN # 
+04/08/2025 01:18:12 am # INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2, tiene_lista) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_dir), 'asasasas', '0', '0', '0', '1') # ADMIN # 
+04/08/2025 01:21:48 am # INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2, tiene_lista) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_dir), 'rrrr rrr rrrr', '0', '0', '0', '1') # ADMIN # 
+04/08/2025 01:25:38 am # INSERT INTO cx_ctr_dir (codigo, nombre, tipo, valor1, valor2, tiene_lista) VALUES ((SELECT isnull(max(codigo),0)+1 FROM cx_ctr_dir), 'wewe aaaaa', '0', '0', '0', '1') # ADMIN # 
