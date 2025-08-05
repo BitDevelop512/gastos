@@ -15,8 +15,11 @@ else
   $ano = $_GET["ano"];
   $directiva = $_GET["directiva"];
   $directiva1 = $_GET["directiva1"];
+  $tipo = isset($_GET['tipo']) ? $_GET['tipo'] : null;
+  // var_dump($_GET);
   $pregunta = "SELECT directiva, lista, fec_res, fec_sum FROM cx_reg_rec WHERE conse='$conse' AND ano='$ano'";
   $sql = odbc_exec($conexion, $pregunta);
+  $i = 0;
   while($i<$row=odbc_fetch_array($sql))
   {
     $directiva2 = odbc_result($sql,1);
@@ -29,6 +32,20 @@ else
   {
     $valida = "1";
   }
+
+  
+  if ($directiva == "6") {
+	  $query = "";
+	  //tipo=0 Reco tipo=1 Pago
+	if($tipo == "0") {
+		$query = "SELECT conse, orden, documentacion FROM dbo.lista_0012 WHERE es_recompensa = 1 and directiva=$directiva  ORDER BY orden";
+	} else {
+		$query = "SELECT conse, orden, documentacion FROM dbo.lista_0012 WHERE es_informacion = 1 and directiva=$directiva ORDER BY orden";
+	}
+	$cur = odbc_exec($conexion, $query);
+  }
+	 	
+ //var_dump($_GET);die($query);
 ?>
 <html lang="es">
 <head>
@@ -893,7 +910,7 @@ else
         <div id="lista2">
           <table width="100%" align="center" border="1">
             <tr>
-              <td width="58%">
+              <td width="60%">
                 &nbsp;
               </td>
               <td width="5%">
@@ -906,7 +923,7 @@ else
                   <b>NO</b>
                 </center>
               </td>
-              <td width="12%">
+              <td width="10%">
                 <center>
                   <b>No. Doc</b>
                 </center>
@@ -926,854 +943,609 @@ else
                   <b>Folio<br>Final</b>
                 </center>
               </td>
-            </tr>
-            <tr>
-              <td>
-                <div align="justify">LA SOLICITUD DEBE SEGUIR EL CONDUCTO REGULAR CON EL RESPECTIVO APOYO BATALLÓN (OFICIO REMISORIO EXP. BR).</div>
-              </td>
-              <td>
-                <center>
-                  <input type="radio" name="l2_1_1" id="l2_1_1" value="1" onclick="val_lista2()">
-                </center>
-              </td>
-              <td>
-                <center>
-                  <input type="radio" name="l2_1_1" id="l2_1_1" value="1" onclick="val_lista2()" checked>
-                </center>
-              </td>
-              <td>
-                <center>
-                  <input type="text" name="l2_1_2" id="l2_1_2" class="form-control numero" value="0">
-                </center>
-              </td>
-              <td>
-                <center>
-                  <input type="text" name="l2_1_3" id="l2_1_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                </center>
-              </td>
-              <td>
-                <center>
-                  <input type="text" name="l2_1_4" id="l2_1_4" class="form-control numero" value="0">
-                </center>
-              </td>
-              <td>
-                <center>
-                  <input type="text" name="l2_1_5" id="l2_1_5" class="form-control numero" value="0">
-                </center>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div align="justify">LA SOLICITUD DEBE SEGUIR EL CONDUCTO REGULAR CON EL RESPECTIVO APOYO BRIGADA (OFICIO REMISORIO EXP. DIV)</div>
-              </td>
-              <td>
-                <center>
-                  <input type="radio" name="l2_2_1" id="l2_2_1" value="1" onclick="val_lista2()">
-                </center>
-              </td>
-              <td>
-                <center>
-                  <input type="radio" name="l2_2_1" id="l2_2_1" value="1" onclick="val_lista2()" checked>
-                </center>
-              </td>
-            <td>
-              <center>
-                <input type="text" name="l2_2_2" id="l2_2_2" class="form-control numero" value="0">
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="text" name="l2_2_3" id="l2_2_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="text" name="l2_2_4" id="l2_2_4" class="form-control numero" value="0">
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="text" name="l2_2_5" id="l2_2_5" class="form-control numero" value="0">
-              </center>
-            </td>
           </tr>
           <tr>
-            <td>
-              <div align="justify">LA SOLICITUD DEBE SEGUIR EL CONDUCTO REGULAR CON EL RESPECTIVO APOYO DIVISIÓN (OFICIO REMISORIO EXP. CEDE2).</div>
-            </td>
-            <td>
-              <center>
-                <input type="radio" name="l2_3_1" id="l2_3_1" value="1" onclick="val_lista2()">
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="radio" name="l2_3_1" id="l2_3_1" value="1" onclick="val_lista2()" checked>
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="text" name="l2_3_2" id="l2_3_2" class="form-control numero" value="0">
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="text" name="l2_3_3" id="l2_3_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-              </center>
-            </td>
-            <td>
-              <center>
-                <input type="text" name="l2_3_4" id="l2_3_4" class="form-control numero" value="0">
-              </center>
-            </td>
+                            <td>
+                                LA SOLICITUD DEBE SEGUIR EL CONDUCTO REGULAR CON EL RESPECTIVO APOYO BAT. BR. DIV.
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="radio" name="l1_1_1" id="l1_1_1" value="1" onclick="val_lista1()">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="radio" name="l1_1_1" id="l1_1_1" value="1" onclick="val_lista1()" checked>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_1_2" id="l1_1_2" class="form-control numero" value="0">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_1_3" id="l1_1_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_1_4" id="l1_1_4" class="form-control numero" value="0">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_1_5" id="l1_1_5" class="form-control numero" value="0">
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                DOCUMENTO OFICIAL CON EL CUAL LA RESPECTIVA UNIDAD INFORMA AL MANDO SUPERIOR LOS RESULTADOS OBTENIDOS
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="radio" name="l1_2_1" id="l1_2_1" value="1" onclick="val_lista1()">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="radio" name="l1_2_1" id="l1_2_1" value="1" onclick="val_lista1()" checked>
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_2_2" id="l1_2_2" class="form-control numero" value="0">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_2_3" id="l1_2_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_2_4" id="l1_2_4" class="form-control numero" value="0">
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    <input type="text" name="l1_2_5" id="l1_2_5" class="form-control numero" value="0">
+                                </center>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    CERTIFICACION INFORMANTE NO PERTENECE A REINSERCION EXPEDIDO POR EL COMANDANTE DE LA UNIDAD
+                                </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_3_5" id="l2_3_5" class="form-control numero" value="0">
+                                        <input type="radio" name="l1_3_1" id="l1_3_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_3_1" id="l1_3_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_3_2" id="l1_3_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_3_3" id="l1_3_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_3_4" id="l1_3_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_3_5" id="l1_3_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">INFORME DE CONTACTO CON LA FUENTE (INICIAL O PRELIMINAR DE LA INFORMACIÓN SUMINISTRADA POR LA FUENTE).</div>
+                                    DOCUMENTO OFICIAL QUE ORDENE LA OPERACION DE LA UNIDAD TACTICA Y/O OPERATIVA
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_4_1" id="l2_4_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_4_1" id="l1_4_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_4_1" id="l2_4_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_4_1" id="l1_4_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_4_2" id="l2_4_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_4_2" id="l1_4_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_4_3" id="l2_4_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_4_3" id="l1_4_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_4_4" id="l2_4_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_4_4" id="l1_4_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_4_5" id="l2_4_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">INFORME DE INTELIGENCIA DONDE SE INCLUYE LA INFORMACIÓN ENTREGADA POR LA FUENTE DEBIDAMENTE EVALUADA.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_5_1" id="l2_5_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_5_1" id="l2_5_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_5_2" id="l2_5_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_5_3" id="l2_5_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_5_4" id="l2_5_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_5_5" id="l2_5_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_4_5" id="l1_4_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">DOCUMENTO OFICIAL CON EL CUAL LA RESPECTIVA UNIDAD INFORMA AL MANDO SUPERIOR LOS RESULTADOS OBTENIDOS (RADIOGRAMA AL COE POR PARTE DE LA DIV).</div>
+                                    INFORME DE PATRULLA O RESULTADOS
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_6_1" id="l2_6_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_5_1" id="l1_5_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_6_1" id="l2_6_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_5_1" id="l1_5_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_6_2" id="l2_6_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_5_2" id="l1_5_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_6_3" id="l2_6_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_5_3" id="l1_5_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_6_4" id="l2_6_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_5_4" id="l1_5_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_6_5" id="l2_6_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">CERTIFICACIÓN EXPEDIDA POR EL COMANDANTE DE LA UNIDAD DONDE SE INDIQUE QUE NO SE TRAMITARÁ PAGO ALGUNO ANTE EL GAHD, OTRA FUERZA NI PONAL COMO TAMPOCO A TRAVÉS DE LA ALCALDÍA O GOBERNACIÓN CON RECURSOS DE LEY 418 DE 1997.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_7_1" id="l2_7_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_7_1" id="l2_7_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_7_2" id="l2_7_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_7_3" id="l2_7_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_7_4" id="l2_7_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_7_5" id="l2_7_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_5_5" id="l1_5_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">CERTIFICACIÓN INFORMANTE NO PERTENECE AL PROGRAMA DE REINSERCIÓN EXPEDIDO POR EL GAHD.</div>
+                                    CERTIFICACION POR PARTE DEL JEFE DE LA SECCION DE INT.
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_8_1" id="l2_8_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_6_1" id="l1_6_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_8_1" id="l2_8_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_6_1" id="l1_6_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_8_2" id="l2_8_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_6_2" id="l1_6_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_8_3" id="l2_8_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_6_3" id="l1_6_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_8_4" id="l2_8_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_6_4" id="l1_6_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_8_5" id="l2_8_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">DOCUMENTO OFICIAL QUE ORDENE LA OPERACIÓN DE LA UNIDAD TÁCTICA Y/O OPERATIVA (ORDOP ó OFRAG).</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_9_1" id="l2_9_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_9_1" id="l2_9_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_9_2" id="l2_9_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_9_3" id="l2_9_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_9_4" id="l2_9_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_9_5" id="l2_9_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">ANEXO DE INTELIGENCIA.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_10_1" id="l2_10_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_10_1" id="l2_10_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_10_2" id="l2_10_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_10_3" id="l2_10_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_10_4" id="l2_10_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_10_5" id="l2_10_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">INFORME RESULTADOS OBTENIDOS EN DESARROLLO DE LA OPERACIÓN FIRMADO, DONDE REFERENCIA QUE FUE PRODUCTO INFORMACIÓN APORTADA POR FUENTE HUMANA.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_11_1" id="l2_11_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_11_1" id="l2_11_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_11_2" id="l2_11_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_11_3" id="l2_11_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_11_4" id="l2_11_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_11_5" id="l2_11_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">COPIA INFORME PRIMER RESPONDIENTE O INFORME EJECUTIVO DEJANDO A DISPOSICIÓN DE AUTORIDAD LOS ELEMENTOS INCAUTADOS Y/O INMOVILIZADOS Y/O PERSONAL NEUTRALIZADO.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_12_1" id="l2_12_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_12_1" id="l2_12_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_12_2" id="l2_12_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_12_3" id="l2_12_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_12_4" id="l2_12_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_12_5" id="l2_12_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">ACTA DE ACUERDOS PREVIOS CON LA FUENTE SIN DETERMINAR CIFRAS PARA EL PAGO.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_13_1" id="l2_13_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_13_1" id="l2_13_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_13_2" id="l2_13_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_13_3" id="l2_13_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_13_4" id="l2_13_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_13_5" id="l2_13_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_6_5" id="l1_6_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="7" height="35" bgcolor="#ccc">
-                                    <b>Neutralizaciones (Capturas o Desmovilizaciones)</b>
+                                    <b>Capturas</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                  <div align="justify">ACTA O DOCUMENTO INTERNO PUESTA A DISPOSICIÓN DE AUTORIDAD COMPETENTE.</div>
+                                    DOCUMENTO DEJANDO A DISPOSICION AUTORIDAD JUD. CAPTURADO
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_14_1" id="l2_14_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_7_1" id="l1_7_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_14_1" id="l2_14_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_7_1" id="l1_7_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_14_2" id="l2_14_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_7_2" id="l1_7_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_14_3" id="l2_14_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_7_3" id="l1_7_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_14_4" id="l2_14_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_7_4" id="l1_7_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_14_5" id="l2_14_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">DEBE ADJUNTAR UN ORGANIGRAMA SIMPLIFICADO CON LA UBICACIÓN EN LA ESTRUCTURA DELINCUENCIAL DEL SUJETO O SUJETOS NEUTRALIZADOS CON INFORMACIÓN DE INTELIGENCIA Y/O CONTRAINTELIGENCIA.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="radio" name="l2_15_1" id="l2_15_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="radio" name="l2_15_1" id="l2_15_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_15_2" id="l2_15_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_15_3" id="l2_15_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_15_4" id="l2_15_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_15_5" id="l2_15_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_7_5" id="l1_7_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">FOTOGRAFÍAS DEL TERRORISTA CAPTURADO.</div>
+                                    ORGANIGRAMA SIMPLIFICADO CON LA UBICACION DE LA ESTRUCTURA
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_16_1" id="l2_16_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_8_1" id="l1_8_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_16_1" id="l2_16_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_8_1" id="l1_8_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_16_2" id="l2_16_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_8_2" id="l1_8_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_16_3" id="l2_16_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_8_3" id="l1_8_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_16_4" id="l2_16_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_8_4" id="l1_8_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_16_5" id="l2_16_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                  <div align="justify">PRONTUARIO O PERFIL DELICTIVO O ANTECEDENTES DELICTIVO DEL SUJETO O SUJETOS REPORTADOS.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="radio" name="l2_17_1" id="l2_17_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="radio" name="l2_17_1" id="l2_17_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_17_2" id="l2_17_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_17_3" id="l2_17_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_17_4" id="l2_17_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                      <input type="text" name="l2_17_5" id="l2_17_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_8_5" id="l1_8_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                  <div align="justify">TARJETA DECADACTILAR DEL NEUTRALIZADO.</div>
+                                    FOTOGRAFIAS DEL TERRORISTA CAPTURADO O FUGADO
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_18_1" id="l2_18_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_9_1" id="l1_9_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_18_1" id="l2_18_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_9_1" id="l1_9_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_18_2" id="l2_18_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_9_2" id="l1_9_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_18_3" id="l2_18_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                            <input type="text" name="l1_9_3" id="l1_9_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_18_4" id="l2_18_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_9_4" id="l1_9_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_18_5" id="l2_18_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_9_5" id="l1_9_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                  <div align="justify">CERTIFICADO DE CODA DE LA ACEPTACIÓN POR PARTE DEL GAHD (PARA DESMOVILIZADOS).</div>
+                                    ANTECEDENTES PENALES Y/O ANOTACIONES DEL TERRORISTA
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_19_1" id="l2_19_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_10_1" id="l1_10_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="radio" name="l2_19_1" id="l2_19_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_10_1" id="l1_10_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_19_2" id="l2_19_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_10_2" id="l1_10_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_19_3" id="l2_19_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_10_3" id="l1_10_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_19_4" id="l2_19_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_10_4" id="l1_10_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                      <input type="text" name="l2_19_5" id="l2_19_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_10_5" id="l1_10_5" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    TARJETA DECADACTILAR DEL CAPTURADO O FUGADO
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_11_1" id="l1_11_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_11_1" id="l1_11_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_11_2" id="l1_11_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_11_3" id="l1_11_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_11_4" id="l1_11_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_11_5" id="l1_11_5" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ENTREVISTA DEL CAPTURADO O FUGADO
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_12_1" id="l1_12_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_12_1" id="l1_12_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_12_2" id="l1_12_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_12_3" id="l1_12_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_12_4" id="l1_12_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_12_5" id="l1_12_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="7" height="35" bgcolor="#ccc">
-                                  <b>Muerte en Desarrollo de Operaci&oacute;n Militar</b>
+                                    <b>Abatidos</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">ACTA DE INSPECCIÓN AL CADÁVER.</div>
+                                    ACTA DE LEVANTAMIENTO
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_20_1" id="l2_20_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_13_1" id="l1_13_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_20_1" id="l2_20_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_13_1" id="l1_13_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_20_2" id="l2_20_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_13_2" id="l1_13_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_20_3" id="l2_20_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_13_3" id="l1_13_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_20_4" id="l2_20_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_13_4" id="l1_13_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_20_5" id="l2_20_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">DEBE ADJUNTARSE UN ORGANIGRAMA SIMPLIFICADO CON LA UBICACIÓN EN LA ESTRUCTURA DELINCUENCIAL DEL SUJETO O SUJETOS NEUTRALIZADOS CON INFORMACIÓN DE INTELIGENCIA Y/O CONTRAINTELIGENCIA.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_21_1" id="l2_21_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_21_1" id="l2_21_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_21_2" id="l2_21_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_21_3" id="l2_21_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_21_4" id="l2_21_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_21_5" id="l2_21_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_13_5" id="l1_13_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">FOTOGRAFÍAS DEL TERRORISTA NEUTRALIZADOS.</div>
+                                    ORGANIGRAMA SIMPLIFICADO CON LA UBICACION DE LA ESTRUCTURA
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_22_1" id="l2_22_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_14_1" id="l1_14_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_22_1" id="l2_22_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_14_1" id="l1_14_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_22_2" id="l2_22_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_14_2" id="l1_14_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_22_3" id="l2_22_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_14_3" id="l1_14_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_22_4" id="l2_22_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_14_4" id="l1_14_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_22_5" id="l2_22_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div align="justify">PRONTUARIO DELICTIVO.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_23_1" id="l2_23_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_23_1" id="l2_23_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_23_2" id="l2_23_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_23_3" id="l2_23_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_23_4" id="l2_23_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_23_5" id="l2_23_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_14_5" id="l1_14_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">TARJETA NECRODACTILAR.</div>
+                                    FOTOGRAFIAS DEL TERRORISTA CAPTURADO O FUGADO
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_24_1" id="l2_24_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_15_1" id="l1_15_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_24_1" id="l2_24_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_15_1" id="l1_15_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_24_2" id="l2_24_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_15_2" id="l1_15_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_24_3" id="l2_24_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_15_3" id="l1_15_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_24_4" id="l2_24_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_15_4" id="l1_15_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_24_5" id="l2_24_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_15_5" id="l1_15_5" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ANTECEDENTES PENALES Y/O ANOTACIONES DEL TERRORISTA
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_16_1" id="l1_16_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_16_1" id="l1_16_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_16_2" id="l1_16_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_16_3" id="l1_16_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_16_4" id="l1_16_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_16_5" id="l1_16_5" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    TARJETA DE NECRODACTILIA
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_17_1" id="l1_17_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_17_1" id="l1_17_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_17_2" id="l1_17_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_17_3" id="l1_17_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_17_4" id="l1_17_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_17_5" id="l1_17_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
@@ -1784,567 +1556,708 @@ else
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">ACTA O DOCUMENTO INTERNO DE LA INCAUTACION DE MATERIAL.</div>
+                                    ACTA O DOCUMENTO INTERNO DE LA INCAUTACION DE MATERIAL
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_25_1" id="l2_25_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_18_1" id="l1_18_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_25_1" id="l2_25_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_18_1" id="l1_18_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_25_2" id="l2_25_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_18_2" id="l1_18_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_25_3" id="l2_25_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_18_3" id="l1_18_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_25_4" id="l2_25_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_18_4" id="l1_18_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_25_5" id="l2_25_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-
-
-                            <tr>
-                                <td>
-                                    <div align="justify">FOTOGRAFIAS DEL MATERIAL INCAUTADO.</div>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_26_1" id="l2_26_1" value="1" onclick="val_lista2()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l2_26_1" id="l2_26_1" value="1" onclick="val_lista2()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_26_2" id="l2_26_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_26_3" id="l2_26_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_26_4" id="l2_26_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l2_26_5" id="l2_26_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_18_5" id="l1_18_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div align="justify">ANALISIS PRELIMINAR MATERIAL INCAUTADO.</div>
+                                    FOTOGRAFIAS DEL MATERIAL INCAUTADO
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_27_1" id="l2_27_1" value="1" onclick="val_lista2()">
+                                        <input type="radio" name="l1_19_1" id="l1_19_1" value="1" onclick="val_lista1()">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="radio" name="l2_27_1" id="l2_27_1" value="1" onclick="val_lista2()" checked>
+                                        <input type="radio" name="l1_19_1" id="l1_19_1" value="1" onclick="val_lista1()" checked>
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_27_2" id="l2_27_2" class="form-control numero" value="0">
+                                        <input type="text" name="l1_19_2" id="l1_19_2" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_27_3" id="l2_27_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                        <input type="text" name="l1_19_3" id="l1_19_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_27_4" id="l2_27_4" class="form-control numero" value="0">
+                                        <input type="text" name="l1_19_4" id="l1_19_4" class="form-control numero" value="0">
                                     </center>
                                 </td>
                                 <td>
                                     <center>
-                                        <input type="text" name="l2_27_5" id="l2_27_5" class="form-control numero" value="0">
+                                        <input type="text" name="l1_19_5" id="l1_19_5" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ANALISIS PRELIMINAR MATERIAL INCAUTADO
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_20_1" id="l1_20_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_20_1" id="l1_20_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_20_2" id="l1_20_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_20_3" id="l1_20_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_20_4" id="l1_20_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_20_5" id="l1_20_5" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" height="35" bgcolor="#ccc">
+                                    <b>Documentos</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ACTA O DOCUMENTO INTERNO DE LA INCAUTACION DE MATERIAL
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_21_1" id="l1_21_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_21_1" id="l1_21_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_21_2" id="l1_21_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_21_3" id="l1_21_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_21_4" id="l1_21_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_21_5" id="l1_21_5" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ANALISIS DE DOCUMENTOS INCAUTADOS - PERTENENCIA
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_22_1" id="l1_22_1" value="1" onclick="val_lista1()">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="radio" name="l1_22_1" id="l1_22_1" value="1" onclick="val_lista1()" checked>
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_22_2" id="l1_22_2" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_22_3" id="l1_22_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_22_4" id="l1_22_4" class="form-control numero" value="0">
+                                    </center>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="text" name="l1_22_5" id="l1_22_5" class="form-control numero" value="0">
                                     </center>
                                 </td>
                             </tr>
                         </table>
         </div>
-        <div id="lista3">
-                        <table width="100%" align="center" border="1">
-                            <tr>
-                                <td width="60%">
-                                    &nbsp;
-                                </td>
-                                <td width="5%">
-                                    <center>
-                                        <b>SI</b>
-                                    </center>
-                                </td>
-                                <td width="5%">
-                                    <center>
-                                        <b>NO</b>
-                                    </center>
-                                </td>
-                                <td width="10%">
-                                    <center>
-                                        <b>No. Doc</b>
-                                    </center>
-                                </td>
-                                <td width="10%">
-                                    <center>
-                                        <b>Fecha</b>
-                                    </center>
-                                </td>
-                                <td width="5%">
-                                    <center>
-                                        <b>Folio<br>Inicial</b>
-                                    </center>
-                                </td>
-                                <td width="5%">
-                                    <center>
-                                        <b>Folio<br>Final</b>
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    1. Copia informe de contacto con la fuente - PROIC.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_1_1" id="l3_1_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_1_1" id="l3_1_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_1_2" id="l3_1_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_1_3" id="l3_1_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_1_4" id="l3_1_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_1_5" id="l3_1_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    2. Copia anexo de inteligencia a la ORDOP.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_2_1" id="l3_2_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_2_1" id="l3_2_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_2_2" id="l3_2_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_2_3" id="l3_2_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_2_4" id="l3_2_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_2_5" id="l3_2_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    3. Copia informe de inteligencia y contrainteligencia, informe preliminar de inteligencia o informe de inteligencia preventivo.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_3_1" id="l3_3_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_3_1" id="l3_3_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_3_2" id="l3_3_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_3_3" id="l3_3_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_3_4" id="l3_3_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_3_5" id="l3_3_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    4. Copia orden de operaci&oacute;n militar emitida por la unidad operativa y/o t&aacute;ctica.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_4_1" id="l3_4_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_4_1" id="l3_4_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_4_2" id="l3_4_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_4_3" id="l3_4_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_4_4" id="l3_4_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_4_5" id="l3_4_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    5. Copia orden fragmentaria emitida por la unidad operativa y/o t&aacute;ctica (Cuando aplique).
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_5_1" id="l3_5_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_5_1" id="l3_5_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_5_2" id="l3_5_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_5_3" id="l3_5_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_5_4" id="l3_5_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_5_5" id="l3_5_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    6. Copia del informe de patrullaje emitido por el responsable de la ORDOP militar.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_6_1" id="l3_6_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_6_1" id="l3_6_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_6_2" id="l3_6_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_6_3" id="l3_6_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_6_4" id="l3_6_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_6_5" id="l3_6_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    7. Copia radiograma de reporte al COE. del resultado operacional emitido por parte del comando de la Divisi&oacute;n.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_7_1" id="l3_7_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_7_1" id="l3_7_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_7_2" id="l3_7_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_7_3" id="l3_7_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_7_4" id="l3_7_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_7_5" id="l3_7_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    8. Documento emitido por el Comandante de la Unidad solicitante, donde certifica que NO dar&aacute; tramite de pago de la recompensa a trav&eacute;s del GAHD, otra Fuerza ni PONAL como tampoco a trav&eacute;s de la alcald&iacute;a o gobernaci&oacute;n con recursos de ley 418 de 1997.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_8_1" id="l3_8_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_8_1" id="l3_8_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_8_2" id="l3_8_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_8_3" id="l3_8_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_8_4" id="l3_8_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_8_5" id="l3_8_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    9. Certificaci&oacute;n informante no pertenece al programa de reinserci&oacute;n expedido por el GAHD.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_9_1" id="l3_9_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_9_1" id="l3_9_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_9_2" id="l3_9_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_9_3" id="l3_9_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_9_4" id="l3_9_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_9_5" id="l3_9_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    10. Acta de acuerdos con la fuente.
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_10_1" id="l3_10_1" value="1" onclick="val_lista3()">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="radio" name="l3_10_1" id="l3_10_1" value="1" onclick="val_lista3()" checked>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_10_2" id="l3_10_2" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_10_3" id="l3_10_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_10_4" id="l3_10_4" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input type="text" name="l3_10_5" id="l3_10_5" class="form-control numero" value="0">
-                                    </center>
-                                </td>
-                            </tr>
-                            <?php
-                            if ($tpu_usuario == "7")
-                            {
-                            ?>
-                                <tr>
-                                    <td>
-                                        11. Oficios de apoyo al tramite de recompensas emitido por el Comando Brigada y Divisi&oacute;n.
-                                    </td>
-                                    <td>
-                                        <center>
-                                            <input type="radio" name="l3_11_1" id="l3_11_1" value="1" onclick="val_lista3()">
-                                        </center>
-                                    </td>
-                                    <td>
-                                        <center>
-                                            <input type="radio" name="l3_11_1" id="l3_11_1" value="1" onclick="val_lista3()" checked>
-                                        </center>
-                                    </td>
-                                    <td>
-                                        <center>
-                                            <input type="text" name="l3_11_2" id="l3_11_2" class="form-control numero" value="0">
-                                        </center>
-                                    </td>
-                                    <td>
-                                        <center>
-                                            <input type="text" name="l3_11_3" id="l3_11_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
-                                        </center>
-                                    </td>
-                                    <td>
-                                        <center>
-                                            <input type="text" name="l3_11_4" id="l3_11_4" class="form-control numero" value="0">
-                                        </center>
-                                    </td>
-                                    <td>
-                                        <center>
-                                            <input type="text" name="l3_11_5" id="l3_11_5" class="form-control numero" value="0">
-                                        </center>
-                                    </td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
-                            <tr>
-                                <td colspan="7" height="40">
-                                    <br>
-                                    <b>Tipo de Resultado</b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="7">
-                                    <div id="tipo_l3">
-                                        <input type="checkbox" name="tipo1_l3" id="tipo1_l3" onclick="vali1()"><label for="tipo1_l3">Cristalizadero - Laboratorio - Material</label>
-                                        <input type="checkbox" name="tipo2_l3" id="tipo2_l3" onclick="vali2()"><label for="tipo2_l3">Capturas</label>
-                                        <input type="checkbox" name="tipo3_l3" id="tipo3_l3" onclick="vali3()"><label for="tipo3_l3">M.D.O.M</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="7" height="15" valign="bottom">
-                                    &nbsp;
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-        </table>
+		<div id="lista3">		
+			<table width="100%" align="center" border="1">
+				<tr>
+					<td width="60%">
+						&nbsp;
+					</td>
+					<td width="5%">
+						<center>
+							<b>SI</b>
+						</center>
+					</td>
+					<td width="5%">
+						<center>
+							<b>NO</b>
+						</center>
+					</td>
+					<td width="10%">
+						<center>
+							<b>No. Doc</b>
+						</center>
+					</td>
+					<td width="10%">
+						<center>
+							<b>Fecha</b>
+						</center>
+					</td>
+					<td width="5%">
+						<center>
+							<b>Folio<br>Inicial</b>
+						</center>
+					</td>
+					<td width="5%">
+						<center>
+							<b>Folio<br>Final</b>
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						1. Copia informe de contacto con la fuente - PROIC.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_1_1" id="l3_1_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_1_1" id="l3_1_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_1_2" id="l3_1_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_1_3" id="l3_1_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_1_4" id="l3_1_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_1_5" id="l3_1_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						2. Copia anexo de inteligencia a la ORDOP.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_2_1" id="l3_2_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_2_1" id="l3_2_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_2_2" id="l3_2_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_2_3" id="l3_2_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_2_4" id="l3_2_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_2_5" id="l3_2_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						3. Copia informe de inteligencia y contrainteligencia, informe preliminar de inteligencia o informe de inteligencia preventivo.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_3_1" id="l3_3_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_3_1" id="l3_3_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_3_2" id="l3_3_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_3_3" id="l3_3_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_3_4" id="l3_3_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_3_5" id="l3_3_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						4. Copia orden de operaci&oacute;n militar emitida por la unidad operativa y/o t&aacute;ctica.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_4_1" id="l3_4_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_4_1" id="l3_4_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_4_2" id="l3_4_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_4_3" id="l3_4_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_4_4" id="l3_4_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_4_5" id="l3_4_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						5. Copia orden fragmentaria emitida por la unidad operativa y/o t&aacute;ctica (Cuando aplique).
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_5_1" id="l3_5_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_5_1" id="l3_5_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_5_2" id="l3_5_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_5_3" id="l3_5_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_5_4" id="l3_5_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_5_5" id="l3_5_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						6. Copia del informe de patrullaje emitido por el responsable de la ORDOP militar.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_6_1" id="l3_6_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_6_1" id="l3_6_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_6_2" id="l3_6_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_6_3" id="l3_6_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_6_4" id="l3_6_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_6_5" id="l3_6_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						7. Copia radiograma de reporte al COE. del resultado operacional emitido por parte del comando de la Divisi&oacute;n.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_7_1" id="l3_7_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_7_1" id="l3_7_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_7_2" id="l3_7_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_7_3" id="l3_7_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_7_4" id="l3_7_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_7_5" id="l3_7_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						8. Documento emitido por el Comandante de la Unidad solicitante, donde certifica que NO dar&aacute; tramite de pago de la recompensa a trav&eacute;s del GAHD, otra Fuerza ni PONAL como tampoco a trav&eacute;s de la alcald&iacute;a o gobernaci&oacute;n con recursos de ley 418 de 1997.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_8_1" id="l3_8_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_8_1" id="l3_8_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_8_2" id="l3_8_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_8_3" id="l3_8_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_8_4" id="l3_8_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_8_5" id="l3_8_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						9. Certificaci&oacute;n informante no pertenece al programa de reinserci&oacute;n expedido por el GAHD.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_9_1" id="l3_9_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_9_1" id="l3_9_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_9_2" id="l3_9_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_9_3" id="l3_9_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_9_4" id="l3_9_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_9_5" id="l3_9_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						10. Acta de acuerdos con la fuente.
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_10_1" id="l3_10_1" value="1" onclick="val_lista3()">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="radio" name="l3_10_1" id="l3_10_1" value="1" onclick="val_lista3()" checked>
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_10_2" id="l3_10_2" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_10_3" id="l3_10_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_10_4" id="l3_10_4" class="form-control numero" value="0">
+						</center>
+					</td>
+					<td>
+						<center>
+							<input type="text" name="l3_10_5" id="l3_10_5" class="form-control numero" value="0">
+						</center>
+					</td>
+				</tr>
+				<?php
+				if ($tpu_usuario == "7")
+				{
+				?>
+					<tr>
+						<td>
+							11. Oficios de apoyo al tramite de recompensas emitido por el Comando Brigada y Divisi&oacute;n.
+						</td>
+						<td>
+							<center>
+								<input type="radio" name="l3_11_1" id="l3_11_1" value="1" onclick="val_lista3()">
+							</center>
+						</td>
+						<td>
+							<center>
+								<input type="radio" name="l3_11_1" id="l3_11_1" value="1" onclick="val_lista3()" checked>
+							</center>
+						</td>
+						<td>
+							<center>
+								<input type="text" name="l3_11_2" id="l3_11_2" class="form-control numero" value="0">
+							</center>
+						</td>
+						<td>
+							<center>
+								<input type="text" name="l3_11_3" id="l3_11_3" class="form-control fecha" placeholder="yy/mm/dd" readonly="readonly">
+							</center>
+						</td>
+						<td>
+							<center>
+								<input type="text" name="l3_11_4" id="l3_11_4" class="form-control numero" value="0">
+							</center>
+						</td>
+						<td>
+							<center>
+								<input type="text" name="l3_11_5" id="l3_11_5" class="form-control numero" value="0">
+							</center>
+						</td>
+					</tr>
+				<?php
+				}
+				?>
+				<tr>
+					<td colspan="7" height="40">
+						<br>
+						<b>Tipo de Resultado</b>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7">
+						<div id="tipo_l3">
+							<input type="checkbox" name="tipo1_l3" id="tipo1_l3" onclick="vali1()"><label for="tipo1_l3">Cristalizadero - Laboratorio - Material</label>
+							<input type="checkbox" name="tipo2_l3" id="tipo2_l3" onclick="vali2()"><label for="tipo2_l3">Capturas</label>
+							<input type="checkbox" name="tipo3_l3" id="tipo3_l3" onclick="vali3()"><label for="tipo3_l3">M.D.O.M</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" height="15" valign="bottom">
+						&nbsp;
+					</td>
+				</tr>
+			</table>
+				</div>
+        <div id="lista4">
+          <table width="100%" align="center" border="1">
+				<tr>
+				  <td width="5%">
+					<center>
+					  <b>No</b>
+					</center>
+				  </td>
+				  <td>
+					<center>
+					  <b>Documentación</b>
+					</center>
+				  </td>
+				  <td width="5%">
+					<center>
+					  <b>SI</b>
+					</center>
+				  </td>
+				  <td width="5%">
+					<center>
+					  <b>NO</b>
+					</center>
+				  </td>
+				  <td width="5%">
+					<center>
+					  <b>Folio(s)</b>
+					</center>
+				  </td>
+				</tr>
+				<?php
+					$cont = 0;
+					while($row = odbc_fetch_array($cur)) {
+						$cont++;
+						$id = $row['conse'];
+						$orden = $row['orden'];
+						$documentacion = utf8_encode($row['documentacion']);
+				?>
+					<tr>
+					  <td>
+						<div align="center"><?= $cont ?></div>
+					  </td>
+					  <td>
+						<div align="justify"><?= $documentacion ?></div>
+					  </td>
+					  <td>
+						<center>
+						  <input type="radio" name="l4_<?=$cont?>_1" id="l4_<?=$cont?>_1" value="1" onclick="val_lista4()">
+						</center>
+					  </td>
+					  <td>
+						<center>
+						  <input type="radio" name="l4_<?=$cont?>_1" id="l4_<?=$cont?>_1" value="1" onclick="val_lista4()" checked>
+						</center>
+					  </td>
+					  <td>
+						<center>
+						  <input type="text" name="l4_<?=$cont?>_2" id="l4_<?=$cont?>_2" class="form-control numero" value="0">
+						</center>
+					  </td>
+					</tr>
+				<?php 
+				$cont_lista4 = $cont;
+				} 
+				?>
+				<input type="hidden" id="cont_lista4" value="<?= $cont_lista4 ?>">
+			</table>
+		</div>
+        					
+	  </td>
+	</tr>
+  </table>
     <br>
     <center>
         <input type="button" name="actualizar" id="actualizar" value="Actualizar">
@@ -2367,6 +2280,7 @@ $(document).bind("contextmenu",function(e) {
   return false;  
 });
 $(document).ready(function() {
+
   $("#load").hide();
   var fec_res = $("#fec_res").val();
   var fec_sum = $("#fec_sum").val();
@@ -2426,9 +2340,17 @@ $(document).ready(function() {
 			});
     }
   }
+    // Lista4
+  let total_lista4 = parseInt(document.getElementById('cont_lista4').value);
+  for (i=1; i<=total_lista4; i++)
+  {
+    $("#l4_"+i+"_2").prop("disabled",true);
+  }
+  
   $("#lista1").hide();
   $("#lista2").hide();
   $("#lista3").hide();
+  $("#lista4").hide();
   $("#actualizar").button();
   $("#actualizar").click(actualizar);
   $("#actualizar").css({ width: '200px', 'padding-top': '8px', 'padding-bottom': '8px' });
@@ -2443,6 +2365,7 @@ function valida_direc()
       $("#lista1").show();
       $("#lista2").hide();
       $("#lista3").hide();
+      $("#lista4").hide();
       break;
     case '2':
     case '3':
@@ -2450,15 +2373,71 @@ function valida_direc()
       $("#lista1").hide();
       $("#lista2").show();
       $("#lista3").hide();
+      $("#lista4").hide();
+      break;
+    case '6':
+      $("#lista1").hide();
+      $("#lista2").hide();
+      $("#lista3").hide();
+      $("#lista4").show();
       break;
     default:
       $("#lista1").hide();
       $("#lista2").hide();
       $("#lista3").hide();
+      $("#lista4").hide();
       break;
   }
   trae_lista();
 }
+
+function trae_lista() {
+  var directiva = $("#directiva").val();
+  var campos = 0;
+  var var_lista = 0;
+  var columnas = 5; // por defecto
+
+  var lista = $("#listas").val();
+  var var_ocu = lista.split('|');
+  var var_ocu1 = var_ocu.length;
+
+  if (var_ocu1 > 2) {
+    // Configurar según la directiva
+    if (directiva == "1") {
+      var_lista = 1;
+      campos = 22;
+    } else if (directiva == "6") {
+      var_lista = 4;
+      let total_lista4 = parseInt(document.getElementById('cont_lista4').value);
+      campos = total_lista4;
+      columnas = 2; // solo hay 2 columnas en este caso
+    } else {
+      var_lista = 2;
+      campos = 27;
+    }
+
+    let index = 0;
+    for (let i = 1; i <= campos; i++) {
+      for (let j = 1; j <= columnas; j++) {
+        let valor = var_ocu[index] || "";
+        let selector = `#l${var_lista}_${i}_${j}`;
+
+        if (j === 1) {
+          if (valor == "1") {
+            $(selector).prop("checked", true);
+          } else {
+            $(selector).prop("checked", false);
+          }
+        } else {
+          $(selector).val(valor);
+        }
+        index++;
+      }
+    }
+  }
+}
+
+/*
 function trae_lista()
 {
   var directiva = $("#directiva").val();
@@ -2470,7 +2449,7 @@ function trae_lista()
 	if (var_ocu1 > 2)
 	{
 		var a = 0;
-    var b = 1;
+		var b = 1;
 		var c = 2;
 		var d = 3;
 		var e = 4;
@@ -2507,6 +2486,7 @@ function trae_lista()
     }
 	}
 }
+*/
 function val_lista1()
 {
   for (i=1; i<=22; i++)
@@ -2554,479 +2534,52 @@ function val_lista2()
       $("#l2_"+i+"_5").prop("disabled",true);
     }
   }
-  /*
-  if (document.getElementById('l2_2_1').checked)
-  {
-    document.getElementById('l2_2_2').removeAttribute("disabled");
-    document.getElementById('l2_2_3').removeAttribute("disabled");
-    document.getElementById('l2_2_4').removeAttribute("disabled");
-    document.getElementById('l2_2_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_2_2").val("0");
-    $("#l2_2_3").val("");
-    $("#l2_2_4").val("0");
-    $("#l2_2_5").val("0");
-    $("#l2_2_2").prop("disabled",true);
-    $("#l2_2_3").prop("disabled",true);
-    $("#l2_2_4").prop("disabled",true);
-    $("#l2_2_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_3_1').checked)
-  {
-    document.getElementById('l2_3_2').removeAttribute("disabled");
-    document.getElementById('l2_3_3').removeAttribute("disabled");
-    document.getElementById('l2_3_4').removeAttribute("disabled");
-    document.getElementById('l2_3_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_3_2").val("0");
-    $("#l2_3_3").val("");
-    $("#l2_3_4").val("0");
-    $("#l2_3_5").val("0");
-    $("#l2_3_2").prop("disabled",true);
-    $("#l2_3_3").prop("disabled",true);
-    $("#l2_3_4").prop("disabled",true);
-    $("#l2_3_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_4_1').checked)
-  {
-    document.getElementById('l2_4_2').removeAttribute("disabled");
-    document.getElementById('l2_4_3').removeAttribute("disabled");
-    document.getElementById('l2_4_4').removeAttribute("disabled");
-    document.getElementById('l2_4_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_4_2").val("0");
-    $("#l2_4_3").val("");
-    $("#l2_4_4").val("0");
-    $("#l2_4_5").val("0");
-    $("#l2_4_2").prop("disabled",true);
-    $("#l2_4_3").prop("disabled",true);
-    $("#l2_4_4").prop("disabled",true);
-    $("#l2_4_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_5_1').checked)
-  {
-    document.getElementById('l2_5_2').removeAttribute("disabled");
-    document.getElementById('l2_5_3').removeAttribute("disabled");
-    document.getElementById('l2_5_4').removeAttribute("disabled");
-    document.getElementById('l2_5_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_5_2").val("0");
-    $("#l2_5_3").val("");
-    $("#l2_5_4").val("0");
-    $("#l2_5_5").val("0");
-    $("#l2_5_2").prop("disabled",true);
-    $("#l2_5_3").prop("disabled",true);
-    $("#l2_5_4").prop("disabled",true);
-    $("#l2_5_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_6_1').checked)
-  {
-    document.getElementById('l2_6_2').removeAttribute("disabled");
-    document.getElementById('l2_6_3').removeAttribute("disabled");
-    document.getElementById('l2_6_4').removeAttribute("disabled");
-    document.getElementById('l2_6_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_6_2").val("0");
-    $("#l2_6_3").val("");
-    $("#l2_6_4").val("0");
-    $("#l2_6_5").val("0");
-    $("#l2_6_2").prop("disabled",true);
-    $("#l2_6_3").prop("disabled",true);
-    $("#l2_6_4").prop("disabled",true);
-    $("#l2_6_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_7_1').checked)
-  {
-    document.getElementById('l2_7_2').removeAttribute("disabled");
-    document.getElementById('l2_7_3').removeAttribute("disabled");
-    document.getElementById('l2_7_4').removeAttribute("disabled");
-    document.getElementById('l2_7_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_7_2").val("0");
-    $("#l2_7_3").val("");
-    $("#l2_7_4").val("0");
-    $("#l2_7_5").val("0");
-    $("#l2_7_2").prop("disabled",true);
-    $("#l2_7_3").prop("disabled",true);
-    $("#l2_7_4").prop("disabled",true);
-    $("#l2_7_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_8_1').checked)
-  {
-    document.getElementById('l2_8_2').removeAttribute("disabled");
-    document.getElementById('l2_8_3').removeAttribute("disabled");
-    document.getElementById('l2_8_4').removeAttribute("disabled");
-    document.getElementById('l2_8_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_8_2").val("0");
-    $("#l2_8_3").val("");
-    $("#l2_8_4").val("0");
-    $("#l2_8_5").val("0");
-    $("#l2_8_2").prop("disabled",true);
-    $("#l2_8_3").prop("disabled",true);
-    $("#l2_8_4").prop("disabled",true);
-    $("#l2_8_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_9_1').checked)
-  {
-    document.getElementById('l2_9_2').removeAttribute("disabled");
-    document.getElementById('l2_9_3').removeAttribute("disabled");
-    document.getElementById('l2_9_4').removeAttribute("disabled");
-    document.getElementById('l2_9_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_9_2").val("0");
-    $("#l2_9_3").val("");
-    $("#l2_9_4").val("0");
-    $("#l2_9_5").val("0");
-    $("#l2_9_2").prop("disabled",true);
-    $("#l2_9_3").prop("disabled",true);
-    $("#l2_9_4").prop("disabled",true);
-    $("#l2_9_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_10_1').checked)
-  {
-    document.getElementById('l2_10_2').removeAttribute("disabled");
-    document.getElementById('l2_10_3').removeAttribute("disabled");
-    document.getElementById('l2_10_4').removeAttribute("disabled");
-    document.getElementById('l2_10_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_10_2").val("0");
-    $("#l2_10_3").val("");
-    $("#l2_10_4").val("0");
-    $("#l2_10_5").val("0");
-    $("#l2_10_2").prop("disabled",true);
-    $("#l2_10_3").prop("disabled",true);
-    $("#l2_10_4").prop("disabled",true);
-    $("#l2_10_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_11_1').checked)
-  {
-    document.getElementById('l2_11_2').removeAttribute("disabled");
-    document.getElementById('l2_11_3').removeAttribute("disabled");
-    document.getElementById('l2_11_4').removeAttribute("disabled");
-    document.getElementById('l2_11_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_11_2").val("0");
-    $("#l2_11_3").val("");
-    $("#l2_11_4").val("0");
-    $("#l2_11_5").val("0");
-    $("#l2_11_2").prop("disabled",true);
-    $("#l2_11_3").prop("disabled",true);
-    $("#l2_11_4").prop("disabled",true);
-    $("#l2_11_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_12_1').checked)
-  {
-    document.getElementById('l2_12_2').removeAttribute("disabled");
-    document.getElementById('l2_12_3').removeAttribute("disabled");
-    document.getElementById('l2_12_4').removeAttribute("disabled");
-    document.getElementById('l2_12_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_12_2").val("0");
-    $("#l2_12_3").val("");
-    $("#l2_12_4").val("0");
-    $("#l2_12_5").val("0");
-    $("#l2_12_2").prop("disabled",true);
-    $("#l2_12_3").prop("disabled",true);
-    $("#l2_12_4").prop("disabled",true);
-    $("#l2_12_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_13_1').checked)
-  {
-    document.getElementById('l2_13_2').removeAttribute("disabled");
-    document.getElementById('l2_13_3').removeAttribute("disabled");
-    document.getElementById('l2_13_4').removeAttribute("disabled");
-    document.getElementById('l2_13_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_13_2").val("0");
-    $("#l2_13_3").val("");
-    $("#l2_13_4").val("0");
-    $("#l2_13_5").val("0");
-    $("#l2_13_2").prop("disabled",true);
-    $("#l2_13_3").prop("disabled",true);
-    $("#l2_13_4").prop("disabled",true);
-    $("#l2_13_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_14_1').checked)
-  {
-    document.getElementById('l2_14_2').removeAttribute("disabled");
-    document.getElementById('l2_14_3').removeAttribute("disabled");
-    document.getElementById('l2_14_4').removeAttribute("disabled");
-    document.getElementById('l2_14_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_14_2").val("0");
-    $("#l2_14_3").val("");
-    $("#l2_14_4").val("0");
-    $("#l2_14_5").val("0");
-    $("#l2_14_2").prop("disabled",true);
-    $("#l2_14_3").prop("disabled",true);
-    $("#l2_14_4").prop("disabled",true);
-    $("#l2_14_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_15_1').checked)
-  {
-    document.getElementById('l2_15_2').removeAttribute("disabled");
-    document.getElementById('l2_15_3').removeAttribute("disabled");
-    document.getElementById('l2_15_4').removeAttribute("disabled");
-    document.getElementById('l2_15_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_15_2").val("0");
-    $("#l2_15_3").val("");
-    $("#l2_15_4").val("0");
-    $("#l2_15_5").val("0");
-    $("#l2_15_2").prop("disabled",true);
-    $("#l2_15_3").prop("disabled",true);
-    $("#l2_15_4").prop("disabled",true);
-    $("#l2_15_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_16_1').checked)
-  {
-    document.getElementById('l2_16_2').removeAttribute("disabled");
-    document.getElementById('l2_16_3').removeAttribute("disabled");
-    document.getElementById('l2_16_4').removeAttribute("disabled");
-    document.getElementById('l2_16_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_16_2").val("0");
-    $("#l2_16_3").val("");
-    $("#l2_16_4").val("0");
-    $("#l2_16_5").val("0");
-    $("#l2_16_2").prop("disabled",true);
-    $("#l2_16_3").prop("disabled",true);
-    $("#l2_16_4").prop("disabled",true);
-    $("#l2_16_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_17_1').checked)
-  {
-    document.getElementById('l2_17_2').removeAttribute("disabled");
-    document.getElementById('l2_17_3').removeAttribute("disabled");
-    document.getElementById('l2_17_4').removeAttribute("disabled");
-    document.getElementById('l2_17_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_17_2").val("0");
-    $("#l2_17_3").val("");
-    $("#l2_17_4").val("0");
-    $("#l2_17_5").val("0");
-    $("#l2_17_2").prop("disabled",true);
-    $("#l2_17_3").prop("disabled",true);
-    $("#l2_17_4").prop("disabled",true);
-    $("#l2_17_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_18_1').checked)
-  {
-    document.getElementById('l2_18_2').removeAttribute("disabled");
-    document.getElementById('l2_18_3').removeAttribute("disabled");
-    document.getElementById('l2_18_4').removeAttribute("disabled");
-    document.getElementById('l2_18_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_18_2").val("0");
-    $("#l2_18_3").val("");
-    $("#l2_18_2").prop("disabled",true);
-    $("#l2_18_3").prop("disabled",true);
-    $("#l2_18_4").prop("disabled",true);
-    $("#l2_18_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_19_1').checked)
-  {
-    document.getElementById('l2_19_2').removeAttribute("disabled");
-    document.getElementById('l2_19_3').removeAttribute("disabled");
-    document.getElementById('l2_19_4').removeAttribute("disabled");
-    document.getElementById('l2_19_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_19_2").val("0");
-    $("#l2_19_3").val("");
-    $("#l2_19_4").val("0");
-    $("#l2_19_5").val("0");
-    $("#l2_19_2").prop("disabled",true);
-    $("#l2_19_3").prop("disabled",true);
-    $("#l2_19_4").prop("disabled",true);
-    $("#l2_19_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_20_1').checked)
-  {
-    document.getElementById('l2_20_2').removeAttribute("disabled");
-    document.getElementById('l2_20_3').removeAttribute("disabled");
-    document.getElementById('l2_20_4').removeAttribute("disabled");
-    document.getElementById('l2_20_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_20_2").val("0");
-    $("#l2_20_3").val("");
-    $("#l2_20_4").val("0");
-    $("#l2_20_5").val("0");
-    $("#l2_20_2").prop("disabled",true);
-    $("#l2_20_3").prop("disabled",true);
-    $("#l2_20_4").prop("disabled",true);
-    $("#l2_20_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_21_1').checked)
-  {
-    document.getElementById('l2_21_2').removeAttribute("disabled");
-    document.getElementById('l2_21_3').removeAttribute("disabled");
-    document.getElementById('l2_21_4').removeAttribute("disabled");
-    document.getElementById('l2_21_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_21_2").val("0");
-    $("#l2_21_3").val("");
-    $("#l2_21_4").val("0");
-    $("#l2_21_5").val("0");
-    $("#l2_21_2").prop("disabled",true);
-    $("#l2_21_3").prop("disabled",true);
-    $("#l2_21_4").prop("disabled",true);
-    $("#l2_21_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_22_1').checked)
-  {
-    document.getElementById('l2_22_2').removeAttribute("disabled");
-    document.getElementById('l2_22_3').removeAttribute("disabled");
-    document.getElementById('l2_22_4').removeAttribute("disabled");
-    document.getElementById('l2_22_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_22_2").val("0");
-    $("#l2_22_3").val("");
-    $("#l2_22_4").val("0");
-    $("#l2_22_5").val("0");
-    $("#l2_22_2").prop("disabled",true);
-    $("#l2_22_3").prop("disabled",true);
-    $("#l2_22_4").prop("disabled",true);
-    $("#l2_22_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_23_1').checked)
-  {
-    document.getElementById('l2_23_2').removeAttribute("disabled");
-    document.getElementById('l2_23_3').removeAttribute("disabled");
-    document.getElementById('l2_23_4').removeAttribute("disabled");
-    document.getElementById('l2_23_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_23_2").val("0");
-    $("#l2_23_3").val("");
-    $("#l2_23_4").val("0");
-    $("#l2_23_5").val("0");
-    $("#l2_23_2").prop("disabled",true);
-    $("#l2_23_3").prop("disabled",true);
-    $("#l2_23_4").prop("disabled",true);
-    $("#l2_23_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_24_1').checked)
-  {
-    document.getElementById('l2_24_2').removeAttribute("disabled");
-    document.getElementById('l2_24_3').removeAttribute("disabled");
-    document.getElementById('l2_24_4').removeAttribute("disabled");
-    document.getElementById('l2_24_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_24_2").val("0");
-    $("#l2_24_3").val("");
-    $("#l2_24_4").val("0");
-    $("#l2_24_5").val("0");
-    $("#l2_24_2").prop("disabled",true);
-    $("#l2_24_3").prop("disabled",true);
-    $("#l2_24_4").prop("disabled",true);
-    $("#l2_24_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_25_1').checked)
-  {
-    document.getElementById('l2_25_2').removeAttribute("disabled");
-    document.getElementById('l2_25_3').removeAttribute("disabled");
-    document.getElementById('l2_25_4').removeAttribute("disabled");
-    document.getElementById('l2_25_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_25_2").val("0");
-    $("#l2_25_3").val("");
-    $("#l2_25_4").val("0");
-    $("#l2_25_5").val("0");
-    $("#l2_25_2").prop("disabled",true);
-    $("#l2_25_3").prop("disabled",true);
-    $("#l2_25_4").prop("disabled",true);
-    $("#l2_25_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_26_1').checked)
-  {
-    document.getElementById('l2_26_2').removeAttribute("disabled");
-    document.getElementById('l2_26_3').removeAttribute("disabled");
-    document.getElementById('l2_26_4').removeAttribute("disabled");
-    document.getElementById('l2_26_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_26_2").val("0");
-    $("#l2_26_3").val("");
-    $("#l2_26_4").val("0");
-    $("#l2_26_5").val("0");
-    $("#l2_26_2").prop("disabled",true);
-    $("#l2_26_3").prop("disabled",true);
-    $("#l2_26_4").prop("disabled",true);
-    $("#l2_26_5").prop("disabled",true);
-  }
-  if (document.getElementById('l2_27_1').checked)
-  {
-    document.getElementById('l2_27_2').removeAttribute("disabled");
-    document.getElementById('l2_27_3').removeAttribute("disabled");
-    document.getElementById('l2_27_4').removeAttribute("disabled");
-    document.getElementById('l2_27_5').removeAttribute("disabled");
-  }
-  else
-  {
-    $("#l2_27_2").val("0");
-    $("#l2_27_3").val("");
-    $("#l2_27_4").val("0");
-    $("#l2_27_5").val("0");
-    $("#l2_27_2").prop("disabled",true);
-    $("#l2_27_3").prop("disabled",true);
-    $("#l2_27_4").prop("disabled",true);
-    $("#l2_27_5").prop("disabled",true);
-  }
-  */
 }
-function actualizar()
+
+function val_lista4()
 {
+  let total_lista4 = parseInt(document.getElementById('cont_lista4').value);
+  for (i=1; i<=total_lista4; i++)
+  {
+    if (document.getElementById('l4_'+i+'_1').checked)
+    {
+      document.getElementById('l4_'+i+'_2').removeAttribute("disabled");
+    }
+    else
+    {
+      $("#l4_"+i+"_2").val("0");
+      $("#l4_"+i+"_2").prop("disabled",true);
+    }
+  }
+}
+
+function actualizar() {
+  console.log("Función actualizar ejecutada");
   var directiva = $("#directiva").val();
-  if (directiva == "1")
+  console.log("Directiva actual:", directiva);
+
+  if (directiva == "6") {
+	console.log("validò el 6. Directiva es: ", directiva);
+    var lis_final = "";
+    let total_lista4 = parseInt(document.getElementById('cont_lista4').value);
+    for (let i = 1; i <= total_lista4; i++) {
+      for (let j = 1; j <= 2; j++) {
+        const id = `#l4_${i}_${j}`;
+        console.log("Consultando:", id, $(id).length ? "OK" : "No encontrado");
+
+        let valor;
+        if (j === 1) {
+          valor = $(id).is(":checked") ? "1" : "0";
+        } else {
+          valor = $(id).val();
+        }
+        lis_final += valor + "|";
+      }
+    }
+    console.log("Resultado final:", lis_final);
+  }
+
+  else if (directiva == "1")
   {
     if ($("#l1_1_1").is(":checked"))
     {
@@ -3667,7 +3220,7 @@ function actualizar()
     var valor133 = $("#l2_27_3").val();
     var valor134 = $("#l2_27_4").val();
     var valor135 = $("#l2_27_5").val();
-    var lis_final = valor1+"|"+valor2+"|"+valor3+"|"+valor4+"|"+valor5+"|"+valor6+"|"+valor7+"|"+valor8+"|"+valor9+"|"+valor10+"|"+valor11+"|"+valor12+"|"+valor13+"|"+valor14+"|"+valor15+"|"+valor16+"|"+valor17+"|"+valor18+"|"+valor19+"|"+valor20+"|"+valor21+"|"+valor22+"|"+valor23+"|"+valor24+"|"+valor25+"|"+valor26+"|"+valor27+"|"+valor28+"|"+valor29+"|"+valor30+"|"+valor31+"|"+valor32+"|"+valor33+"|"+valor34+"|"+valor35+"|"+valor36+"|"+valor37+"|"+valor38+"|"+valor39+"|"+valor40+"|"+valor41+"|"+valor42+"|"+valor43+"|"+valor44+"|"+valor45+"|"+valor46+"|"+valor47+"|"+valor48+"|"+valor49+"|"+valor50+"|"+valor51+"|"+valor52+"|"+valor53+"|"+valor54+"|"+valor55+"|"+valor56+"|"+valor57+"|"+valor58+"|"+valor59+"|"+valor60+"|"+valor61+"|"+valor62+"|"+valor63+"|"+valor64+"|"+valor65+"|"+valor66+"|"+valor67+"|"+valor68+"|"+valor69+"|"+valor70+"|"+valor71+"|"+valor72+"|"+valor73+"|"+valor74+"|"+valor75+"|"+valor76+"|"+valor77+"|"+valor78+"|"+valor79+"|"+valor80+"|"+valor81+"|"+valor82+"|"+valor83+"|"+valor84+"|"+valor85+"|"+valor86+"|"+valor87+"|"+valor88+"|"+valor89+"|"+valor90+"|"+valor91+"|"+valor92+"|"+valor93+"|"+valor94+"|"+valor95+"|"+valor96+"|"+valor97+"|"+valor98+"|"+valor99+"|"+valor100+"|"+valor101+"|"+valor102+"|"+valor103+"|"+valor104+"|"+valor105+"|"+valor106+"|"+valor107+"|"+valor108+"|"+valor109+"|"+valor110+"|"+valor111+"|"+valor112+"|"+valor113+"|"+valor114+"|"+valor115+"|"+valor116+"|"+valor117+"|"+valor118+"|"+valor119+"|"+valor120+"|"+valor121+"|"+valor122+"|"+valor123+"|"+valor124+"|"+valor125+"|"+valor126+"|"+valor127+"|"+valor128+"|"+valor129+"|"+valor130+"|"+valor131+"|"+valor132+"|"+valor133+"|"+valor134+"|"+valor135+"|";
+    var lis_final = valor1+"|"+valor2+"|"+valor3+"|"+valor4+"|"+valor5+"|"+valor6+"|"+valor7+"|"+valor8+"|"+valor9+"|"+valor10+"|"+valor11+"|"+valor12+"|"+valor13+"|"+valor14+"|"+valor15+"|"+valor16+"|"+valor17+"|"+valor18+"|"+valor19+"|"+valor20+"|"+valor21+"|"+valor22+"|"+valor23+"|"+valor24+"|"+valor25+"|"+valor26+"|"+valor27+"|"+valor28+"|"+valor29+"|"+valor30+"|"+valor31+"|"+valor32+"|"+valor33+"|"+valor34+"|"+valor35+"|"+valor36+"|"+valor37+"|"+valor38+"|"+valor39+"|"+valor40+"|"+valor41+"|"+valor42+"|"+valor43+"|"+valor44+"|"+valor45+"|"+valor46+"|"+valor47+"|"+valor48+"|"+valor49+"|"+valor50+"|"+valor51+"|"+valor52+"|"+valor53+"|"+valor54+"|"+valor55+"|"+valor56+"|"+valor57+"|"+valor58+"|"+valor59+"|"+valor60+"|"+valor61+"|"+valor62+"|"+valor63+"|"+valor64+"|"+valor65+"|"+valor66+"|"+valor67+"|"+valor68+"|"+valor69+"|"+valor70+"|"+valor71+"|"+valor72+"|"+valor73+"|"+valor74+"|"+valor75+"|"+valor76+"|"+valor77+"|"+valor78+"|"+valor79+"|"+valor80+"|"+valor81+"|"+valor82+"|"+valor83+"|"+valor84+"|"+valor85+"|"+valor86+"|"+valor87+"|"+valor88+"|"+valor89+"|"+valor90+"|"+valor91+"|"+valor92+"|"+valor93+"|"+valor94+"|"+valor95+"|"+valor96+"|"+valor97+"|"+valor98+"|"+valor99+"|"+valor100+"|"+valor101+"|"+valor102+"|"+valor103+"|"+valor104+"|"+valor105+"|"+valor106+"|"+valor107+"|"+valor108+"|"+valor109+"|"+valor110+"|"+valor111+"|"+valor112+"|"+valor113+"|"+valor114+"|"+valor115+"|"+valor116+"|"+valor117+"|"+valor118+"|"+valor119+"|"+valor120+"|"+valor121+"|"+valor122+"|"+valor123+"|"+valor124+"|"+valor125+"|"+valor126+"|"+valor127+"|"+valor128+"|"+valor129+"|"+valor130+"|"+valor131+"|"+valor132+"|"+valor133+"|"+valor134+"|"+valor135+"|";	
   }
   $("#lista").val(lis_final);
   $.ajax({
@@ -3690,7 +3243,7 @@ function actualizar()
       $("#load").hide();
     },
     success: function (data)
-    {
+    {	  
       $("#load").hide();
       var registros = JSON.parse(data);
       var salida = registros.salida;
@@ -3718,7 +3271,16 @@ function actualizar()
             $("#l2_"+i+"_4").prop("disabled",true);
             $("#l2_"+i+"_5").prop("disabled",true);
           }
-        }
+        }		
+        if (directiva == "6")
+        {
+		  let total_lista4 = parseInt(document.getElementById('cont_lista4').value);
+          for (i=1; i<=total_lista4; i++)
+          {
+            $("input:radio[name='l4_"+i+"_1']").hide();
+            $("#l4_"+i+"_2").prop("disabled",true);
+          }
+        }		
       }
     }
   });
