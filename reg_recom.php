@@ -629,6 +629,8 @@ include('titulo.php');
             <form name="formu3" action="ver_lista.php" method="post" target="_blank">
               <input type="hidden" name="rec_conse" id="rec_conse" readonly="readonly">
               <input type="hidden" name="rec_ano" id="rec_ano" readonly="readonly">
+              <input type="hidden" name="tipo" id="tipo" value="0" readonly="readonly"> <!--tipo=0 RECO tipo=1 PAGO -->
+              <input type="hidden" name="dir" id="dir" readonly="readonly">
             </form>
           </div>
         </div>
@@ -1761,7 +1763,7 @@ function verificacion()
   }
   else
   {
-    var url = "<a href='./lista.php?conse="+conse+"&ano="+ano+"&directiva="+directiva+"&directiva1="+directiva1+"' name='link4' id='link4' class='pantalla-modal'>Link</a>";
+	var url = "<a href='./lista.php?conse="+conse+"&ano="+ano+"&directiva="+directiva+"&directiva1="+directiva1+"&tipo=0' name='link4' id='link4' class='pantalla-modal'>Link</a>"; <!--tipo=0 reco-->
     $("#link").hide();
     $("#link").html('');
     $("#link").append(url);
@@ -3040,13 +3042,13 @@ function val_caracteres(valor)
   detalle = detalle.replace(/[™]+/g, '');
   $("#"+valor).val(detalle);
 }
-function link(valor, valor1)
-{
-  var valor, valor1;
+function link(valor, valor1) {
   $("#rec_conse").val(valor);
   $("#rec_ano").val(valor1);
-  formu3.submit();
+  $("#tipo").val('0'); //campo tipo = 0 para Reco 1 para Pago
+  document.formu3.submit();
 }
+
 function check(e)
 {
   tecla = (document.all) ? e.keyCode : e.which;

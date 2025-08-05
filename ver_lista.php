@@ -3,13 +3,29 @@ session_start();
 error_reporting(0);
 if ($_SESSION["autenticado"] != "SI")
 {
- 	header("location:resultado.php");
+  header("location:resultado.php");
 }
 else
 {
+  require('conf.php');
+  include('funciones.php');
+  include('permisos.php');
+
 	$conse = $_POST['rec_conse'];
 	$ano = $_POST['rec_ano'];
-	$pdf = "./fpdf/603.php?conse=".$conse."&ano=".$ano;
+	$tipo = isset($_POST['tipo']) ? $_POST['tipo'] : null;
+	$fpdf = "";
+	
+	$cons_dir= "SELECT TOP 1 directiva FROM cx_reg_rec WHERE conse='$conse' AND ano = '$ano' ";
+	$cur_dir = odbc_exec($conexion,$cons_dir);
+	$directiva = odbc_result($cur_dir,1);
+	if ($directiva == "6") 
+	{
+		$pdf = "./fpdf/603_1.php?conse=" . urlencode($conse) . "&ano=" . urlencode($ano) . "&tipo=" . urlencode($tipo);
+	} else 
+	{
+		$pdf = "./fpdf/603.php?conse=" . urlencode($conse) . "&ano=" . urlencode($ano);
+	}
 ?>
 <html lang="es">
 	<head>

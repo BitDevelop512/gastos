@@ -233,6 +233,7 @@ include('titulo.php');
             <input type="hidden" name="n_comite" id="n_comite" class="form-control" value="<?php echo $comite; ?>" readonly="readonly" tabindex="0">
             <input type="hidden" name="t_unidad" id="t_unidad" class="form-control" value="<?php echo $tpu_usuario; ?>" readonly="readonly" tabindex="0">
             <input type="hidden" name="n_pago" id="n_pago" class="form-control" value="0" readonly="readonly" tabindex="0">
+            <input type="hidden" name="directiva" id="directiva" class="form-control" value="0" readonly="readonly" tabindex="0">
             <input type="hidden" name="conse" id="conse" class="form-control" value="0" readonly="readonly" tabindex="0">
             <input type="hidden" name="ano" id="ano" class="form-control" value="0" readonly="readonly" tabindex="0">
             <input type="hidden" name="carpeta" id="carpeta" class="form-control" value="0" readonly="readonly" tabindex="0">
@@ -396,6 +397,7 @@ include('titulo.php');
 			<form name="formu1" action="ver_lista.php" method="post" target="_blank">
 				<input type="hidden" name="rec_conse" id="rec_conse" readonly="readonly">
 				<input type="hidden" name="rec_ano" id="rec_ano" readonly="readonly">
+				<input type="hidden" name="tipo" id="tipo" readonly="readonly">
 			</form>
       <form name="formu_excel" id="formu_excel" action="reco_verif_x.php" target="_blank" method="post">
         <input type="hidden" name="paso_excel" id="paso_excel" class="form-control" readonly="readonly">
@@ -783,7 +785,7 @@ function trae_registros()
       $.each(registros.rows, function (index, value)
       {
         valida2 = value.conse+','+value.ano+','+value.unidad+',\"'+value.estado+'\",'+value.tipo;
-      	valida3 = value.conse+','+value.ano;
+      	valida3 = value.conse+','+value.ano+','+value.tipo;
         if (value.tipo == "0")
         {
           valida4 = "RECO";
@@ -856,6 +858,7 @@ function paso_val()
 }
 function veri(valor, valor1, valor2, valor3, valor4, valor5)
 {
+  //valor4 es tipo 0=RECO 1=PAGO
   var valor, valor1, valor2, valor3, valor4, valor5;
   var usu_diadi = $("#n_usuario1").val();
   $.ajax({
@@ -917,6 +920,8 @@ function veri(valor, valor1, valor2, valor3, valor4, valor5)
       $("#fecha").val(registros.fec_rec);
       $("#observaciones").val(registros.observaciones1);
       $("#conse1").val(registros.conse1);
+      $("#directiva").val(registros.directiva);
+	  console.log("Directiva: " + $("#directiva").val());
       $("#resultado").val(registros.resultado1);
       $("#observaciones2").val(observaciones2);
       $("#fecha").prop("disabled", false);
@@ -925,7 +930,8 @@ function veri(valor, valor1, valor2, valor3, valor4, valor5)
       $("#anexo").html('');
       $("#todos").html('');
       var datos = valor+","+valor1+",'"+repositorio+"'";     
-      var datos1 = valor+","+valor1+","+directiva+",'"+n_directiva+"'";
+      var datos1 = valor+","+valor1+","+directiva+",'"+n_directiva+"','"+valor4+"'";
+	  console.log("datos1: "+datos1);
       var salida = "<a href='#' name='lnk1' id='lnk1' onclick=\"link("+datos+");\"><img src='imagenes/zip.png' width='30' border='0' title='Descargar Expediente Comprimido'></a>";
       if (valor4 == "0")
       {
@@ -1076,10 +1082,10 @@ function link(valor, valor1, valor2)
   });
   $("#lnk2").click();
 }
-function link1(valor, valor1, valor2, valor3)
+function link1(valor, valor1, valor2, valor3, tipo)
 {
   var valor, valor1, valor2, valor3;
-  var url = "<a href='./lista.php?conse="+valor+"&ano="+valor1+"&directiva="+valor2+"&directiva1="+valor3+"' name='lnk4' id='lnk4' class='pantalla-modal'></a>";
+  var url = "<a href='./lista.php?conse="+valor+"&ano="+valor1+"&directiva="+valor2+"&directiva1="+valor3+"&tipo="+tipo+"' name='lnk4' id='lnk4' class='pantalla-modal'></a>";
   $("#vinculo").html('');
   $("#vinculo").append(url);
   $(".pantalla-modal").magnificPopup({
@@ -1212,6 +1218,7 @@ function val_lista()
 {
   var conse = $("#conse").val();
   var ano = $("#ano").val();
+  var tipo = $("#n_pago").val();
   $.ajax({
     type: "POST",
     datatype: "json",
@@ -1240,25 +1247,44 @@ function val_lista()
       var var3 = var_ocu[7]
       var var4 = var_ocu[8]
       var var5 = var_ocu[9]
-      if (var1 == "1")
-      {
-        nuevo();
-      }
-      else
-      {
-        var detalle = "<center><h3>Lista de Verificaci&oacute;n Incompleta</h3></center>";
-        $("#dialogo").html(detalle);
-        $("#dialogo").dialog("open");
-        $("#dialogo").closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
-      }
+	  var directiva = $("#directiva").val();
+	  console.log(var_ocu);
+	  console.log("var_ocu[5]: " + var_ocu[5]);
+	  console.log("Directiva validando lista: " + $("#directiva").val());
+		
+		if (var1 == "1" && directiva < 6) {
+			nuevo();
+		}
+		else if (directiva == 6 && validarLista(var_ocu) == "1") {
+			console.log("si valida completo");
+			nuevo();
+		}
+		else {
+			console.log("No valida completo");
+			var detalle = "<center><h3>Lista de Verificaci&oacute;n Incompleta</h3></center>";
+			$("#dialogo").html(detalle);
+			$("#dialogo").dialog("open");
+			$("#dialogo").closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
+		}
     }
   });
 }
-function lista(valor, valor1)
+
+function validarLista(arr) {
+    for (let i = 0; i < arr.length-1; i += 2) {
+        if (arr[i] == "0") {
+            return "0";
+        }
+    }
+    return "1";
+}
+
+function lista(valor, valor1, tipo)
 {
   var valor, valor1;
   $("#rec_conse").val(valor);
   $("#rec_ano").val(valor1);
+  $("#tipo").val(tipo);
   formu1.submit();
 }
 function nuevo()

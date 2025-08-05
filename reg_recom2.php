@@ -1,6 +1,8 @@
 <!doctype html>
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+	session_start();
+}
 error_reporting(0);
 $_SESSION["chat"] = "SI";
 if ($_SESSION["autenticado"] != "SI")
@@ -395,6 +397,20 @@ include('titulo.php');
                 </div>
               </div>
               <br>
+              <table width="50%" align="center" border="0">
+                <tr>
+                  <td width="100%">
+                    <div id="lista">
+                      <center>
+                        Lista de Verificaci&oacute;n
+                        <br><br>
+                        <a href="#" name="lnk3" id="lnk3" onclick="verificacion();"><img src="imagenes/lista.png" width="30" border="0" title="Lista de Verificaci&oacute;n"></a>
+                      </center>
+                    </div>                    
+                  </td>
+                </tr>
+              </table>
+			  
               <div class="row">
                 <div class="col col-lg-12 col-sm-12 col-md-12 col-xs-12">
                   <center>
@@ -447,6 +463,12 @@ include('titulo.php');
             <br>
             <div id="tabla3"></div>
             <div id="resultados5"></div>
+            <form name="formu3" action="ver_lista.php" method="post" target="_blank">
+              <input type="hidden" name="rec_conse" id="rec_conse" readonly="readonly">
+              <input type="hidden" name="rec_ano" id="rec_ano" readonly="readonly">
+              <input type="hidden" name="tipo" id="tipo" value="2" readonly="readonly">
+              <input type="hidden" name="dir" id="dir" readonly="readonly">
+            </form>
           </div>
         </div>
       </div>
@@ -793,15 +815,14 @@ function val_salario()
   var valor = $("#valor1").val();
   var valor1 = $("#salario1").val();
   valor1 = parseFloat(valor1);
-  var valor2 = valor1*10;
+  var valor2 = valor1*35;
   if (valor < valor2)
   {
-    $("#aceptar").hide();
-    alerta("Valor No Permitido, inferior a 10 SMMLV");
+    alerta("Inferior a 35 SMMLV, va a comité regional");
   }
   else
   {
-    $("#aceptar").show();
+    alerta("Mayor a 35 SMMLV, va a comité central");
   }
 }
 // Trae dias transcurridos
@@ -1385,7 +1406,7 @@ function consultar()
         salida2 += "<td height='35' width='10%'>"+value.fecha+"</td>";
         salida2 += "<td height='35' width='10%'>"+value.fecha1+"</td>";
         salida2 += "<td height='35' width='10%'>"+value.usuario+"</td>";
-        salida2 += "<td height='35' width='15%'>"+n_unidad+"</td>";
+        salida2 += "<td height='35' width='10%'>"+n_unidad+"</td>";
         salida2 += "<td height='35' width='10%'>"+value.ordop+"</td>";
         salida2 += "<td height='35' width='10%'>"+value.fragmenta+"</td>";
         salida2 += "<td height='35' width='12%'>"+value.estado1+"</td>";
@@ -1396,8 +1417,9 @@ function consultar()
         }
         else
         {
-          salida2 += "<td height='35' width='5%' ><center><img src='imagenes/blanco.png' border='0'></center></td></tr>";
+          salida2 += "<td height='35' width='5%' ><center><img src='imagenes/blanco.png' border='0'></center></td>";
         }
+		salida2 += "<td height='35' width='5%'><center><a href='#' onclick='link("+valida2+")'><img src='imagenes/pdf.png' border='0' title='Visualizar Lista de Verificaci&oacute;n'></a></center></td></tr>";
         listaplanes.push(value.interno);
       });
       salida2 += "</table>";
@@ -1627,6 +1649,42 @@ function alerta1(valor)
 {
   alertify.success(valor);
 }
+function verificacion()
+{
+  var conse = $("#numero").val();
+  var ano = $("#v_ano").val();
+  var directiva = $("#directiva").val();
+  var directiva1 = $("#directiva option:selected").html();
+  directiva1 = directiva1.trim();
+  if (conse == "0")
+  {
+    var detalle = "<center><h3>Sin Registro previo, no se permite diligenciar<br>Lista de Verificación</h3></center>";
+    $("#dialogo2").html(detalle);
+    $("#dialogo2").dialog("open");
+    $("#dialogo2").closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
+  }
+  else
+  {
+	var url = "<a href='./lista.php?conse="+conse+"&ano="+ano+"&directiva="+directiva+"&directiva1="+directiva1+"&tipo=2' name='link4' id='link4' class='pantalla-modal'>Link</a>";
+    $("#link").hide();
+    $("#link").html('');
+    $("#link").append(url);
+    $(".pantalla-modal").magnificPopup({
+      type: 'iframe',
+      preloader: false,
+      modal: false
+    });
+    $("#link4").click();
+    $("#directiva").prop("disabled",true);
+  }
+}
+function link(valor, valor1) {
+  $("#rec_conse").val(valor);
+  $("#rec_ano").val(valor1);
+  $("#tipo").val(2);
+  document.formu3.submit();
+}
+
 </script>
 </body>
 </html>
